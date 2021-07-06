@@ -5,6 +5,8 @@
 #include "plinf.tab.h"
 %}
 
+%option noyywrap
+
 digit [0-9]
 letter [a-zA-Z]
 
@@ -46,24 +48,26 @@ letter [a-zA-Z]
 
 (?i:"odd") { return ODD; }
 
-(?i:"begin") { return BEGIN; }
-(?i:"end") { return END; }
+(?i:"begin") { return BLOCK_BEGIN; }
+(?i:"end") { return BLOCK_END; }
 
-":=" { return ASSIGN; }
-"#" { return NEW; }
-">=" { return REQ; }
-"<=" { return LEQ; }
-">" { return RES; }
-"<" { return LES; }
+"<>" { return RELOP; }
+">=" { return RELOP; }
+"<=" { return RELOP; }
+">" { return RELOP; }
+"<" { return RELOP; }
 "=" { return EQ; }
-"." { return PERIOD; }
-":" { return COLON; }
-";" { return SEMI; }
-"," { return COMMA; }
+
 "+" { return PLUS; }
 "-" { return MINUS; }
 "/" { return DIVIDE; }
 "*" { return TIMES; }
+
+":=" { return ASSIGN; }
+"." { return PERIOD; }
+":" { return COLON; }
+";" { return SEMI; }
+"," { return COMMA; }
 "(" { return LPAREN; }
 ")" { return RPAREN; }
 "[" { return LBRACE; }
@@ -76,15 +80,15 @@ letter [a-zA-Z]
 
 {letter}({letter}|{digit})*  {
   yylval.id = strdup(yytext);
-  return ID;
+  return IDENTIFIER;
 }
 
-/* ignore comments */
-"//".*\n ;
+
+"//".*\n /* ignore comments */;
 "/*" {
   for (;;) {
     while (input() != '*');
-    if (input() != '/') unput(yytext[yyleng - 1])
+    if (input() != '/') unput(yytext[yyleng - 1]);
     else return;
   }
 }
