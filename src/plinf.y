@@ -114,10 +114,10 @@ procedure_declare: procedure_declare procedure_define
   | procedure_define
   ;
 
-procedure_define: PROCEDURE IDENTIFIER SEMI program
-  | PROCEDURE IDENTIFIER LPAREN param_define RPAREN SEMI program
-  | FUNCTION IDENTIFIER COLON type SEMI program
-  | FUNCTION IDENTIFIER LPAREN param_define RPAREN COLON type SEMI program
+procedure_define: PROCEDURE IDENTIFIER SEMI block SEMI
+  | PROCEDURE IDENTIFIER LPAREN param_define RPAREN SEMI block SEMI
+  | FUNCTION IDENTIFIER COLON type SEMI block SEMI
+  | FUNCTION IDENTIFIER LPAREN param_define RPAREN COLON type SEMI block SEMI
   ;
 
 param_define: param_define COMMA IDENTIFIER COLON type

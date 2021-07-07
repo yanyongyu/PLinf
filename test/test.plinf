@@ -1,21 +1,37 @@
 const x = 1; y = 2;
-type t1 = INTEGER; t2 = real; t3 = Boolean; t4 = array[3] of array[0..5] of integer;  // 3 * 5 二维数组
+type t1 = INTEGER; t2 = real; t3 = Boolean; t4 = array[3] of array[1..5] of integer;  // 3 * 5 二维数组
 var a: t1; b, c: t2; d: boolean; e: t4;
 
 procedure procedure1;
   begin
     ;  // do nothing
     // also do nothing
-  end.
+  end;
 
-function function1(param1: integer, param2: t4): integer;
+function function1(param1: integer, param2: t3): integer;
   begin
     function1 := param1;
-  end.
+  end;
 
 begin
   /* simple comment block
      with multiline.
   */
+
+  READ(a);
+  if a then
+    WRITE(a + 1)
+  else
+    begin
+      call procedure1;
+    end;
+
+  while a + 1 do
+    begin
+      a := a - 1;
+      WRITE(call function1(a + 1, true));
+      if not (a <> 0) then
+        exit;
+    end;
 
 end.
