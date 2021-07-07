@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+extern int yylineno;
+
 int yylex(void);
 void yyerror(const char *);
 %}
@@ -9,12 +11,15 @@ void yyerror(const char *);
 %union {
   char *id;
   long num;
+  double real_num;
 }
 
 %start program
+%locations
 
 %token <id> IDENTIFIER
 %token <num> NUMBER
+%token <real_num> REAL_NUMBER
 
 %token CONST TYPE VAR PROCEDURE FUNCTION
 %token INTEGER REAL BOOLEAN ARRAY OF TRUE FALSE
@@ -25,7 +30,7 @@ void yyerror(const char *);
 %token DIV MOD
 %token RELOP
 
-%token PERIOD COLON SEMI COMMA
+%token PERIOD PERIOD_PERIOD COLON SEMI COMMA
 %token LPAREN RPAREN LBRACE RBRACE
 %token CALL ODD BLOCK_BEGIN BLOCK_END ASSIGN EQ PLUS MINUS DIVIDE TIMES
 
@@ -63,17 +68,18 @@ declarepart: const_declare type_declare var_declare procedure_declare
 const_declare: CONST const_define SEMI
   ;
 
-const_define: const_define COMMA num_definition
+const_define: const_define SEMI num_definition
   | num_definition
   ;
 
 num_definition: IDENTIFIER EQ NUMBER
+  | IDENTIFIER EQ REAL_NUMBER
   ;
 
 type_declare: TYPE type_define SEMI
   ;
 
-type_define: type_define COMMA type_definition
+type_define: type_define SEMI type_definition
   | type_definition
   ;
 
@@ -84,13 +90,18 @@ type_expression: INTEGER
   | REAL
   | BOOLEAN
   | ARRAY LBRACE NUMBER RBRACE OF type_expression
+  | ARRAY LBRACE NUMBER PERIOD_PERIOD NUMBER RBRACE OF type_expression
   ;
 
 var_declare: VAR var_define SEMI
   ;
 
-var_define: var_define COMMA IDENTIFIER COLON type
-  | IDENTIFIER COLON type
+var_define: var_define SEMI identifier_list COLON type
+  | identifier_list COLON type
+  ;
+
+identifier_list: identifier_list COMMA IDENTIFIER
+  | IDENTIFIER
   ;
 
 type: INTEGER
@@ -103,10 +114,10 @@ procedure_declare: procedure_declare procedure_define
   | procedure_define
   ;
 
-procedure_define: PROCEDURE IDENTIFIER SEMI block SEMI
-  | PROCEDURE IDENTIFIER LPAREN param_define RPAREN SEMI block SEMI
-  | FUNCTION IDENTIFIER COLON type SEMI block SEMI
-  | FUNCTION IDENTIFIER LPAREN param_define RPAREN COLON type SEMI block SEMI
+procedure_define: PROCEDURE IDENTIFIER SEMI program
+  | PROCEDURE IDENTIFIER LPAREN param_define RPAREN SEMI program
+  | FUNCTION IDENTIFIER COLON type SEMI program
+  | FUNCTION IDENTIFIER LPAREN param_define RPAREN COLON type SEMI program
   ;
 
 param_define: param_define COMMA IDENTIFIER COLON type
@@ -114,7 +125,7 @@ param_define: param_define COMMA IDENTIFIER COLON type
   ;
 
 statements: statements statement SEMI
-  | statement SEMI
+  | /* empty statement */
   ;
 
 statement: identifier_ref ASSIGN expression
@@ -169,6 +180,7 @@ term: term TIMES factor
 
 factor: identifier_ref
   | NUMBER
+  | REAL_NUMBER
   | LPAREN expression RPAREN
   | NOT factor
   | CALL IDENTIFIER
@@ -181,5 +193,5 @@ factor: identifier_ref
 %%
 
 void yyerror(const char *msg) {
-  printf("%s\n", msg);
+  fprintf(stderr, "%s at line %d\n", msg, yylineno);
 }

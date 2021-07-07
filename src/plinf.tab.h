@@ -51,51 +51,53 @@ extern int yydebug;
   {
     IDENTIFIER = 258,
     NUMBER = 259,
-    CONST = 260,
-    TYPE = 261,
-    VAR = 262,
-    PROCEDURE = 263,
-    FUNCTION = 264,
-    INTEGER = 265,
-    REAL = 266,
-    BOOLEAN = 267,
-    ARRAY = 268,
-    OF = 269,
-    TRUE = 270,
-    FALSE = 271,
-    IF = 272,
-    THEN = 273,
-    ELSE = 274,
-    WRITE = 275,
-    READ = 276,
-    WHILE = 277,
-    DO = 278,
-    EXIT = 279,
-    OR = 280,
-    AND = 281,
-    NOT = 282,
-    DIV = 283,
-    MOD = 284,
-    RELOP = 285,
-    PERIOD = 286,
-    COLON = 287,
-    SEMI = 288,
-    COMMA = 289,
-    LPAREN = 290,
-    RPAREN = 291,
-    LBRACE = 292,
-    RBRACE = 293,
-    CALL = 294,
-    ODD = 295,
-    BLOCK_BEGIN = 296,
-    BLOCK_END = 297,
-    ASSIGN = 298,
-    EQ = 299,
-    PLUS = 300,
-    MINUS = 301,
-    DIVIDE = 302,
-    TIMES = 303,
-    LOWER_THAN_ELSE = 304
+    REAL_NUMBER = 260,
+    CONST = 261,
+    TYPE = 262,
+    VAR = 263,
+    PROCEDURE = 264,
+    FUNCTION = 265,
+    INTEGER = 266,
+    REAL = 267,
+    BOOLEAN = 268,
+    ARRAY = 269,
+    OF = 270,
+    TRUE = 271,
+    FALSE = 272,
+    IF = 273,
+    THEN = 274,
+    ELSE = 275,
+    WRITE = 276,
+    READ = 277,
+    WHILE = 278,
+    DO = 279,
+    EXIT = 280,
+    OR = 281,
+    AND = 282,
+    NOT = 283,
+    DIV = 284,
+    MOD = 285,
+    RELOP = 286,
+    PERIOD = 287,
+    PERIOD_PERIOD = 288,
+    COLON = 289,
+    SEMI = 290,
+    COMMA = 291,
+    LPAREN = 292,
+    RPAREN = 293,
+    LBRACE = 294,
+    RBRACE = 295,
+    CALL = 296,
+    ODD = 297,
+    BLOCK_BEGIN = 298,
+    BLOCK_END = 299,
+    ASSIGN = 300,
+    EQ = 301,
+    PLUS = 302,
+    MINUS = 303,
+    DIVIDE = 304,
+    TIMES = 305,
+    LOWER_THAN_ELSE = 306
   };
 #endif
 
@@ -103,12 +105,13 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 9 "src/plinf.y"
+#line 11 "src/plinf.y"
 
   char *id;
   long num;
+  double real_num;
 
-#line 112 "src/plinf.tab.h"
+#line 115 "src/plinf.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -116,9 +119,23 @@ typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_DECLARED 1
 #endif
 
+/* Location type.  */
+#if ! defined YYLTYPE && ! defined YYLTYPE_IS_DECLARED
+typedef struct YYLTYPE YYLTYPE;
+struct YYLTYPE
+{
+  int first_line;
+  int first_column;
+  int last_line;
+  int last_column;
+};
+# define YYLTYPE_IS_DECLARED 1
+# define YYLTYPE_IS_TRIVIAL 1
+#endif
+
 
 extern YYSTYPE yylval;
-
+extern YYLTYPE yylloc;
 int yyparse (void);
 
 #endif /* !YY_YY_SRC_PLINF_TAB_H_INCLUDED  */

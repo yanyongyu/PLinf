@@ -6,6 +6,7 @@
 %}
 
 %option noyywrap
+%option yylineno
 
 digit [0-9]
 letter [a-zA-Z]
@@ -23,8 +24,8 @@ letter [a-zA-Z]
 (?i:"boolean") { return BOOLEAN; }
 (?i:"array") { return ARRAY; }
 (?i:"of") { return OF; }
-"true" { return TRUE; }
-"false" { return FALSE; }
+(?i:"true") { return TRUE; }
+(?i:"false") { return FALSE; }
 
 (?i:"if") { return IF; }
 (?i:"then") { return THEN; }
@@ -65,6 +66,7 @@ letter [a-zA-Z]
 
 ":=" { return ASSIGN; }
 "." { return PERIOD; }
+".." { return PERIOD_PERIOD; }
 ":" { return COLON; }
 ";" { return SEMI; }
 "," { return COMMA; }
@@ -77,6 +79,11 @@ letter [a-zA-Z]
   yylval.num = atoi(yytext);
   return NUMBER;
 }
+{digit}+\.{digit}*/[^.] {
+  char *eptr;
+  yylval.real_num = strtod(yytext, &eptr);
+  return REAL_NUMBER;
+}
 
 {letter}({letter}|{digit})*  {
   yylval.id = strdup(yytext);
@@ -84,13 +91,24 @@ letter [a-zA-Z]
 }
 
 
-"//".*/\n|<<EOF>> /* ignore comments */;
+"//".* /* ignore comments */;
 "/*" {
   for (;;) {
-    while (input() != '*');
-    if (input() != '/') unput(yytext[yyleng - 1]);
-    break;
+    switch (input()) {
+      case EOF:
+        yy_fatal_error("unterminated comment");
+        break;
+      case '*':
+        if (input() == '/') goto done;
+        unput(yytext[yyleng - 1]);
+        break;
+      default:
+        break;
+    }
   }
+
+  done:
+    /* exit entry */;
 }
 
 [ \t\n] ;

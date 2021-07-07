@@ -1,0 +1,21 @@
+const x = 1; y = 2;
+type t1 = INTEGER; t2 = real; t3 = Boolean; t4 = array[3] of array[0..5] of integer;  // 3 * 5 二维数组
+var a: t1; b, c: t2; d: boolean; e: t4;
+
+procedure procedure1;
+  begin
+    ;  // do nothing
+    // also do nothing
+  end.
+
+function function1(param1: integer, param2: t4): integer;
+  begin
+    function1 := param1;
+  end.
+
+begin
+  /* simple comment block
+     with multiline.
+  */
+
+end.
