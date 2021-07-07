@@ -68,9 +68,13 @@
 /* First part of user prologue.  */
 #line 1 "src/plinf.y"
 
+#include <stdio.h>
 #include <stdlib.h>
 
-#line 74 "src/plinf.tab.c"
+int yylex(void);
+void yyerror(const char *);
+
+#line 78 "src/plinf.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -172,12 +176,12 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 5 "src/plinf.y"
+#line 9 "src/plinf.y"
 
   char *id;
   long num;
 
-#line 181 "src/plinf.tab.c"
+#line 185 "src/plinf.tab.c"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -557,16 +561,16 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    35,    35,    38,    41,    42,    43,    44,    45,    46,
-      47,    48,    49,    50,    51,    52,    53,    54,    55,    56,
-      59,    62,    63,    66,    69,    72,    73,    76,    79,    80,
-      81,    82,    85,    88,    89,    92,    93,    94,    95,    98,
-      99,   102,   103,   104,   105,   108,   109,   112,   113,   116,
-     117,   118,   119,   120,   121,   122,   123,   124,   125,   126,
-     129,   130,   133,   134,   137,   138,   141,   142,   145,   146,
-     147,   150,   151,   152,   153,   154,   155,   158,   159,   160,
-     161,   162,   163,   166,   167,   168,   169,   170,   171,   172,
-     173,   174
+       0,    39,    39,    42,    45,    46,    47,    48,    49,    50,
+      51,    52,    53,    54,    55,    56,    57,    58,    59,    60,
+      63,    66,    67,    70,    73,    76,    77,    80,    83,    84,
+      85,    86,    89,    92,    93,    96,    97,    98,    99,   102,
+     103,   106,   107,   108,   109,   112,   113,   116,   117,   120,
+     121,   122,   123,   124,   125,   126,   127,   128,   129,   130,
+     133,   134,   137,   138,   141,   142,   145,   146,   149,   150,
+     151,   154,   155,   156,   157,   158,   159,   162,   163,   164,
+     165,   166,   167,   170,   171,   172,   173,   174,   175,   176,
+     177,   178
 };
 #endif
 
@@ -1491,7 +1495,7 @@ yyreduce:
   switch (yyn)
     {
 
-#line 1495 "src/plinf.tab.c"
+#line 1499 "src/plinf.tab.c"
 
       default: break;
     }
@@ -1723,5 +1727,9 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 177 "src/plinf.y"
+#line 181 "src/plinf.y"
 
+
+void yyerror(const char *msg) {
+  printf("%s\n", msg);
+}

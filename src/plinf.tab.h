@@ -103,7 +103,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 5 "src/plinf.y"
+#line 9 "src/plinf.y"
 
   char *id;
   long num;

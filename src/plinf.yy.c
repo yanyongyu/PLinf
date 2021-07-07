@@ -1114,7 +1114,7 @@ YY_RULE_SETUP
   for (;;) {
     while (input() != '*');
     if (input() != '/') unput(yytext[yyleng - 1]);
-    else return;
+    break;
   }
 }
 	YY_BREAK

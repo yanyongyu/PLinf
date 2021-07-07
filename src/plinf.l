@@ -84,12 +84,12 @@ letter [a-zA-Z]
 }
 
 
-"//".*\n /* ignore comments */;
+"//".*/\n|<<EOF>> /* ignore comments */;
 "/*" {
   for (;;) {
     while (input() != '*');
     if (input() != '/') unput(yytext[yyleng - 1]);
-    else return;
+    break;
   }
 }
 

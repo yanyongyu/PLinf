@@ -1,5 +1,9 @@
 %{
+#include <stdio.h>
 #include <stdlib.h>
+
+int yylex(void);
+void yyerror(const char *);
 %}
 
 %union {
@@ -175,3 +179,7 @@ factor: identifier_ref
   ;
 
 %%
+
+void yyerror(const char *msg) {
+  printf("%s\n", msg);
+}
