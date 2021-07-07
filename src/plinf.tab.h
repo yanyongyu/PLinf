@@ -105,13 +105,14 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 11 "src/plinf.y"
+#line 14 "src/plinf.y"
 
   char *id;
   long num;
   double real_num;
+  ICODE *icode;
 
-#line 115 "src/plinf.tab.h"
+#line 116 "src/plinf.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "intermediate.h"
+
+int icode_index = 0;
 extern int yylineno;
 
 int yylex(void);
@@ -12,6 +15,7 @@ void yyerror(const char *);
   char *id;
   long num;
   double real_num;
+  ICODE *icode;
 }
 
 %start program
@@ -41,7 +45,13 @@ void yyerror(const char *);
 
 %%
 
-program: block PERIOD
+program: before_program block PERIOD
+  ;
+
+before_program: {
+      // clear icode index and begin a new analysis
+      icode_index = 0;
+    }
   ;
 
 block: declarepart BLOCK_BEGIN statements BLOCK_END
@@ -194,4 +204,12 @@ factor: identifier_ref
 
 void yyerror(const char *msg) {
   fprintf(stderr, "%s at line %d\n", msg, yylineno);
+}
+
+ICODE *create_icode(OPERATION operation) {
+  ICODE *icode = malloc(sizeof(ICODE));
+  icode->index = icode_index;
+  icode->op = operation;
+  icode_index++;
+  return icode;
 }
