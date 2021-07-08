@@ -5,16 +5,22 @@
 #include "intermediate.h"
 
 int icode_index = 0;
-extern ICODE *global_result;
+ICODE *global_result;
 extern int yylineno;
 
 int yylex(void);
 void yyerror(const char *);
+SYMBOL *create_symbol(SYMBOL_TYPE);
+ICODE *create_icode(OPERATION);
+ICODE *concat_icode(ICODE *, ICODE *);
+ID_LIST *concat_id_list(ID_LIST *, ID_LIST *);
+PARAM_LIST *concat_param_list(PARAM_LIST *, PARAM_LIST *);
 %}
 
 %union {
   char *id;
   ID_LIST *id_list;
+  PARAM_LIST *param_list;
   ICODE *icode;
   VAR_VALUE *var_value;
   TYPE_VALUE *type_value;
@@ -42,12 +48,18 @@ void yyerror(const char *);
 %token CALL ODD BLOCK_BEGIN BLOCK_END ASSIGN EQ PLUS MINUS DIVIDE TIMES
 
 %type <icode> block declarepart
+
 %type <icode> const_declare const_define const_definition
+
 %type <icode> type_declare type_define type_definition
 %type <type_value> type_expression
+
 %type <icode> var_declare var_define
 %type <id_list> identifier_list
 %type <var_value> type
+
+%type <icode> procedure_declare procedure_define
+%type <param_list> param_define
 
 %left PLUS MINUS
 %left TIMES DIVIDE
@@ -73,19 +85,19 @@ block: declarepart BLOCK_BEGIN statements BLOCK_END {
   ;
 
 declarepart: const_declare type_declare var_declare procedure_declare {
-      $$ = concat_icode($1, concat_icode($2, concat_icode($3, concat_icode($4))));
+      $$ = concat_icode($1, concat_icode($2, concat_icode($3, $4)));
     }
   | const_declare type_declare var_declare {
-      $$ = concat_icode($1, concat_icode($2, concat_icode($3)));
+      $$ = concat_icode($1, concat_icode($2, $3));
     }
   | const_declare type_declare procedure_declare {
-      $$ = concat_icode($1, concat_icode($2, concat_icode($3)));
+      $$ = concat_icode($1, concat_icode($2, $3));
     }
   | const_declare var_declare procedure_declare {
-      $$ = concat_icode($1, concat_icode($2, concat_icode($3)));
+      $$ = concat_icode($1, concat_icode($2, $3));
     }
   | type_declare var_declare procedure_declare {
-      $$ = concat_icode($1, concat_icode($2, concat_icode($3)));
+      $$ = concat_icode($1, concat_icode($2, $3));
     }
   | const_declare type_declare {
       $$ = concat_icode($1, $2);
@@ -139,7 +151,7 @@ const_definition: IDENTIFIER EQ NUMBER {
       ICODE *temp = create_icode(op_const_declare);
       SYMBOL *id = create_symbol(st_identifier);
       temp->symbol[2] = id;
-      id->name = $1;
+      id->identifier = $1;
       SYMBOL *number = create_symbol(st_const);
       temp->symbol[0] = number;
       number->const_value = $3;
@@ -152,7 +164,7 @@ const_definition: IDENTIFIER EQ NUMBER {
       number->const_value = $3;
       SYMBOL *id = create_symbol(st_identifier);
       temp->symbol[2] = id;
-      id->name = $1;
+      id->identifier = $1;
       $$ = temp;
     }
   | IDENTIFIER EQ TRUE {
@@ -162,7 +174,7 @@ const_definition: IDENTIFIER EQ NUMBER {
       number->const_value = $3;
       SYMBOL *id = create_symbol(st_identifier);
       temp->symbol[2] = id;
-      id->name = $1;
+      id->identifier = $1;
       $$ = temp;
     }
   | IDENTIFIER EQ FALSE {
@@ -172,7 +184,7 @@ const_definition: IDENTIFIER EQ NUMBER {
       number->const_value = $3;
       SYMBOL *id = create_symbol(st_identifier);
       temp->symbol[2] = id;
-      id->name = $1;
+      id->identifier = $1;
       $$ = temp;
     }
   ;
@@ -194,6 +206,7 @@ type_definition: IDENTIFIER EQ type_expression {
       ICODE *temp = create_icode(op_type_declare);
       SYMBOL *id = create_symbol(st_identifier);
       temp->symbol[2] = id;
+      id->identifier = $1;
       SYMBOL *type = create_symbol(st_type);
       temp->symbol[0] = type;
       type->type_value = $3;
@@ -224,63 +237,161 @@ type_expression: INTEGER {
     }
   ;
 
-var_declare: VAR var_define SEMI
+var_declare: VAR var_define SEMI {
+      $$ = $2;
+    }
   ;
 
-var_define: var_define SEMI identifier_list COLON type
-  | identifier_list COLON type
+var_define: var_define SEMI identifier_list COLON type {
+      SYMBOL *var, *id;
+      ICODE *define, *start, *temp = create_icode(op_nop);
+      ID_LIST *id_list = $3;
+      start = temp;
+      do {
+        define = temp->next = create_icode(op_var_declare);
+        id = create_symbol(st_identifier);
+        id->identifier = id_list->name;
+        define->symbol[2] = id;
+        var = create_symbol(st_var);
+        var->var_value = $5;
+        define->symbol[0] = var;
+        temp = temp->next;
+        id_list = id_list->next;
+      } while (id_list);
+      $$ = concat_icode($1, start->next);
+    }
+  | identifier_list COLON type {
+      SYMBOL *var, *id;
+      ICODE *define, *start, *temp = create_icode(op_nop);
+      ID_LIST *id_list = $1;
+      start = temp;
+      do {
+        define = temp->next = create_icode(op_var_declare);
+        id = create_symbol(st_identifier);
+        id->identifier = id_list->name;
+        define->symbol[2] = id;
+        var = create_symbol(st_var);
+        var->var_value = $3;
+        define->symbol[0] = var;
+        temp = temp->next;
+        id_list = id_list->next;
+      } while (id_list);
+      $$ = start->next;
+    }
   ;
 
 identifier_list: identifier_list COMMA IDENTIFIER {
-      ID_LIST *temp = (ID_LIST *)malloc(sizeof(ID_LIST));
+      ID_LIST *temp = (ID_LIST *)calloc(1, sizeof(ID_LIST));
       temp->name = $3;
       $$ = concat_id_list($1, temp);
     }
   | IDENTIFIER {
-      ID_LIST *temp = (ID_LIST *)malloc(sizeof(ID_LIST));
+      ID_LIST *temp = (ID_LIST *)calloc(1, sizeof(ID_LIST));
       temp->name = $1;
       $$ = temp;
     }
   ;
 
 type: INTEGER {
-      VAR_VALUE *temp = (VAR_VALUE *)malloc(sizeof(VAR_VALUE));
+      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
       temp->type = vt_type;
       temp->detail = $1;
       $$ = temp;
     }
   | REAL {
-      VAR_VALUE *temp = (VAR_VALUE *)malloc(sizeof(VAR_VALUE));
+      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
       temp->type = vt_type;
       temp->detail = $1;
       $$ = temp;
     }
   | BOOLEAN {
-      VAR_VALUE *temp = (VAR_VALUE *)malloc(sizeof(VAR_VALUE));
+      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
       temp->type = vt_type;
       temp->detail = $1;
       $$ = temp;
     }
   | IDENTIFIER {
-      VAR_VALUE *temp = (VAR_VALUE *)malloc(sizeof(VAR_VALUE));
+      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
       temp->type = vt_identifier;
       temp->identifier = $1;
       $$ = temp;
     }
   ;
 
-procedure_declare: procedure_declare procedure_define
-  | procedure_define
+procedure_declare: procedure_declare procedure_define {
+      $$ = concat_icode($1, $2);
+    }
+  | procedure_define {
+      $$ = $1;
+    }
   ;
 
-procedure_define: PROCEDURE IDENTIFIER SEMI block SEMI
-  | PROCEDURE IDENTIFIER LPAREN param_define RPAREN SEMI block SEMI
-  | FUNCTION IDENTIFIER COLON type SEMI block SEMI
-  | FUNCTION IDENTIFIER LPAREN param_define RPAREN COLON type SEMI block SEMI
+procedure_define: PROCEDURE IDENTIFIER SEMI block SEMI {
+      ICODE *temp = create_icode(op_procedure_declare);
+      PROCEDURE_VALUE *procedure_value = (PROCEDURE_VALUE *)calloc(1, sizeof(PROCEDURE_VALUE));
+      procedure_value->icode_list = $4;
+      SYMBOL *procedure = create_symbol(st_procedure);
+      procedure->procedure_value = procedure_value;
+      temp->symbol[0] = procedure;
+      SYMBOL *id = create_symbol(st_identifier);
+      id->identifier = $2;
+      temp->symbol[2] = id;
+      $$ = temp;
+    }
+  | PROCEDURE IDENTIFIER LPAREN param_define RPAREN SEMI block SEMI {
+      ICODE *temp = create_icode(op_procedure_declare);
+      PROCEDURE_VALUE *procedure_value = (PROCEDURE_VALUE *)calloc(1, sizeof(PROCEDURE_VALUE));
+      procedure_value->param_list = $4;
+      procedure_value->icode_list = $7;
+      SYMBOL *procedure = create_symbol(st_procedure);
+      procedure->procedure_value = procedure_value;
+      temp->symbol[0] = procedure;
+      SYMBOL *id = create_symbol(st_identifier);
+      id->identifier = $2;
+      temp->symbol[2] = id;
+      $$ = temp;
+    }
+  | FUNCTION IDENTIFIER COLON type SEMI block SEMI {
+      ICODE *temp = create_icode(op_function_declare);
+      FUNCTION_VALUE *function_value = (FUNCTION_VALUE *)calloc(1, sizeof(FUNCTION_VALUE));
+      function_value->return_var = $4;
+      function_value->icode_list = $6;
+      SYMBOL *function = create_symbol(st_function);
+      function->function_value = function_value;
+      temp->symbol[0] = function;
+      SYMBOL *id = create_symbol(st_identifier);
+      id->identifier = $2;
+      temp->symbol[2] = id;
+      $$ = temp;
+    }
+  | FUNCTION IDENTIFIER LPAREN param_define RPAREN COLON type SEMI block SEMI {
+      ICODE *temp = create_icode(op_function_declare);
+      FUNCTION_VALUE *function_value = (FUNCTION_VALUE *)calloc(1, sizeof(FUNCTION_VALUE));
+      function_value->param_list = $4;
+      function_value->return_var = $7;
+      function_value->icode_list = $9;
+      SYMBOL *function = create_symbol(st_function);
+      function->function_value = function_value;
+      temp->symbol[0] = function;
+      SYMBOL *id = create_symbol(st_identifier);
+      id->identifier = $2;
+      temp->symbol[2] = id;
+      $$ = temp;
+    }
   ;
 
-param_define: param_define COMMA IDENTIFIER COLON type
-  | IDENTIFIER COLON type
+param_define: param_define COMMA IDENTIFIER COLON type {
+      PARAM_LIST *temp = (PARAM_LIST *)calloc(1, sizeof(PARAM_LIST));
+      temp->name = $3;
+      temp->var_value = $5;
+      $$ = concat_param_list($1, temp);
+    }
+  | IDENTIFIER COLON type {
+      PARAM_LIST *temp = (PARAM_LIST *)calloc(1, sizeof(PARAM_LIST));
+      temp->name = $1;
+      temp->var_value = $3;
+      $$ = temp;
+    }
   ;
 
 statements: statements statement SEMI
@@ -356,13 +467,13 @@ void yyerror(const char *msg) {
 }
 
 SYMBOL *create_symbol(SYMBOL_TYPE type) {
-  SYMBOL *symbol = (SYMBOL *)malloc(sizeof(SYMBOL));
+  SYMBOL *symbol = (SYMBOL *)calloc(1, sizeof(SYMBOL));
   symbol->type = type;
   return symbol;
 }
 
 ICODE *create_icode(OPERATION operation) {
-  ICODE *icode = (ICODE *)malloc(sizeof(ICODE));
+  ICODE *icode = (ICODE *)calloc(1, sizeof(ICODE));
   icode->index = icode_index;
   icode->op = operation;
   icode_index++;
@@ -378,6 +489,13 @@ ICODE *concat_icode(ICODE *first, ICODE *second) {
 
 ID_LIST *concat_id_list(ID_LIST *first, ID_LIST *second) {
   ID_LIST *temp = first;
+  while (temp->next) temp = temp->next;
+  temp->next = second;
+  return first;
+}
+
+PARAM_LIST *concat_param_list(PARAM_LIST *first, PARAM_LIST *second) {
+  PARAM_LIST *temp = first;
   while (temp->next) temp = temp->next;
   temp->next = second;
   return first;

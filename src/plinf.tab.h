@@ -50,19 +50,19 @@ extern int yydebug;
   enum yytokentype
   {
     IDENTIFIER = 258,
-    NUMBER = 259,
-    REAL_NUMBER = 260,
-    TRUE = 261,
-    FALSE = 262,
-    CONST = 263,
-    TYPE = 264,
-    VAR = 265,
-    PROCEDURE = 266,
-    FUNCTION = 267,
-    INTEGER = 268,
-    REAL = 269,
-    BOOLEAN = 270,
-    ARRAY = 271,
+    INTEGER = 259,
+    REAL = 260,
+    BOOLEAN = 261,
+    ARRAY = 262,
+    NUMBER = 263,
+    REAL_NUMBER = 264,
+    TRUE = 265,
+    FALSE = 266,
+    CONST = 267,
+    TYPE = 268,
+    VAR = 269,
+    PROCEDURE = 270,
+    FUNCTION = 271,
     OF = 272,
     IF = 273,
     THEN = 274,
@@ -105,13 +105,17 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 15 "src/plinf.y"
+#line 20 "src/plinf.y"
 
   char *id;
+  ID_LIST *id_list;
+  PARAM_LIST *param_list;
   ICODE *icode;
+  VAR_VALUE *var_value;
+  TYPE_VALUE *type_value;
   CONST_VALUE *const_value;
 
-#line 115 "src/plinf.tab.h"
+#line 119 "src/plinf.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

@@ -21,35 +21,39 @@ letter [a-zA-Z]
 (?i:"function") { return FUNCTION; }
 
 (?i:"integer") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
   temp->type = tt_int;
+  yylval.type_value = temp;
   return INTEGER;
 }
 (?i:"real") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
   temp->type = tt_real;
+  yylval.type_value = temp;
   return REAL;
 }
 (?i:"boolean") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
   temp->type = tt_bool;
+  yylval.type_value = temp;
   return BOOLEAN;
 }
 (?i:"array") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
   temp->type = tt_array;
+  yylval.type_value = temp;
   return ARRAY;
 }
 (?i:"of") { return OF; }
 (?i:"true") {
-  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
   temp->type = ct_bool;
   temp->num = 1;
   yylval.const_value = temp;
   return TRUE;
 }
 (?i:"false") {
-  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
   temp->type = ct_bool;
   temp->num = 0;
   yylval.const_value = temp;
@@ -105,7 +109,7 @@ letter [a-zA-Z]
 "]" { return RBRACE; }
 
 {digit}+ 	{
-  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
   temp->type = ct_int;
   temp->num = atoi(yytext);
   yylval.const_value = temp;
@@ -113,7 +117,7 @@ letter [a-zA-Z]
 }
 {digit}+\.{digit}*/[^.] {
   char *eptr;
-  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
   temp->type = ct_real;
   temp->real_num = strtod(yytext, &eptr);
   yylval.const_value = temp;

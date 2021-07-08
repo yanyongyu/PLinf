@@ -1,3 +1,8 @@
+#ifndef __PLINF_INTERMEDIATE
+#define __PLINF_INTERMEDIATE
+
+struct icode;
+
 // 操作类型
 typedef enum {
   op_nop,
@@ -7,6 +12,17 @@ typedef enum {
   op_procedure_declare,
   op_function_declare
 } OPERATION;
+
+// 类型类型
+typedef enum { tt_int, tt_real, tt_bool, tt_array } TYPE_TYPE;
+
+// 类型结构
+typedef struct type_value {
+  TYPE_TYPE type;
+  int array_start;
+  int array_end;
+  struct type_value *sub_value;
+} TYPE_VALUE;
 
 // 常量类型
 typedef enum { ct_int, ct_real, ct_bool, ct_type } CONST_TYPE;
@@ -20,17 +36,6 @@ typedef struct const_value {
     TYPE_VALUE *type_value;
   };
 } CONST_VALUE;
-
-// 类型类型
-typedef enum { tt_int, tt_real, tt_bool, tt_array } TYPE_TYPE;
-
-// 类型结构
-typedef struct type_value {
-  TYPE_TYPE type;
-  int array_start;
-  int array_end;
-  TYPE_VALUE *sub_value;
-} TYPE_VALUE;
 
 // 变量类型
 typedef enum { vt_type, vt_identifier } VAR_TYPE;
@@ -46,13 +51,13 @@ typedef struct var_value {
 
 // 变量链表
 typedef struct id_list {
-  ID_LIST *next;
+  struct id_list *next;
   char *name;
 } ID_LIST;
 
 // 参数链表
 typedef struct param_list {
-  PARAM_LIST *next;
+  struct param_list *next;
   char *name;
   VAR_VALUE *var_value;
 } PARAM_LIST;
@@ -60,14 +65,14 @@ typedef struct param_list {
 // 过程结构
 typedef struct procedure_value {
   PARAM_LIST *param_list;
-  ICODE icode_list;
+  struct icode *icode_list;
 } PROCEDURE_VALUE;
 
 // 函数结构
 typedef struct function_value {
   PARAM_LIST *param_list;
   VAR_VALUE *return_var;
-  ICODE icode_list;
+  struct icode *icode_list;
 } FUNCTION_VALUE;
 
 // 符号类型
@@ -94,8 +99,18 @@ typedef struct symbol {
 } SYMBOL;
 
 typedef struct icode {
-  ICODE *next;
+  struct icode *next;
   int index;
   OPERATION op;
   SYMBOL *symbol[3];
 } ICODE;
+
+ICODE *free_icode(ICODE *icode);
+void free_symbol(SYMBOL *symbol);
+void free_const(CONST_VALUE *const_value);
+void free_type(TYPE_VALUE *type_value);
+void free_var(VAR_VALUE *var_value);
+void free_procedure(PROCEDURE_VALUE *procedure_value);
+void free_function(FUNCTION_VALUE *function_value);
+
+#endif
