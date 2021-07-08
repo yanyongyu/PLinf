@@ -52,18 +52,18 @@ extern int yydebug;
     IDENTIFIER = 258,
     NUMBER = 259,
     REAL_NUMBER = 260,
-    CONST = 261,
-    TYPE = 262,
-    VAR = 263,
-    PROCEDURE = 264,
-    FUNCTION = 265,
-    INTEGER = 266,
-    REAL = 267,
-    BOOLEAN = 268,
-    ARRAY = 269,
-    OF = 270,
-    TRUE = 271,
-    FALSE = 272,
+    TRUE = 261,
+    FALSE = 262,
+    CONST = 263,
+    TYPE = 264,
+    VAR = 265,
+    PROCEDURE = 266,
+    FUNCTION = 267,
+    INTEGER = 268,
+    REAL = 269,
+    BOOLEAN = 270,
+    ARRAY = 271,
+    OF = 272,
     IF = 273,
     THEN = 274,
     ELSE = 275,
@@ -105,14 +105,13 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 14 "src/plinf.y"
+#line 15 "src/plinf.y"
 
   char *id;
-  long num;
-  double real_num;
   ICODE *icode;
+  CONST_VALUE *const_value;
 
-#line 116 "src/plinf.tab.h"
+#line 115 "src/plinf.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

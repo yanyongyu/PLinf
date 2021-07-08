@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "plinf.tab.h"
+#include "intermediate.h"
 %}
 
 %option noyywrap
@@ -19,13 +20,41 @@ letter [a-zA-Z]
 (?i:"procedure") { return PROCEDURE; }
 (?i:"function") { return FUNCTION; }
 
-(?i:"integer") { return INTEGER; }
-(?i:"real") { return REAL; }
-(?i:"boolean") { return BOOLEAN; }
-(?i:"array") { return ARRAY; }
+(?i:"integer") {
+  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  temp->type = tt_int;
+  return INTEGER;
+}
+(?i:"real") {
+  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  temp->type = tt_real;
+  return REAL;
+}
+(?i:"boolean") {
+  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  temp->type = tt_bool;
+  return BOOLEAN;
+}
+(?i:"array") {
+  TYPE_VALUE *temp = (TYPE_VALUE *)malloc(sizeof(TYPE_VALUE));
+  temp->type = tt_array;
+  return ARRAY;
+}
 (?i:"of") { return OF; }
-(?i:"true") { return TRUE; }
-(?i:"false") { return FALSE; }
+(?i:"true") {
+  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  temp->type = ct_bool;
+  temp->num = 1;
+  yylval.const_value = temp;
+  return TRUE;
+}
+(?i:"false") {
+  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  temp->type = ct_bool;
+  temp->num = 0;
+  yylval.const_value = temp;
+  return FALSE;
+}
 
 (?i:"if") { return IF; }
 (?i:"then") { return THEN; }
@@ -76,12 +105,18 @@ letter [a-zA-Z]
 "]" { return RBRACE; }
 
 {digit}+ 	{
-  yylval.num = atoi(yytext);
+  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  temp->type = ct_int;
+  temp->num = atoi(yytext);
+  yylval.const_value = temp;
   return NUMBER;
 }
 {digit}+\.{digit}*/[^.] {
   char *eptr;
-  yylval.real_num = strtod(yytext, &eptr);
+  CONST_VALUE *temp = (CONST_VALUE *)malloc(sizeof(CONST_VALUE));
+  temp->type = ct_real;
+  temp->real_num = strtod(yytext, &eptr);
+  yylval.const_value = temp;
   return REAL_NUMBER;
 }
 

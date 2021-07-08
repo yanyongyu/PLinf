@@ -1,5 +1,6 @@
 // 操作类型
 typedef enum {
+  op_nop,
   op_const_declare,
   op_type_declare,
   op_var_declare,
@@ -31,10 +32,23 @@ typedef struct type_value {
   TYPE_VALUE *sub_value;
 } TYPE_VALUE;
 
+// 变量类型
+typedef enum { vt_type, vt_identifier } VAR_TYPE;
+
 // 变量结构
 typedef struct var_value {
-  TYPE_VALUE *type;
+  VAR_TYPE type;
+  union {
+    TYPE_VALUE *detail;
+    char *identifier;
+  };
 } VAR_VALUE;
+
+// 变量链表
+typedef struct id_list {
+  ID_LIST *next;
+  char *name;
+} ID_LIST;
 
 // 参数链表
 typedef struct param_list {
@@ -58,6 +72,7 @@ typedef struct function_value {
 
 // 符号类型
 typedef enum {
+  st_identifier,
   st_const,
   st_type,
   st_var,
@@ -68,8 +83,8 @@ typedef enum {
 // 符号结构
 typedef struct symbol {
   SYMBOL_TYPE type;
-  char *name;
   union {
+    char *identifier;
     CONST_VALUE *const_value;
     TYPE_VALUE *type_value;
     VAR_VALUE *var_value;
