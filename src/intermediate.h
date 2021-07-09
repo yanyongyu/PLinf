@@ -1,7 +1,9 @@
 #ifndef __PLINF_INTERMEDIATE
 #define __PLINF_INTERMEDIATE
 
-struct icode;
+struct type;
+struct identifier;
+struct node;
 
 // 操作类型
 typedef enum {
@@ -10,19 +12,51 @@ typedef enum {
   op_type_declare,
   op_var_declare,
   op_procedure_declare,
-  op_function_declare
+  op_function_declare,
+  op_assign,
+  op_if_then,
+  op_if_then_else,
+  op_while_do,
+  op_continue,
+  op_exit,
+  op_call,
+  op_le,
+  op_leq,
+  op_ge,
+  op_geq,
+  op_eq,
+  op_neq,
+  op_plus,
+  op_minus,
+  op_times,
+  op_devide,
+  op_div,
+  op_mod,
+  op_odd,
+  op_and,
+  op_or,
+  op_not,
+  op_load_const,
+  op_load_identifier
 } OPERATION;
 
 // 类型类型
-typedef enum { tt_int, tt_real, tt_bool, tt_array } TYPE_TYPE;
+typedef enum { tt_int, tt_real, tt_bool, tt_array, tt_identifier } TYPE_TYPE;
 
-// 类型结构
-typedef struct type_value {
-  TYPE_TYPE type;
+typedef struct array_info {
   int array_start;
   int array_end;
-  struct type_value *sub_value;
-} TYPE_VALUE;
+  struct type *sub_type;
+} ARRAY_INFO;
+
+// 类型结构
+typedef struct type {
+  TYPE_TYPE type;
+  union {
+    ARRAY_INFO *array;
+    struct identifier *identifier;
+  };
+} TYPE;
 
 // 常量类型
 typedef enum { ct_int, ct_real, ct_bool, ct_type } CONST_TYPE;
@@ -33,84 +67,138 @@ typedef struct const_value {
   union {
     long num;
     double real_num;
-    TYPE_VALUE *type_value;
+    TYPE *type;
   };
-} CONST_VALUE;
+} CONST;
 
-// 变量类型
-typedef enum { vt_type, vt_identifier } VAR_TYPE;
+// 标识符类型
+typedef enum { it_identifier, it_temp } ID_TYPE;
 
-// 变量结构
-typedef struct var_value {
-  VAR_TYPE type;
-  union {
-    TYPE_VALUE *detail;
-    char *identifier;
-  };
-} VAR_VALUE;
+// 标识符结构
+typedef struct identifier {
+  ID_TYPE type;
+  char *name;
+} IDENTIFIER;
+
+// 变量引用
+typedef struct array_offset {
+  struct array_offset *next;
+  struct node *expression;
+} ARRAY_OFFSET;
+
+typedef struct identifier_ref {
+  IDENTIFIER *id;
+  ARRAY_OFFSET *offset;
+} IDENTIFIER_REF;
 
 // 变量链表
-typedef struct id_list {
-  struct id_list *next;
-  char *name;
-} ID_LIST;
+typedef struct var_list {
+  struct var_list *next;
+  IDENTIFIER *id;
+} VAR_LIST;
 
-// 参数链表
+// 参数声明链表
 typedef struct param_list {
   struct param_list *next;
-  char *name;
-  VAR_VALUE *var_value;
+  IDENTIFIER *id;
+  TYPE *type;
 } PARAM_LIST;
 
+// 参数链表
+typedef struct arg_list {
+  struct arg_list *next;
+  IDENTIFIER_REF *id_ref;
+} ARG_LIST;
+
 // 过程结构
-typedef struct procedure_value {
+typedef struct procedure {
   PARAM_LIST *param_list;
-  struct icode *icode_list;
-} PROCEDURE_VALUE;
+  struct node *node_list;
+} PROCEDURE;
 
 // 函数结构
-typedef struct function_value {
+typedef struct function {
   PARAM_LIST *param_list;
-  VAR_VALUE *return_var;
-  struct icode *icode_list;
-} FUNCTION_VALUE;
+  TYPE *return_type;
+  struct node *node_list;
+} FUNCTION;
 
-// 符号类型
-typedef enum {
-  st_identifier,
-  st_const,
-  st_type,
-  st_var,
-  st_procedure,
-  st_function
-} SYMBOL_TYPE;
+/****************************************************
+ *                                                  *
+ *                       NODES                      *
+ *                                                  *
+ ****************************************************/
 
-// 符号结构
-typedef struct symbol {
-  SYMBOL_TYPE type;
-  union {
-    char *identifier;
-    CONST_VALUE *const_value;
-    TYPE_VALUE *type_value;
-    VAR_VALUE *var_value;
-    PROCEDURE_VALUE *procedure_value;
-    FUNCTION_VALUE *function_value;
-  };
-} SYMBOL;
+typedef struct const_declare {
+  IDENTIFIER *id;
+  CONST *value;
+} CONST_DECLARE;
 
-typedef struct icode {
-  struct icode *next;
-  int index;
+typedef struct type_declare {
+  IDENTIFIER *id;
+  TYPE *type;
+} TYPE_DECLARE;
+
+typedef struct var_declare {
+  IDENTIFIER *id;
+  TYPE *type;
+} VAR_DECLARE;
+
+typedef struct procedure_declare {
+  IDENTIFIER *id;
+  PROCEDURE *procedure;
+} PROCEDURE_DECLARE;
+
+typedef struct function_declare {
+  IDENTIFIER *id;
+  FUNCTION *function;
+} FUNCTION_DECLARE;
+
+typedef struct assign {
+  IDENTIFIER_REF *id_ref;
+  struct node *expression;
+} ASSIGN;
+
+typedef struct binary_operate {
+  struct node *first;
+  struct node *second;
+} BINARY_OPERATE;
+
+typedef struct condition_jump {
+  struct node *condition;
+  struct node * true;
+  struct node * false;
+} CONDITION_JUMP;
+
+typedef struct function_call {
+  IDENTIFIER *id;
+  struct node *args;
+} FUNCTION_CALL;
+
+typedef struct node {
+  struct node *next;
   OPERATION op;
-  SYMBOL *symbol[3];
-} ICODE;
+  union {
+    CONST_DECLARE *const_declare;
+    TYPE_DECLARE *type_declare;
+    VAR_DECLARE *var_declare;
+    PROCEDURE_DECLARE *procedure_declare;
+    FUNCTION_DECLARE *function_declare;
+    ASSIGN *assign;
+    BINARY_OPERATE *binary_operate;
 
-ICODE *free_icode(ICODE *icode);
-void free_symbol(SYMBOL *symbol);
-void free_const(CONST_VALUE *const_value);
-void free_type(TYPE_VALUE *type_value);
-void free_var(VAR_VALUE *var_value);
-void free_procedure(PROCEDURE_VALUE *procedure_value);
-void free_function(FUNCTION_VALUE *function_value);
+    IDENTIFIER_REF *id_ref;
+    CONST *const_value;
+    CONDITION_JUMP *condition_jump;
+    FUNCTION_CALL *function_call;
+  };
+} NODE;
+
+NODE *free_node(NODE *node);
+void free_const_declare(CONST_DECLARE *);
+void free_type_declare(TYPE_DECLARE *);
+void free_var_declare(VAR_DECLARE *);
+void free_procedure_declare(PROCEDURE_DECLARE *);
+void free_function_declare(FUNCTION_DECLARE *);
 
 #endif

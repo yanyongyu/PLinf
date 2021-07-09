@@ -49,55 +49,60 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    IDENTIFIER = 258,
-    INTEGER = 259,
-    REAL = 260,
-    BOOLEAN = 261,
-    ARRAY = 262,
-    NUMBER = 263,
-    REAL_NUMBER = 264,
-    TRUE = 265,
-    FALSE = 266,
-    CONST = 267,
-    TYPE = 268,
-    VAR = 269,
-    PROCEDURE = 270,
-    FUNCTION = 271,
-    OF = 272,
-    IF = 273,
-    THEN = 274,
-    ELSE = 275,
-    WRITE = 276,
-    READ = 277,
+    IDENTIFIER_ = 258,
+    WRITE = 259,
+    READ = 260,
+    INTEGER = 261,
+    REAL = 262,
+    BOOLEAN = 263,
+    ARRAY = 264,
+    NUMBER = 265,
+    REAL_NUMBER = 266,
+    TRUE = 267,
+    FALSE = 268,
+    CONST_ = 269,
+    TYPE_ = 270,
+    VAR_ = 271,
+    PROCEDURE_ = 272,
+    FUNCTION_ = 273,
+    OF = 274,
+    IF = 275,
+    THEN = 276,
+    ELSE = 277,
     WHILE = 278,
     DO = 279,
-    EXIT = 280,
-    OR = 281,
-    AND = 282,
-    NOT = 283,
-    DIV = 284,
-    MOD = 285,
-    RELOP = 286,
-    PERIOD = 287,
-    PERIOD_PERIOD = 288,
-    COLON = 289,
-    SEMI = 290,
-    COMMA = 291,
-    LPAREN = 292,
-    RPAREN = 293,
-    LBRACE = 294,
-    RBRACE = 295,
-    CALL = 296,
-    ODD = 297,
-    BLOCK_BEGIN = 298,
-    BLOCK_END = 299,
-    ASSIGN = 300,
-    EQ = 301,
-    PLUS = 302,
-    MINUS = 303,
-    DIVIDE = 304,
-    TIMES = 305,
-    LOWER_THAN_ELSE = 306
+    CONTINUE = 280,
+    EXIT = 281,
+    OR = 282,
+    AND = 283,
+    NOT = 284,
+    DIV = 285,
+    MOD = 286,
+    LE = 287,
+    LEQ = 288,
+    GE = 289,
+    GEQ = 290,
+    EQ = 291,
+    NEQ = 292,
+    PLUS = 293,
+    MINUS = 294,
+    DIVIDE = 295,
+    TIMES = 296,
+    PERIOD = 297,
+    PERIOD_PERIOD = 298,
+    COLON = 299,
+    SEMI = 300,
+    COMMA = 301,
+    LPAREN = 302,
+    RPAREN = 303,
+    LBRACE = 304,
+    RBRACE = 305,
+    CALL = 306,
+    ODD = 307,
+    BLOCK_BEGIN = 308,
+    BLOCK_END = 309,
+    ASSIGN_ = 310,
+    LOWER_THAN_ELSE = 311
   };
 #endif
 
@@ -105,17 +110,19 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 20 "src/plinf.y"
+#line 18 "src/plinf.y"
 
-  char *id;
-  ID_LIST *id_list;
+  VAR_LIST *var_list;
   PARAM_LIST *param_list;
-  ICODE *icode;
-  VAR_VALUE *var_value;
-  TYPE_VALUE *type_value;
-  CONST_VALUE *const_value;
+  ARG_LIST *arg_list;
+  NODE *node;
+  TYPE *type;
+  ARRAY_OFFSET *offset;
+  CONST *const_value;
+  IDENTIFIER *id;
+  IDENTIFIER_REF *id_ref;
 
-#line 119 "src/plinf.tab.h"
+#line 126 "src/plinf.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

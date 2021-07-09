@@ -14,46 +14,46 @@ letter [a-zA-Z]
 
 %%
 
-(?i:"const") { return CONST; }
-(?i:"type") { return TYPE; }
-(?i:"var") { return VAR; }
-(?i:"procedure") { return PROCEDURE; }
-(?i:"function") { return FUNCTION; }
+(?i:"const") { return CONST_; }
+(?i:"type") { return TYPE_; }
+(?i:"var") { return VAR_; }
+(?i:"procedure") { return PROCEDURE_; }
+(?i:"function") { return FUNCTION_; }
 
 (?i:"integer") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
+  TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
   temp->type = tt_int;
-  yylval.type_value = temp;
+  yylval.type = temp;
   return INTEGER;
 }
 (?i:"real") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
+  TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
   temp->type = tt_real;
-  yylval.type_value = temp;
+  yylval.type = temp;
   return REAL;
 }
 (?i:"boolean") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
+  TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
   temp->type = tt_bool;
-  yylval.type_value = temp;
+  yylval.type = temp;
   return BOOLEAN;
 }
 (?i:"array") {
-  TYPE_VALUE *temp = (TYPE_VALUE *)calloc(1, sizeof(TYPE_VALUE));
+  TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
   temp->type = tt_array;
-  yylval.type_value = temp;
+  yylval.type = temp;
   return ARRAY;
 }
 (?i:"of") { return OF; }
 (?i:"true") {
-  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
+  CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_bool;
   temp->num = 1;
   yylval.const_value = temp;
   return TRUE;
 }
 (?i:"false") {
-  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
+  CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_bool;
   temp->num = 0;
   yylval.const_value = temp;
@@ -64,11 +64,24 @@ letter [a-zA-Z]
 (?i:"then") { return THEN; }
 (?i:"else") { return ELSE; }
 
-(?i:"write") { return WRITE; }
-(?i:"read") { return READ; }
+(?i:"write") {
+  IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
+  temp->type = id_identifier;
+  temp->name = strdup("write");
+  yylval.id = temp;
+  return WRITE;
+}
+(?i:"read") {
+  IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
+  temp->type = id_identifier;
+  temp->name = strdup("read");
+  yylval.id = temp;
+  return READ;
+}
 
 (?i:"while") { return WHILE; }
 (?i:"do") { return DO; }
+(?i:"continue") { return CONTINUE; }
 (?i:"exit") { return EXIT; }
 
 (?i:"or") { return OR; }
@@ -85,11 +98,11 @@ letter [a-zA-Z]
 (?i:"begin") { return BLOCK_BEGIN; }
 (?i:"end") { return BLOCK_END; }
 
-"<>" { return RELOP; }
-">=" { return RELOP; }
-"<=" { return RELOP; }
-">" { return RELOP; }
-"<" { return RELOP; }
+"<>" { return NEQ; }
+">=" { return GEQ; }
+"<=" { return LEQ; }
+">" { return GE; }
+"<" { return LE; }
 "=" { return EQ; }
 
 "+" { return PLUS; }
@@ -109,7 +122,7 @@ letter [a-zA-Z]
 "]" { return RBRACE; }
 
 {digit}+ 	{
-  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
+  CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_int;
   temp->num = atoi(yytext);
   yylval.const_value = temp;
@@ -117,16 +130,19 @@ letter [a-zA-Z]
 }
 {digit}+\.{digit}*/[^.] {
   char *eptr;
-  CONST_VALUE *temp = (CONST_VALUE *)calloc(1, sizeof(CONST_VALUE));
+  CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_real;
   temp->real_num = strtod(yytext, &eptr);
   yylval.const_value = temp;
   return REAL_NUMBER;
 }
 
-{letter}({letter}|{digit})*  {
-  yylval.id = strdup(yytext);
-  return IDENTIFIER;
+{letter}({letter}|{digit})* {
+  IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
+  temp->type = id_identifier;
+  temp->name = strdup(yytext);
+  yylval.id = temp;
+  return IDENTIFIER_;
 }
 
 

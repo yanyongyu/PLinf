@@ -73,19 +73,17 @@
 
 #include "intermediate.h"
 
-int icode_index = 0;
-ICODE *global_result;
+NODE *global_result;
 extern int yylineno;
 
 int yylex(void);
 void yyerror(const char *);
-SYMBOL *create_symbol(SYMBOL_TYPE);
-ICODE *create_icode(OPERATION);
-ICODE *concat_icode(ICODE *, ICODE *);
-ID_LIST *concat_id_list(ID_LIST *, ID_LIST *);
+NODE *create_node(OPERATION);
+NODE *concat_node(NODE *, NODE *);
+VAR_LIST *concat_var_list(VAR_LIST *, VAR_LIST *);
 PARAM_LIST *concat_param_list(PARAM_LIST *, PARAM_LIST *);
 
-#line 89 "src/plinf.tab.c"
+#line 87 "src/plinf.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -133,55 +131,60 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    IDENTIFIER = 258,
-    INTEGER = 259,
-    REAL = 260,
-    BOOLEAN = 261,
-    ARRAY = 262,
-    NUMBER = 263,
-    REAL_NUMBER = 264,
-    TRUE = 265,
-    FALSE = 266,
-    CONST = 267,
-    TYPE = 268,
-    VAR = 269,
-    PROCEDURE = 270,
-    FUNCTION = 271,
-    OF = 272,
-    IF = 273,
-    THEN = 274,
-    ELSE = 275,
-    WRITE = 276,
-    READ = 277,
+    IDENTIFIER_ = 258,
+    WRITE = 259,
+    READ = 260,
+    INTEGER = 261,
+    REAL = 262,
+    BOOLEAN = 263,
+    ARRAY = 264,
+    NUMBER = 265,
+    REAL_NUMBER = 266,
+    TRUE = 267,
+    FALSE = 268,
+    CONST_ = 269,
+    TYPE_ = 270,
+    VAR_ = 271,
+    PROCEDURE_ = 272,
+    FUNCTION_ = 273,
+    OF = 274,
+    IF = 275,
+    THEN = 276,
+    ELSE = 277,
     WHILE = 278,
     DO = 279,
-    EXIT = 280,
-    OR = 281,
-    AND = 282,
-    NOT = 283,
-    DIV = 284,
-    MOD = 285,
-    RELOP = 286,
-    PERIOD = 287,
-    PERIOD_PERIOD = 288,
-    COLON = 289,
-    SEMI = 290,
-    COMMA = 291,
-    LPAREN = 292,
-    RPAREN = 293,
-    LBRACE = 294,
-    RBRACE = 295,
-    CALL = 296,
-    ODD = 297,
-    BLOCK_BEGIN = 298,
-    BLOCK_END = 299,
-    ASSIGN = 300,
-    EQ = 301,
-    PLUS = 302,
-    MINUS = 303,
-    DIVIDE = 304,
-    TIMES = 305,
-    LOWER_THAN_ELSE = 306
+    CONTINUE = 280,
+    EXIT = 281,
+    OR = 282,
+    AND = 283,
+    NOT = 284,
+    DIV = 285,
+    MOD = 286,
+    LE = 287,
+    LEQ = 288,
+    GE = 289,
+    GEQ = 290,
+    EQ = 291,
+    NEQ = 292,
+    PLUS = 293,
+    MINUS = 294,
+    DIVIDE = 295,
+    TIMES = 296,
+    PERIOD = 297,
+    PERIOD_PERIOD = 298,
+    COLON = 299,
+    SEMI = 300,
+    COMMA = 301,
+    LPAREN = 302,
+    RPAREN = 303,
+    LBRACE = 304,
+    RBRACE = 305,
+    CALL = 306,
+    ODD = 307,
+    BLOCK_BEGIN = 308,
+    BLOCK_END = 309,
+    ASSIGN_ = 310,
+    LOWER_THAN_ELSE = 311
   };
 #endif
 
@@ -189,17 +192,19 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 20 "src/plinf.y"
+#line 18 "src/plinf.y"
 
-  char *id;
-  ID_LIST *id_list;
+  VAR_LIST *var_list;
   PARAM_LIST *param_list;
-  ICODE *icode;
-  VAR_VALUE *var_value;
-  TYPE_VALUE *type_value;
-  CONST_VALUE *const_value;
+  ARG_LIST *arg_list;
+  NODE *node;
+  TYPE *type;
+  ARRAY_OFFSET *offset;
+  CONST *const_value;
+  IDENTIFIER *id;
+  IDENTIFIER_REF *id_ref;
 
-#line 203 "src/plinf.tab.c"
+#line 208 "src/plinf.tab.c"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -535,19 +540,19 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  3
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   236
+#define YYLAST   239
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  52
+#define YYNTOKENS  57
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  29
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  99
+#define YYNRULES  104
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  200
+#define YYNSTATES  209
 
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   306
+#define YYMAXUTOK   311
 
 
 /* YYTRANSLATE(TOKEN-NUM) -- Symbol number corresponding to TOKEN-NUM
@@ -589,23 +594,25 @@ static const yytype_int8 yytranslate[] =
       15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
       25,    26,    27,    28,    29,    30,    31,    32,    33,    34,
       35,    36,    37,    38,    39,    40,    41,    42,    43,    44,
-      45,    46,    47,    48,    49,    50,    51
+      45,    46,    47,    48,    49,    50,    51,    52,    53,    54,
+      55,    56
 };
 
 #if YYDEBUG
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int16 yyrline[] =
 {
-       0,    71,    71,    76,    82,    87,    90,    93,    96,    99,
-     102,   105,   108,   111,   114,   117,   120,   123,   126,   129,
-     132,   137,   142,   145,   150,   160,   170,   180,   192,   197,
-     200,   205,   217,   220,   223,   226,   232,   240,   245,   263,
-     283,   288,   295,   301,   307,   313,   321,   324,   329,   341,
-     354,   367,   383,   389,   397,   398,   401,   402,   403,   404,
-     405,   406,   407,   408,   409,   410,   411,   414,   415,   418,
-     419,   422,   423,   426,   427,   430,   431,   432,   435,   436,
-     437,   438,   439,   440,   443,   444,   445,   446,   447,   448,
-     451,   452,   453,   454,   455,   456,   457,   458,   459,   460
+       0,    77,    77,    82,    88,    93,    96,    99,   102,   105,
+     108,   111,   114,   117,   120,   123,   126,   129,   132,   135,
+     138,   143,   148,   151,   156,   164,   172,   180,   190,   195,
+     198,   203,   213,   216,   219,   222,   228,   236,   241,   257,
+     275,   280,   287,   290,   293,   296,   304,   307,   312,   322,
+     333,   344,   358,   364,   372,   375,   380,   388,   396,   405,
+     408,   416,   419,   422,   429,   437,   445,   453,   458,   463,
+     470,   475,   483,   488,   495,   498,   503,   506,   514,   522,
+     530,   538,   546,   556,   564,   572,   580,   583,   590,   595,
+     603,   611,   619,   627,   635,   640,   645,   650,   655,   658,
+     665,   672,   680,   687,   692
 };
 #endif
 
@@ -614,20 +621,21 @@ static const yytype_int16 yyrline[] =
    First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
 static const char *const yytname[] =
 {
-  "$end", "error", "$undefined", "IDENTIFIER", "INTEGER", "REAL",
-  "BOOLEAN", "ARRAY", "NUMBER", "REAL_NUMBER", "TRUE", "FALSE", "CONST",
-  "TYPE", "VAR", "PROCEDURE", "FUNCTION", "OF", "IF", "THEN", "ELSE",
-  "WRITE", "READ", "WHILE", "DO", "EXIT", "OR", "AND", "NOT", "DIV", "MOD",
-  "RELOP", "PERIOD", "PERIOD_PERIOD", "COLON", "SEMI", "COMMA", "LPAREN",
-  "RPAREN", "LBRACE", "RBRACE", "CALL", "ODD", "BLOCK_BEGIN", "BLOCK_END",
-  "ASSIGN", "EQ", "PLUS", "MINUS", "DIVIDE", "TIMES", "LOWER_THAN_ELSE",
-  "$accept", "program", "before_program", "block", "declarepart",
-  "const_declare", "const_define", "const_definition", "type_declare",
-  "type_define", "type_definition", "type_expression", "var_declare",
-  "var_define", "identifier_list", "type", "procedure_declare",
-  "procedure_define", "param_define", "statements", "statement",
-  "identifier_refs", "identifier_ref", "indexs", "params", "expression",
-  "simple_expression", "term", "factor", YY_NULLPTR
+  "$end", "error", "$undefined", "IDENTIFIER_", "WRITE", "READ",
+  "INTEGER", "REAL", "BOOLEAN", "ARRAY", "NUMBER", "REAL_NUMBER", "TRUE",
+  "FALSE", "CONST_", "TYPE_", "VAR_", "PROCEDURE_", "FUNCTION_", "OF",
+  "IF", "THEN", "ELSE", "WHILE", "DO", "CONTINUE", "EXIT", "OR", "AND",
+  "NOT", "DIV", "MOD", "LE", "LEQ", "GE", "GEQ", "EQ", "NEQ", "PLUS",
+  "MINUS", "DIVIDE", "TIMES", "PERIOD", "PERIOD_PERIOD", "COLON", "SEMI",
+  "COMMA", "LPAREN", "RPAREN", "LBRACE", "RBRACE", "CALL", "ODD",
+  "BLOCK_BEGIN", "BLOCK_END", "ASSIGN_", "LOWER_THAN_ELSE", "$accept",
+  "program", "before_program", "block", "declarepart", "const_declare",
+  "const_define", "const_definition", "type_declare", "type_define",
+  "type_definition", "type_expression", "var_declare", "var_define",
+  "identifier_list", "type", "procedure_declare", "procedure_define",
+  "param_define", "statements", "statement", "identifier_refs",
+  "identifier_ref", "indexs", "args", "expression", "simple_expression",
+  "term", "factor", YY_NULLPTR
 };
 #endif
 
@@ -641,11 +649,11 @@ static const yytype_int16 yytoknum[] =
      275,   276,   277,   278,   279,   280,   281,   282,   283,   284,
      285,   286,   287,   288,   289,   290,   291,   292,   293,   294,
      295,   296,   297,   298,   299,   300,   301,   302,   303,   304,
-     305,   306
+     305,   306,   307,   308,   309,   310,   311
 };
 # endif
 
-#define YYPACT_NINF (-177)
+#define YYPACT_NINF (-171)
 
 #define yypact_value_is_default(Yyn) \
   ((Yyn) == YYPACT_NINF)
@@ -659,26 +667,27 @@ static const yytype_int16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int16 yypact[] =
 {
-    -177,    13,   148,  -177,    25,    45,    49,    54,    58,    12,
-      27,    94,   137,    23,    23,  -177,    30,    48,  -177,    34,
-      69,  -177,  -177,    70,    59,   120,    41,  -177,  -177,   137,
-      23,    23,    23,    23,    23,  -177,   169,    25,   177,    45,
-      49,   182,    81,   148,   110,   182,   110,    76,    23,    23,
-      23,    23,  -177,  -177,  -177,  -177,  -177,  -177,  -177,  -177,
-      83,  -177,  -177,   134,  -177,  -177,  -177,  -177,  -177,  -177,
-      88,    98,   153,    92,   154,    96,    26,   108,   112,    26,
-    -177,   162,  -177,  -177,   121,   124,    23,   165,   182,  -177,
-     182,   195,   166,   148,   168,    26,   164,  -177,  -177,  -177,
-    -177,   130,    26,   197,   167,   130,   130,  -177,   186,   128,
-     -18,  -177,    26,   203,   183,   171,    93,  -177,    26,   -23,
-    -177,  -177,   175,   148,   176,   182,   170,    26,  -177,   174,
-     178,    26,   -18,   -18,   103,   130,    26,    26,   130,   130,
-     130,   130,   130,   130,   130,   157,  -177,     5,  -177,   103,
-      26,  -177,  -177,   205,   199,   182,   179,  -177,   184,  -177,
-     180,  -177,    26,    24,   198,   -18,    38,    38,   -18,   -18,
-    -177,  -177,  -177,  -177,  -177,    26,  -177,  -177,  -177,  -177,
-     158,   181,   177,  -177,  -177,   148,  -177,   161,  -177,   103,
-    -177,  -177,   200,  -177,   187,  -177,  -177,   177,  -177,  -177
+    -171,    22,   157,  -171,    34,    38,    45,    61,    65,    18,
+      20,   183,    78,   105,   105,  -171,    49,    36,  -171,    53,
+      56,  -171,  -171,    60,    21,    57,   -31,  -171,  -171,    78,
+     105,   105,   105,   105,   105,  -171,   192,    34,   200,    38,
+      45,    32,    95,   157,   107,    32,   107,     5,   105,   105,
+     105,   105,  -171,  -171,  -171,  -171,  -171,  -171,  -171,  -171,
+      66,  -171,  -171,    98,  -171,  -171,  -171,  -171,  -171,  -171,
+      87,    84,   110,    90,   116,    89,    92,   104,   108,   108,
+    -171,  -171,   142,  -171,  -171,   103,    99,   105,   147,    32,
+    -171,    32,   160,   123,   157,   133,   108,   129,   108,   187,
+    -171,  -171,  -171,  -171,   114,   114,   114,   108,   188,   170,
+    -171,   194,   149,   139,  -171,   195,   171,    46,  -171,   108,
+     -39,  -171,  -171,   176,   157,   177,    32,   173,   108,   164,
+    -171,     9,  -171,  -171,   139,   139,   178,   174,   108,    83,
+     114,   108,   108,   108,   108,   108,   108,   114,   114,   114,
+     114,   114,   114,   114,    83,   108,  -171,  -171,   214,   206,
+      32,   182,  -171,   184,  -171,   180,   108,  -171,  -171,  -171,
+    -171,   108,   102,   209,   139,    52,    52,    52,    52,    52,
+      52,   139,   139,  -171,  -171,  -171,  -171,  -171,  -171,   165,
+     185,   200,  -171,  -171,   157,  -171,  -171,   168,  -171,    83,
+    -171,   213,  -171,   189,  -171,  -171,   200,  -171,  -171
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -690,30 +699,31 @@ static const yytype_int8 yydefact[] =
        0,    16,    17,    18,    19,    47,     0,     0,    23,     0,
        0,    30,    41,     0,     0,     0,     0,     2,    55,    10,
       12,    11,    14,    13,    15,    46,     0,    21,     0,    28,
-      37,     0,     0,    20,     0,     0,     0,    66,     6,     7,
+      37,     0,     0,    20,     0,     0,     0,    67,     6,     7,
        8,     9,    24,    25,    26,    27,    22,    32,    33,    34,
        0,    31,    29,     0,    45,    42,    43,    44,    39,    40,
-       0,     0,     0,     0,     0,    69,     0,     0,     0,     0,
-      61,     0,    55,     4,     0,     0,     5,     0,     0,    48,
-       0,     0,     0,    20,     0,     0,    70,    91,    92,    98,
-      99,     0,     0,     0,     0,     0,     0,    90,     0,    75,
-      83,    89,     0,     0,     0,    62,    66,    54,     0,     0,
-      38,    53,     0,    20,     0,     0,     0,     0,    94,     0,
-      95,     0,    81,    82,    66,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,    74,     0,    68,    66,
-       0,    59,    56,     0,     0,     0,     0,    50,     0,    72,
-       0,    93,     0,     0,    57,    80,    76,    77,    78,    79,
-      88,    86,    87,    85,    84,     0,    64,    65,    67,    60,
-       0,     0,     0,    52,    49,    20,    71,     0,    97,    66,
-      73,    63,     0,    35,     0,    96,    58,     0,    51,    36
+       0,     0,     0,     0,     0,    70,     0,     0,     0,     0,
+      61,    62,     0,    55,     4,     0,     0,     5,     0,     0,
+      48,     0,     0,     0,    20,     0,     0,    71,     0,     0,
+      96,    97,   103,   104,     0,     0,     0,     0,     0,     0,
+      95,     0,    76,    88,    94,     0,    63,    67,    54,     0,
+       0,    38,    53,     0,    20,     0,     0,     0,     0,     0,
+      75,     0,    69,    99,    86,    87,     0,   100,     0,    67,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+       0,     0,     0,     0,    67,     0,    59,    56,     0,     0,
+       0,     0,    50,     0,    73,     0,     0,    65,    66,    68,
+      98,     0,     0,    57,    85,    77,    78,    79,    80,    81,
+      82,    83,    84,    93,    91,    92,    90,    89,    60,     0,
+       0,     0,    52,    49,    20,    72,    74,     0,   102,    67,
+      64,     0,    35,     0,   101,    58,     0,    51,    36
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int16 yypgoto[] =
 {
-    -177,  -177,  -177,   -42,  -177,  -177,  -177,   188,   212,  -177,
-     185,  -176,     4,  -177,   189,   -43,   118,    -9,   190,   144,
-    -131,  -177,   -47,  -177,   -97,   -72,  -117,   -79,   -52
+    -171,  -171,  -171,   -41,  -171,  -171,  -171,   191,   222,  -171,
+     197,  -170,     3,  -171,   198,   -44,   101,    -7,   193,   154,
+    -136,  -171,   -47,  -171,  -138,   -73,    51,   -86,   -75
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
@@ -721,7 +731,7 @@ static const yytype_int16 yydefgoto[] =
 {
       -1,     1,     2,     9,    10,    11,    17,    18,    12,    20,
       21,    61,    13,    23,    24,    68,    14,    15,    72,    47,
-      84,   147,   107,    96,   145,   146,   109,   110,   111
+      85,   131,   110,    97,   129,   130,   112,   113,   114
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -729,99 +739,101 @@ static const yytype_int16 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-      85,    70,    73,   164,   108,    35,   193,   114,    75,   140,
-     153,   141,   142,     3,   163,    30,    32,   154,   179,   166,
-     167,   199,    35,   126,    35,    35,   132,   133,    16,    75,
-     129,   143,   144,    48,    97,    98,    99,   100,     7,     8,
-      35,    35,    35,   177,    27,   120,   152,   121,    19,   128,
-     135,   124,    22,   180,   101,   160,   165,    25,   196,   168,
-     169,    26,   188,   102,   135,   187,   148,   103,   104,    85,
-      28,   138,   139,   105,   106,    45,    36,    35,    46,    75,
-      38,   156,   158,    37,    69,   138,   139,    85,   170,   171,
-     172,   173,   174,    41,    76,    42,    75,    77,    78,    79,
-     178,    80,    85,   190,    39,    40,    75,     5,     6,     7,
-       8,    76,   183,    71,    77,    78,    79,    81,    80,    82,
-      83,    76,    87,    89,    77,    78,    79,    93,    80,    31,
-      33,    34,    90,    75,    81,    95,    82,   151,    97,    98,
-      99,   100,    85,   194,    81,   112,    82,    49,    50,   113,
-      51,     6,     7,     8,   135,    43,   117,    44,   101,   136,
-       4,     5,     6,     7,     8,   115,    86,   102,    88,   118,
-      42,   103,   104,   119,   137,   138,   139,    52,    53,    54,
-      55,    57,    58,    59,    60,    64,    65,    66,    67,    91,
-      91,    92,    94,   175,   175,   176,   191,   175,   122,   195,
-     130,   123,   125,   127,   131,   134,    75,   149,   150,   155,
-     159,   157,   161,   181,   184,   162,   182,   197,   189,   185,
-     186,   192,   198,    29,    62,    56,   116,     0,     0,    63,
-       0,     0,     0,     0,     0,     0,    74
+      86,    73,    70,   173,   158,   111,   115,    35,    75,    76,
+      77,   159,    75,    45,    30,    32,    46,   189,   188,   134,
+     135,   202,     3,   127,    35,    78,    35,    35,    79,   133,
+      80,    81,    48,   197,   136,    64,   208,    16,    65,    66,
+      67,    19,    35,    35,    35,   121,   157,   122,    22,    75,
+      76,    77,   132,   125,   174,   165,    82,   168,    83,    84,
+      27,   181,   182,   205,    25,    41,    78,    42,    26,    79,
+      86,    80,    81,    28,   183,   184,   185,   186,   187,   140,
+      35,    37,   163,   161,   169,    36,    75,    76,    77,    38,
+     147,   148,    86,   196,     6,     7,     8,    82,    69,    83,
+     156,    39,    43,    78,    44,    40,    79,    86,    80,    81,
+      71,    75,    31,    33,    34,    88,   192,    75,   100,   101,
+     102,   103,     7,     8,   100,   101,   102,   103,    91,   140,
+      49,    50,    90,    51,    82,    94,    83,   104,    96,    98,
+     147,   148,    89,   104,    42,   116,   105,   106,   118,    87,
+     198,    99,    86,   203,   119,   107,    92,   120,    93,   108,
+     109,   107,    92,   123,    95,   108,   109,   149,   124,   150,
+     151,     4,     5,     6,     7,     8,   140,   126,   128,   152,
+     153,   141,   142,   143,   144,   145,   146,   147,   148,   172,
+      75,   137,   175,   176,   177,   178,   179,   180,     5,     6,
+       7,     8,    52,    53,    54,    55,    57,    58,    59,    60,
+     166,   166,   167,   200,   166,   139,   204,   138,   155,   154,
+     160,   171,   162,   164,   190,   191,   170,   193,    56,   194,
+     195,   199,   206,    29,   207,   201,    62,   117,    63,    74
 };
 
-static const yytype_int16 yycheck[] =
+static const yytype_uint8 yycheck[] =
 {
-      47,    43,    45,   134,    76,    14,   182,    79,     3,    27,
-      33,    29,    30,     0,   131,    11,    12,    40,   149,   136,
-     137,   197,    31,    95,    33,    34,   105,   106,     3,     3,
-     102,    49,    50,    29,     8,     9,    10,    11,    15,    16,
-      49,    50,    51,    38,    32,    88,   118,    90,     3,   101,
-      26,    93,     3,   150,    28,   127,   135,     3,   189,   138,
-     139,     3,    38,    37,    26,   162,   113,    41,    42,   116,
-      43,    47,    48,    47,    48,    34,    46,    86,    37,     3,
-      46,   123,   125,    35,     3,    47,    48,   134,   140,   141,
-     142,   143,   144,    34,    18,    36,     3,    21,    22,    23,
-     147,    25,   149,   175,    35,    35,     3,    13,    14,    15,
-      16,    18,   155,     3,    21,    22,    23,    41,    25,    43,
-      44,    18,    39,    35,    21,    22,    23,    35,    25,    11,
-      12,    13,    34,     3,    41,    39,    43,    44,     8,     9,
-      10,    11,   189,   185,    41,    37,    43,    29,    30,    37,
-      32,    14,    15,    16,    26,    35,    35,    37,    28,    31,
-      12,    13,    14,    15,    16,     3,    48,    37,    34,    45,
-      36,    41,    42,     8,    46,    47,    48,     8,     9,    10,
-      11,     4,     5,     6,     7,     3,     4,     5,     6,    36,
-      36,    38,    38,    36,    36,    38,    38,    36,     3,    38,
-       3,    35,    34,    39,    37,    19,     3,    24,    37,    34,
-      40,    35,    38,     8,    35,    37,    17,    17,    20,    35,
-      40,    40,    35,    11,    39,    37,    82,    -1,    -1,    40,
-      -1,    -1,    -1,    -1,    -1,    -1,    46
+      47,    45,    43,   139,    43,    78,    79,    14,     3,     4,
+       5,    50,     3,    44,    11,    12,    47,   155,   154,   105,
+     106,   191,     0,    96,    31,    20,    33,    34,    23,   104,
+      25,    26,    29,   171,   107,     3,   206,     3,     6,     7,
+       8,     3,    49,    50,    51,    89,   119,    91,     3,     3,
+       4,     5,    99,    94,   140,   128,    51,    48,    53,    54,
+      42,   147,   148,   199,     3,    44,    20,    46,     3,    23,
+     117,    25,    26,    53,   149,   150,   151,   152,   153,    27,
+      87,    45,   126,   124,   131,    36,     3,     4,     5,    36,
+      38,    39,   139,   166,    16,    17,    18,    51,     3,    53,
+      54,    45,    45,    20,    47,    45,    23,   154,    25,    26,
+       3,     3,    11,    12,    13,    49,   160,     3,    10,    11,
+      12,    13,    17,    18,    10,    11,    12,    13,    44,    27,
+      29,    30,    45,    32,    51,    45,    53,    29,    49,    47,
+      38,    39,    44,    29,    46,     3,    38,    39,    45,    48,
+      48,    47,   199,   194,    55,    47,    46,    10,    48,    51,
+      52,    47,    46,     3,    48,    51,    52,    28,    45,    30,
+      31,    14,    15,    16,    17,    18,    27,    44,    49,    40,
+      41,    32,    33,    34,    35,    36,    37,    38,    39,   138,
+       3,     3,   141,   142,   143,   144,   145,   146,    15,    16,
+      17,    18,    10,    11,    12,    13,     6,     7,     8,     9,
+      46,    46,    48,    48,    46,    21,    48,    47,    47,    24,
+      44,    47,    45,    50,    10,    19,    48,    45,    37,    45,
+      50,    22,    19,    11,    45,    50,    39,    83,    40,    46
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_int8 yystos[] =
 {
-       0,    53,    54,     0,    12,    13,    14,    15,    16,    55,
-      56,    57,    60,    64,    68,    69,     3,    58,    59,     3,
-      61,    62,     3,    65,    66,     3,     3,    32,    43,    60,
-      64,    68,    64,    68,    68,    69,    46,    35,    46,    35,
-      35,    34,    36,    35,    37,    34,    37,    71,    64,    68,
-      68,    68,     8,     9,    10,    11,    59,     4,     5,     6,
-       7,    63,    62,    66,     3,     4,     5,     6,    67,     3,
-      55,     3,    70,    67,    70,     3,    18,    21,    22,    23,
-      25,    41,    43,    44,    72,    74,    68,    39,    34,    35,
-      34,    36,    38,    35,    38,    39,    75,     8,     9,    10,
-      11,    28,    37,    41,    42,    47,    48,    74,    77,    78,
-      79,    80,    37,    37,    77,     3,    71,    35,    45,     8,
-      67,    67,     3,    35,    55,    34,    77,    39,    80,    77,
-       3,    37,    79,    79,    19,    26,    31,    46,    47,    48,
-      27,    29,    30,    49,    50,    76,    77,    73,    74,    24,
-      37,    44,    77,    33,    40,    34,    55,    35,    67,    40,
-      77,    38,    37,    78,    72,    79,    78,    78,    79,    79,
-      80,    80,    80,    80,    80,    36,    38,    38,    74,    72,
-      76,     8,    17,    67,    35,    35,    40,    76,    38,    20,
-      77,    38,    40,    63,    55,    38,    72,    17,    35,    63
+       0,    58,    59,     0,    14,    15,    16,    17,    18,    60,
+      61,    62,    65,    69,    73,    74,     3,    63,    64,     3,
+      66,    67,     3,    70,    71,     3,     3,    42,    53,    65,
+      69,    73,    69,    73,    73,    74,    36,    45,    36,    45,
+      45,    44,    46,    45,    47,    44,    47,    76,    69,    73,
+      73,    73,    10,    11,    12,    13,    64,     6,     7,     8,
+       9,    68,    67,    71,     3,     6,     7,     8,    72,     3,
+      60,     3,    75,    72,    75,     3,     4,     5,    20,    23,
+      25,    26,    51,    53,    54,    77,    79,    73,    49,    44,
+      45,    44,    46,    48,    45,    48,    49,    80,    47,    47,
+      10,    11,    12,    13,    29,    38,    39,    47,    51,    52,
+      79,    82,    83,    84,    85,    82,     3,    76,    45,    55,
+      10,    72,    72,     3,    45,    60,    44,    82,    49,    81,
+      82,    78,    79,    85,    84,    84,    82,     3,    47,    21,
+      27,    32,    33,    34,    35,    36,    37,    38,    39,    28,
+      30,    31,    40,    41,    24,    47,    54,    82,    43,    50,
+      44,    60,    45,    72,    50,    82,    46,    48,    48,    79,
+      48,    47,    83,    77,    84,    83,    83,    83,    83,    83,
+      83,    84,    84,    85,    85,    85,    85,    85,    77,    81,
+      10,    19,    72,    45,    45,    50,    82,    81,    48,    22,
+      48,    50,    68,    60,    48,    77,    19,    45,    68
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_int8 yyr1[] =
 {
-       0,    52,    53,    54,    55,    56,    56,    56,    56,    56,
-      56,    56,    56,    56,    56,    56,    56,    56,    56,    56,
-      56,    57,    58,    58,    59,    59,    59,    59,    60,    61,
-      61,    62,    63,    63,    63,    63,    63,    64,    65,    65,
-      66,    66,    67,    67,    67,    67,    68,    68,    69,    69,
-      69,    69,    70,    70,    71,    71,    72,    72,    72,    72,
-      72,    72,    72,    72,    72,    72,    72,    73,    73,    74,
-      74,    75,    75,    76,    76,    77,    77,    77,    78,    78,
-      78,    78,    78,    78,    79,    79,    79,    79,    79,    79,
-      80,    80,    80,    80,    80,    80,    80,    80,    80,    80
+       0,    57,    58,    59,    60,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    62,    63,    63,    64,    64,    64,    64,    65,    66,
+      66,    67,    68,    68,    68,    68,    68,    69,    70,    70,
+      71,    71,    72,    72,    72,    72,    73,    73,    74,    74,
+      74,    74,    75,    75,    76,    76,    77,    77,    77,    77,
+      77,    77,    77,    77,    77,    77,    77,    77,    78,    78,
+      79,    79,    80,    80,    81,    81,    82,    82,    82,    82,
+      82,    82,    82,    83,    83,    83,    83,    83,    83,    84,
+      84,    84,    84,    84,    84,    85,    85,    85,    85,    85,
+      85,    85,    85,    85,    85
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -833,10 +845,11 @@ static const yytype_int8 yyr2[] =
        1,     3,     1,     1,     1,     6,     8,     3,     5,     3,
        3,     1,     1,     1,     1,     1,     2,     1,     5,     8,
        7,    10,     5,     3,     3,     0,     3,     4,     6,     3,
-       4,     1,     2,     5,     4,     4,     0,     2,     1,     1,
-       2,     4,     3,     3,     1,     1,     3,     3,     3,     3,
-       3,     2,     2,     1,     3,     3,     3,     3,     3,     1,
-       1,     1,     1,     3,     2,     2,     5,     4,     1,     1
+       4,     1,     1,     2,     5,     4,     4,     0,     2,     1,
+       1,     2,     4,     3,     3,     1,     1,     3,     3,     3,
+       3,     3,     3,     3,     3,     3,     2,     2,     1,     3,
+       3,     3,     3,     3,     1,     1,     1,     1,     3,     2,
+       2,     5,     4,     1,     1
 };
 
 
@@ -1627,557 +1640,1088 @@ yyreduce:
   switch (yyn)
     {
   case 2:
-#line 71 "src/plinf.y"
+#line 77 "src/plinf.y"
                                      {
-      global_result = (yyvsp[-1].icode);
+      global_result = (yyvsp[-1].node);
     }
-#line 1635 "src/plinf.tab.c"
+#line 1648 "src/plinf.tab.c"
     break;
 
   case 3:
-#line 76 "src/plinf.y"
+#line 82 "src/plinf.y"
                 {
-      // clear icode index and begin a new analysis
-      icode_index = 0;
+      // clear result
+      global_result = (NODE *)NULL;
     }
-#line 1644 "src/plinf.tab.c"
+#line 1657 "src/plinf.tab.c"
     break;
 
   case 4:
-#line 82 "src/plinf.y"
+#line 88 "src/plinf.y"
                                                     {
-      (yyval.icode) = (yyvsp[-3].icode);
+      (yyval.node) = (yyvsp[-3].node);
     }
-#line 1652 "src/plinf.tab.c"
+#line 1665 "src/plinf.tab.c"
     break;
 
   case 5:
-#line 87 "src/plinf.y"
+#line 93 "src/plinf.y"
                                                                       {
-      (yyval.icode) = concat_icode((yyvsp[-3].icode), concat_icode((yyvsp[-2].icode), concat_icode((yyvsp[-1].icode), (yyvsp[0].icode))));
+      (yyval.node) = concat_node((yyvsp[-3].node), concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node))));
     }
-#line 1660 "src/plinf.tab.c"
+#line 1673 "src/plinf.tab.c"
     break;
 
   case 6:
-#line 90 "src/plinf.y"
+#line 96 "src/plinf.y"
                                            {
-      (yyval.icode) = concat_icode((yyvsp[-2].icode), concat_icode((yyvsp[-1].icode), (yyvsp[0].icode)));
+      (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1668 "src/plinf.tab.c"
+#line 1681 "src/plinf.tab.c"
     break;
 
   case 7:
-#line 93 "src/plinf.y"
+#line 99 "src/plinf.y"
                                                  {
-      (yyval.icode) = concat_icode((yyvsp[-2].icode), concat_icode((yyvsp[-1].icode), (yyvsp[0].icode)));
+      (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1676 "src/plinf.tab.c"
+#line 1689 "src/plinf.tab.c"
     break;
 
   case 8:
-#line 96 "src/plinf.y"
+#line 102 "src/plinf.y"
                                                 {
-      (yyval.icode) = concat_icode((yyvsp[-2].icode), concat_icode((yyvsp[-1].icode), (yyvsp[0].icode)));
+      (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1684 "src/plinf.tab.c"
+#line 1697 "src/plinf.tab.c"
     break;
 
   case 9:
-#line 99 "src/plinf.y"
+#line 105 "src/plinf.y"
                                                {
-      (yyval.icode) = concat_icode((yyvsp[-2].icode), concat_icode((yyvsp[-1].icode), (yyvsp[0].icode)));
+      (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1692 "src/plinf.tab.c"
+#line 1705 "src/plinf.tab.c"
     break;
 
   case 10:
-#line 102 "src/plinf.y"
+#line 108 "src/plinf.y"
                                {
-      (yyval.icode) = concat_icode((yyvsp[-1].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1700 "src/plinf.tab.c"
+#line 1713 "src/plinf.tab.c"
     break;
 
   case 11:
-#line 105 "src/plinf.y"
+#line 111 "src/plinf.y"
                                     {
-      (yyval.icode) = concat_icode((yyvsp[-1].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1708 "src/plinf.tab.c"
+#line 1721 "src/plinf.tab.c"
     break;
 
   case 12:
-#line 108 "src/plinf.y"
+#line 114 "src/plinf.y"
                               {
-      (yyval.icode) = concat_icode((yyvsp[-1].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1716 "src/plinf.tab.c"
+#line 1729 "src/plinf.tab.c"
     break;
 
   case 13:
-#line 111 "src/plinf.y"
+#line 117 "src/plinf.y"
                                    {
-      (yyval.icode) = concat_icode((yyvsp[-1].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1724 "src/plinf.tab.c"
+#line 1737 "src/plinf.tab.c"
     break;
 
   case 14:
-#line 114 "src/plinf.y"
+#line 120 "src/plinf.y"
                              {
-      (yyval.icode) = concat_icode((yyvsp[-1].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1732 "src/plinf.tab.c"
+#line 1745 "src/plinf.tab.c"
     break;
 
   case 15:
-#line 117 "src/plinf.y"
+#line 123 "src/plinf.y"
                                   {
-      (yyval.icode) = concat_icode((yyvsp[-1].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1740 "src/plinf.tab.c"
+#line 1753 "src/plinf.tab.c"
     break;
 
   case 16:
-#line 120 "src/plinf.y"
+#line 126 "src/plinf.y"
                   {
-      (yyval.icode) = (yyvsp[0].icode);
+      (yyval.node) = (yyvsp[0].node);
     }
-#line 1748 "src/plinf.tab.c"
+#line 1761 "src/plinf.tab.c"
     break;
 
   case 17:
-#line 123 "src/plinf.y"
+#line 129 "src/plinf.y"
                  {
-      (yyval.icode) = (yyvsp[0].icode);
+      (yyval.node) = (yyvsp[0].node);
     }
-#line 1756 "src/plinf.tab.c"
+#line 1769 "src/plinf.tab.c"
     break;
 
   case 18:
-#line 126 "src/plinf.y"
+#line 132 "src/plinf.y"
                 {
-      (yyval.icode) = (yyvsp[0].icode);
+      (yyval.node) = (yyvsp[0].node);
     }
-#line 1764 "src/plinf.tab.c"
+#line 1777 "src/plinf.tab.c"
     break;
 
   case 19:
-#line 129 "src/plinf.y"
+#line 135 "src/plinf.y"
                       {
-      (yyval.icode) = (yyvsp[0].icode);
+      (yyval.node) = (yyvsp[0].node);
     }
-#line 1772 "src/plinf.tab.c"
+#line 1785 "src/plinf.tab.c"
     break;
 
   case 20:
-#line 132 "src/plinf.y"
+#line 138 "src/plinf.y"
     {
-      (yyval.icode) = create_icode(op_nop);
+      (yyval.node) = create_node(op_nop);
     }
-#line 1780 "src/plinf.tab.c"
+#line 1793 "src/plinf.tab.c"
     break;
 
   case 21:
-#line 137 "src/plinf.y"
-                                       {
-      (yyval.icode) = (yyvsp[-1].icode);
+#line 143 "src/plinf.y"
+                                        {
+      (yyval.node) = (yyvsp[-1].node);
     }
-#line 1788 "src/plinf.tab.c"
+#line 1801 "src/plinf.tab.c"
     break;
 
   case 22:
-#line 142 "src/plinf.y"
+#line 148 "src/plinf.y"
                                                  {
-      (yyval.icode) = concat_icode((yyvsp[-2].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[0].node));
     }
-#line 1796 "src/plinf.tab.c"
+#line 1809 "src/plinf.tab.c"
     break;
 
   case 23:
-#line 145 "src/plinf.y"
+#line 151 "src/plinf.y"
                      {
-      (yyval.icode) = (yyvsp[0].icode);
+      (yyval.node) = (yyvsp[0].node);
     }
-#line 1804 "src/plinf.tab.c"
+#line 1817 "src/plinf.tab.c"
     break;
 
   case 24:
-#line 150 "src/plinf.y"
-                                       {
-      ICODE *temp = create_icode(op_const_declare);
-      SYMBOL *id = create_symbol(st_identifier);
-      temp->symbol[2] = id;
-      id->identifier = (yyvsp[-2].id);
-      SYMBOL *number = create_symbol(st_const);
-      temp->symbol[0] = number;
-      number->const_value = (yyvsp[0].const_value);
-      (yyval.icode) = temp;
+#line 156 "src/plinf.y"
+                                        {
+      NODE *temp = create_node(op_const_declare);
+      CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
+      declare->id = (yyvsp[-2].id);
+      declare->value = (yyvsp[0].const_value);
+      temp->const_declare = declare;
+      (yyval.node) = temp;
     }
-#line 1819 "src/plinf.tab.c"
+#line 1830 "src/plinf.tab.c"
     break;
 
   case 25:
-#line 160 "src/plinf.y"
-                              {
-      ICODE *temp = create_icode(op_const_declare);
-      SYMBOL *number = create_symbol(st_const);
-      temp->symbol[0] = number;
-      number->const_value = (yyvsp[0].const_value);
-      SYMBOL *id = create_symbol(st_identifier);
-      temp->symbol[2] = id;
-      id->identifier = (yyvsp[-2].id);
-      (yyval.icode) = temp;
+#line 164 "src/plinf.y"
+                               {
+      NODE *temp = create_node(op_const_declare);
+      CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
+      declare->id = (yyvsp[-2].id);
+      declare->value = (yyvsp[0].const_value);
+      temp->const_declare = declare;
+      (yyval.node) = temp;
     }
-#line 1834 "src/plinf.tab.c"
+#line 1843 "src/plinf.tab.c"
     break;
 
   case 26:
-#line 170 "src/plinf.y"
-                       {
-      ICODE *temp = create_icode(op_const_declare);
-      SYMBOL *number = create_symbol(st_const);
-      temp->symbol[0] = number;
-      number->const_value = (yyvsp[0].const_value);
-      SYMBOL *id = create_symbol(st_identifier);
-      temp->symbol[2] = id;
-      id->identifier = (yyvsp[-2].id);
-      (yyval.icode) = temp;
+#line 172 "src/plinf.y"
+                        {
+      NODE *temp = create_node(op_const_declare);
+      CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
+      declare->id = (yyvsp[-2].id);
+      declare->value = (yyvsp[0].const_value);
+      temp->const_declare = declare;
+      (yyval.node) = temp;
     }
-#line 1849 "src/plinf.tab.c"
+#line 1856 "src/plinf.tab.c"
     break;
 
   case 27:
 #line 180 "src/plinf.y"
-                        {
-      ICODE *temp = create_icode(op_const_declare);
-      SYMBOL *number = create_symbol(st_const);
-      temp->symbol[0] = number;
-      number->const_value = (yyvsp[0].const_value);
-      SYMBOL *id = create_symbol(st_identifier);
-      temp->symbol[2] = id;
-      id->identifier = (yyvsp[-2].id);
-      (yyval.icode) = temp;
+                         {
+      NODE *temp = create_node(op_const_declare);
+      CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
+      declare->id = (yyvsp[-2].id);
+      declare->value = (yyvsp[0].const_value);
+      temp->const_declare = declare;
+      (yyval.node) = temp;
     }
-#line 1864 "src/plinf.tab.c"
+#line 1869 "src/plinf.tab.c"
     break;
 
   case 28:
-#line 192 "src/plinf.y"
-                                    {
-      (yyval.icode) = (yyvsp[-1].icode);
+#line 190 "src/plinf.y"
+                                     {
+      (yyval.node) = (yyvsp[-1].node);
     }
-#line 1872 "src/plinf.tab.c"
+#line 1877 "src/plinf.tab.c"
     break;
 
   case 29:
-#line 197 "src/plinf.y"
+#line 195 "src/plinf.y"
                                               {
-      (yyval.icode) = concat_icode((yyvsp[-2].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[0].node));
     }
-#line 1880 "src/plinf.tab.c"
+#line 1885 "src/plinf.tab.c"
     break;
 
   case 30:
-#line 200 "src/plinf.y"
+#line 198 "src/plinf.y"
                     {
-      (yyval.icode) = (yyvsp[0].icode);
+      (yyval.node) = (yyvsp[0].node);
     }
-#line 1888 "src/plinf.tab.c"
+#line 1893 "src/plinf.tab.c"
     break;
 
   case 31:
-#line 205 "src/plinf.y"
-                                               {
-      ICODE *temp = create_icode(op_type_declare);
-      SYMBOL *id = create_symbol(st_identifier);
-      temp->symbol[2] = id;
-      id->identifier = (yyvsp[-2].id);
-      SYMBOL *type = create_symbol(st_type);
-      temp->symbol[0] = type;
-      type->type_value = (yyvsp[0].type_value);
-      (yyval.icode) = temp;
+#line 203 "src/plinf.y"
+                                                {
+      NODE *temp = create_node(op_type_declare);
+      TYPE_DECLARE *declare = (TYPE_DECLARE *)calloc(1, sizeof(TYPE_DECLARE));
+      declare->id = (yyvsp[-2].id);
+      declare->type = (yyvsp[0].type);
+      temp->type_declare = declare;
+      (yyval.node) = temp;
     }
-#line 1903 "src/plinf.tab.c"
+#line 1906 "src/plinf.tab.c"
     break;
 
   case 32:
-#line 217 "src/plinf.y"
+#line 213 "src/plinf.y"
                          {
-      (yyval.type_value) = (yyvsp[0].type_value);
+      (yyval.type) = (yyvsp[0].type);
     }
-#line 1911 "src/plinf.tab.c"
+#line 1914 "src/plinf.tab.c"
     break;
 
   case 33:
-#line 220 "src/plinf.y"
+#line 216 "src/plinf.y"
          {
-      (yyval.type_value) = (yyvsp[0].type_value);
+      (yyval.type) = (yyvsp[0].type);
     }
-#line 1919 "src/plinf.tab.c"
+#line 1922 "src/plinf.tab.c"
     break;
 
   case 34:
-#line 223 "src/plinf.y"
+#line 219 "src/plinf.y"
             {
-      (yyval.type_value) = (yyvsp[0].type_value);
+      (yyval.type) = (yyvsp[0].type);
     }
-#line 1927 "src/plinf.tab.c"
+#line 1930 "src/plinf.tab.c"
     break;
 
   case 35:
-#line 226 "src/plinf.y"
+#line 222 "src/plinf.y"
                                                   {
-      (yyvsp[-5].type_value)->array_start = 0;
-      (yyvsp[-5].type_value)->array_end = (yyvsp[-3].const_value)->num - 1;
-      (yyvsp[-5].type_value)->sub_value = (yyvsp[0].type_value);
-      (yyval.type_value) = (yyvsp[-5].type_value);
+      (yyvsp[-5].type)->array->array_start = 0;
+      (yyvsp[-5].type)->array->array_end = (yyvsp[-3].const_value)->num - 1;
+      (yyvsp[-5].type)->array->sub_type = (yyvsp[0].type);
+      (yyval.type) = (yyvsp[-5].type);
     }
-#line 1938 "src/plinf.tab.c"
+#line 1941 "src/plinf.tab.c"
     break;
 
   case 36:
-#line 232 "src/plinf.y"
+#line 228 "src/plinf.y"
                                                                        {
-      (yyvsp[-7].type_value)->array_start = (yyvsp[-5].const_value)->num;
-      (yyvsp[-7].type_value)->array_end = (yyvsp[-3].const_value)->num;
-      (yyvsp[-7].type_value)->sub_value = (yyvsp[0].type_value);
-      (yyval.type_value) = (yyvsp[-7].type_value);
+      (yyvsp[-7].type)->array->array_start = (yyvsp[-5].const_value)->num;
+      (yyvsp[-7].type)->array->array_end = (yyvsp[-3].const_value)->num;
+      (yyvsp[-7].type)->array->sub_type = (yyvsp[0].type);
+      (yyval.type) = (yyvsp[-7].type);
     }
-#line 1949 "src/plinf.tab.c"
+#line 1952 "src/plinf.tab.c"
     break;
 
   case 37:
-#line 240 "src/plinf.y"
-                                 {
-      (yyval.icode) = (yyvsp[-1].icode);
+#line 236 "src/plinf.y"
+                                  {
+      (yyval.node) = (yyvsp[-1].node);
     }
-#line 1957 "src/plinf.tab.c"
+#line 1960 "src/plinf.tab.c"
     break;
 
   case 38:
-#line 245 "src/plinf.y"
+#line 241 "src/plinf.y"
                                                        {
-      SYMBOL *var, *id;
-      ICODE *define, *start, *temp = create_icode(op_nop);
-      ID_LIST *id_list = (yyvsp[-2].id_list);
+      NODE *define, *start, *temp = create_node(op_nop);
+      VAR_DECLARE *declare;
+      VAR_LIST *var_list = (yyvsp[-2].var_list);
       start = temp;
       do {
-        define = temp->next = create_icode(op_var_declare);
-        id = create_symbol(st_identifier);
-        id->identifier = id_list->name;
-        define->symbol[2] = id;
-        var = create_symbol(st_var);
-        var->var_value = (yyvsp[0].var_value);
-        define->symbol[0] = var;
+        define = temp->next = create_node(op_var_declare);
+        declare = (VAR_DECLARE *)calloc(1, sizeof(VAR_DECLARE));
+        declare->id = var_list->id;
+        declare->type = (yyvsp[0].type);
+        define->var_declare = declare;
         temp = temp->next;
-        id_list = id_list->next;
-      } while (id_list);
-      (yyval.icode) = concat_icode((yyvsp[-4].icode), start->next);
+        var_list = var_list->next;
+      } while (var_list);
+      (yyval.node) = concat_node((yyvsp[-4].node), start->next);
     }
-#line 1980 "src/plinf.tab.c"
+#line 1981 "src/plinf.tab.c"
     break;
 
   case 39:
-#line 263 "src/plinf.y"
+#line 257 "src/plinf.y"
                                {
-      SYMBOL *var, *id;
-      ICODE *define, *start, *temp = create_icode(op_nop);
-      ID_LIST *id_list = (yyvsp[-2].id_list);
+      NODE *define, *start, *temp = create_node(op_nop);
+      VAR_DECLARE *declare;
+      VAR_LIST *var_list = (yyvsp[-2].var_list);
       start = temp;
       do {
-        define = temp->next = create_icode(op_var_declare);
-        id = create_symbol(st_identifier);
-        id->identifier = id_list->name;
-        define->symbol[2] = id;
-        var = create_symbol(st_var);
-        var->var_value = (yyvsp[0].var_value);
-        define->symbol[0] = var;
+        define = temp->next = create_node(op_var_declare);
+        declare = (VAR_DECLARE *)calloc(1, sizeof(VAR_DECLARE));
+        declare->id = var_list->id;
+        declare->type = (yyvsp[0].type);
+        define->var_declare = declare;
         temp = temp->next;
-        id_list = id_list->next;
-      } while (id_list);
-      (yyval.icode) = start->next;
+        var_list = var_list->next;
+      } while (var_list);
+      (yyval.node) = start->next;
     }
-#line 2003 "src/plinf.tab.c"
+#line 2002 "src/plinf.tab.c"
     break;
 
   case 40:
-#line 283 "src/plinf.y"
-                                                  {
-      ID_LIST *temp = (ID_LIST *)calloc(1, sizeof(ID_LIST));
-      temp->name = (yyvsp[0].id);
-      (yyval.id_list) = concat_id_list((yyvsp[-2].id_list), temp);
+#line 275 "src/plinf.y"
+                                                   {
+      VAR_LIST *temp = (VAR_LIST *)calloc(1, sizeof(VAR_LIST));
+      temp->id = (yyvsp[0].id);
+      (yyval.var_list) = concat_var_list((yyvsp[-2].var_list), temp);
     }
-#line 2013 "src/plinf.tab.c"
+#line 2012 "src/plinf.tab.c"
     break;
 
   case 41:
-#line 288 "src/plinf.y"
-               {
-      ID_LIST *temp = (ID_LIST *)calloc(1, sizeof(ID_LIST));
-      temp->name = (yyvsp[0].id);
-      (yyval.id_list) = temp;
+#line 280 "src/plinf.y"
+                {
+      VAR_LIST *temp = (VAR_LIST *)calloc(1, sizeof(VAR_LIST));
+      temp->id = (yyvsp[0].id);
+      (yyval.var_list) = temp;
     }
-#line 2023 "src/plinf.tab.c"
+#line 2022 "src/plinf.tab.c"
     break;
 
   case 42:
-#line 295 "src/plinf.y"
+#line 287 "src/plinf.y"
               {
-      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
-      temp->type = vt_type;
-      temp->detail = (yyvsp[0].type_value);
-      (yyval.var_value) = temp;
+      (yyval.type) = (yyvsp[0].type);
     }
-#line 2034 "src/plinf.tab.c"
+#line 2030 "src/plinf.tab.c"
     break;
 
   case 43:
-#line 301 "src/plinf.y"
+#line 290 "src/plinf.y"
          {
-      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
-      temp->type = vt_type;
-      temp->detail = (yyvsp[0].type_value);
-      (yyval.var_value) = temp;
+      (yyval.type) = (yyvsp[0].type);
     }
-#line 2045 "src/plinf.tab.c"
+#line 2038 "src/plinf.tab.c"
     break;
 
   case 44:
-#line 307 "src/plinf.y"
+#line 293 "src/plinf.y"
             {
-      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
-      temp->type = vt_type;
-      temp->detail = (yyvsp[0].type_value);
-      (yyval.var_value) = temp;
+      (yyval.type) = (yyvsp[0].type);
     }
-#line 2056 "src/plinf.tab.c"
+#line 2046 "src/plinf.tab.c"
     break;
 
   case 45:
-#line 313 "src/plinf.y"
-               {
-      VAR_VALUE *temp = (VAR_VALUE *)calloc(1, sizeof(VAR_VALUE));
-      temp->type = vt_identifier;
+#line 296 "src/plinf.y"
+                {
+      TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
+      temp->type = tt_identifier;
       temp->identifier = (yyvsp[0].id);
-      (yyval.var_value) = temp;
+      (yyval.type) = temp;
     }
-#line 2067 "src/plinf.tab.c"
+#line 2057 "src/plinf.tab.c"
     break;
 
   case 46:
-#line 321 "src/plinf.y"
+#line 304 "src/plinf.y"
                                                       {
-      (yyval.icode) = concat_icode((yyvsp[-1].icode), (yyvsp[0].icode));
+      (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 2075 "src/plinf.tab.c"
+#line 2065 "src/plinf.tab.c"
     break;
 
   case 47:
-#line 324 "src/plinf.y"
+#line 307 "src/plinf.y"
                      {
-      (yyval.icode) = (yyvsp[0].icode);
+      (yyval.node) = (yyvsp[0].node);
     }
-#line 2083 "src/plinf.tab.c"
+#line 2073 "src/plinf.tab.c"
     break;
 
   case 48:
-#line 329 "src/plinf.y"
-                                                       {
-      ICODE *temp = create_icode(op_procedure_declare);
-      PROCEDURE_VALUE *procedure_value = (PROCEDURE_VALUE *)calloc(1, sizeof(PROCEDURE_VALUE));
-      procedure_value->icode_list = (yyvsp[-1].icode);
-      SYMBOL *procedure = create_symbol(st_procedure);
-      procedure->procedure_value = procedure_value;
-      temp->symbol[0] = procedure;
-      SYMBOL *id = create_symbol(st_identifier);
-      id->identifier = (yyvsp[-3].id);
-      temp->symbol[2] = id;
-      (yyval.icode) = temp;
+#line 312 "src/plinf.y"
+                                                         {
+      NODE *temp = create_node(op_procedure_declare);
+      PROCEDURE *procedure = (PROCEDURE *)calloc(1, sizeof(PROCEDURE));
+      procedure->node_list = (yyvsp[-1].node);
+      PROCEDURE_DECLARE *procedure_declare = (PROCEDURE_DECLARE *)calloc(1, sizeof(PROCEDURE_DECLARE));
+      procedure_declare->id = (yyvsp[-3].id);
+      procedure_declare->procedure = procedure;
+      temp->procedure_declare = procedure_declare;
+      (yyval.node) = temp;
     }
-#line 2100 "src/plinf.tab.c"
+#line 2088 "src/plinf.tab.c"
     break;
 
   case 49:
-#line 341 "src/plinf.y"
-                                                                    {
-      ICODE *temp = create_icode(op_procedure_declare);
-      PROCEDURE_VALUE *procedure_value = (PROCEDURE_VALUE *)calloc(1, sizeof(PROCEDURE_VALUE));
-      procedure_value->param_list = (yyvsp[-4].param_list);
-      procedure_value->icode_list = (yyvsp[-1].icode);
-      SYMBOL *procedure = create_symbol(st_procedure);
-      procedure->procedure_value = procedure_value;
-      temp->symbol[0] = procedure;
-      SYMBOL *id = create_symbol(st_identifier);
-      id->identifier = (yyvsp[-6].id);
-      temp->symbol[2] = id;
-      (yyval.icode) = temp;
+#line 322 "src/plinf.y"
+                                                                      {
+      NODE *temp = create_node(op_procedure_declare);
+      PROCEDURE *procedure = (PROCEDURE *)calloc(1, sizeof(PROCEDURE));
+      procedure->param_list = (yyvsp[-4].param_list);
+      procedure->node_list = (yyvsp[-1].node);
+      PROCEDURE_DECLARE *procedure_declare = (PROCEDURE_DECLARE *)calloc(1, sizeof(PROCEDURE_DECLARE));
+      procedure_declare->id = (yyvsp[-6].id);
+      procedure_declare->procedure = procedure;
+      temp->procedure_declare = procedure_declare;
+      (yyval.node) = temp;
     }
-#line 2118 "src/plinf.tab.c"
+#line 2104 "src/plinf.tab.c"
     break;
 
   case 50:
-#line 354 "src/plinf.y"
-                                                   {
-      ICODE *temp = create_icode(op_function_declare);
-      FUNCTION_VALUE *function_value = (FUNCTION_VALUE *)calloc(1, sizeof(FUNCTION_VALUE));
-      function_value->return_var = (yyvsp[-3].var_value);
-      function_value->icode_list = (yyvsp[-1].icode);
-      SYMBOL *function = create_symbol(st_function);
-      function->function_value = function_value;
-      temp->symbol[0] = function;
-      SYMBOL *id = create_symbol(st_identifier);
-      id->identifier = (yyvsp[-5].id);
-      temp->symbol[2] = id;
-      (yyval.icode) = temp;
+#line 333 "src/plinf.y"
+                                                     {
+      NODE *temp = create_node(op_function_declare);
+      FUNCTION *function = (FUNCTION *)calloc(1, sizeof(FUNCTION));
+      function->return_type = (yyvsp[-3].type);
+      function->node_list = (yyvsp[-1].node);
+      FUNCTION_DECLARE *function_declare = (FUNCTION_DECLARE *)calloc(1, sizeof(FUNCTION_DECLARE));
+      function_declare->id = (yyvsp[-5].id);
+      function_declare->function = function;
+      temp->function_declare = function_declare;
+      (yyval.node) = temp;
     }
-#line 2136 "src/plinf.tab.c"
+#line 2120 "src/plinf.tab.c"
     break;
 
   case 51:
-#line 367 "src/plinf.y"
-                                                                              {
-      ICODE *temp = create_icode(op_function_declare);
-      FUNCTION_VALUE *function_value = (FUNCTION_VALUE *)calloc(1, sizeof(FUNCTION_VALUE));
-      function_value->param_list = (yyvsp[-6].param_list);
-      function_value->return_var = (yyvsp[-3].var_value);
-      function_value->icode_list = (yyvsp[-1].icode);
-      SYMBOL *function = create_symbol(st_function);
-      function->function_value = function_value;
-      temp->symbol[0] = function;
-      SYMBOL *id = create_symbol(st_identifier);
-      id->identifier = (yyvsp[-8].id);
-      temp->symbol[2] = id;
-      (yyval.icode) = temp;
+#line 344 "src/plinf.y"
+                                                                                {
+      NODE *temp = create_node(op_function_declare);
+      FUNCTION *function = (FUNCTION *)calloc(1, sizeof(FUNCTION));
+      function->param_list = (yyvsp[-6].param_list);
+      function->return_type = (yyvsp[-3].type);
+      function->node_list = (yyvsp[-1].node);
+      FUNCTION_DECLARE *function_declare = (FUNCTION_DECLARE *)calloc(1, sizeof(FUNCTION_DECLARE));
+      function_declare->id = (yyvsp[-8].id);
+      function_declare->function = function;
+      temp->function_declare = function_declare;
+      (yyval.node) = temp;
     }
-#line 2155 "src/plinf.tab.c"
+#line 2137 "src/plinf.tab.c"
     break;
 
   case 52:
-#line 383 "src/plinf.y"
-                                                       {
+#line 358 "src/plinf.y"
+                                                        {
       PARAM_LIST *temp = (PARAM_LIST *)calloc(1, sizeof(PARAM_LIST));
-      temp->name = (yyvsp[-2].id);
-      temp->var_value = (yyvsp[0].var_value);
+      temp->id = (yyvsp[-2].id);
+      temp->type = (yyvsp[0].type);
       (yyval.param_list) = concat_param_list((yyvsp[-4].param_list), temp);
     }
-#line 2166 "src/plinf.tab.c"
+#line 2148 "src/plinf.tab.c"
     break;
 
   case 53:
-#line 389 "src/plinf.y"
-                          {
+#line 364 "src/plinf.y"
+                           {
       PARAM_LIST *temp = (PARAM_LIST *)calloc(1, sizeof(PARAM_LIST));
-      temp->name = (yyvsp[-2].id);
-      temp->var_value = (yyvsp[0].var_value);
+      temp->id = (yyvsp[-2].id);
+      temp->type = (yyvsp[0].type);
       (yyval.param_list) = temp;
     }
-#line 2177 "src/plinf.tab.c"
+#line 2159 "src/plinf.tab.c"
+    break;
+
+  case 54:
+#line 372 "src/plinf.y"
+                                      {
+      (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[-1].node));
+    }
+#line 2167 "src/plinf.tab.c"
+    break;
+
+  case 55:
+#line 375 "src/plinf.y"
+                          {
+      (yyval.node) = create_node(op_nop);
+    }
+#line 2175 "src/plinf.tab.c"
+    break;
+
+  case 56:
+#line 380 "src/plinf.y"
+                                             {
+      NODE *temp = create_node(op_assign);
+      ASSIGN *assign = (ASSIGN *)calloc(1, sizeof(ASSIGN));
+      assign->id_ref = (yyvsp[-2].id_ref);
+      assign->expression = (yyvsp[0].node);
+      temp->assign = assign;
+      (yyval.node) = temp;
+    }
+#line 2188 "src/plinf.tab.c"
+    break;
+
+  case 57:
+#line 388 "src/plinf.y"
+                                                       {
+      NODE *temp = create_node(op_if_then);
+      CONDITION_JUMP *jump = (CONDITION_JUMP *)calloc(1, sizeof(CONDITION_JUMP));
+      jump->condition = (yyvsp[-2].node);
+      jump->true = (yyvsp[0].node);
+      temp->condition_jump = jump;
+      (yyval.node) = temp;
+    }
+#line 2201 "src/plinf.tab.c"
+    break;
+
+  case 58:
+#line 396 "src/plinf.y"
+                                                {
+      NODE *temp = create_node(op_if_then);
+      CONDITION_JUMP *jump = (CONDITION_JUMP *)calloc(1, sizeof(CONDITION_JUMP));
+      jump->condition = (yyvsp[-4].node);
+      jump->true = (yyvsp[-2].node);
+      jump->false = (yyvsp[0].node);
+      temp->condition_jump = jump;
+      (yyval.node) = temp;
+    }
+#line 2215 "src/plinf.tab.c"
+    break;
+
+  case 59:
+#line 405 "src/plinf.y"
+                                     {
+      (yyval.node) = (yyvsp[-1].node);
+    }
+#line 2223 "src/plinf.tab.c"
+    break;
+
+  case 60:
+#line 408 "src/plinf.y"
+                                  {
+      NODE *temp = create_node(op_while_do);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2236 "src/plinf.tab.c"
+    break;
+
+  case 61:
+#line 416 "src/plinf.y"
+             {
+      (yyval.node) = create_node(op_continue);
+    }
+#line 2244 "src/plinf.tab.c"
+    break;
+
+  case 62:
+#line 419 "src/plinf.y"
+         {
+      (yyval.node) = create_node(op_exit);
+    }
+#line 2252 "src/plinf.tab.c"
+    break;
+
+  case 63:
+#line 422 "src/plinf.y"
+                     {
+      NODE *temp = create_node(op_call);
+      FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
+      call->id = (yyvsp[0].id);
+      temp->function_call = call;
+      (yyval.node) = temp;
+    }
+#line 2264 "src/plinf.tab.c"
+    break;
+
+  case 64:
+#line 429 "src/plinf.y"
+                                        {
+      NODE *temp = create_node(op_call);
+      FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
+      call->id = (yyvsp[-3].id);
+      call->args = (yyvsp[-1].node);
+      temp->function_call = call;
+      (yyval.node) = temp;
+    }
+#line 2277 "src/plinf.tab.c"
+    break;
+
+  case 65:
+#line 437 "src/plinf.y"
+                             {
+      NODE *temp = create_node(op_call);
+      FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
+      call->id = (yyvsp[-3].id);
+      call->args = (yyvsp[-1].node);
+      temp->function_call = call;
+      (yyval.node) = temp;
+    }
+#line 2290 "src/plinf.tab.c"
+    break;
+
+  case 66:
+#line 445 "src/plinf.y"
+                                       {
+      NODE *temp = create_node(op_call);
+      FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
+      call->id = (yyvsp[-3].id);
+      call->args = (yyvsp[-1].arg_list);
+      temp->function_call = call;
+      (yyval.node) = temp;
+    }
+#line 2303 "src/plinf.tab.c"
+    break;
+
+  case 67:
+#line 453 "src/plinf.y"
+                          {
+      (yyval.node) = create_node(op_nop);
+    }
+#line 2311 "src/plinf.tab.c"
+    break;
+
+  case 68:
+#line 458 "src/plinf.y"
+                                                {
+      ARG_LIST *arg_list = (ARG_LIST *)calloc(1, sizeof(ARG_LIST));
+      arg_list->id_ref = (yyvsp[0].id_ref);
+      (yyval.arg_list) = concat_arg_list((yyvsp[-1].arg_list), arg_list);
+    }
+#line 2321 "src/plinf.tab.c"
+    break;
+
+  case 69:
+#line 463 "src/plinf.y"
+                   {
+      ARG_LIST *arg_list = (ARG_LIST *)calloc(1, sizeof(ARG_LIST));
+      arg_list->id_ref = (yyvsp[0].id_ref);
+      (yyval.arg_list) = arg_list;
+    }
+#line 2331 "src/plinf.tab.c"
+    break;
+
+  case 70:
+#line 470 "src/plinf.y"
+                            {
+      IDENTIFIER_REF *id_ref = (IDENTIFIER_REF *)calloc(1, sizeof(IDENTIFIER_REF));
+      id_ref->id = (yyvsp[0].id);
+      (yyval.id_ref) = id_ref;
+    }
+#line 2341 "src/plinf.tab.c"
+    break;
+
+  case 71:
+#line 475 "src/plinf.y"
+                       {
+      IDENTIFIER_REF *id_ref = (IDENTIFIER_REF *)calloc(1, sizeof(IDENTIFIER_REF));
+      id_ref->id = (yyvsp[-1].id);
+      id_ref->offset = (yyvsp[0].offset);
+      (yyval.id_ref) = id_ref;
+    }
+#line 2352 "src/plinf.tab.c"
+    break;
+
+  case 72:
+#line 483 "src/plinf.y"
+                                        {
+      ARRAY_OFFSET *index = (ARRAY_OFFSET *)calloc(1, sizeof(ARRAY_OFFSET));
+      index->expression = (yyvsp[-1].node);
+      (yyval.offset) = concat_array_offset((yyvsp[-3].offset), index);
+    }
+#line 2362 "src/plinf.tab.c"
+    break;
+
+  case 73:
+#line 488 "src/plinf.y"
+                             {
+      ARRAY_OFFSET *index = (ARRAY_OFFSET *)calloc(1, sizeof(ARRAY_OFFSET));
+      index->expression = (yyvsp[-1].node);
+      (yyval.offset) = index;
+    }
+#line 2372 "src/plinf.tab.c"
+    break;
+
+  case 74:
+#line 495 "src/plinf.y"
+                            {
+      (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[0].node));
+    }
+#line 2380 "src/plinf.tab.c"
+    break;
+
+  case 75:
+#line 498 "src/plinf.y"
+               {
+      (yyval.node) = (yyvsp[0].node);
+    }
+#line 2388 "src/plinf.tab.c"
+    break;
+
+  case 76:
+#line 503 "src/plinf.y"
+                              {
+      (yyval.node) = (yyvsp[0].node);
+    }
+#line 2396 "src/plinf.tab.c"
+    break;
+
+  case 77:
+#line 506 "src/plinf.y"
+                                           {
+      NODE *temp = create_node(op_le);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2409 "src/plinf.tab.c"
+    break;
+
+  case 78:
+#line 514 "src/plinf.y"
+                                            {
+      NODE *temp = create_node(op_leq);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2422 "src/plinf.tab.c"
+    break;
+
+  case 79:
+#line 522 "src/plinf.y"
+                                           {
+      NODE *temp = create_node(op_ge);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2435 "src/plinf.tab.c"
+    break;
+
+  case 80:
+#line 530 "src/plinf.y"
+                                            {
+      NODE *temp = create_node(op_geq);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2448 "src/plinf.tab.c"
+    break;
+
+  case 81:
+#line 538 "src/plinf.y"
+                                           {
+      NODE *temp = create_node(op_eq);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2461 "src/plinf.tab.c"
+    break;
+
+  case 82:
+#line 546 "src/plinf.y"
+                                            {
+      NODE *temp = create_node(op_neq);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2474 "src/plinf.tab.c"
+    break;
+
+  case 83:
+#line 556 "src/plinf.y"
+                                               {
+      NODE *temp = create_node(op_plus);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2487 "src/plinf.tab.c"
+    break;
+
+  case 84:
+#line 564 "src/plinf.y"
+                                 {
+      NODE *temp = create_node(op_minus);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2500 "src/plinf.tab.c"
+    break;
+
+  case 85:
+#line 572 "src/plinf.y"
+                              {
+      NODE *temp = create_node(op_or);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2513 "src/plinf.tab.c"
+    break;
+
+  case 86:
+#line 580 "src/plinf.y"
+              {
+      (yyval.node) = (yyvsp[0].node);
+    }
+#line 2521 "src/plinf.tab.c"
+    break;
+
+  case 87:
+#line 583 "src/plinf.y"
+               {
+      NODE *temp = create_node(op_minus);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2533 "src/plinf.tab.c"
+    break;
+
+  case 88:
+#line 590 "src/plinf.y"
+         {
+      (yyval.node) = (yyvsp[0].node);
+    }
+#line 2541 "src/plinf.tab.c"
+    break;
+
+  case 89:
+#line 595 "src/plinf.y"
+                        {
+      NODE *temp = create_node(op_times);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2554 "src/plinf.tab.c"
+    break;
+
+  case 90:
+#line 603 "src/plinf.y"
+                       {
+      NODE *temp = create_node(op_devide);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2567 "src/plinf.tab.c"
+    break;
+
+  case 91:
+#line 611 "src/plinf.y"
+                    {
+      NODE *temp = create_node(op_div);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2580 "src/plinf.tab.c"
+    break;
+
+  case 92:
+#line 619 "src/plinf.y"
+                    {
+      NODE *temp = create_node(op_mod);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2593 "src/plinf.tab.c"
+    break;
+
+  case 93:
+#line 627 "src/plinf.y"
+                    {
+      NODE *temp = create_node(op_and);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = (yyvsp[-2].node);
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2606 "src/plinf.tab.c"
+    break;
+
+  case 94:
+#line 635 "src/plinf.y"
+           {
+      (yyval.node) = (yyvsp[0].node);
+    }
+#line 2614 "src/plinf.tab.c"
+    break;
+
+  case 95:
+#line 640 "src/plinf.y"
+                       {
+      NODE *temp = create_node(op_load_identifier);
+      temp->id_ref = (yyvsp[0].id_ref);
+      (yyval.node) = temp;
+    }
+#line 2624 "src/plinf.tab.c"
+    break;
+
+  case 96:
+#line 645 "src/plinf.y"
+           {
+      NODE *temp = create_node(op_load_const);
+      temp->const_value = (yyvsp[0].const_value);
+      (yyval.node) = temp;
+    }
+#line 2634 "src/plinf.tab.c"
+    break;
+
+  case 97:
+#line 650 "src/plinf.y"
+                {
+      NODE *temp = create_node(op_load_const);
+      temp->const_value = (yyvsp[0].const_value);
+      (yyval.node) = temp;
+    }
+#line 2644 "src/plinf.tab.c"
+    break;
+
+  case 98:
+#line 655 "src/plinf.y"
+                             {
+      (yyval.node) = (yyvsp[-1].node);
+    }
+#line 2652 "src/plinf.tab.c"
+    break;
+
+  case 99:
+#line 658 "src/plinf.y"
+               {
+      NODE *temp = create_node(op_not);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->second = (yyvsp[0].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2664 "src/plinf.tab.c"
+    break;
+
+  case 100:
+#line 665 "src/plinf.y"
+                     {
+      NODE *temp = create_node(op_call);
+      FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
+      call->id = (yyvsp[0].id);
+      temp->function_call = call;
+      (yyval.node) = temp;
+    }
+#line 2676 "src/plinf.tab.c"
+    break;
+
+  case 101:
+#line 672 "src/plinf.y"
+                                        {
+      NODE *temp = create_node(op_call);
+      FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
+      call->id = (yyvsp[-3].id);
+      call->args = (yyvsp[-1].node);
+      temp->function_call = call;
+      (yyval.node) = temp;
+    }
+#line 2689 "src/plinf.tab.c"
+    break;
+
+  case 102:
+#line 680 "src/plinf.y"
+                                        {
+      NODE *temp = create_node(op_odd);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->second = (yyvsp[-1].node);
+      temp->binary_operate = operation;
+      (yyval.node) = temp;
+    }
+#line 2701 "src/plinf.tab.c"
+    break;
+
+  case 103:
+#line 687 "src/plinf.y"
+         {
+      NODE *temp = create_node(op_load_const);
+      temp->const_value = (yyvsp[0].const_value);
+      (yyval.node) = temp;
+    }
+#line 2711 "src/plinf.tab.c"
+    break;
+
+  case 104:
+#line 692 "src/plinf.y"
+          {
+      NODE *temp = create_node(op_load_const);
+      temp->const_value = (yyvsp[0].const_value);
+      (yyval.node) = temp;
+    }
+#line 2721 "src/plinf.tab.c"
     break;
 
 
-#line 2181 "src/plinf.tab.c"
+#line 2725 "src/plinf.tab.c"
 
       default: break;
     }
@@ -2415,36 +2959,28 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 463 "src/plinf.y"
+#line 699 "src/plinf.y"
 
 
 void yyerror(const char *msg) {
   fprintf(stderr, "%s at line %d\n", msg, yylineno);
 }
 
-SYMBOL *create_symbol(SYMBOL_TYPE type) {
-  SYMBOL *symbol = (SYMBOL *)calloc(1, sizeof(SYMBOL));
-  symbol->type = type;
-  return symbol;
+NODE *create_node(OPERATION operation) {
+  NODE *node = (NODE *)calloc(1, sizeof(NODE));
+  node->op = operation;
+  return node;
 }
 
-ICODE *create_icode(OPERATION operation) {
-  ICODE *icode = (ICODE *)calloc(1, sizeof(ICODE));
-  icode->index = icode_index;
-  icode->op = operation;
-  icode_index++;
-  return icode;
-}
-
-ICODE *concat_icode(ICODE *first, ICODE *second) {
-  ICODE *temp = first;
+NODE *concat_node(NODE *first, NODE *second) {
+  NODE *temp = first;
   while (temp->next) temp = temp->next;
   temp->next = second;
   return first;
 }
 
-ID_LIST *concat_id_list(ID_LIST *first, ID_LIST *second) {
-  ID_LIST *temp = first;
+VAR_LIST *concat_var_list(VAR_LIST *first, VAR_LIST *second) {
+  VAR_LIST *temp = first;
   while (temp->next) temp = temp->next;
   temp->next = second;
   return first;
@@ -2452,6 +2988,20 @@ ID_LIST *concat_id_list(ID_LIST *first, ID_LIST *second) {
 
 PARAM_LIST *concat_param_list(PARAM_LIST *first, PARAM_LIST *second) {
   PARAM_LIST *temp = first;
+  while (temp->next) temp = temp->next;
+  temp->next = second;
+  return first;
+}
+
+ARG_LIST *concat_arg_list(ARG_LIST *first, ARG_LIST *second) {
+  ARG_LIST *temp = first;
+  while (temp->next) temp = temp->next;
+  temp->next = second;
+  return first;
+}
+
+ARRAY_OFFSET *concat_array_offset(ARRAY_OFFSET *first, ARRAY_OFFSET *second) {
+  ARRAY_OFFSET *temp = first;
   while (temp->next) temp = temp->next;
   temp->next = second;
   return first;
