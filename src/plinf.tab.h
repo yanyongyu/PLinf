@@ -43,6 +43,12 @@
 #if YYDEBUG
 extern int yydebug;
 #endif
+/* "%code requires" blocks.  */
+#line 20 "src/plinf.y"
+
+  #include "intermediate.h"
+
+#line 52 "src/plinf.tab.h"
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -110,11 +116,10 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 18 "src/plinf.y"
+#line 24 "src/plinf.y"
 
   VAR_LIST *var_list;
   PARAM_LIST *param_list;
-  ARG_LIST *arg_list;
   NODE *node;
   TYPE *type;
   ARRAY_OFFSET *offset;
@@ -122,7 +127,7 @@ union YYSTYPE
   IDENTIFIER *id;
   IDENTIFIER_REF *id_ref;
 
-#line 126 "src/plinf.tab.h"
+#line 131 "src/plinf.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

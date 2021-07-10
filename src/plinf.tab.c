@@ -70,6 +70,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "intermediate.h"
 
@@ -82,8 +83,9 @@ NODE *create_node(OPERATION);
 NODE *concat_node(NODE *, NODE *);
 VAR_LIST *concat_var_list(VAR_LIST *, VAR_LIST *);
 PARAM_LIST *concat_param_list(PARAM_LIST *, PARAM_LIST *);
+ARRAY_OFFSET *concat_array_offset(ARRAY_OFFSET *first, ARRAY_OFFSET *second);
 
-#line 87 "src/plinf.tab.c"
+#line 89 "src/plinf.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -125,6 +127,12 @@ PARAM_LIST *concat_param_list(PARAM_LIST *, PARAM_LIST *);
 #if YYDEBUG
 extern int yydebug;
 #endif
+/* "%code requires" blocks.  */
+#line 20 "src/plinf.y"
+
+  #include "intermediate.h"
+
+#line 136 "src/plinf.tab.c"
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -192,11 +200,10 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 18 "src/plinf.y"
+#line 24 "src/plinf.y"
 
   VAR_LIST *var_list;
   PARAM_LIST *param_list;
-  ARG_LIST *arg_list;
   NODE *node;
   TYPE *type;
   ARRAY_OFFSET *offset;
@@ -204,7 +211,7 @@ union YYSTYPE
   IDENTIFIER *id;
   IDENTIFIER_REF *id_ref;
 
-#line 208 "src/plinf.tab.c"
+#line 215 "src/plinf.tab.c"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -602,17 +609,17 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int16 yyrline[] =
 {
-       0,    77,    77,    82,    88,    93,    96,    99,   102,   105,
-     108,   111,   114,   117,   120,   123,   126,   129,   132,   135,
-     138,   143,   148,   151,   156,   164,   172,   180,   190,   195,
-     198,   203,   213,   216,   219,   222,   228,   236,   241,   257,
-     275,   280,   287,   290,   293,   296,   304,   307,   312,   322,
-     333,   344,   358,   364,   372,   375,   380,   388,   396,   405,
-     408,   416,   419,   422,   429,   437,   445,   453,   458,   463,
-     470,   475,   483,   488,   495,   498,   503,   506,   514,   522,
-     530,   538,   546,   556,   564,   572,   580,   583,   590,   595,
-     603,   611,   619,   627,   635,   640,   645,   650,   655,   658,
-     665,   672,   680,   687,   692
+       0,    81,    81,    86,    92,    97,   100,   103,   106,   109,
+     112,   115,   118,   121,   124,   127,   130,   133,   136,   139,
+     142,   147,   152,   155,   160,   168,   176,   184,   194,   199,
+     202,   207,   217,   220,   223,   226,   232,   240,   245,   262,
+     281,   286,   293,   296,   299,   302,   310,   313,   318,   328,
+     339,   350,   364,   370,   378,   381,   386,   394,   402,   411,
+     414,   422,   425,   428,   435,   443,   451,   459,   464,   469,
+     476,   481,   489,   494,   501,   504,   509,   512,   520,   528,
+     536,   544,   552,   562,   570,   578,   586,   589,   596,   601,
+     609,   617,   625,   633,   641,   646,   651,   656,   661,   664,
+     671,   678,   686,   693,   698
 };
 #endif
 
@@ -1640,184 +1647,184 @@ yyreduce:
   switch (yyn)
     {
   case 2:
-#line 77 "src/plinf.y"
+#line 81 "src/plinf.y"
                                      {
       global_result = (yyvsp[-1].node);
     }
-#line 1648 "src/plinf.tab.c"
+#line 1655 "src/plinf.tab.c"
     break;
 
   case 3:
-#line 82 "src/plinf.y"
+#line 86 "src/plinf.y"
                 {
       // clear result
       global_result = (NODE *)NULL;
     }
-#line 1657 "src/plinf.tab.c"
+#line 1664 "src/plinf.tab.c"
     break;
 
   case 4:
-#line 88 "src/plinf.y"
+#line 92 "src/plinf.y"
                                                     {
-      (yyval.node) = (yyvsp[-3].node);
+      (yyval.node) = concat_node((yyvsp[-3].node), (yyvsp[-1].node));
     }
-#line 1665 "src/plinf.tab.c"
+#line 1672 "src/plinf.tab.c"
     break;
 
   case 5:
-#line 93 "src/plinf.y"
+#line 97 "src/plinf.y"
                                                                       {
       (yyval.node) = concat_node((yyvsp[-3].node), concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node))));
     }
-#line 1673 "src/plinf.tab.c"
+#line 1680 "src/plinf.tab.c"
     break;
 
   case 6:
-#line 96 "src/plinf.y"
+#line 100 "src/plinf.y"
                                            {
       (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1681 "src/plinf.tab.c"
+#line 1688 "src/plinf.tab.c"
     break;
 
   case 7:
-#line 99 "src/plinf.y"
+#line 103 "src/plinf.y"
                                                  {
       (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1689 "src/plinf.tab.c"
+#line 1696 "src/plinf.tab.c"
     break;
 
   case 8:
-#line 102 "src/plinf.y"
+#line 106 "src/plinf.y"
                                                 {
       (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1697 "src/plinf.tab.c"
+#line 1704 "src/plinf.tab.c"
     break;
 
   case 9:
-#line 105 "src/plinf.y"
+#line 109 "src/plinf.y"
                                                {
       (yyval.node) = concat_node((yyvsp[-2].node), concat_node((yyvsp[-1].node), (yyvsp[0].node)));
     }
-#line 1705 "src/plinf.tab.c"
+#line 1712 "src/plinf.tab.c"
     break;
 
   case 10:
-#line 108 "src/plinf.y"
+#line 112 "src/plinf.y"
                                {
       (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1713 "src/plinf.tab.c"
+#line 1720 "src/plinf.tab.c"
     break;
 
   case 11:
-#line 111 "src/plinf.y"
+#line 115 "src/plinf.y"
                                     {
       (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1721 "src/plinf.tab.c"
+#line 1728 "src/plinf.tab.c"
     break;
 
   case 12:
-#line 114 "src/plinf.y"
+#line 118 "src/plinf.y"
                               {
       (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1729 "src/plinf.tab.c"
+#line 1736 "src/plinf.tab.c"
     break;
 
   case 13:
-#line 117 "src/plinf.y"
+#line 121 "src/plinf.y"
                                    {
       (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1737 "src/plinf.tab.c"
+#line 1744 "src/plinf.tab.c"
     break;
 
   case 14:
-#line 120 "src/plinf.y"
+#line 124 "src/plinf.y"
                              {
       (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1745 "src/plinf.tab.c"
+#line 1752 "src/plinf.tab.c"
     break;
 
   case 15:
-#line 123 "src/plinf.y"
+#line 127 "src/plinf.y"
                                   {
       (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 1753 "src/plinf.tab.c"
+#line 1760 "src/plinf.tab.c"
     break;
 
   case 16:
-#line 126 "src/plinf.y"
+#line 130 "src/plinf.y"
                   {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 1761 "src/plinf.tab.c"
+#line 1768 "src/plinf.tab.c"
     break;
 
   case 17:
-#line 129 "src/plinf.y"
+#line 133 "src/plinf.y"
                  {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 1769 "src/plinf.tab.c"
+#line 1776 "src/plinf.tab.c"
     break;
 
   case 18:
-#line 132 "src/plinf.y"
+#line 136 "src/plinf.y"
                 {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 1777 "src/plinf.tab.c"
+#line 1784 "src/plinf.tab.c"
     break;
 
   case 19:
-#line 135 "src/plinf.y"
+#line 139 "src/plinf.y"
                       {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 1785 "src/plinf.tab.c"
+#line 1792 "src/plinf.tab.c"
     break;
 
   case 20:
-#line 138 "src/plinf.y"
+#line 142 "src/plinf.y"
     {
       (yyval.node) = create_node(op_nop);
     }
-#line 1793 "src/plinf.tab.c"
+#line 1800 "src/plinf.tab.c"
     break;
 
   case 21:
-#line 143 "src/plinf.y"
+#line 147 "src/plinf.y"
                                         {
       (yyval.node) = (yyvsp[-1].node);
     }
-#line 1801 "src/plinf.tab.c"
+#line 1808 "src/plinf.tab.c"
     break;
 
   case 22:
-#line 148 "src/plinf.y"
+#line 152 "src/plinf.y"
                                                  {
       (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[0].node));
     }
-#line 1809 "src/plinf.tab.c"
+#line 1816 "src/plinf.tab.c"
     break;
 
   case 23:
-#line 151 "src/plinf.y"
+#line 155 "src/plinf.y"
                      {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 1817 "src/plinf.tab.c"
+#line 1824 "src/plinf.tab.c"
     break;
 
   case 24:
-#line 156 "src/plinf.y"
+#line 160 "src/plinf.y"
                                         {
       NODE *temp = create_node(op_const_declare);
       CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
@@ -1826,11 +1833,11 @@ yyreduce:
       temp->const_declare = declare;
       (yyval.node) = temp;
     }
-#line 1830 "src/plinf.tab.c"
+#line 1837 "src/plinf.tab.c"
     break;
 
   case 25:
-#line 164 "src/plinf.y"
+#line 168 "src/plinf.y"
                                {
       NODE *temp = create_node(op_const_declare);
       CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
@@ -1839,11 +1846,11 @@ yyreduce:
       temp->const_declare = declare;
       (yyval.node) = temp;
     }
-#line 1843 "src/plinf.tab.c"
+#line 1850 "src/plinf.tab.c"
     break;
 
   case 26:
-#line 172 "src/plinf.y"
+#line 176 "src/plinf.y"
                         {
       NODE *temp = create_node(op_const_declare);
       CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
@@ -1852,11 +1859,11 @@ yyreduce:
       temp->const_declare = declare;
       (yyval.node) = temp;
     }
-#line 1856 "src/plinf.tab.c"
+#line 1863 "src/plinf.tab.c"
     break;
 
   case 27:
-#line 180 "src/plinf.y"
+#line 184 "src/plinf.y"
                          {
       NODE *temp = create_node(op_const_declare);
       CONST_DECLARE *declare = (CONST_DECLARE *)calloc(1, sizeof(CONST_DECLARE));
@@ -1865,35 +1872,35 @@ yyreduce:
       temp->const_declare = declare;
       (yyval.node) = temp;
     }
-#line 1869 "src/plinf.tab.c"
+#line 1876 "src/plinf.tab.c"
     break;
 
   case 28:
-#line 190 "src/plinf.y"
+#line 194 "src/plinf.y"
                                      {
       (yyval.node) = (yyvsp[-1].node);
     }
-#line 1877 "src/plinf.tab.c"
+#line 1884 "src/plinf.tab.c"
     break;
 
   case 29:
-#line 195 "src/plinf.y"
+#line 199 "src/plinf.y"
                                               {
       (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[0].node));
     }
-#line 1885 "src/plinf.tab.c"
+#line 1892 "src/plinf.tab.c"
     break;
 
   case 30:
-#line 198 "src/plinf.y"
+#line 202 "src/plinf.y"
                     {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 1893 "src/plinf.tab.c"
+#line 1900 "src/plinf.tab.c"
     break;
 
   case 31:
-#line 203 "src/plinf.y"
+#line 207 "src/plinf.y"
                                                 {
       NODE *temp = create_node(op_type_declare);
       TYPE_DECLARE *declare = (TYPE_DECLARE *)calloc(1, sizeof(TYPE_DECLARE));
@@ -1902,65 +1909,65 @@ yyreduce:
       temp->type_declare = declare;
       (yyval.node) = temp;
     }
-#line 1906 "src/plinf.tab.c"
+#line 1913 "src/plinf.tab.c"
     break;
 
   case 32:
-#line 213 "src/plinf.y"
+#line 217 "src/plinf.y"
                          {
       (yyval.type) = (yyvsp[0].type);
     }
-#line 1914 "src/plinf.tab.c"
+#line 1921 "src/plinf.tab.c"
     break;
 
   case 33:
-#line 216 "src/plinf.y"
+#line 220 "src/plinf.y"
          {
       (yyval.type) = (yyvsp[0].type);
     }
-#line 1922 "src/plinf.tab.c"
+#line 1929 "src/plinf.tab.c"
     break;
 
   case 34:
-#line 219 "src/plinf.y"
+#line 223 "src/plinf.y"
             {
       (yyval.type) = (yyvsp[0].type);
     }
-#line 1930 "src/plinf.tab.c"
+#line 1937 "src/plinf.tab.c"
     break;
 
   case 35:
-#line 222 "src/plinf.y"
+#line 226 "src/plinf.y"
                                                   {
       (yyvsp[-5].type)->array->array_start = 0;
       (yyvsp[-5].type)->array->array_end = (yyvsp[-3].const_value)->num - 1;
       (yyvsp[-5].type)->array->sub_type = (yyvsp[0].type);
       (yyval.type) = (yyvsp[-5].type);
     }
-#line 1941 "src/plinf.tab.c"
+#line 1948 "src/plinf.tab.c"
     break;
 
   case 36:
-#line 228 "src/plinf.y"
+#line 232 "src/plinf.y"
                                                                        {
       (yyvsp[-7].type)->array->array_start = (yyvsp[-5].const_value)->num;
       (yyvsp[-7].type)->array->array_end = (yyvsp[-3].const_value)->num;
       (yyvsp[-7].type)->array->sub_type = (yyvsp[0].type);
       (yyval.type) = (yyvsp[-7].type);
     }
-#line 1952 "src/plinf.tab.c"
+#line 1959 "src/plinf.tab.c"
     break;
 
   case 37:
-#line 236 "src/plinf.y"
+#line 240 "src/plinf.y"
                                   {
       (yyval.node) = (yyvsp[-1].node);
     }
-#line 1960 "src/plinf.tab.c"
+#line 1967 "src/plinf.tab.c"
     break;
 
   case 38:
-#line 241 "src/plinf.y"
+#line 245 "src/plinf.y"
                                                        {
       NODE *define, *start, *temp = create_node(op_nop);
       VAR_DECLARE *declare;
@@ -1970,18 +1977,19 @@ yyreduce:
         define = temp->next = create_node(op_var_declare);
         declare = (VAR_DECLARE *)calloc(1, sizeof(VAR_DECLARE));
         declare->id = var_list->id;
-        declare->type = (yyvsp[0].type);
+        declare->type = copy_type((yyvsp[0].type));
         define->var_declare = declare;
         temp = temp->next;
         var_list = var_list->next;
       } while (var_list);
+      free_type((yyvsp[0].type));
       (yyval.node) = concat_node((yyvsp[-4].node), start->next);
     }
-#line 1981 "src/plinf.tab.c"
+#line 1989 "src/plinf.tab.c"
     break;
 
   case 39:
-#line 257 "src/plinf.y"
+#line 262 "src/plinf.y"
                                {
       NODE *define, *start, *temp = create_node(op_nop);
       VAR_DECLARE *declare;
@@ -1991,89 +1999,90 @@ yyreduce:
         define = temp->next = create_node(op_var_declare);
         declare = (VAR_DECLARE *)calloc(1, sizeof(VAR_DECLARE));
         declare->id = var_list->id;
-        declare->type = (yyvsp[0].type);
+        declare->type = copy_type((yyvsp[0].type));
         define->var_declare = declare;
         temp = temp->next;
         var_list = var_list->next;
       } while (var_list);
+      free_type((yyvsp[0].type));
       (yyval.node) = start->next;
     }
-#line 2002 "src/plinf.tab.c"
+#line 2011 "src/plinf.tab.c"
     break;
 
   case 40:
-#line 275 "src/plinf.y"
+#line 281 "src/plinf.y"
                                                    {
       VAR_LIST *temp = (VAR_LIST *)calloc(1, sizeof(VAR_LIST));
       temp->id = (yyvsp[0].id);
       (yyval.var_list) = concat_var_list((yyvsp[-2].var_list), temp);
     }
-#line 2012 "src/plinf.tab.c"
+#line 2021 "src/plinf.tab.c"
     break;
 
   case 41:
-#line 280 "src/plinf.y"
+#line 286 "src/plinf.y"
                 {
       VAR_LIST *temp = (VAR_LIST *)calloc(1, sizeof(VAR_LIST));
       temp->id = (yyvsp[0].id);
       (yyval.var_list) = temp;
     }
-#line 2022 "src/plinf.tab.c"
+#line 2031 "src/plinf.tab.c"
     break;
 
   case 42:
-#line 287 "src/plinf.y"
+#line 293 "src/plinf.y"
               {
       (yyval.type) = (yyvsp[0].type);
     }
-#line 2030 "src/plinf.tab.c"
+#line 2039 "src/plinf.tab.c"
     break;
 
   case 43:
-#line 290 "src/plinf.y"
+#line 296 "src/plinf.y"
          {
       (yyval.type) = (yyvsp[0].type);
     }
-#line 2038 "src/plinf.tab.c"
+#line 2047 "src/plinf.tab.c"
     break;
 
   case 44:
-#line 293 "src/plinf.y"
+#line 299 "src/plinf.y"
             {
       (yyval.type) = (yyvsp[0].type);
     }
-#line 2046 "src/plinf.tab.c"
+#line 2055 "src/plinf.tab.c"
     break;
 
   case 45:
-#line 296 "src/plinf.y"
+#line 302 "src/plinf.y"
                 {
       TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
       temp->type = tt_identifier;
       temp->identifier = (yyvsp[0].id);
       (yyval.type) = temp;
     }
-#line 2057 "src/plinf.tab.c"
+#line 2066 "src/plinf.tab.c"
     break;
 
   case 46:
-#line 304 "src/plinf.y"
+#line 310 "src/plinf.y"
                                                       {
       (yyval.node) = concat_node((yyvsp[-1].node), (yyvsp[0].node));
     }
-#line 2065 "src/plinf.tab.c"
+#line 2074 "src/plinf.tab.c"
     break;
 
   case 47:
-#line 307 "src/plinf.y"
+#line 313 "src/plinf.y"
                      {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 2073 "src/plinf.tab.c"
+#line 2082 "src/plinf.tab.c"
     break;
 
   case 48:
-#line 312 "src/plinf.y"
+#line 318 "src/plinf.y"
                                                          {
       NODE *temp = create_node(op_procedure_declare);
       PROCEDURE *procedure = (PROCEDURE *)calloc(1, sizeof(PROCEDURE));
@@ -2084,11 +2093,11 @@ yyreduce:
       temp->procedure_declare = procedure_declare;
       (yyval.node) = temp;
     }
-#line 2088 "src/plinf.tab.c"
+#line 2097 "src/plinf.tab.c"
     break;
 
   case 49:
-#line 322 "src/plinf.y"
+#line 328 "src/plinf.y"
                                                                       {
       NODE *temp = create_node(op_procedure_declare);
       PROCEDURE *procedure = (PROCEDURE *)calloc(1, sizeof(PROCEDURE));
@@ -2100,11 +2109,11 @@ yyreduce:
       temp->procedure_declare = procedure_declare;
       (yyval.node) = temp;
     }
-#line 2104 "src/plinf.tab.c"
+#line 2113 "src/plinf.tab.c"
     break;
 
   case 50:
-#line 333 "src/plinf.y"
+#line 339 "src/plinf.y"
                                                      {
       NODE *temp = create_node(op_function_declare);
       FUNCTION *function = (FUNCTION *)calloc(1, sizeof(FUNCTION));
@@ -2116,11 +2125,11 @@ yyreduce:
       temp->function_declare = function_declare;
       (yyval.node) = temp;
     }
-#line 2120 "src/plinf.tab.c"
+#line 2129 "src/plinf.tab.c"
     break;
 
   case 51:
-#line 344 "src/plinf.y"
+#line 350 "src/plinf.y"
                                                                                 {
       NODE *temp = create_node(op_function_declare);
       FUNCTION *function = (FUNCTION *)calloc(1, sizeof(FUNCTION));
@@ -2133,49 +2142,49 @@ yyreduce:
       temp->function_declare = function_declare;
       (yyval.node) = temp;
     }
-#line 2137 "src/plinf.tab.c"
+#line 2146 "src/plinf.tab.c"
     break;
 
   case 52:
-#line 358 "src/plinf.y"
+#line 364 "src/plinf.y"
                                                         {
       PARAM_LIST *temp = (PARAM_LIST *)calloc(1, sizeof(PARAM_LIST));
       temp->id = (yyvsp[-2].id);
       temp->type = (yyvsp[0].type);
       (yyval.param_list) = concat_param_list((yyvsp[-4].param_list), temp);
     }
-#line 2148 "src/plinf.tab.c"
+#line 2157 "src/plinf.tab.c"
     break;
 
   case 53:
-#line 364 "src/plinf.y"
+#line 370 "src/plinf.y"
                            {
       PARAM_LIST *temp = (PARAM_LIST *)calloc(1, sizeof(PARAM_LIST));
       temp->id = (yyvsp[-2].id);
       temp->type = (yyvsp[0].type);
       (yyval.param_list) = temp;
     }
-#line 2159 "src/plinf.tab.c"
+#line 2168 "src/plinf.tab.c"
     break;
 
   case 54:
-#line 372 "src/plinf.y"
+#line 378 "src/plinf.y"
                                       {
       (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[-1].node));
     }
-#line 2167 "src/plinf.tab.c"
+#line 2176 "src/plinf.tab.c"
     break;
 
   case 55:
-#line 375 "src/plinf.y"
+#line 381 "src/plinf.y"
                           {
       (yyval.node) = create_node(op_nop);
     }
-#line 2175 "src/plinf.tab.c"
+#line 2184 "src/plinf.tab.c"
     break;
 
   case 56:
-#line 380 "src/plinf.y"
+#line 386 "src/plinf.y"
                                              {
       NODE *temp = create_node(op_assign);
       ASSIGN *assign = (ASSIGN *)calloc(1, sizeof(ASSIGN));
@@ -2184,11 +2193,11 @@ yyreduce:
       temp->assign = assign;
       (yyval.node) = temp;
     }
-#line 2188 "src/plinf.tab.c"
+#line 2197 "src/plinf.tab.c"
     break;
 
   case 57:
-#line 388 "src/plinf.y"
+#line 394 "src/plinf.y"
                                                        {
       NODE *temp = create_node(op_if_then);
       CONDITION_JUMP *jump = (CONDITION_JUMP *)calloc(1, sizeof(CONDITION_JUMP));
@@ -2197,11 +2206,11 @@ yyreduce:
       temp->condition_jump = jump;
       (yyval.node) = temp;
     }
-#line 2201 "src/plinf.tab.c"
+#line 2210 "src/plinf.tab.c"
     break;
 
   case 58:
-#line 396 "src/plinf.y"
+#line 402 "src/plinf.y"
                                                 {
       NODE *temp = create_node(op_if_then);
       CONDITION_JUMP *jump = (CONDITION_JUMP *)calloc(1, sizeof(CONDITION_JUMP));
@@ -2211,19 +2220,19 @@ yyreduce:
       temp->condition_jump = jump;
       (yyval.node) = temp;
     }
-#line 2215 "src/plinf.tab.c"
+#line 2224 "src/plinf.tab.c"
     break;
 
   case 59:
-#line 405 "src/plinf.y"
+#line 411 "src/plinf.y"
                                      {
       (yyval.node) = (yyvsp[-1].node);
     }
-#line 2223 "src/plinf.tab.c"
+#line 2232 "src/plinf.tab.c"
     break;
 
   case 60:
-#line 408 "src/plinf.y"
+#line 414 "src/plinf.y"
                                   {
       NODE *temp = create_node(op_while_do);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2232,27 +2241,27 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2236 "src/plinf.tab.c"
+#line 2245 "src/plinf.tab.c"
     break;
 
   case 61:
-#line 416 "src/plinf.y"
+#line 422 "src/plinf.y"
              {
       (yyval.node) = create_node(op_continue);
     }
-#line 2244 "src/plinf.tab.c"
+#line 2253 "src/plinf.tab.c"
     break;
 
   case 62:
-#line 419 "src/plinf.y"
+#line 425 "src/plinf.y"
          {
       (yyval.node) = create_node(op_exit);
     }
-#line 2252 "src/plinf.tab.c"
+#line 2261 "src/plinf.tab.c"
     break;
 
   case 63:
-#line 422 "src/plinf.y"
+#line 428 "src/plinf.y"
                      {
       NODE *temp = create_node(op_call);
       FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
@@ -2260,11 +2269,11 @@ yyreduce:
       temp->function_call = call;
       (yyval.node) = temp;
     }
-#line 2264 "src/plinf.tab.c"
+#line 2273 "src/plinf.tab.c"
     break;
 
   case 64:
-#line 429 "src/plinf.y"
+#line 435 "src/plinf.y"
                                         {
       NODE *temp = create_node(op_call);
       FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
@@ -2273,11 +2282,11 @@ yyreduce:
       temp->function_call = call;
       (yyval.node) = temp;
     }
-#line 2277 "src/plinf.tab.c"
+#line 2286 "src/plinf.tab.c"
     break;
 
   case 65:
-#line 437 "src/plinf.y"
+#line 443 "src/plinf.y"
                              {
       NODE *temp = create_node(op_call);
       FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
@@ -2286,117 +2295,117 @@ yyreduce:
       temp->function_call = call;
       (yyval.node) = temp;
     }
-#line 2290 "src/plinf.tab.c"
+#line 2299 "src/plinf.tab.c"
     break;
 
   case 66:
-#line 445 "src/plinf.y"
+#line 451 "src/plinf.y"
                                        {
       NODE *temp = create_node(op_call);
       FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
       call->id = (yyvsp[-3].id);
-      call->args = (yyvsp[-1].arg_list);
+      call->args = (yyvsp[-1].node);
       temp->function_call = call;
       (yyval.node) = temp;
     }
-#line 2303 "src/plinf.tab.c"
+#line 2312 "src/plinf.tab.c"
     break;
 
   case 67:
-#line 453 "src/plinf.y"
+#line 459 "src/plinf.y"
                           {
       (yyval.node) = create_node(op_nop);
     }
-#line 2311 "src/plinf.tab.c"
+#line 2320 "src/plinf.tab.c"
     break;
 
   case 68:
-#line 458 "src/plinf.y"
+#line 464 "src/plinf.y"
                                                 {
-      ARG_LIST *arg_list = (ARG_LIST *)calloc(1, sizeof(ARG_LIST));
-      arg_list->id_ref = (yyvsp[0].id_ref);
-      (yyval.arg_list) = concat_arg_list((yyvsp[-1].arg_list), arg_list);
+      NODE *temp = create_node(op_load_identifier);
+      temp->id_ref = (yyvsp[0].id_ref);
+      (yyval.node) = concat_node((yyvsp[-1].node), temp);
     }
-#line 2321 "src/plinf.tab.c"
+#line 2330 "src/plinf.tab.c"
     break;
 
   case 69:
-#line 463 "src/plinf.y"
+#line 469 "src/plinf.y"
                    {
-      ARG_LIST *arg_list = (ARG_LIST *)calloc(1, sizeof(ARG_LIST));
-      arg_list->id_ref = (yyvsp[0].id_ref);
-      (yyval.arg_list) = arg_list;
+      NODE *temp = create_node(op_load_identifier);
+      temp->id_ref = (yyvsp[0].id_ref);
+      (yyval.node) = temp;
     }
-#line 2331 "src/plinf.tab.c"
+#line 2340 "src/plinf.tab.c"
     break;
 
   case 70:
-#line 470 "src/plinf.y"
+#line 476 "src/plinf.y"
                             {
       IDENTIFIER_REF *id_ref = (IDENTIFIER_REF *)calloc(1, sizeof(IDENTIFIER_REF));
       id_ref->id = (yyvsp[0].id);
       (yyval.id_ref) = id_ref;
     }
-#line 2341 "src/plinf.tab.c"
+#line 2350 "src/plinf.tab.c"
     break;
 
   case 71:
-#line 475 "src/plinf.y"
+#line 481 "src/plinf.y"
                        {
       IDENTIFIER_REF *id_ref = (IDENTIFIER_REF *)calloc(1, sizeof(IDENTIFIER_REF));
       id_ref->id = (yyvsp[-1].id);
       id_ref->offset = (yyvsp[0].offset);
       (yyval.id_ref) = id_ref;
     }
-#line 2352 "src/plinf.tab.c"
+#line 2361 "src/plinf.tab.c"
     break;
 
   case 72:
-#line 483 "src/plinf.y"
+#line 489 "src/plinf.y"
                                         {
       ARRAY_OFFSET *index = (ARRAY_OFFSET *)calloc(1, sizeof(ARRAY_OFFSET));
       index->expression = (yyvsp[-1].node);
       (yyval.offset) = concat_array_offset((yyvsp[-3].offset), index);
     }
-#line 2362 "src/plinf.tab.c"
+#line 2371 "src/plinf.tab.c"
     break;
 
   case 73:
-#line 488 "src/plinf.y"
+#line 494 "src/plinf.y"
                              {
       ARRAY_OFFSET *index = (ARRAY_OFFSET *)calloc(1, sizeof(ARRAY_OFFSET));
       index->expression = (yyvsp[-1].node);
       (yyval.offset) = index;
     }
-#line 2372 "src/plinf.tab.c"
+#line 2381 "src/plinf.tab.c"
     break;
 
   case 74:
-#line 495 "src/plinf.y"
+#line 501 "src/plinf.y"
                             {
       (yyval.node) = concat_node((yyvsp[-2].node), (yyvsp[0].node));
     }
-#line 2380 "src/plinf.tab.c"
+#line 2389 "src/plinf.tab.c"
     break;
 
   case 75:
-#line 498 "src/plinf.y"
+#line 504 "src/plinf.y"
                {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 2388 "src/plinf.tab.c"
+#line 2397 "src/plinf.tab.c"
     break;
 
   case 76:
-#line 503 "src/plinf.y"
+#line 509 "src/plinf.y"
                               {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 2396 "src/plinf.tab.c"
+#line 2405 "src/plinf.tab.c"
     break;
 
   case 77:
-#line 506 "src/plinf.y"
+#line 512 "src/plinf.y"
                                            {
       NODE *temp = create_node(op_le);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2405,11 +2414,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2409 "src/plinf.tab.c"
+#line 2418 "src/plinf.tab.c"
     break;
 
   case 78:
-#line 514 "src/plinf.y"
+#line 520 "src/plinf.y"
                                             {
       NODE *temp = create_node(op_leq);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2418,11 +2427,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2422 "src/plinf.tab.c"
+#line 2431 "src/plinf.tab.c"
     break;
 
   case 79:
-#line 522 "src/plinf.y"
+#line 528 "src/plinf.y"
                                            {
       NODE *temp = create_node(op_ge);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2431,11 +2440,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2435 "src/plinf.tab.c"
+#line 2444 "src/plinf.tab.c"
     break;
 
   case 80:
-#line 530 "src/plinf.y"
+#line 536 "src/plinf.y"
                                             {
       NODE *temp = create_node(op_geq);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2444,11 +2453,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2448 "src/plinf.tab.c"
+#line 2457 "src/plinf.tab.c"
     break;
 
   case 81:
-#line 538 "src/plinf.y"
+#line 544 "src/plinf.y"
                                            {
       NODE *temp = create_node(op_eq);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2457,11 +2466,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2461 "src/plinf.tab.c"
+#line 2470 "src/plinf.tab.c"
     break;
 
   case 82:
-#line 546 "src/plinf.y"
+#line 552 "src/plinf.y"
                                             {
       NODE *temp = create_node(op_neq);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2470,11 +2479,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2474 "src/plinf.tab.c"
+#line 2483 "src/plinf.tab.c"
     break;
 
   case 83:
-#line 556 "src/plinf.y"
+#line 562 "src/plinf.y"
                                                {
       NODE *temp = create_node(op_plus);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2483,11 +2492,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2487 "src/plinf.tab.c"
+#line 2496 "src/plinf.tab.c"
     break;
 
   case 84:
-#line 564 "src/plinf.y"
+#line 570 "src/plinf.y"
                                  {
       NODE *temp = create_node(op_minus);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2496,11 +2505,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2500 "src/plinf.tab.c"
+#line 2509 "src/plinf.tab.c"
     break;
 
   case 85:
-#line 572 "src/plinf.y"
+#line 578 "src/plinf.y"
                               {
       NODE *temp = create_node(op_or);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2509,19 +2518,19 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2513 "src/plinf.tab.c"
+#line 2522 "src/plinf.tab.c"
     break;
 
   case 86:
-#line 580 "src/plinf.y"
+#line 586 "src/plinf.y"
               {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 2521 "src/plinf.tab.c"
+#line 2530 "src/plinf.tab.c"
     break;
 
   case 87:
-#line 583 "src/plinf.y"
+#line 589 "src/plinf.y"
                {
       NODE *temp = create_node(op_minus);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2529,19 +2538,19 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2533 "src/plinf.tab.c"
+#line 2542 "src/plinf.tab.c"
     break;
 
   case 88:
-#line 590 "src/plinf.y"
+#line 596 "src/plinf.y"
          {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 2541 "src/plinf.tab.c"
+#line 2550 "src/plinf.tab.c"
     break;
 
   case 89:
-#line 595 "src/plinf.y"
+#line 601 "src/plinf.y"
                         {
       NODE *temp = create_node(op_times);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2550,11 +2559,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2554 "src/plinf.tab.c"
+#line 2563 "src/plinf.tab.c"
     break;
 
   case 90:
-#line 603 "src/plinf.y"
+#line 609 "src/plinf.y"
                        {
       NODE *temp = create_node(op_devide);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2563,11 +2572,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2567 "src/plinf.tab.c"
+#line 2576 "src/plinf.tab.c"
     break;
 
   case 91:
-#line 611 "src/plinf.y"
+#line 617 "src/plinf.y"
                     {
       NODE *temp = create_node(op_div);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2576,11 +2585,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2580 "src/plinf.tab.c"
+#line 2589 "src/plinf.tab.c"
     break;
 
   case 92:
-#line 619 "src/plinf.y"
+#line 625 "src/plinf.y"
                     {
       NODE *temp = create_node(op_mod);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2589,11 +2598,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2593 "src/plinf.tab.c"
+#line 2602 "src/plinf.tab.c"
     break;
 
   case 93:
-#line 627 "src/plinf.y"
+#line 633 "src/plinf.y"
                     {
       NODE *temp = create_node(op_and);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2602,57 +2611,57 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2606 "src/plinf.tab.c"
+#line 2615 "src/plinf.tab.c"
     break;
 
   case 94:
-#line 635 "src/plinf.y"
+#line 641 "src/plinf.y"
            {
       (yyval.node) = (yyvsp[0].node);
     }
-#line 2614 "src/plinf.tab.c"
+#line 2623 "src/plinf.tab.c"
     break;
 
   case 95:
-#line 640 "src/plinf.y"
+#line 646 "src/plinf.y"
                        {
       NODE *temp = create_node(op_load_identifier);
       temp->id_ref = (yyvsp[0].id_ref);
       (yyval.node) = temp;
     }
-#line 2624 "src/plinf.tab.c"
+#line 2633 "src/plinf.tab.c"
     break;
 
   case 96:
-#line 645 "src/plinf.y"
+#line 651 "src/plinf.y"
            {
       NODE *temp = create_node(op_load_const);
       temp->const_value = (yyvsp[0].const_value);
       (yyval.node) = temp;
     }
-#line 2634 "src/plinf.tab.c"
+#line 2643 "src/plinf.tab.c"
     break;
 
   case 97:
-#line 650 "src/plinf.y"
+#line 656 "src/plinf.y"
                 {
       NODE *temp = create_node(op_load_const);
       temp->const_value = (yyvsp[0].const_value);
       (yyval.node) = temp;
     }
-#line 2644 "src/plinf.tab.c"
+#line 2653 "src/plinf.tab.c"
     break;
 
   case 98:
-#line 655 "src/plinf.y"
+#line 661 "src/plinf.y"
                              {
       (yyval.node) = (yyvsp[-1].node);
     }
-#line 2652 "src/plinf.tab.c"
+#line 2661 "src/plinf.tab.c"
     break;
 
   case 99:
-#line 658 "src/plinf.y"
+#line 664 "src/plinf.y"
                {
       NODE *temp = create_node(op_not);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2660,11 +2669,11 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2664 "src/plinf.tab.c"
+#line 2673 "src/plinf.tab.c"
     break;
 
   case 100:
-#line 665 "src/plinf.y"
+#line 671 "src/plinf.y"
                      {
       NODE *temp = create_node(op_call);
       FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
@@ -2672,11 +2681,11 @@ yyreduce:
       temp->function_call = call;
       (yyval.node) = temp;
     }
-#line 2676 "src/plinf.tab.c"
+#line 2685 "src/plinf.tab.c"
     break;
 
   case 101:
-#line 672 "src/plinf.y"
+#line 678 "src/plinf.y"
                                         {
       NODE *temp = create_node(op_call);
       FUNCTION_CALL *call = (FUNCTION_CALL *)calloc(1, sizeof(FUNCTION_CALL));
@@ -2685,11 +2694,11 @@ yyreduce:
       temp->function_call = call;
       (yyval.node) = temp;
     }
-#line 2689 "src/plinf.tab.c"
+#line 2698 "src/plinf.tab.c"
     break;
 
   case 102:
-#line 680 "src/plinf.y"
+#line 686 "src/plinf.y"
                                         {
       NODE *temp = create_node(op_odd);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
@@ -2697,31 +2706,31 @@ yyreduce:
       temp->binary_operate = operation;
       (yyval.node) = temp;
     }
-#line 2701 "src/plinf.tab.c"
+#line 2710 "src/plinf.tab.c"
     break;
 
   case 103:
-#line 687 "src/plinf.y"
+#line 693 "src/plinf.y"
          {
       NODE *temp = create_node(op_load_const);
       temp->const_value = (yyvsp[0].const_value);
       (yyval.node) = temp;
     }
-#line 2711 "src/plinf.tab.c"
+#line 2720 "src/plinf.tab.c"
     break;
 
   case 104:
-#line 692 "src/plinf.y"
+#line 698 "src/plinf.y"
           {
       NODE *temp = create_node(op_load_const);
       temp->const_value = (yyvsp[0].const_value);
       (yyval.node) = temp;
     }
-#line 2721 "src/plinf.tab.c"
+#line 2730 "src/plinf.tab.c"
     break;
 
 
-#line 2725 "src/plinf.tab.c"
+#line 2734 "src/plinf.tab.c"
 
       default: break;
     }
@@ -2959,7 +2968,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 699 "src/plinf.y"
+#line 705 "src/plinf.y"
 
 
 void yyerror(const char *msg) {
@@ -2988,13 +2997,6 @@ VAR_LIST *concat_var_list(VAR_LIST *first, VAR_LIST *second) {
 
 PARAM_LIST *concat_param_list(PARAM_LIST *first, PARAM_LIST *second) {
   PARAM_LIST *temp = first;
-  while (temp->next) temp = temp->next;
-  temp->next = second;
-  return first;
-}
-
-ARG_LIST *concat_arg_list(ARG_LIST *first, ARG_LIST *second) {
-  ARG_LIST *temp = first;
   while (temp->next) temp = temp->next;
   temp->next = second;
   return first;

@@ -600,8 +600,8 @@ char *yytext;
 #include <stdlib.h>
 #include <string.h>
 
-#include "plinf.tab.h"
 #include "intermediate.h"
+#include "plinf.tab.h"
 #line 606 "src/plinf.yy.c"
 #line 607 "src/plinf.yy.c"
 
@@ -950,19 +950,21 @@ YY_RULE_SETUP
 #line 41 "src/plinf.l"
 {
   TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
+  ARRAY_INFO *info = (ARRAY_INFO *)calloc(1, sizeof(ARRAY_INFO));
   temp->type = tt_array;
+  temp->array = info;
   yylval.type = temp;
   return ARRAY;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 47 "src/plinf.l"
+#line 49 "src/plinf.l"
 { return OF; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 48 "src/plinf.l"
+#line 50 "src/plinf.l"
 {
   CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_bool;
@@ -973,7 +975,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 55 "src/plinf.l"
+#line 57 "src/plinf.l"
 {
   CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_bool;
@@ -984,25 +986,25 @@ YY_RULE_SETUP
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 63 "src/plinf.l"
+#line 65 "src/plinf.l"
 { return IF; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 64 "src/plinf.l"
+#line 66 "src/plinf.l"
 { return THEN; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 65 "src/plinf.l"
+#line 67 "src/plinf.l"
 { return ELSE; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 67 "src/plinf.l"
+#line 69 "src/plinf.l"
 {
   IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
-  temp->type = id_identifier;
+  temp->type = it_identifier;
   temp->name = strdup("write");
   yylval.id = temp;
   return WRITE;
@@ -1010,10 +1012,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 74 "src/plinf.l"
+#line 76 "src/plinf.l"
 {
   IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
-  temp->type = id_identifier;
+  temp->type = it_identifier;
   temp->name = strdup("read");
   yylval.id = temp;
   return READ;
@@ -1021,172 +1023,172 @@ YY_RULE_SETUP
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 82 "src/plinf.l"
+#line 84 "src/plinf.l"
 { return WHILE; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 83 "src/plinf.l"
+#line 85 "src/plinf.l"
 { return DO; }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 84 "src/plinf.l"
+#line 86 "src/plinf.l"
 { return CONTINUE; }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 85 "src/plinf.l"
+#line 87 "src/plinf.l"
 { return EXIT; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 87 "src/plinf.l"
+#line 89 "src/plinf.l"
 { return OR; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 88 "src/plinf.l"
+#line 90 "src/plinf.l"
 { return AND; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 89 "src/plinf.l"
+#line 91 "src/plinf.l"
 { return NOT; }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 91 "src/plinf.l"
+#line 93 "src/plinf.l"
 { return DIV; }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 92 "src/plinf.l"
+#line 94 "src/plinf.l"
 { return MOD; }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 94 "src/plinf.l"
+#line 96 "src/plinf.l"
 { return CALL; }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 96 "src/plinf.l"
+#line 98 "src/plinf.l"
 { return ODD; }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 98 "src/plinf.l"
+#line 100 "src/plinf.l"
 { return BLOCK_BEGIN; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 99 "src/plinf.l"
+#line 101 "src/plinf.l"
 { return BLOCK_END; }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 101 "src/plinf.l"
+#line 103 "src/plinf.l"
 { return NEQ; }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 102 "src/plinf.l"
+#line 104 "src/plinf.l"
 { return GEQ; }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 103 "src/plinf.l"
+#line 105 "src/plinf.l"
 { return LEQ; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 104 "src/plinf.l"
+#line 106 "src/plinf.l"
 { return GE; }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 105 "src/plinf.l"
+#line 107 "src/plinf.l"
 { return LE; }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 106 "src/plinf.l"
+#line 108 "src/plinf.l"
 { return EQ; }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 108 "src/plinf.l"
+#line 110 "src/plinf.l"
 { return PLUS; }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 109 "src/plinf.l"
+#line 111 "src/plinf.l"
 { return MINUS; }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 110 "src/plinf.l"
+#line 112 "src/plinf.l"
 { return DIVIDE; }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 111 "src/plinf.l"
+#line 113 "src/plinf.l"
 { return TIMES; }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 113 "src/plinf.l"
-{ return ASSIGN; }
+#line 115 "src/plinf.l"
+{ return ASSIGN_; }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 114 "src/plinf.l"
+#line 116 "src/plinf.l"
 { return PERIOD; }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 115 "src/plinf.l"
+#line 117 "src/plinf.l"
 { return PERIOD_PERIOD; }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 116 "src/plinf.l"
+#line 118 "src/plinf.l"
 { return COLON; }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 117 "src/plinf.l"
+#line 119 "src/plinf.l"
 { return SEMI; }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 118 "src/plinf.l"
+#line 120 "src/plinf.l"
 { return COMMA; }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 119 "src/plinf.l"
+#line 121 "src/plinf.l"
 { return LPAREN; }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 120 "src/plinf.l"
+#line 122 "src/plinf.l"
 { return RPAREN; }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 121 "src/plinf.l"
+#line 123 "src/plinf.l"
 { return LBRACE; }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 122 "src/plinf.l"
+#line 124 "src/plinf.l"
 { return RBRACE; }
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 124 "src/plinf.l"
+#line 126 "src/plinf.l"
 {
   CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_int;
@@ -1202,7 +1204,7 @@ YY_LINENO_REWIND_TO(yy_cp - 1);
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 131 "src/plinf.l"
+#line 133 "src/plinf.l"
 {
   char *eptr;
   CONST *temp = (CONST *)calloc(1, sizeof(CONST));
@@ -1214,10 +1216,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 140 "src/plinf.l"
+#line 142 "src/plinf.l"
 {
   IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
-  temp->type = id_identifier;
+  temp->type = it_identifier;
   temp->name = strdup(yytext);
   yylval.id = temp;
   return IDENTIFIER_;
@@ -1225,12 +1227,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 149 "src/plinf.l"
+#line 151 "src/plinf.l"
 /* ignore comments */;
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 150 "src/plinf.l"
+#line 152 "src/plinf.l"
 {
   for (;;) {
     switch (input()) {
@@ -1253,15 +1255,15 @@ YY_RULE_SETUP
 case 56:
 /* rule 56 can match eol */
 YY_RULE_SETUP
-#line 169 "src/plinf.l"
+#line 171 "src/plinf.l"
 ;
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 171 "src/plinf.l"
+#line 173 "src/plinf.l"
 ECHO;
 	YY_BREAK
-#line 1265 "src/plinf.yy.c"
+#line 1267 "src/plinf.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2278,6 +2280,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 171 "src/plinf.l"
+#line 173 "src/plinf.l"
 
 

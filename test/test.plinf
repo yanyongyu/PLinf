@@ -8,9 +8,9 @@ procedure procedure1;
     // also do nothing
   end;
 
-function function1(param1: integer, param2: t3): integer;
+function function1(param1: integer, param2: t3): t4;
   begin
-    function1 := param1;
+    function1[0][2] := param1;
   end;
 
 begin

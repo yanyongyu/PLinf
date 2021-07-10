@@ -1,6 +1,7 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "intermediate.h"
 
@@ -13,12 +14,16 @@ NODE *create_node(OPERATION);
 NODE *concat_node(NODE *, NODE *);
 VAR_LIST *concat_var_list(VAR_LIST *, VAR_LIST *);
 PARAM_LIST *concat_param_list(PARAM_LIST *, PARAM_LIST *);
+ARRAY_OFFSET *concat_array_offset(ARRAY_OFFSET *first, ARRAY_OFFSET *second);
 %}
+
+%code requires {
+  #include "intermediate.h"
+}
 
 %union {
   VAR_LIST *var_list;
   PARAM_LIST *param_list;
-  ARG_LIST *arg_list;
   NODE *node;
   TYPE *type;
   ARRAY_OFFSET *offset;
@@ -60,8 +65,7 @@ PARAM_LIST *concat_param_list(PARAM_LIST *, PARAM_LIST *);
 %type <node> procedure_declare procedure_define
 %type <param_list> param_define
 
-%type <node> statements statement args
-%type <arg_list> identifier_refs
+%type <node> statements statement args identifier_refs
 %type <id_ref> identifier_ref
 %type <offset> indexs
 
@@ -86,7 +90,7 @@ before_program: {
   ;
 
 block: declarepart BLOCK_BEGIN statements BLOCK_END {
-      $$ = $1;
+      $$ = concat_node($1, $3);
     }
   ;
 
@@ -247,11 +251,12 @@ var_define: var_define SEMI identifier_list COLON type {
         define = temp->next = create_node(op_var_declare);
         declare = (VAR_DECLARE *)calloc(1, sizeof(VAR_DECLARE));
         declare->id = var_list->id;
-        declare->type = $5;
+        declare->type = copy_type($5);
         define->var_declare = declare;
         temp = temp->next;
         var_list = var_list->next;
       } while (var_list);
+      free_type($5);
       $$ = concat_node($1, start->next);
     }
   | identifier_list COLON type {
@@ -263,11 +268,12 @@ var_define: var_define SEMI identifier_list COLON type {
         define = temp->next = create_node(op_var_declare);
         declare = (VAR_DECLARE *)calloc(1, sizeof(VAR_DECLARE));
         declare->id = var_list->id;
-        declare->type = $3;
+        declare->type = copy_type($3);
         define->var_declare = declare;
         temp = temp->next;
         var_list = var_list->next;
       } while (var_list);
+      free_type($3);
       $$ = start->next;
     }
   ;
@@ -456,14 +462,14 @@ statement: identifier_ref ASSIGN_ expression {
   ;
 
 identifier_refs: identifier_refs identifier_ref {
-      ARG_LIST *arg_list = (ARG_LIST *)calloc(1, sizeof(ARG_LIST));
-      arg_list->id_ref = $2;
-      $$ = concat_arg_list($1, arg_list);
+      NODE *temp = create_node(op_load_identifier);
+      temp->id_ref = $2;
+      $$ = concat_node($1, temp);
     }
   | identifier_ref {
-      ARG_LIST *arg_list = (ARG_LIST *)calloc(1, sizeof(ARG_LIST));
-      arg_list->id_ref = $1;
-      $$ = arg_list;
+      NODE *temp = create_node(op_load_identifier);
+      temp->id_ref = $1;
+      $$ = temp;
     }
   ;
 
@@ -724,13 +730,6 @@ VAR_LIST *concat_var_list(VAR_LIST *first, VAR_LIST *second) {
 
 PARAM_LIST *concat_param_list(PARAM_LIST *first, PARAM_LIST *second) {
   PARAM_LIST *temp = first;
-  while (temp->next) temp = temp->next;
-  temp->next = second;
-  return first;
-}
-
-ARG_LIST *concat_arg_list(ARG_LIST *first, ARG_LIST *second) {
-  ARG_LIST *temp = first;
   while (temp->next) temp = temp->next;
   temp->next = second;
   return first;

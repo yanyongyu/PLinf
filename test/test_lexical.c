@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-#include "plinf.tab.c"
-#include "plinf.yy.c"
+#include "plinf.tab.h"
+
+extern int yylex(void);
 
 int main() {
   int token;

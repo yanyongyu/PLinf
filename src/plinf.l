@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "plinf.tab.h"
 #include "intermediate.h"
+#include "plinf.tab.h"
 %}
 
 %option noyywrap
@@ -40,7 +40,9 @@ letter [a-zA-Z]
 }
 (?i:"array") {
   TYPE *temp = (TYPE *)calloc(1, sizeof(TYPE));
+  ARRAY_INFO *info = (ARRAY_INFO *)calloc(1, sizeof(ARRAY_INFO));
   temp->type = tt_array;
+  temp->array = info;
   yylval.type = temp;
   return ARRAY;
 }
@@ -66,14 +68,14 @@ letter [a-zA-Z]
 
 (?i:"write") {
   IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
-  temp->type = id_identifier;
+  temp->type = it_identifier;
   temp->name = strdup("write");
   yylval.id = temp;
   return WRITE;
 }
 (?i:"read") {
   IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
-  temp->type = id_identifier;
+  temp->type = it_identifier;
   temp->name = strdup("read");
   yylval.id = temp;
   return READ;
@@ -110,7 +112,7 @@ letter [a-zA-Z]
 "/" { return DIVIDE; }
 "*" { return TIMES; }
 
-":=" { return ASSIGN; }
+":=" { return ASSIGN_; }
 "." { return PERIOD; }
 ".." { return PERIOD_PERIOD; }
 ":" { return COLON; }
@@ -139,7 +141,7 @@ letter [a-zA-Z]
 
 {letter}({letter}|{digit})* {
   IDENTIFIER *temp = (IDENTIFIER *)calloc(1, sizeof(IDENTIFIER));
-  temp->type = id_identifier;
+  temp->type = it_identifier;
   temp->name = strdup(yytext);
   yylval.id = temp;
   return IDENTIFIER_;

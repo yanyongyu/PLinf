@@ -12,9 +12,9 @@ lex:
 	$(LEX) -o src/plinf.yy.c src/plinf.l
 
 test_lex: yacc lex
-	$(CC) test/test_lexical.c -Isrc -o temp/test_lexical
+	$(CC) test/test_lexical.c $(wildcard src/*.c) -Isrc -o temp/test_lexical
 	./temp/test_lexical
 
 test_grammar: yacc lex
-	$(CC) test/test_grammar.c -Isrc -o temp/test_grammar
+	$(CC) test/test_grammar.c $(wildcard src/*.c) -Isrc -o temp/test_grammar
 	./temp/test_grammar $(file)

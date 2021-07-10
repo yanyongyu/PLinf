@@ -59,7 +59,7 @@ typedef struct type {
 } TYPE;
 
 // 常量类型
-typedef enum { ct_int, ct_real, ct_bool, ct_type } CONST_TYPE;
+typedef enum { ct_int, ct_real, ct_bool } CONST_TYPE;
 
 // 常量结构
 typedef struct const_value {
@@ -67,7 +67,6 @@ typedef struct const_value {
   union {
     long num;
     double real_num;
-    TYPE *type;
   };
 } CONST;
 
@@ -103,12 +102,6 @@ typedef struct param_list {
   IDENTIFIER *id;
   TYPE *type;
 } PARAM_LIST;
-
-// 参数链表
-typedef struct arg_list {
-  struct arg_list *next;
-  IDENTIFIER_REF *id_ref;
-} ARG_LIST;
 
 // 过程结构
 typedef struct procedure {
@@ -194,11 +187,28 @@ typedef struct node {
   };
 } NODE;
 
+ARRAY_INFO *copy_array_info(ARRAY_INFO *a);
+TYPE *copy_type(TYPE *a);
+IDENTIFIER *copy_identifier(IDENTIFIER *a);
+void free_array_info(ARRAY_INFO *a);
+void free_type(TYPE *a);
+void free_const(CONST *a);
+void free_identifier(IDENTIFIER *a);
+void free_array_offset(ARRAY_OFFSET *a);
+void free_identifier_ref(IDENTIFIER_REF *a);
+void free_var_list(VAR_LIST *a);
+void free_param_list(PARAM_LIST *a);
+void free_procedure(PROCEDURE *a);
+void free_function(FUNCTION *a);
+void free_const_declare(CONST_DECLARE *a);
+void free_type_declare(TYPE_DECLARE *a);
+void free_var_declare(VAR_DECLARE *a);
+void free_procedure_declare(PROCEDURE_DECLARE *a);
+void free_function_declare(FUNCTION_DECLARE *a);
+void free_assign(ASSIGN *a);
+void free_binary_operate(BINARY_OPERATE *a);
+void free_condition_jump(CONDITION_JUMP *a);
+void free_function_call(FUNCTION_CALL *a);
 NODE *free_node(NODE *node);
-void free_const_declare(CONST_DECLARE *);
-void free_type_declare(TYPE_DECLARE *);
-void free_var_declare(VAR_DECLARE *);
-void free_procedure_declare(PROCEDURE_DECLARE *);
-void free_function_declare(FUNCTION_DECLARE *);
 
 #endif
