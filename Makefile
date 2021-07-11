@@ -18,3 +18,7 @@ test_lex: yacc lex
 test_grammar: yacc lex
 	$(CC) test/test_grammar.c $(wildcard src/*.c) -Isrc -o temp/test_grammar
 	./temp/test_grammar $(file)
+
+test_opcode: yacc lex
+	$(CC) test/test_opcode.c $(wildcard src/*.c) -Isrc -o temp/test_opcode
+	./temp/test_opcode $(file)

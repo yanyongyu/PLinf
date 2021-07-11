@@ -126,7 +126,7 @@ letter [a-zA-Z]
 {digit}+ 	{
   CONST *temp = (CONST *)calloc(1, sizeof(CONST));
   temp->type = ct_int;
-  temp->num = atoi(yytext);
+  temp->num = atol(yytext);
   yylval.const_value = temp;
   return NUMBER;
 }
