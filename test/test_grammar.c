@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
       return 0;
     }
     do {
-      print_node(node, 0);
+      print_node(stdout, node, 0);
       node = free_node(node);
     } while (node);
   } else {
