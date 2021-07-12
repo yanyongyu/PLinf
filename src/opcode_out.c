@@ -26,9 +26,10 @@ int next_index(void) {
  *                                                  *
  ****************************************************/
 
-TAG_LIST *tag_wait;
-TAG_LIST *tag_ready;
-OUTPUT_CACHE *output_cache;
+TAG_LIST *tag_wait = NULL;
+TAG_LIST *tag_ready = NULL;
+OUTPUT_CACHE *output_cache = NULL;
+LOOP_STACK *loop_stack = NULL;
 
 void store_tag(int tag) {
   TAG_LIST *temp;
@@ -289,6 +290,7 @@ void opout_function_declare(FILE *fp, FUNCTION_DECLARE *function_declare) {
     opout_node(fp, node);
     node = node->next;
   }
+  output(fp, next_index(), opcode_return_function, (ARG *)NULL);
   output(fp, next_index(), opcode_block_end, (ARG *)NULL);
 
   int param_count = 0;
@@ -353,16 +355,36 @@ void opout_condition_jump(FILE *fp, CONDITION_JUMP *condition_jump) {
 void opout_while_do(FILE *fp, BINARY_OPERATE *binary_operate) {
   ARG *temp;
   int condition_position = current_index() + 1;
+
+  // output condition
   opout_node(fp, binary_operate->first);
+
+  // output condition false jump
   temp = (ARG *)calloc(1, sizeof(ARG));
   temp->type = at_tag;
   temp->num = condition_position;
   output(fp, next_index(), opcode_jump_if_false, temp);
+
+  // push loop stack
+  LOOP_STACK *loop = (LOOP_STACK *)calloc(1, sizeof(LOOP_STACK));
+  loop->next = loop_stack;
+  loop->tag_id = condition_position;
+  loop_stack = loop;
+
+  // output loop block
   opout_node(fp, binary_operate->second);
+
+  // output jump back to condition
   temp = (ARG *)calloc(1, sizeof(ARG));
   temp->type = at_int;
   temp->num = condition_position;
   output(fp, next_index(), opcode_jump, temp);
+
+  // pop loop stack
+  loop_stack = loop_stack->next;
+  free(loop);
+
+  // backport loop end
   temp = (ARG *)calloc(1, sizeof(ARG));
   temp->type = at_int;
   temp->num = current_index() + 1;
@@ -390,6 +412,8 @@ void opout_function_call(FILE *fp, FUNCTION_CALL *function_call) {
 
 void opout_node(FILE *fp, NODE *node) {
   if (node == NULL) return;
+  ARG *temp;
+  int cmp_op;
   switch (node->op) {
     case op_nop:
       output(fp, next_index(), opcode_nop, (ARG *)NULL);
@@ -416,11 +440,106 @@ void opout_node(FILE *fp, NODE *node) {
     case op_if_then_else:
       opout_condition_jump(fp, node->condition_jump);
       break;
+    case op_while_do:
+      opout_while_do(fp, node->binary_operate);
+      break;
+    case op_continue:
+      if (loop_stack == NULL) {
+        fprintf(stderr, "continue outside of loop");
+        exit(1);
+      }
+      temp = (ARG *)calloc(1, sizeof(ARG));
+      temp->type = at_int;
+      temp->num = loop_stack->tag_id;
+      output(fp, next_index(), opcode_jump, temp);
+      break;
+    case op_exit:
+      if (loop_stack == NULL) {
+        fprintf(stderr, "exit outside of loop");
+        exit(1);
+      }
+      temp = (ARG *)calloc(1, sizeof(ARG));
+      temp->type = at_tag;
+      temp->num = loop_stack->tag_id;
+      output(fp, next_index(), opcode_jump, temp);
+      break;
     case op_call:
       opout_function_call(fp, node->function_call);
       break;
-    case op_while_do:
-      opout_while_do(fp, node->binary_operate);
+    case op_le:
+      cmp_op = 0;
+    case op_leq:
+      cmp_op = 1;
+    case op_ge:
+      cmp_op = 2;
+    case op_geq:
+      cmp_op = 3;
+    case op_eq:
+      cmp_op = 4;
+    case op_neq:
+      cmp_op = 5;
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      temp = (ARG *)calloc(1, sizeof(ARG));
+      temp->type = at_int;
+      temp->num = cmp_op;
+      output(fp, next_index(), opcode_binary_compare, temp);
+      break;
+    case op_plus:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_plus, (ARG *)NULL);
+      break;
+    case op_minus:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      if (node->binary_operate->first == NULL)
+        output(fp, next_index(), opcode_unary_negative, (ARG *)NULL);
+      else
+        output(fp, next_index(), opcode_binary_minus, (ARG *)NULL);
+      break;
+    case op_power:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_power, (ARG *)NULL);
+      break;
+    case op_times:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_times, (ARG *)NULL);
+      break;
+    case op_divide:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_divide, (ARG *)NULL);
+      break;
+    case op_div:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_floor_divide, (ARG *)NULL);
+      break;
+    case op_mod:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_modulo, (ARG *)NULL);
+      break;
+    case op_odd:
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_unary_odd, (ARG *)NULL);
+      break;
+    case op_and:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_and, (ARG *)NULL);
+      break;
+    case op_or:
+      opout_node(fp, node->binary_operate->first);
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_binary_or, (ARG *)NULL);
+      break;
+    case op_not:
+      opout_node(fp, node->binary_operate->second);
+      output(fp, next_index(), opcode_unary_not, (ARG *)NULL);
       break;
     case op_load_const:
       opout_const(fp, node->const_value);
@@ -429,7 +548,7 @@ void opout_node(FILE *fp, NODE *node) {
       opout_identifier_ref(fp, node->id_ref);
       break;
     default:
-      fprintf(fp, "unknown opcode %d\n", node->op);
+      fprintf(stderr, "unknown opcode %d\n", node->op);
       break;
   }
 }

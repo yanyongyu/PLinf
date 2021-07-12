@@ -361,7 +361,7 @@ procedure_define: PROCEDURE_ IDENTIFIER_ SEMI block SEMI {
     }
   ;
 
-param_define: param_define COMMA IDENTIFIER_ COLON type {
+param_define: param_define SEMI IDENTIFIER_ COLON type {
       PARAM_LIST *temp = (PARAM_LIST *)calloc(1, sizeof(PARAM_LIST));
       temp->id = $3;
       temp->type = $5;
@@ -400,7 +400,7 @@ statement: identifier_ref ASSIGN_ expression {
       $$ = temp;
     }
   | IF expression THEN statement ELSE statement {
-      NODE *temp = create_node(op_if_then);
+      NODE *temp = create_node(op_if_then_else);
       CONDITION_JUMP *jump = (CONDITION_JUMP *)calloc(1, sizeof(CONDITION_JUMP));
       jump->condition = $2;
       jump->true = $4;
@@ -461,9 +461,9 @@ statement: identifier_ref ASSIGN_ expression {
     }
   ;
 
-identifier_refs: identifier_refs identifier_ref {
+identifier_refs: identifier_refs COMMA identifier_ref {
       NODE *temp = create_node(op_load_identifier);
-      temp->id_ref = $2;
+      temp->id_ref = $3;
       $$ = concat_node($1, temp);
     }
   | identifier_ref {
@@ -615,7 +615,7 @@ term: term TIMES factor {
       $$ = temp;
     }
   | term DIVIDE factor {
-      NODE *temp = create_node(op_devide);
+      NODE *temp = create_node(op_divide);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
       operation->first = $1;
       operation->second = $3;

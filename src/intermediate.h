@@ -30,7 +30,7 @@ typedef enum {
   op_minus,
   op_times,
   op_power,
-  op_devide,
+  op_divide,
   op_div,
   op_mod,
   op_odd,

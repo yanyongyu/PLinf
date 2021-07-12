@@ -8,8 +8,6 @@
 typedef enum {
   /* do nothing */
   opcode_nop,
-  /* pop tos anyway  */
-  opcode_pop_top,
   /* declare a const variable
    * arg: const name
    * tos: const value
@@ -81,7 +79,7 @@ typedef enum {
   /* tos = tos1 % tos */
   opcode_binary_modulo,
   /* tos = tos1 + tos */
-  opcode_binary_add,
+  opcode_binary_plus,
   /* tos = tos1 - tos */
   opcode_binary_minus,
   /* tos = tos1[tos]*/
@@ -109,12 +107,20 @@ typedef enum {
    * tos: condition
    */
   opcode_jump_if_false,
-  /* call function and push return value if exists onto stack
+  /* call function, store current operation index for jump back
+   * jump to function block start
+   * push new variable scope
+   * predeclare param and return variables
    * arg: param count n
    * tos0~n-1: params
    * tosn: function name
    */
   opcode_call_function,
+  /* return function, jump back to where function was called
+   * push return variable onto stack
+   * pop latest variable scope
+   */
+  opcode_return_function,
 } OPCODE;
 
 extern int global_index;
@@ -150,6 +156,11 @@ typedef struct output_cache {
   OPCODE opcode;
   ARG *arg;
 } OUTPUT_CACHE;
+
+typedef struct loop_stack {
+  struct loop_stack *next;
+  int tag_id;
+} LOOP_STACK;
 
 void store_tag(int tag);
 void fill_tag(int tag, ARG *value);

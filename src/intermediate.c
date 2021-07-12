@@ -216,7 +216,7 @@ NODE *free_node(NODE *node) {
     case op_plus:
     case op_minus:
     case op_times:
-    case op_devide:
+    case op_divide:
     case op_div:
     case op_mod:
     case op_odd:
