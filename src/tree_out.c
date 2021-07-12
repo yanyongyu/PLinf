@@ -232,6 +232,12 @@ void print_binary_operate(FILE *fp, OPERATION op, BINARY_OPERATE *operation,
       fprintf(fp, "*\n");
       print_node(fp, operation->second, indent);
       break;
+    case op_power:
+      print_node(fp, operation->first, 0);
+      print_indent(fp, indent);
+      fprintf(fp, "**\n");
+      print_node(fp, operation->second, indent);
+      break;
     case op_devide:
       print_node(fp, operation->first, 0);
       print_indent(fp, indent);
@@ -343,6 +349,7 @@ void print_node(FILE *fp, NODE *node, int indent) {
     case op_plus:
     case op_minus:
     case op_times:
+    case op_power:
     case op_devide:
     case op_div:
     case op_mod:

@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
       printf("Error parsing: no result\n");
       return 0;
     }
+    restart_opcode();
     do {
       opout_node(stdout, node);
       node = free_node(node);

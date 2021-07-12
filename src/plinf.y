@@ -606,6 +606,14 @@ term: term TIMES factor {
       temp->binary_operate = operation;
       $$ = temp;
     }
+  | term TIMES TIMES factor {
+      NODE *temp = create_node(op_power);
+      BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
+      operation->first = $1;
+      operation->second = $4;
+      temp->binary_operate = operation;
+      $$ = temp;
+    }
   | term DIVIDE factor {
       NODE *temp = create_node(op_devide);
       BINARY_OPERATE *operation = (BINARY_OPERATE *)calloc(1, sizeof(BINARY_OPERATE));
