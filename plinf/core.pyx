@@ -23,6 +23,41 @@ cdef extern from "core/plinf.yy.c":
 cdef extern from "core/tree_out.c":
     cdef void print_node(FILE *, NODE *, int)
 
+cdef extern from "core/opcode_out.h":
+    cpdef enum OPCODE "opcode":
+        op_nop
+        op_const_declare
+        op_type_declare
+        op_var_declare
+        op_procedure_declare
+        op_function_declare
+        op_assign
+        op_if_then
+        op_if_then_else
+        op_while_do
+        op_continue
+        op_exit
+        op_call
+        op_le
+        op_leq
+        op_ge
+        op_geq
+        op_eq
+        op_neq
+        op_plus
+        op_minus
+        op_times
+        op_power
+        op_divide
+        op_div
+        op_mod
+        op_odd
+        op_and
+        op_or
+        op_not
+        op_load_const
+        op_load_identifier
+
 cdef extern from "core/opcode_out.c":
     cdef void opout_node(FILE *, NODE *)
     cdef void restart_opcode()

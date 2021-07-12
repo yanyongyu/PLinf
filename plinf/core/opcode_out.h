@@ -5,7 +5,7 @@
 
 #include "intermediate.h"
 
-typedef enum {
+typedef enum opcode {
   /* do nothing */
   opcode_nop,
   /* declare a const variable
