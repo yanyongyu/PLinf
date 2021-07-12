@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
   if (success == 0) {
     node = global_result;
     if (node == NULL) {
-      printf("Error parsing: no result\n");
+      fprintf(stderr, "Error parsing: no result\n");
       return 0;
     }
     do {
@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
       node = free_node(node);
     } while (node);
   } else {
-    printf("Error parsing %d\n", success);
+    fprintf(stderr, "Error parsing %d\n", success);
   }
   return 0;
 }

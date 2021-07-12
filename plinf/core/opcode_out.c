@@ -95,7 +95,7 @@ char *format_arg(ARG *arg) {
   return result;
 }
 
-void output_clear_cache() {
+void output_clear_cache(void) {
   OUTPUT_CACHE *cache = output_cache;
   while (cache != NULL) {
     fprintf(cache->fp, "%d,%d,%s\n", cache->index, cache->opcode,
@@ -183,20 +183,17 @@ void opout_type(FILE *fp, TYPE *type) {
 }
 
 void opout_const(FILE *fp, CONST *value) {
-  ARG *temp;
+  ARG *temp = (ARG *)calloc(1, sizeof(ARG));
   switch (value->type) {
     case ct_int:
-      temp = (ARG *)calloc(1, sizeof(ARG));
       temp->type = at_int;
       temp->num = value->num;
       break;
     case ct_real:
-      temp = (ARG *)calloc(1, sizeof(ARG));
       temp->type = at_real;
       temp->real_num = value->real_num;
       break;
     case ct_bool:
-      temp = (ARG *)calloc(1, sizeof(ARG));
       temp->type = at_bool;
       temp->num = value->num;
       temp = &(ARG){.type = at_bool, .num = value->num};
@@ -553,7 +550,7 @@ void opout_node(FILE *fp, NODE *node) {
   }
 }
 
-void restart_opcode() {
+void restart_opcode(void) {
   global_index = 0;
   tag_wait = NULL;
   tag_ready = NULL;

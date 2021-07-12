@@ -276,6 +276,8 @@ void print_binary_operate(FILE *fp, OPERATION op, BINARY_OPERATE *operation,
       fprintf(fp, "not\n");
       print_node(fp, operation->second, indent);
       break;
+    default:
+      break;
   }
 }
 

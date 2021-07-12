@@ -166,7 +166,7 @@ void store_tag(int tag);
 void fill_tag(int tag, ARG *value);
 ARG *pop_tag(int tag);
 char *format_arg(ARG *arg);
-void output_clear_cache();
+void output_clear_cache(void);
 void output(FILE *fp, int index, OPCODE opcode, ARG *arg);
 void opout_type(FILE *fp, TYPE *type);
 void opout_const(FILE *fp, CONST *value);
@@ -180,6 +180,6 @@ void opout_assign(FILE *fp, ASSIGN *assign);
 void opout_condition_jump(FILE *fp, CONDITION_JUMP *condition_jump);
 void opout_node(FILE *fp, NODE *node);
 
-void restart_opcode();
+void restart_opcode(void);
 
 #endif

@@ -1,4 +1,4 @@
-# PL/inf - extends PL/0
+# PL/inf - extends the PL/0
 
 ## Extended grammar
 

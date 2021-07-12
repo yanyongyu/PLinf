@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "plinf"
+version = "0.1.0"
+description = "PL/inf - extends the PL/0"
+authors = ["yanyongyu <yanyongyu_1@126.com>"]
+license = "MIT"
+build = "build.py"
+include = ["py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Cython = "^0.29.23"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "cython"]
+build-backend = "poetry.core.masonry.api"

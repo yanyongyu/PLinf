@@ -34,8 +34,8 @@
 /* Undocumented macros, especially those whose name start with YY_,
    are private implementation details.  Do not rely on them.  */
 
-#ifndef YY_YY_SRC_PLINF_TAB_H_INCLUDED
-# define YY_YY_SRC_PLINF_TAB_H_INCLUDED
+#ifndef YY_YY_PLINF_CORE_PLINF_TAB_H_INCLUDED
+# define YY_YY_PLINF_CORE_PLINF_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -44,11 +44,11 @@
 extern int yydebug;
 #endif
 /* "%code requires" blocks.  */
-#line 20 "src/plinf.y"
+#line 20 "plinf/core/plinf.y"
 
   #include "intermediate.h"
 
-#line 52 "src/plinf.tab.h"
+#line 52 "plinf/core/plinf.tab.h"
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -116,7 +116,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 24 "src/plinf.y"
+#line 24 "plinf/core/plinf.y"
 
   VAR_LIST *var_list;
   PARAM_LIST *param_list;
@@ -127,7 +127,7 @@ union YYSTYPE
   IDENTIFIER *id;
   IDENTIFIER_REF *id_ref;
 
-#line 131 "src/plinf.tab.h"
+#line 131 "plinf/core/plinf.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -154,4 +154,4 @@ extern YYSTYPE yylval;
 extern YYLTYPE yylloc;
 int yyparse (void);
 
-#endif /* !YY_YY_SRC_PLINF_TAB_H_INCLUDED  */
+#endif /* !YY_YY_PLINF_CORE_PLINF_TAB_H_INCLUDED  */

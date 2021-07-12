@@ -22,6 +22,8 @@ TYPE *copy_type(TYPE *a) {
     case tt_identifier:
       temp->identifier = copy_identifier(a->identifier);
       break;
+    default:
+      break;
   }
   return temp;
 }
@@ -47,6 +49,8 @@ void free_type(TYPE *a) {
       break;
     case tt_identifier:
       free_identifier(a->identifier);
+      break;
+    default:
       break;
   }
   free(a);
