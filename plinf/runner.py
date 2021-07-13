@@ -74,7 +74,7 @@ class CONST(StackType, Generic[CT]):
         bool = bool
         str = str
 
-    def __init__(self, type: CONST_TYPE, value: str):
+    def __init__(self, type: CONST_TYPE, value: Union[str, CT]):
         self._type: CONST.CONST_TYPE = type
         self._value: CT = self.convert_value(value)
 
@@ -261,8 +261,11 @@ class OperationList(List[Optional["Operation"]]):
             op_list[op.index] = op
         return op_list
 
+    def push_stack(self, stack: StackType):
+        self._stack.append(stack)
+
     def pop_stack(self, num: int) -> Tuple[StackType, ...]:
-        result = tuple(self._stack[-num:])
+        result = tuple(reversed(self._stack[-num:]))
         del self._stack[-num:]
         return result
 
@@ -278,7 +281,6 @@ class OperationList(List[Optional["Operation"]]):
         return self._symbol_table.pop_scope()
 
     def run_operation(self):
-        # TODO: run one step
         op = self.current_operation
         self._current_index += 1
         if op is None:
@@ -369,6 +371,29 @@ class OperationList(List[Optional["Operation"]]):
 
             symbol = Symbol(function_name.value, Symbol.SymbolType.function, function)
             self.push_symbol(symbol)
+        elif op.opcode == OPCODE.op_param_declare:
+            if not isinstance(op.arg, CONST) or op.arg.type is not str:
+                raise RuntimeError(f"{op} with unexpected argument type")
+            name: CONST[str] = op.arg
+            value, *_ = self.pop_stack(1)
+            if not isinstance(value, TYPE):
+                raise RuntimeError(f"{op} failed because unexpected TOS {value}")
+
+            param = PARAM(name.value, value)
+            self.push_stack(param)
+        elif op.opcode == OPCODE.op_build_array_type:
+            start, end, sub_type = self.pop_stack(3)
+            if not isinstance(start, CONST) or start.type is not int:
+                raise RuntimeError(
+                    f"{op} failed because unexpected array start {start}"
+                )
+            elif not isinstance(end, CONST) or end.type is not int:
+                raise RuntimeError(f"{op} failed because unexpected array end {end}")
+            elif not isinstance(sub_type, TYPE):
+                raise RuntimeError(f"{op} with unexpected array subtype {sub_type}")
+
+            array_type = TYPE_ARRAY(start.value, end.value, sub_type)
+            self.push_stack(array_type)
 
     def run(self):
         self.reset()
