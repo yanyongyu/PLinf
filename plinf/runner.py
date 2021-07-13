@@ -163,7 +163,7 @@ class TYPE_ARRAY(TYPE):
         return f"<type {self.type.value}[{self.sub_type}]>"
 
     def __call__(self) -> list:
-        return [self.sub_type() for _ in range(self.array_end - self.array_start)]
+        return [self.sub_type() for _ in range(self.array_end - self.array_start + 1)]
 
     @property
     def array_start(self) -> int:
@@ -299,6 +299,8 @@ class OperationList(List[Optional["Operation"]]):
         self._stack.append(stack)
 
     def pop_stack(self, num: int) -> Tuple[StackType, ...]:
+        if num > len(self._stack):
+            raise RuntimeError("No more stack elements can be popped")
         result = tuple(reversed(self._stack[-num:]))
         del self._stack[-num:]
         return result
@@ -326,7 +328,7 @@ class OperationList(List[Optional["Operation"]]):
 
     def run_operation(self):
         op = self.current_operation
-        print(f"Running {op}")
+        # print(f"Running {op}")
         self._current_index += 1
         if op is None:
             return
@@ -712,7 +714,7 @@ class OperationList(List[Optional["Operation"]]):
 
             tos.value = tos1.value
         elif op.opcode == OPCODE.opcode_store_subscr:
-            tos, tos1, tos2 = self.pop_stack(2)
+            tos, tos1, tos2 = self.pop_stack(3)
             if (
                 not isinstance(tos, CONST)
                 or not isinstance(tos1, VAR)
@@ -723,12 +725,12 @@ class OperationList(List[Optional["Operation"]]):
                     f"{op} with unexpected TOS {tos} TOS1 {tos1} TOS2 {tos2}"
                 )
 
-            if not tos1.type.check_type(tos2.value):
+            if not tos1.type.sub_type.check_type(tos2.value):  # type: ignore
                 raise RuntimeError(
                     f"{op} with unexpected TOS {tos} TOS1 {tos1} TOS2 {tos2}"
                 )
 
-            tos1.value[tos.value] = tos2.value
+            tos1.value[tos.value - tos1.type.array_start] = tos2.value  # type: ignore
         elif op.opcode == OPCODE.opcode_jump:
             if not isinstance(op.arg, CONST) or op.arg.type is not int:
                 raise RuntimeError(f"{op} with unexpected argument type")
@@ -738,7 +740,7 @@ class OperationList(List[Optional["Operation"]]):
                 raise RuntimeError(f"{op} with unexpected argument type")
 
             tos, *_ = self.pop_stack(1)
-            if not isinstance(tos, (CONST, VAR)) or not isinstance(tos.value, bool):
+            if not isinstance(tos, (CONST, VAR)):
                 raise RuntimeError(f"{op} with unexpected TOS {tos}")
 
             if tos.value:
@@ -748,7 +750,7 @@ class OperationList(List[Optional["Operation"]]):
                 raise RuntimeError(f"{op} with unexpected argument type")
 
             tos, *_ = self.pop_stack(1)
-            if not isinstance(tos, (CONST, VAR)) or not isinstance(tos.value, bool):
+            if not isinstance(tos, (CONST, VAR)):
                 raise RuntimeError(f"{op} with unexpected TOS {tos}")
 
             if not tos.value:
@@ -768,7 +770,7 @@ class OperationList(List[Optional["Operation"]]):
                 )
 
             if function_name.value == "write":
-                print(*map(lambda x: x.value, args))
+                print(*map(lambda x: x.value, reversed(args)))
             elif function_name.value == "read":
                 for param in args:
                     if not isinstance(param, VAR):
@@ -836,7 +838,7 @@ class OperationList(List[Optional["Operation"]]):
         elif op.opcode == OPCODE.opcode_return_function:
             call_name, symbols = self.pop_scope()
             call = self.get_symbol(call_name)
-            if isinstance(call, Function):
+            if call and isinstance(call.value, Function):
                 for symbol in symbols:
                     if symbol.name == call_name:
                         self.push_stack(symbol.value)

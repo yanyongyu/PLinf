@@ -189,6 +189,7 @@ void opout_function_declare(FILE *fp, FUNCTION_DECLARE *function_declare);
 void opout_assign(FILE *fp, ASSIGN *assign);
 void opout_condition_jump(FILE *fp, CONDITION_JUMP *condition_jump);
 void opout_node(FILE *fp, NODE *node);
+void opout_nodes(FILE *fp, NODE *node);
 
 void restart_opcode(void);
 
