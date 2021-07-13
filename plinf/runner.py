@@ -1,3 +1,4 @@
+import sys
 import operator
 from enum import Enum, IntEnum, auto
 from typing import Any, List, Type, Union, Tuple, Generic, TypeVar, Optional
@@ -268,6 +269,8 @@ class Function:
 class OperationList(List[Optional["Operation"]]):
     def __init__(self, operations: List["Operation"]):
         super(OperationList, self).__init__(self.filter_operations(operations))
+        self.input = sys.stdin
+        self.output = sys.stdout
         self.reset()
 
     def reset(self):
@@ -770,7 +773,9 @@ class OperationList(List[Optional["Operation"]]):
                 )
 
             if function_name.value == "write":
-                print(*map(lambda x: x.value, reversed(args)))
+                self.output.write(
+                    ", ".join(map(lambda x: str(x.value), reversed(args))) + "\n"
+                )
             elif function_name.value == "read":
                 for param in args:
                     if not isinstance(param, VAR):
@@ -778,7 +783,7 @@ class OperationList(List[Optional["Operation"]]):
                     param_type = param.type
                     if param_type.type == TYPE.TYPE_TYPE.array:
                         raise RuntimeError(f"Can't store input into array variable")
-                    temp = input()
+                    temp = self.input.readline().strip()
                     if param_type.type == TYPE.TYPE_TYPE.int:
                         param.value = int(temp)
                     elif param_type.type == TYPE.TYPE_TYPE.real:

@@ -12,13 +12,14 @@ cdef extern from "core/intermediate.c":
     cdef NODE *free_node(NODE *node)
 
 cdef extern from "core/plinf.tab.h":
-    int yyparse()
+    cdef int yyparse()
 
 cdef extern from "core/plinf.tab.c":
-    NODE *global_result
+    cdef NODE *global_result
 
 cdef extern from "core/plinf.yy.c":
-    void yyset_in(FILE *)
+    cdef void yyset_in(FILE *)
+    cdef int yylex_destroy()
 
 cdef extern from "core/tree_out.c":
     cdef void print_node(FILE *, NODE *, int)
@@ -75,6 +76,7 @@ cpdef unicode get_tree(unicode code):
     cdef size_t output_size
     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
+    yylex_destroy()
     yyset_in(fake_input)
     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)
 
@@ -118,6 +120,7 @@ cpdef unicode get_opcode(unicode code):
     cdef size_t output_size
     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
+    yylex_destroy()
     yyset_in(fake_input)
     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)
 
