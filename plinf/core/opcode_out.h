@@ -93,17 +93,27 @@ typedef enum opcode {
    */
   opcode_binary_compare,
   /* store value to variable
-   * tos: var name
-   * tos1: valeu to store
+   * tos: var object
+   * tos1: value to store
    */
   opcode_store_fast,
-  /* jump anyway */
+  /* store value to arrat
+   * tos: offset
+   * tos1: array object
+   * tos2: value to store
+   */
+  opcode_store_subscr,
+  /* jump anyway
+   * arg: index
+   */
   opcode_jump,
   /* jump if true
+   * arg: index
    * tos: condition
    */
   opcode_jump_if_true,
   /* jump if false
+   * arg: index
    * tos: condition
    */
   opcode_jump_if_false,

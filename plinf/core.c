@@ -1393,77 +1393,78 @@ static const char __pyx_k_repr[] = "__repr__";
 static const char __pyx_k_self[] = "self";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_class[] = "__class__";
-static const char __pyx_k_op_eq[] = "op_eq";
-static const char __pyx_k_op_ge[] = "op_ge";
-static const char __pyx_k_op_le[] = "op_le";
-static const char __pyx_k_op_or[] = "op_or";
 static const char __pyx_k_s_s_d[] = "<%s.%s: %d>";
 static const char __pyx_k_value[] = "value";
 static const char __pyx_k_OPCODE[] = "OPCODE";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_module[] = "__module__";
 static const char __pyx_k_name_2[] = "__name__";
-static const char __pyx_k_op_and[] = "op_and";
-static const char __pyx_k_op_div[] = "op_div";
-static const char __pyx_k_op_geq[] = "op_geq";
-static const char __pyx_k_op_leq[] = "op_leq";
-static const char __pyx_k_op_mod[] = "op_mod";
-static const char __pyx_k_op_neq[] = "op_neq";
-static const char __pyx_k_op_nop[] = "op_nop";
-static const char __pyx_k_op_not[] = "op_not";
-static const char __pyx_k_op_odd[] = "op_odd";
 static const char __pyx_k_pickle[] = "pickle";
 static const char __pyx_k_reduce[] = "__reduce__";
 static const char __pyx_k_update[] = "update";
 static const char __pyx_k_values[] = "values";
 static const char __pyx_k_IntEnum[] = "IntEnum";
 static const char __pyx_k_members[] = "__members__";
-static const char __pyx_k_op_call[] = "op_call";
-static const char __pyx_k_op_exit[] = "op_exit";
-static const char __pyx_k_op_plus[] = "op_plus";
 static const char __pyx_k_parents[] = "parents";
 static const char __pyx_k_prepare[] = "__prepare__";
 static const char __pyx_k_EnumBase[] = "EnumBase";
 static const char __pyx_k_EnumType[] = "EnumType";
 static const char __pyx_k_getstate[] = "__getstate__";
-static const char __pyx_k_op_minus[] = "op_minus";
-static const char __pyx_k_op_power[] = "op_power";
-static const char __pyx_k_op_times[] = "op_times";
 static const char __pyx_k_pyx_type[] = "__pyx_type";
 static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_setstate[] = "__setstate__";
 static const char __pyx_k_metaclass[] = "__metaclass__";
-static const char __pyx_k_op_assign[] = "op_assign";
-static const char __pyx_k_op_divide[] = "op_divide";
 static const char __pyx_k_pyx_state[] = "__pyx_state";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_ValueError[] = "ValueError";
-static const char __pyx_k_op_if_then[] = "op_if_then";
+static const char __pyx_k_opcode_nop[] = "opcode_nop";
 static const char __pyx_k_pyx_result[] = "__pyx_result";
 static const char __pyx_k_OrderedDict[] = "OrderedDict";
 static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_collections[] = "collections";
-static const char __pyx_k_op_continue[] = "op_continue";
-static const char __pyx_k_op_while_do[] = "op_while_do";
+static const char __pyx_k_opcode_jump[] = "opcode_jump";
 static const char __pyx_k_Pyx_EnumBase[] = "__Pyx_EnumBase";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_stringsource[] = "stringsource";
-static const char __pyx_k_op_load_const[] = "op_load_const";
 static const char __pyx_k_reduce_cython[] = "__reduce_cython__";
-static const char __pyx_k_op_var_declare[] = "op_var_declare";
-static const char __pyx_k_op_if_then_else[] = "op_if_then_else";
-static const char __pyx_k_op_type_declare[] = "op_type_declare";
 static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
-static const char __pyx_k_op_const_declare[] = "op_const_declare";
+static const char __pyx_k_opcode_binary_or[] = "opcode_binary_or";
+static const char __pyx_k_opcode_block_end[] = "opcode_block_end";
+static const char __pyx_k_opcode_load_fast[] = "opcode_load_fast";
+static const char __pyx_k_opcode_unary_not[] = "opcode_unary_not";
+static const char __pyx_k_opcode_unary_odd[] = "opcode_unary_odd";
+static const char __pyx_k_opcode_binary_and[] = "opcode_binary_and";
+static const char __pyx_k_opcode_load_const[] = "opcode_load_const";
+static const char __pyx_k_opcode_store_fast[] = "opcode_store_fast";
 static const char __pyx_k_Pyx_EnumBase___new[] = "__Pyx_EnumBase.__new__";
 static const char __pyx_k_Pyx_EnumBase___str[] = "__Pyx_EnumBase.__str__";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_op_load_identifier[] = "op_load_identifier";
+static const char __pyx_k_opcode_binary_plus[] = "opcode_binary_plus";
+static const char __pyx_k_opcode_block_start[] = "opcode_block_start";
+static const char __pyx_k_opcode_var_declare[] = "opcode_var_declare";
 static const char __pyx_k_Pyx_EnumBase___repr[] = "__Pyx_EnumBase.__repr__";
-static const char __pyx_k_op_function_declare[] = "op_function_declare";
+static const char __pyx_k_opcode_binary_minus[] = "opcode_binary_minus";
+static const char __pyx_k_opcode_binary_power[] = "opcode_binary_power";
+static const char __pyx_k_opcode_binary_times[] = "opcode_binary_times";
+static const char __pyx_k_opcode_jump_if_true[] = "opcode_jump_if_true";
+static const char __pyx_k_opcode_store_subscr[] = "opcode_store_subscr";
+static const char __pyx_k_opcode_type_declare[] = "opcode_type_declare";
 static const char __pyx_k_Unknown_enum_value_s[] = "Unknown enum value: '%s'";
-static const char __pyx_k_op_procedure_declare[] = "op_procedure_declare";
+static const char __pyx_k_opcode_binary_divide[] = "opcode_binary_divide";
+static const char __pyx_k_opcode_binary_modulo[] = "opcode_binary_modulo";
+static const char __pyx_k_opcode_binary_subscr[] = "opcode_binary_subscr";
+static const char __pyx_k_opcode_call_function[] = "opcode_call_function";
+static const char __pyx_k_opcode_const_declare[] = "opcode_const_declare";
+static const char __pyx_k_opcode_jump_if_false[] = "opcode_jump_if_false";
+static const char __pyx_k_opcode_param_declare[] = "opcode_param_declare";
+static const char __pyx_k_opcode_binary_compare[] = "opcode_binary_compare";
+static const char __pyx_k_opcode_unary_negative[] = "opcode_unary_negative";
+static const char __pyx_k_opcode_return_function[] = "opcode_return_function";
+static const char __pyx_k_opcode_build_array_type[] = "opcode_build_array_type";
+static const char __pyx_k_opcode_function_declare[] = "opcode_function_declare";
+static const char __pyx_k_opcode_procedure_declare[] = "opcode_procedure_declare";
+static const char __pyx_k_opcode_binary_floor_divide[] = "opcode_binary_floor_divide";
 static const char __pyx_k_pyx_unpickle___Pyx_EnumMeta[] = "__pyx_unpickle___Pyx_EnumMeta";
 static const char __pyx_k_Incompatible_checksums_s_vs_0xd4[] = "Incompatible checksums (%s vs 0xd41d8cd = ())";
 static PyObject *__pyx_n_s_EnumBase;
@@ -1497,38 +1498,39 @@ static PyObject *__pyx_n_s_module;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_name_2;
 static PyObject *__pyx_n_s_new;
-static PyObject *__pyx_n_s_op_and;
-static PyObject *__pyx_n_s_op_assign;
-static PyObject *__pyx_n_s_op_call;
-static PyObject *__pyx_n_s_op_const_declare;
-static PyObject *__pyx_n_s_op_continue;
-static PyObject *__pyx_n_s_op_div;
-static PyObject *__pyx_n_s_op_divide;
-static PyObject *__pyx_n_s_op_eq;
-static PyObject *__pyx_n_s_op_exit;
-static PyObject *__pyx_n_s_op_function_declare;
-static PyObject *__pyx_n_s_op_ge;
-static PyObject *__pyx_n_s_op_geq;
-static PyObject *__pyx_n_s_op_if_then;
-static PyObject *__pyx_n_s_op_if_then_else;
-static PyObject *__pyx_n_s_op_le;
-static PyObject *__pyx_n_s_op_leq;
-static PyObject *__pyx_n_s_op_load_const;
-static PyObject *__pyx_n_s_op_load_identifier;
-static PyObject *__pyx_n_s_op_minus;
-static PyObject *__pyx_n_s_op_mod;
-static PyObject *__pyx_n_s_op_neq;
-static PyObject *__pyx_n_s_op_nop;
-static PyObject *__pyx_n_s_op_not;
-static PyObject *__pyx_n_s_op_odd;
-static PyObject *__pyx_n_s_op_or;
-static PyObject *__pyx_n_s_op_plus;
-static PyObject *__pyx_n_s_op_power;
-static PyObject *__pyx_n_s_op_procedure_declare;
-static PyObject *__pyx_n_s_op_times;
-static PyObject *__pyx_n_s_op_type_declare;
-static PyObject *__pyx_n_s_op_var_declare;
-static PyObject *__pyx_n_s_op_while_do;
+static PyObject *__pyx_n_s_opcode_binary_and;
+static PyObject *__pyx_n_s_opcode_binary_compare;
+static PyObject *__pyx_n_s_opcode_binary_divide;
+static PyObject *__pyx_n_s_opcode_binary_floor_divide;
+static PyObject *__pyx_n_s_opcode_binary_minus;
+static PyObject *__pyx_n_s_opcode_binary_modulo;
+static PyObject *__pyx_n_s_opcode_binary_or;
+static PyObject *__pyx_n_s_opcode_binary_plus;
+static PyObject *__pyx_n_s_opcode_binary_power;
+static PyObject *__pyx_n_s_opcode_binary_subscr;
+static PyObject *__pyx_n_s_opcode_binary_times;
+static PyObject *__pyx_n_s_opcode_block_end;
+static PyObject *__pyx_n_s_opcode_block_start;
+static PyObject *__pyx_n_s_opcode_build_array_type;
+static PyObject *__pyx_n_s_opcode_call_function;
+static PyObject *__pyx_n_s_opcode_const_declare;
+static PyObject *__pyx_n_s_opcode_function_declare;
+static PyObject *__pyx_n_s_opcode_jump;
+static PyObject *__pyx_n_s_opcode_jump_if_false;
+static PyObject *__pyx_n_s_opcode_jump_if_true;
+static PyObject *__pyx_n_s_opcode_load_const;
+static PyObject *__pyx_n_s_opcode_load_fast;
+static PyObject *__pyx_n_s_opcode_nop;
+static PyObject *__pyx_n_s_opcode_param_declare;
+static PyObject *__pyx_n_s_opcode_procedure_declare;
+static PyObject *__pyx_n_s_opcode_return_function;
+static PyObject *__pyx_n_s_opcode_store_fast;
+static PyObject *__pyx_n_s_opcode_store_subscr;
+static PyObject *__pyx_n_s_opcode_type_declare;
+static PyObject *__pyx_n_s_opcode_unary_negative;
+static PyObject *__pyx_n_s_opcode_unary_not;
+static PyObject *__pyx_n_s_opcode_unary_odd;
+static PyObject *__pyx_n_s_opcode_var_declare;
 static PyObject *__pyx_n_s_parents;
 static PyObject *__pyx_n_s_pickle;
 static PyObject *__pyx_n_s_prepare;
@@ -1580,7 +1582,7 @@ static PyObject *__pyx_codeobj__7;
 static PyObject *__pyx_codeobj__9;
 /* Late includes */
 
-/* "plinf/core.pyx":66
+/* "plinf/core.pyx":67
  * 
  * 
  * cpdef unicode get_tree(unicode code):             # <<<<<<<<<<<<<<
@@ -1610,7 +1612,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_tree", 0);
 
-  /* "plinf/core.pyx":67
+  /* "plinf/core.pyx":68
  * 
  * cpdef unicode get_tree(unicode code):
  *     cdef int result = 1             # <<<<<<<<<<<<<<
@@ -1619,7 +1621,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_result = 1;
 
-  /* "plinf/core.pyx":68
+  /* "plinf/core.pyx":69
  * cpdef unicode get_tree(unicode code):
  *     cdef int result = 1
  *     cdef NODE *node = NULL             # <<<<<<<<<<<<<<
@@ -1628,7 +1630,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_node = NULL;
 
-  /* "plinf/core.pyx":69
+  /* "plinf/core.pyx":70
  *     cdef int result = 1
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")             # <<<<<<<<<<<<<<
@@ -1637,24 +1639,24 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   if (unlikely(__pyx_v_code == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 69, __pyx_L1_error)
+    __PYX_ERR(0, 70, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_code_bytes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "plinf/core.pyx":70
+  /* "plinf/core.pyx":71
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")
  *     cdef char *c_code = code_bytes             # <<<<<<<<<<<<<<
  *     cdef char *input_bp
  *     cdef char *output_bp
  */
-  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 71, __pyx_L1_error)
   __pyx_v_c_code = __pyx_t_2;
 
-  /* "plinf/core.pyx":75
+  /* "plinf/core.pyx":76
  *     cdef size_t input_size
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)             # <<<<<<<<<<<<<<
@@ -1663,7 +1665,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_fake_input = open_memstream((&__pyx_v_input_bp), (&__pyx_v_input_size));
 
-  /* "plinf/core.pyx":76
+  /* "plinf/core.pyx":77
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)             # <<<<<<<<<<<<<<
@@ -1672,7 +1674,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_fake_output = open_memstream((&__pyx_v_output_bp), (&__pyx_v_output_size));
 
-  /* "plinf/core.pyx":77
+  /* "plinf/core.pyx":78
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yyset_in(fake_input)             # <<<<<<<<<<<<<<
@@ -1681,7 +1683,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   yyset_in(__pyx_v_fake_input);
 
-  /* "plinf/core.pyx":78
+  /* "plinf/core.pyx":79
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yyset_in(fake_input)
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)             # <<<<<<<<<<<<<<
@@ -1690,7 +1692,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   (void)(fwrite(__pyx_v_c_code, (sizeof(char)), strlen(__pyx_v_c_code), __pyx_v_fake_input));
 
-  /* "plinf/core.pyx":80
+  /* "plinf/core.pyx":81
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)
  * 
  *     result = yyparse()             # <<<<<<<<<<<<<<
@@ -1699,7 +1701,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_result = yyparse();
 
-  /* "plinf/core.pyx":81
+  /* "plinf/core.pyx":82
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -1709,7 +1711,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   __pyx_t_3 = ((__pyx_v_result == 0) != 0);
   if (__pyx_t_3) {
 
-    /* "plinf/core.pyx":82
+    /* "plinf/core.pyx":83
  *     result = yyparse()
  *     if result == 0:
  *         node = global_result             # <<<<<<<<<<<<<<
@@ -1718,7 +1720,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     __pyx_v_node = global_result;
 
-    /* "plinf/core.pyx":83
+    /* "plinf/core.pyx":84
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -1728,7 +1730,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
     __pyx_t_3 = ((__pyx_v_node == NULL) != 0);
     if (__pyx_t_3) {
 
-      /* "plinf/core.pyx":84
+      /* "plinf/core.pyx":85
  *         node = global_result
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")             # <<<<<<<<<<<<<<
@@ -1737,7 +1739,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       (void)(fprintf(stderr, ((char const *)"Error parsing: no result\n")));
 
-      /* "plinf/core.pyx":85
+      /* "plinf/core.pyx":86
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -1746,7 +1748,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       (void)(fclose(__pyx_v_fake_input));
 
-      /* "plinf/core.pyx":86
+      /* "plinf/core.pyx":87
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)
  *             fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -1755,7 +1757,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       (void)(fclose(__pyx_v_fake_output));
 
-      /* "plinf/core.pyx":87
+      /* "plinf/core.pyx":88
  *             fclose(fake_input)
  *             fclose(fake_output)
  *             free(input_bp)             # <<<<<<<<<<<<<<
@@ -1764,7 +1766,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       free(__pyx_v_input_bp);
 
-      /* "plinf/core.pyx":88
+      /* "plinf/core.pyx":89
  *             fclose(fake_output)
  *             free(input_bp)
  *             free(output_bp)             # <<<<<<<<<<<<<<
@@ -1773,7 +1775,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       free(__pyx_v_output_bp);
 
-      /* "plinf/core.pyx":89
+      /* "plinf/core.pyx":90
  *             free(input_bp)
  *             free(output_bp)
  *             return None             # <<<<<<<<<<<<<<
@@ -1784,7 +1786,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
       __pyx_r = ((PyObject*)Py_None); __Pyx_INCREF(Py_None);
       goto __pyx_L0;
 
-      /* "plinf/core.pyx":83
+      /* "plinf/core.pyx":84
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -1793,7 +1795,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     }
 
-    /* "plinf/core.pyx":90
+    /* "plinf/core.pyx":91
  *             free(output_bp)
  *             return None
  *         print_node(fake_output, node, 0)             # <<<<<<<<<<<<<<
@@ -1802,7 +1804,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     print_node(__pyx_v_fake_output, __pyx_v_node, 0);
 
-    /* "plinf/core.pyx":91
+    /* "plinf/core.pyx":92
  *             return None
  *         print_node(fake_output, node, 0)
  *         node = free_node(node)             # <<<<<<<<<<<<<<
@@ -1811,7 +1813,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     __pyx_v_node = free_node(__pyx_v_node);
 
-    /* "plinf/core.pyx":92
+    /* "plinf/core.pyx":93
  *         print_node(fake_output, node, 0)
  *         node = free_node(node)
  *         while node is not NULL:             # <<<<<<<<<<<<<<
@@ -1822,7 +1824,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
       __pyx_t_3 = ((__pyx_v_node != NULL) != 0);
       if (!__pyx_t_3) break;
 
-      /* "plinf/core.pyx":93
+      /* "plinf/core.pyx":94
  *         node = free_node(node)
  *         while node is not NULL:
  *             print_node(fake_output, node, 0)             # <<<<<<<<<<<<<<
@@ -1831,7 +1833,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       print_node(__pyx_v_fake_output, __pyx_v_node, 0);
 
-      /* "plinf/core.pyx":94
+      /* "plinf/core.pyx":95
  *         while node is not NULL:
  *             print_node(fake_output, node, 0)
  *             node = free_node(node)             # <<<<<<<<<<<<<<
@@ -1841,7 +1843,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
       __pyx_v_node = free_node(__pyx_v_node);
     }
 
-    /* "plinf/core.pyx":81
+    /* "plinf/core.pyx":82
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -1851,7 +1853,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
     goto __pyx_L3;
   }
 
-  /* "plinf/core.pyx":96
+  /* "plinf/core.pyx":97
  *             node = free_node(node)
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)             # <<<<<<<<<<<<<<
@@ -1861,7 +1863,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   /*else*/ {
     (void)(fprintf(stderr, ((char const *)"Error parsing: code %d\n"), __pyx_v_result));
 
-    /* "plinf/core.pyx":97
+    /* "plinf/core.pyx":98
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -1870,7 +1872,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     (void)(fclose(__pyx_v_fake_input));
 
-    /* "plinf/core.pyx":98
+    /* "plinf/core.pyx":99
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)
  *         fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -1879,7 +1881,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     (void)(fclose(__pyx_v_fake_output));
 
-    /* "plinf/core.pyx":99
+    /* "plinf/core.pyx":100
  *         fclose(fake_input)
  *         fclose(fake_output)
  *         free(input_bp)             # <<<<<<<<<<<<<<
@@ -1888,7 +1890,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     free(__pyx_v_input_bp);
 
-    /* "plinf/core.pyx":100
+    /* "plinf/core.pyx":101
  *         fclose(fake_output)
  *         free(input_bp)
  *         free(output_bp)             # <<<<<<<<<<<<<<
@@ -1897,7 +1899,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     free(__pyx_v_output_bp);
 
-    /* "plinf/core.pyx":101
+    /* "plinf/core.pyx":102
  *         free(input_bp)
  *         free(output_bp)
  *         return None             # <<<<<<<<<<<<<<
@@ -1910,7 +1912,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   }
   __pyx_L3:;
 
-  /* "plinf/core.pyx":103
+  /* "plinf/core.pyx":104
  *         return None
  * 
  *     fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -1919,7 +1921,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   (void)(fclose(__pyx_v_fake_input));
 
-  /* "plinf/core.pyx":104
+  /* "plinf/core.pyx":105
  * 
  *     fclose(fake_input)
  *     fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -1928,7 +1930,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   (void)(fclose(__pyx_v_fake_output));
 
-  /* "plinf/core.pyx":105
+  /* "plinf/core.pyx":106
  *     fclose(fake_input)
  *     fclose(fake_output)
  *     free(input_bp)             # <<<<<<<<<<<<<<
@@ -1937,7 +1939,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   free(__pyx_v_input_bp);
 
-  /* "plinf/core.pyx":106
+  /* "plinf/core.pyx":107
  *     fclose(fake_output)
  *     free(input_bp)
  *     return output_bp.decode("utf-8")             # <<<<<<<<<<<<<<
@@ -1945,13 +1947,13 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "plinf/core.pyx":66
+  /* "plinf/core.pyx":67
  * 
  * 
  * cpdef unicode get_tree(unicode code):             # <<<<<<<<<<<<<<
@@ -1980,7 +1982,7 @@ static PyObject *__pyx_pw_5plinf_4core_1get_tree(PyObject *__pyx_self, PyObject 
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_tree (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 66, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 67, __pyx_L1_error)
   __pyx_r = __pyx_pf_5plinf_4core_get_tree(__pyx_self, ((PyObject*)__pyx_v_code));
 
   /* function exit code */
@@ -2001,7 +2003,7 @@ static PyObject *__pyx_pf_5plinf_4core_get_tree(CYTHON_UNUSED PyObject *__pyx_se
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_tree", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5plinf_4core_get_tree(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_5plinf_4core_get_tree(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2018,7 +2020,7 @@ static PyObject *__pyx_pf_5plinf_4core_get_tree(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "plinf/core.pyx":109
+/* "plinf/core.pyx":110
  * 
  * 
  * cpdef unicode get_opcode(unicode code):             # <<<<<<<<<<<<<<
@@ -2048,7 +2050,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_opcode", 0);
 
-  /* "plinf/core.pyx":110
+  /* "plinf/core.pyx":111
  * 
  * cpdef unicode get_opcode(unicode code):
  *     cdef int result = 1             # <<<<<<<<<<<<<<
@@ -2057,7 +2059,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_result = 1;
 
-  /* "plinf/core.pyx":111
+  /* "plinf/core.pyx":112
  * cpdef unicode get_opcode(unicode code):
  *     cdef int result = 1
  *     cdef NODE *node = NULL             # <<<<<<<<<<<<<<
@@ -2066,7 +2068,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_node = NULL;
 
-  /* "plinf/core.pyx":112
+  /* "plinf/core.pyx":113
  *     cdef int result = 1
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")             # <<<<<<<<<<<<<<
@@ -2075,24 +2077,24 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   if (unlikely(__pyx_v_code == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 112, __pyx_L1_error)
+    __PYX_ERR(0, 113, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_code_bytes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "plinf/core.pyx":113
+  /* "plinf/core.pyx":114
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")
  *     cdef char *c_code = code_bytes             # <<<<<<<<<<<<<<
  *     cdef char *input_bp
  *     cdef char *output_bp
  */
-  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
   __pyx_v_c_code = __pyx_t_2;
 
-  /* "plinf/core.pyx":118
+  /* "plinf/core.pyx":119
  *     cdef size_t input_size
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)             # <<<<<<<<<<<<<<
@@ -2101,7 +2103,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_fake_input = open_memstream((&__pyx_v_input_bp), (&__pyx_v_input_size));
 
-  /* "plinf/core.pyx":119
+  /* "plinf/core.pyx":120
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)             # <<<<<<<<<<<<<<
@@ -2110,7 +2112,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_fake_output = open_memstream((&__pyx_v_output_bp), (&__pyx_v_output_size));
 
-  /* "plinf/core.pyx":120
+  /* "plinf/core.pyx":121
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yyset_in(fake_input)             # <<<<<<<<<<<<<<
@@ -2119,7 +2121,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   yyset_in(__pyx_v_fake_input);
 
-  /* "plinf/core.pyx":121
+  /* "plinf/core.pyx":122
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yyset_in(fake_input)
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)             # <<<<<<<<<<<<<<
@@ -2128,7 +2130,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   (void)(fwrite(__pyx_v_c_code, (sizeof(char)), strlen(__pyx_v_c_code), __pyx_v_fake_input));
 
-  /* "plinf/core.pyx":123
+  /* "plinf/core.pyx":124
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)
  * 
  *     result = yyparse()             # <<<<<<<<<<<<<<
@@ -2137,7 +2139,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_result = yyparse();
 
-  /* "plinf/core.pyx":124
+  /* "plinf/core.pyx":125
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -2147,7 +2149,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   __pyx_t_3 = ((__pyx_v_result == 0) != 0);
   if (__pyx_t_3) {
 
-    /* "plinf/core.pyx":125
+    /* "plinf/core.pyx":126
  *     result = yyparse()
  *     if result == 0:
  *         node = global_result             # <<<<<<<<<<<<<<
@@ -2156,7 +2158,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     __pyx_v_node = global_result;
 
-    /* "plinf/core.pyx":126
+    /* "plinf/core.pyx":127
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -2166,7 +2168,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
     __pyx_t_3 = ((__pyx_v_node == NULL) != 0);
     if (__pyx_t_3) {
 
-      /* "plinf/core.pyx":127
+      /* "plinf/core.pyx":128
  *         node = global_result
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")             # <<<<<<<<<<<<<<
@@ -2175,7 +2177,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       (void)(fprintf(stderr, ((char const *)"Error parsing: no result\n")));
 
-      /* "plinf/core.pyx":128
+      /* "plinf/core.pyx":129
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -2184,7 +2186,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       (void)(fclose(__pyx_v_fake_input));
 
-      /* "plinf/core.pyx":129
+      /* "plinf/core.pyx":130
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)
  *             fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -2193,7 +2195,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       (void)(fclose(__pyx_v_fake_output));
 
-      /* "plinf/core.pyx":130
+      /* "plinf/core.pyx":131
  *             fclose(fake_input)
  *             fclose(fake_output)
  *             free(input_bp)             # <<<<<<<<<<<<<<
@@ -2202,7 +2204,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       free(__pyx_v_input_bp);
 
-      /* "plinf/core.pyx":131
+      /* "plinf/core.pyx":132
  *             fclose(fake_output)
  *             free(input_bp)
  *             free(output_bp)             # <<<<<<<<<<<<<<
@@ -2211,7 +2213,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       free(__pyx_v_output_bp);
 
-      /* "plinf/core.pyx":132
+      /* "plinf/core.pyx":133
  *             free(input_bp)
  *             free(output_bp)
  *             return None             # <<<<<<<<<<<<<<
@@ -2222,7 +2224,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
       __pyx_r = ((PyObject*)Py_None); __Pyx_INCREF(Py_None);
       goto __pyx_L0;
 
-      /* "plinf/core.pyx":126
+      /* "plinf/core.pyx":127
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -2231,7 +2233,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     }
 
-    /* "plinf/core.pyx":133
+    /* "plinf/core.pyx":134
  *             free(output_bp)
  *             return None
  *         restart_opcode()             # <<<<<<<<<<<<<<
@@ -2240,7 +2242,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     restart_opcode();
 
-    /* "plinf/core.pyx":134
+    /* "plinf/core.pyx":135
  *             return None
  *         restart_opcode()
  *         opout_node(fake_output, node)             # <<<<<<<<<<<<<<
@@ -2249,7 +2251,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     opout_node(__pyx_v_fake_output, __pyx_v_node);
 
-    /* "plinf/core.pyx":135
+    /* "plinf/core.pyx":136
  *         restart_opcode()
  *         opout_node(fake_output, node)
  *         node = free_node(node)             # <<<<<<<<<<<<<<
@@ -2258,7 +2260,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     __pyx_v_node = free_node(__pyx_v_node);
 
-    /* "plinf/core.pyx":136
+    /* "plinf/core.pyx":137
  *         opout_node(fake_output, node)
  *         node = free_node(node)
  *         while node is not NULL:             # <<<<<<<<<<<<<<
@@ -2269,7 +2271,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
       __pyx_t_3 = ((__pyx_v_node != NULL) != 0);
       if (!__pyx_t_3) break;
 
-      /* "plinf/core.pyx":137
+      /* "plinf/core.pyx":138
  *         node = free_node(node)
  *         while node is not NULL:
  *             opout_node(fake_output, node)             # <<<<<<<<<<<<<<
@@ -2278,7 +2280,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       opout_node(__pyx_v_fake_output, __pyx_v_node);
 
-      /* "plinf/core.pyx":138
+      /* "plinf/core.pyx":139
  *         while node is not NULL:
  *             opout_node(fake_output, node)
  *             node = free_node(node)             # <<<<<<<<<<<<<<
@@ -2288,7 +2290,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
       __pyx_v_node = free_node(__pyx_v_node);
     }
 
-    /* "plinf/core.pyx":124
+    /* "plinf/core.pyx":125
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -2298,7 +2300,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
     goto __pyx_L3;
   }
 
-  /* "plinf/core.pyx":140
+  /* "plinf/core.pyx":141
  *             node = free_node(node)
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)             # <<<<<<<<<<<<<<
@@ -2308,7 +2310,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   /*else*/ {
     (void)(fprintf(stderr, ((char const *)"Error parsing: code %d\n"), __pyx_v_result));
 
-    /* "plinf/core.pyx":141
+    /* "plinf/core.pyx":142
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -2317,7 +2319,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     (void)(fclose(__pyx_v_fake_input));
 
-    /* "plinf/core.pyx":142
+    /* "plinf/core.pyx":143
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)
  *         fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -2326,7 +2328,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     (void)(fclose(__pyx_v_fake_output));
 
-    /* "plinf/core.pyx":143
+    /* "plinf/core.pyx":144
  *         fclose(fake_input)
  *         fclose(fake_output)
  *         free(input_bp)             # <<<<<<<<<<<<<<
@@ -2335,7 +2337,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     free(__pyx_v_input_bp);
 
-    /* "plinf/core.pyx":144
+    /* "plinf/core.pyx":145
  *         fclose(fake_output)
  *         free(input_bp)
  *         free(output_bp)             # <<<<<<<<<<<<<<
@@ -2344,7 +2346,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     free(__pyx_v_output_bp);
 
-    /* "plinf/core.pyx":145
+    /* "plinf/core.pyx":146
  *         free(input_bp)
  *         free(output_bp)
  *         return None             # <<<<<<<<<<<<<<
@@ -2357,7 +2359,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   }
   __pyx_L3:;
 
-  /* "plinf/core.pyx":147
+  /* "plinf/core.pyx":148
  *         return None
  * 
  *     fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -2366,7 +2368,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   (void)(fclose(__pyx_v_fake_input));
 
-  /* "plinf/core.pyx":148
+  /* "plinf/core.pyx":149
  * 
  *     fclose(fake_input)
  *     fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -2375,7 +2377,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   (void)(fclose(__pyx_v_fake_output));
 
-  /* "plinf/core.pyx":149
+  /* "plinf/core.pyx":150
  *     fclose(fake_input)
  *     fclose(fake_output)
  *     free(input_bp)             # <<<<<<<<<<<<<<
@@ -2383,19 +2385,19 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   free(__pyx_v_input_bp);
 
-  /* "plinf/core.pyx":150
+  /* "plinf/core.pyx":151
  *     fclose(fake_output)
  *     free(input_bp)
  *     return output_bp.decode("utf-8")             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "plinf/core.pyx":109
+  /* "plinf/core.pyx":110
  * 
  * 
  * cpdef unicode get_opcode(unicode code):             # <<<<<<<<<<<<<<
@@ -2424,7 +2426,7 @@ static PyObject *__pyx_pw_5plinf_4core_3get_opcode(PyObject *__pyx_self, PyObjec
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_opcode (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 109, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 110, __pyx_L1_error)
   __pyx_r = __pyx_pf_5plinf_4core_2get_opcode(__pyx_self, ((PyObject*)__pyx_v_code));
 
   /* function exit code */
@@ -2445,7 +2447,7 @@ static PyObject *__pyx_pf_5plinf_4core_2get_opcode(CYTHON_UNUSED PyObject *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_opcode", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5plinf_4core_get_opcode(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_5plinf_4core_get_opcode(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4229,38 +4231,39 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_name_2, __pyx_k_name_2, sizeof(__pyx_k_name_2), 0, 0, 1, 1},
   {&__pyx_n_s_new, __pyx_k_new, sizeof(__pyx_k_new), 0, 0, 1, 1},
-  {&__pyx_n_s_op_and, __pyx_k_op_and, sizeof(__pyx_k_op_and), 0, 0, 1, 1},
-  {&__pyx_n_s_op_assign, __pyx_k_op_assign, sizeof(__pyx_k_op_assign), 0, 0, 1, 1},
-  {&__pyx_n_s_op_call, __pyx_k_op_call, sizeof(__pyx_k_op_call), 0, 0, 1, 1},
-  {&__pyx_n_s_op_const_declare, __pyx_k_op_const_declare, sizeof(__pyx_k_op_const_declare), 0, 0, 1, 1},
-  {&__pyx_n_s_op_continue, __pyx_k_op_continue, sizeof(__pyx_k_op_continue), 0, 0, 1, 1},
-  {&__pyx_n_s_op_div, __pyx_k_op_div, sizeof(__pyx_k_op_div), 0, 0, 1, 1},
-  {&__pyx_n_s_op_divide, __pyx_k_op_divide, sizeof(__pyx_k_op_divide), 0, 0, 1, 1},
-  {&__pyx_n_s_op_eq, __pyx_k_op_eq, sizeof(__pyx_k_op_eq), 0, 0, 1, 1},
-  {&__pyx_n_s_op_exit, __pyx_k_op_exit, sizeof(__pyx_k_op_exit), 0, 0, 1, 1},
-  {&__pyx_n_s_op_function_declare, __pyx_k_op_function_declare, sizeof(__pyx_k_op_function_declare), 0, 0, 1, 1},
-  {&__pyx_n_s_op_ge, __pyx_k_op_ge, sizeof(__pyx_k_op_ge), 0, 0, 1, 1},
-  {&__pyx_n_s_op_geq, __pyx_k_op_geq, sizeof(__pyx_k_op_geq), 0, 0, 1, 1},
-  {&__pyx_n_s_op_if_then, __pyx_k_op_if_then, sizeof(__pyx_k_op_if_then), 0, 0, 1, 1},
-  {&__pyx_n_s_op_if_then_else, __pyx_k_op_if_then_else, sizeof(__pyx_k_op_if_then_else), 0, 0, 1, 1},
-  {&__pyx_n_s_op_le, __pyx_k_op_le, sizeof(__pyx_k_op_le), 0, 0, 1, 1},
-  {&__pyx_n_s_op_leq, __pyx_k_op_leq, sizeof(__pyx_k_op_leq), 0, 0, 1, 1},
-  {&__pyx_n_s_op_load_const, __pyx_k_op_load_const, sizeof(__pyx_k_op_load_const), 0, 0, 1, 1},
-  {&__pyx_n_s_op_load_identifier, __pyx_k_op_load_identifier, sizeof(__pyx_k_op_load_identifier), 0, 0, 1, 1},
-  {&__pyx_n_s_op_minus, __pyx_k_op_minus, sizeof(__pyx_k_op_minus), 0, 0, 1, 1},
-  {&__pyx_n_s_op_mod, __pyx_k_op_mod, sizeof(__pyx_k_op_mod), 0, 0, 1, 1},
-  {&__pyx_n_s_op_neq, __pyx_k_op_neq, sizeof(__pyx_k_op_neq), 0, 0, 1, 1},
-  {&__pyx_n_s_op_nop, __pyx_k_op_nop, sizeof(__pyx_k_op_nop), 0, 0, 1, 1},
-  {&__pyx_n_s_op_not, __pyx_k_op_not, sizeof(__pyx_k_op_not), 0, 0, 1, 1},
-  {&__pyx_n_s_op_odd, __pyx_k_op_odd, sizeof(__pyx_k_op_odd), 0, 0, 1, 1},
-  {&__pyx_n_s_op_or, __pyx_k_op_or, sizeof(__pyx_k_op_or), 0, 0, 1, 1},
-  {&__pyx_n_s_op_plus, __pyx_k_op_plus, sizeof(__pyx_k_op_plus), 0, 0, 1, 1},
-  {&__pyx_n_s_op_power, __pyx_k_op_power, sizeof(__pyx_k_op_power), 0, 0, 1, 1},
-  {&__pyx_n_s_op_procedure_declare, __pyx_k_op_procedure_declare, sizeof(__pyx_k_op_procedure_declare), 0, 0, 1, 1},
-  {&__pyx_n_s_op_times, __pyx_k_op_times, sizeof(__pyx_k_op_times), 0, 0, 1, 1},
-  {&__pyx_n_s_op_type_declare, __pyx_k_op_type_declare, sizeof(__pyx_k_op_type_declare), 0, 0, 1, 1},
-  {&__pyx_n_s_op_var_declare, __pyx_k_op_var_declare, sizeof(__pyx_k_op_var_declare), 0, 0, 1, 1},
-  {&__pyx_n_s_op_while_do, __pyx_k_op_while_do, sizeof(__pyx_k_op_while_do), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_and, __pyx_k_opcode_binary_and, sizeof(__pyx_k_opcode_binary_and), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_compare, __pyx_k_opcode_binary_compare, sizeof(__pyx_k_opcode_binary_compare), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_divide, __pyx_k_opcode_binary_divide, sizeof(__pyx_k_opcode_binary_divide), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_floor_divide, __pyx_k_opcode_binary_floor_divide, sizeof(__pyx_k_opcode_binary_floor_divide), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_minus, __pyx_k_opcode_binary_minus, sizeof(__pyx_k_opcode_binary_minus), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_modulo, __pyx_k_opcode_binary_modulo, sizeof(__pyx_k_opcode_binary_modulo), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_or, __pyx_k_opcode_binary_or, sizeof(__pyx_k_opcode_binary_or), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_plus, __pyx_k_opcode_binary_plus, sizeof(__pyx_k_opcode_binary_plus), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_power, __pyx_k_opcode_binary_power, sizeof(__pyx_k_opcode_binary_power), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_subscr, __pyx_k_opcode_binary_subscr, sizeof(__pyx_k_opcode_binary_subscr), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_binary_times, __pyx_k_opcode_binary_times, sizeof(__pyx_k_opcode_binary_times), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_block_end, __pyx_k_opcode_block_end, sizeof(__pyx_k_opcode_block_end), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_block_start, __pyx_k_opcode_block_start, sizeof(__pyx_k_opcode_block_start), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_build_array_type, __pyx_k_opcode_build_array_type, sizeof(__pyx_k_opcode_build_array_type), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_call_function, __pyx_k_opcode_call_function, sizeof(__pyx_k_opcode_call_function), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_const_declare, __pyx_k_opcode_const_declare, sizeof(__pyx_k_opcode_const_declare), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_function_declare, __pyx_k_opcode_function_declare, sizeof(__pyx_k_opcode_function_declare), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_jump, __pyx_k_opcode_jump, sizeof(__pyx_k_opcode_jump), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_jump_if_false, __pyx_k_opcode_jump_if_false, sizeof(__pyx_k_opcode_jump_if_false), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_jump_if_true, __pyx_k_opcode_jump_if_true, sizeof(__pyx_k_opcode_jump_if_true), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_load_const, __pyx_k_opcode_load_const, sizeof(__pyx_k_opcode_load_const), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_load_fast, __pyx_k_opcode_load_fast, sizeof(__pyx_k_opcode_load_fast), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_nop, __pyx_k_opcode_nop, sizeof(__pyx_k_opcode_nop), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_param_declare, __pyx_k_opcode_param_declare, sizeof(__pyx_k_opcode_param_declare), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_procedure_declare, __pyx_k_opcode_procedure_declare, sizeof(__pyx_k_opcode_procedure_declare), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_return_function, __pyx_k_opcode_return_function, sizeof(__pyx_k_opcode_return_function), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_store_fast, __pyx_k_opcode_store_fast, sizeof(__pyx_k_opcode_store_fast), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_store_subscr, __pyx_k_opcode_store_subscr, sizeof(__pyx_k_opcode_store_subscr), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_type_declare, __pyx_k_opcode_type_declare, sizeof(__pyx_k_opcode_type_declare), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_unary_negative, __pyx_k_opcode_unary_negative, sizeof(__pyx_k_opcode_unary_negative), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_unary_not, __pyx_k_opcode_unary_not, sizeof(__pyx_k_opcode_unary_not), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_unary_odd, __pyx_k_opcode_unary_odd, sizeof(__pyx_k_opcode_unary_odd), 0, 0, 1, 1},
+  {&__pyx_n_s_opcode_var_declare, __pyx_k_opcode_var_declare, sizeof(__pyx_k_opcode_var_declare), 0, 0, 1, 1},
   {&__pyx_n_s_parents, __pyx_k_parents, sizeof(__pyx_k_parents), 0, 0, 1, 1},
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
@@ -4575,6 +4578,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_core(PyObject *__pyx_pyinit_module
   PyObject *__pyx_t_32 = NULL;
   PyObject *__pyx_t_33 = NULL;
   PyObject *__pyx_t_34 = NULL;
+  PyObject *__pyx_t_35 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -4911,587 +4915,605 @@ if (!__Pyx_RefNanny) {
     /* "EnumType":54
  * 
  *     OPCODE = __Pyx_EnumBase('OPCODE', __Pyx_OrderedDict([
- *         ('op_nop', op_nop),             # <<<<<<<<<<<<<<
- *         ('op_const_declare', op_const_declare),
- *         ('op_type_declare', op_type_declare),
+ *         ('opcode_nop', opcode_nop),             # <<<<<<<<<<<<<<
+ *         ('opcode_const_declare', opcode_const_declare),
+ *         ('opcode_type_declare', opcode_type_declare),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_nop); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 54, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_nop); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_INCREF(__pyx_n_s_op_nop);
-    __Pyx_GIVEREF(__pyx_n_s_op_nop);
-    PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_n_s_op_nop);
+    __Pyx_INCREF(__pyx_n_s_opcode_nop);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_nop);
+    PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_n_s_opcode_nop);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":55
  *     OPCODE = __Pyx_EnumBase('OPCODE', __Pyx_OrderedDict([
- *         ('op_nop', op_nop),
- *         ('op_const_declare', op_const_declare),             # <<<<<<<<<<<<<<
- *         ('op_type_declare', op_type_declare),
- *         ('op_var_declare', op_var_declare),
+ *         ('opcode_nop', opcode_nop),
+ *         ('opcode_const_declare', opcode_const_declare),             # <<<<<<<<<<<<<<
+ *         ('opcode_type_declare', opcode_type_declare),
+ *         ('opcode_var_declare', opcode_var_declare),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_const_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 55, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_const_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_INCREF(__pyx_n_s_op_const_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_const_declare);
-    PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_op_const_declare);
+    __Pyx_INCREF(__pyx_n_s_opcode_const_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_const_declare);
+    PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_opcode_const_declare);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":56
- *         ('op_nop', op_nop),
- *         ('op_const_declare', op_const_declare),
- *         ('op_type_declare', op_type_declare),             # <<<<<<<<<<<<<<
- *         ('op_var_declare', op_var_declare),
- *         ('op_procedure_declare', op_procedure_declare),
+ *         ('opcode_nop', opcode_nop),
+ *         ('opcode_const_declare', opcode_const_declare),
+ *         ('opcode_type_declare', opcode_type_declare),             # <<<<<<<<<<<<<<
+ *         ('opcode_var_declare', opcode_var_declare),
+ *         ('opcode_procedure_declare', opcode_procedure_declare),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_type_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 56, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_type_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_INCREF(__pyx_n_s_op_type_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_type_declare);
-    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_n_s_op_type_declare);
+    __Pyx_INCREF(__pyx_n_s_opcode_type_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_type_declare);
+    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_n_s_opcode_type_declare);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":57
- *         ('op_const_declare', op_const_declare),
- *         ('op_type_declare', op_type_declare),
- *         ('op_var_declare', op_var_declare),             # <<<<<<<<<<<<<<
- *         ('op_procedure_declare', op_procedure_declare),
- *         ('op_function_declare', op_function_declare),
+ *         ('opcode_const_declare', opcode_const_declare),
+ *         ('opcode_type_declare', opcode_type_declare),
+ *         ('opcode_var_declare', opcode_var_declare),             # <<<<<<<<<<<<<<
+ *         ('opcode_procedure_declare', opcode_procedure_declare),
+ *         ('opcode_function_declare', opcode_function_declare),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_var_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 57, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_var_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(1, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_INCREF(__pyx_n_s_op_var_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_var_declare);
-    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_n_s_op_var_declare);
+    __Pyx_INCREF(__pyx_n_s_opcode_var_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_var_declare);
+    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_n_s_opcode_var_declare);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":58
- *         ('op_type_declare', op_type_declare),
- *         ('op_var_declare', op_var_declare),
- *         ('op_procedure_declare', op_procedure_declare),             # <<<<<<<<<<<<<<
- *         ('op_function_declare', op_function_declare),
- *         ('op_assign', op_assign),
+ *         ('opcode_type_declare', opcode_type_declare),
+ *         ('opcode_var_declare', opcode_var_declare),
+ *         ('opcode_procedure_declare', opcode_procedure_declare),             # <<<<<<<<<<<<<<
+ *         ('opcode_function_declare', opcode_function_declare),
+ *         ('opcode_param_declare', opcode_param_declare),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_procedure_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 58, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_procedure_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 58, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 58, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_INCREF(__pyx_n_s_op_procedure_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_procedure_declare);
-    PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_n_s_op_procedure_declare);
+    __Pyx_INCREF(__pyx_n_s_opcode_procedure_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_procedure_declare);
+    PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_n_s_opcode_procedure_declare);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":59
- *         ('op_var_declare', op_var_declare),
- *         ('op_procedure_declare', op_procedure_declare),
- *         ('op_function_declare', op_function_declare),             # <<<<<<<<<<<<<<
- *         ('op_assign', op_assign),
- *         ('op_if_then', op_if_then),
+ *         ('opcode_var_declare', opcode_var_declare),
+ *         ('opcode_procedure_declare', opcode_procedure_declare),
+ *         ('opcode_function_declare', opcode_function_declare),             # <<<<<<<<<<<<<<
+ *         ('opcode_param_declare', opcode_param_declare),
+ *         ('opcode_build_array_type', opcode_build_array_type),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_function_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 59, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_function_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 59, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 59, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_INCREF(__pyx_n_s_op_function_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_function_declare);
-    PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_n_s_op_function_declare);
+    __Pyx_INCREF(__pyx_n_s_opcode_function_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_function_declare);
+    PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_n_s_opcode_function_declare);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":60
- *         ('op_procedure_declare', op_procedure_declare),
- *         ('op_function_declare', op_function_declare),
- *         ('op_assign', op_assign),             # <<<<<<<<<<<<<<
- *         ('op_if_then', op_if_then),
- *         ('op_if_then_else', op_if_then_else),
+ *         ('opcode_procedure_declare', opcode_procedure_declare),
+ *         ('opcode_function_declare', opcode_function_declare),
+ *         ('opcode_param_declare', opcode_param_declare),             # <<<<<<<<<<<<<<
+ *         ('opcode_build_array_type', opcode_build_array_type),
+ *         ('opcode_load_const', opcode_load_const),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_assign); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 60, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_param_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 60, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(1, 60, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __Pyx_INCREF(__pyx_n_s_op_assign);
-    __Pyx_GIVEREF(__pyx_n_s_op_assign);
-    PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_n_s_op_assign);
+    __Pyx_INCREF(__pyx_n_s_opcode_param_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_param_declare);
+    PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_n_s_opcode_param_declare);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":61
- *         ('op_function_declare', op_function_declare),
- *         ('op_assign', op_assign),
- *         ('op_if_then', op_if_then),             # <<<<<<<<<<<<<<
- *         ('op_if_then_else', op_if_then_else),
- *         ('op_while_do', op_while_do),
+ *         ('opcode_function_declare', opcode_function_declare),
+ *         ('opcode_param_declare', opcode_param_declare),
+ *         ('opcode_build_array_type', opcode_build_array_type),             # <<<<<<<<<<<<<<
+ *         ('opcode_load_const', opcode_load_const),
+ *         ('opcode_load_fast', opcode_load_fast),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_if_then); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 61, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_build_array_type); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 61, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(1, 61, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_INCREF(__pyx_n_s_op_if_then);
-    __Pyx_GIVEREF(__pyx_n_s_op_if_then);
-    PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_n_s_op_if_then);
+    __Pyx_INCREF(__pyx_n_s_opcode_build_array_type);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_build_array_type);
+    PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_n_s_opcode_build_array_type);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":62
- *         ('op_assign', op_assign),
- *         ('op_if_then', op_if_then),
- *         ('op_if_then_else', op_if_then_else),             # <<<<<<<<<<<<<<
- *         ('op_while_do', op_while_do),
- *         ('op_continue', op_continue),
+ *         ('opcode_param_declare', opcode_param_declare),
+ *         ('opcode_build_array_type', opcode_build_array_type),
+ *         ('opcode_load_const', opcode_load_const),             # <<<<<<<<<<<<<<
+ *         ('opcode_load_fast', opcode_load_fast),
+ *         ('opcode_block_start', opcode_block_start),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_if_then_else); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 62, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_load_const); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 62, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_11 = PyTuple_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(1, 62, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __Pyx_INCREF(__pyx_n_s_op_if_then_else);
-    __Pyx_GIVEREF(__pyx_n_s_op_if_then_else);
-    PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_n_s_op_if_then_else);
+    __Pyx_INCREF(__pyx_n_s_opcode_load_const);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_load_const);
+    PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_n_s_opcode_load_const);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_11, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":63
- *         ('op_if_then', op_if_then),
- *         ('op_if_then_else', op_if_then_else),
- *         ('op_while_do', op_while_do),             # <<<<<<<<<<<<<<
- *         ('op_continue', op_continue),
- *         ('op_exit', op_exit),
+ *         ('opcode_build_array_type', opcode_build_array_type),
+ *         ('opcode_load_const', opcode_load_const),
+ *         ('opcode_load_fast', opcode_load_fast),             # <<<<<<<<<<<<<<
+ *         ('opcode_block_start', opcode_block_start),
+ *         ('opcode_block_end', opcode_block_end),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_while_do); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 63, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_load_fast); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 63, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(1, 63, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __Pyx_INCREF(__pyx_n_s_op_while_do);
-    __Pyx_GIVEREF(__pyx_n_s_op_while_do);
-    PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_n_s_op_while_do);
+    __Pyx_INCREF(__pyx_n_s_opcode_load_fast);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_load_fast);
+    PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_n_s_opcode_load_fast);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":64
- *         ('op_if_then_else', op_if_then_else),
- *         ('op_while_do', op_while_do),
- *         ('op_continue', op_continue),             # <<<<<<<<<<<<<<
- *         ('op_exit', op_exit),
- *         ('op_call', op_call),
+ *         ('opcode_load_const', opcode_load_const),
+ *         ('opcode_load_fast', opcode_load_fast),
+ *         ('opcode_block_start', opcode_block_start),             # <<<<<<<<<<<<<<
+ *         ('opcode_block_end', opcode_block_end),
+ *         ('opcode_unary_negative', opcode_unary_negative),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_continue); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 64, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_block_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_13 = PyTuple_New(2); if (unlikely(!__pyx_t_13)) __PYX_ERR(1, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_INCREF(__pyx_n_s_op_continue);
-    __Pyx_GIVEREF(__pyx_n_s_op_continue);
-    PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_n_s_op_continue);
+    __Pyx_INCREF(__pyx_n_s_opcode_block_start);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_block_start);
+    PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_n_s_opcode_block_start);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":65
- *         ('op_while_do', op_while_do),
- *         ('op_continue', op_continue),
- *         ('op_exit', op_exit),             # <<<<<<<<<<<<<<
- *         ('op_call', op_call),
- *         ('op_le', op_le),
+ *         ('opcode_load_fast', opcode_load_fast),
+ *         ('opcode_block_start', opcode_block_start),
+ *         ('opcode_block_end', opcode_block_end),             # <<<<<<<<<<<<<<
+ *         ('opcode_unary_negative', opcode_unary_negative),
+ *         ('opcode_unary_not', opcode_unary_not),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_exit); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 65, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_block_end); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_14 = PyTuple_New(2); if (unlikely(!__pyx_t_14)) __PYX_ERR(1, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_INCREF(__pyx_n_s_op_exit);
-    __Pyx_GIVEREF(__pyx_n_s_op_exit);
-    PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_n_s_op_exit);
+    __Pyx_INCREF(__pyx_n_s_opcode_block_end);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_block_end);
+    PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_n_s_opcode_block_end);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_14, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":66
- *         ('op_continue', op_continue),
- *         ('op_exit', op_exit),
- *         ('op_call', op_call),             # <<<<<<<<<<<<<<
- *         ('op_le', op_le),
- *         ('op_leq', op_leq),
+ *         ('opcode_block_start', opcode_block_start),
+ *         ('opcode_block_end', opcode_block_end),
+ *         ('opcode_unary_negative', opcode_unary_negative),             # <<<<<<<<<<<<<<
+ *         ('opcode_unary_not', opcode_unary_not),
+ *         ('opcode_unary_odd', opcode_unary_odd),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_call); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 66, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_unary_negative); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_15 = PyTuple_New(2); if (unlikely(!__pyx_t_15)) __PYX_ERR(1, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
-    __Pyx_INCREF(__pyx_n_s_op_call);
-    __Pyx_GIVEREF(__pyx_n_s_op_call);
-    PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_n_s_op_call);
+    __Pyx_INCREF(__pyx_n_s_opcode_unary_negative);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_unary_negative);
+    PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_n_s_opcode_unary_negative);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_15, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":67
- *         ('op_exit', op_exit),
- *         ('op_call', op_call),
- *         ('op_le', op_le),             # <<<<<<<<<<<<<<
- *         ('op_leq', op_leq),
- *         ('op_ge', op_ge),
+ *         ('opcode_block_end', opcode_block_end),
+ *         ('opcode_unary_negative', opcode_unary_negative),
+ *         ('opcode_unary_not', opcode_unary_not),             # <<<<<<<<<<<<<<
+ *         ('opcode_unary_odd', opcode_unary_odd),
+ *         ('opcode_binary_power', opcode_binary_power),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_le); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 67, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_unary_not); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
-    __Pyx_INCREF(__pyx_n_s_op_le);
-    __Pyx_GIVEREF(__pyx_n_s_op_le);
-    PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_n_s_op_le);
+    __Pyx_INCREF(__pyx_n_s_opcode_unary_not);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_unary_not);
+    PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_n_s_opcode_unary_not);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_16, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":68
- *         ('op_call', op_call),
- *         ('op_le', op_le),
- *         ('op_leq', op_leq),             # <<<<<<<<<<<<<<
- *         ('op_ge', op_ge),
- *         ('op_geq', op_geq),
+ *         ('opcode_unary_negative', opcode_unary_negative),
+ *         ('opcode_unary_not', opcode_unary_not),
+ *         ('opcode_unary_odd', opcode_unary_odd),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_power', opcode_binary_power),
+ *         ('opcode_binary_times', opcode_binary_times),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_leq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 68, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_unary_odd); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_17 = PyTuple_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_17);
-    __Pyx_INCREF(__pyx_n_s_op_leq);
-    __Pyx_GIVEREF(__pyx_n_s_op_leq);
-    PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_n_s_op_leq);
+    __Pyx_INCREF(__pyx_n_s_opcode_unary_odd);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_unary_odd);
+    PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_n_s_opcode_unary_odd);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":69
- *         ('op_le', op_le),
- *         ('op_leq', op_leq),
- *         ('op_ge', op_ge),             # <<<<<<<<<<<<<<
- *         ('op_geq', op_geq),
- *         ('op_eq', op_eq),
+ *         ('opcode_unary_not', opcode_unary_not),
+ *         ('opcode_unary_odd', opcode_unary_odd),
+ *         ('opcode_binary_power', opcode_binary_power),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_times', opcode_binary_times),
+ *         ('opcode_binary_divide', opcode_binary_divide),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_ge); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 69, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_power); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_18 = PyTuple_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(1, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
-    __Pyx_INCREF(__pyx_n_s_op_ge);
-    __Pyx_GIVEREF(__pyx_n_s_op_ge);
-    PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_n_s_op_ge);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_power);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_power);
+    PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_n_s_opcode_binary_power);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":70
- *         ('op_leq', op_leq),
- *         ('op_ge', op_ge),
- *         ('op_geq', op_geq),             # <<<<<<<<<<<<<<
- *         ('op_eq', op_eq),
- *         ('op_neq', op_neq),
+ *         ('opcode_unary_odd', opcode_unary_odd),
+ *         ('opcode_binary_power', opcode_binary_power),
+ *         ('opcode_binary_times', opcode_binary_times),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_divide', opcode_binary_divide),
+ *         ('opcode_binary_floor_divide', opcode_binary_floor_divide),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_geq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 70, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_times); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 70, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_19 = PyTuple_New(2); if (unlikely(!__pyx_t_19)) __PYX_ERR(1, 70, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_19);
-    __Pyx_INCREF(__pyx_n_s_op_geq);
-    __Pyx_GIVEREF(__pyx_n_s_op_geq);
-    PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_n_s_op_geq);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_times);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_times);
+    PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_n_s_opcode_binary_times);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_19, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":71
- *         ('op_ge', op_ge),
- *         ('op_geq', op_geq),
- *         ('op_eq', op_eq),             # <<<<<<<<<<<<<<
- *         ('op_neq', op_neq),
- *         ('op_plus', op_plus),
+ *         ('opcode_binary_power', opcode_binary_power),
+ *         ('opcode_binary_times', opcode_binary_times),
+ *         ('opcode_binary_divide', opcode_binary_divide),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_floor_divide', opcode_binary_floor_divide),
+ *         ('opcode_binary_modulo', opcode_binary_modulo),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_eq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 71, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_divide); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 71, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(1, 71, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
-    __Pyx_INCREF(__pyx_n_s_op_eq);
-    __Pyx_GIVEREF(__pyx_n_s_op_eq);
-    PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_n_s_op_eq);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_divide);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_divide);
+    PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_n_s_opcode_binary_divide);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":72
- *         ('op_geq', op_geq),
- *         ('op_eq', op_eq),
- *         ('op_neq', op_neq),             # <<<<<<<<<<<<<<
- *         ('op_plus', op_plus),
- *         ('op_minus', op_minus),
+ *         ('opcode_binary_times', opcode_binary_times),
+ *         ('opcode_binary_divide', opcode_binary_divide),
+ *         ('opcode_binary_floor_divide', opcode_binary_floor_divide),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_modulo', opcode_binary_modulo),
+ *         ('opcode_binary_plus', opcode_binary_plus),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_neq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 72, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_floor_divide); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 72, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_21 = PyTuple_New(2); if (unlikely(!__pyx_t_21)) __PYX_ERR(1, 72, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_21);
-    __Pyx_INCREF(__pyx_n_s_op_neq);
-    __Pyx_GIVEREF(__pyx_n_s_op_neq);
-    PyTuple_SET_ITEM(__pyx_t_21, 0, __pyx_n_s_op_neq);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_floor_divide);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_floor_divide);
+    PyTuple_SET_ITEM(__pyx_t_21, 0, __pyx_n_s_opcode_binary_floor_divide);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_21, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":73
- *         ('op_eq', op_eq),
- *         ('op_neq', op_neq),
- *         ('op_plus', op_plus),             # <<<<<<<<<<<<<<
- *         ('op_minus', op_minus),
- *         ('op_times', op_times),
+ *         ('opcode_binary_divide', opcode_binary_divide),
+ *         ('opcode_binary_floor_divide', opcode_binary_floor_divide),
+ *         ('opcode_binary_modulo', opcode_binary_modulo),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_plus', opcode_binary_plus),
+ *         ('opcode_binary_minus', opcode_binary_minus),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_plus); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 73, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_modulo); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 73, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_22 = PyTuple_New(2); if (unlikely(!__pyx_t_22)) __PYX_ERR(1, 73, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_22);
-    __Pyx_INCREF(__pyx_n_s_op_plus);
-    __Pyx_GIVEREF(__pyx_n_s_op_plus);
-    PyTuple_SET_ITEM(__pyx_t_22, 0, __pyx_n_s_op_plus);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_modulo);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_modulo);
+    PyTuple_SET_ITEM(__pyx_t_22, 0, __pyx_n_s_opcode_binary_modulo);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_22, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":74
- *         ('op_neq', op_neq),
- *         ('op_plus', op_plus),
- *         ('op_minus', op_minus),             # <<<<<<<<<<<<<<
- *         ('op_times', op_times),
- *         ('op_power', op_power),
+ *         ('opcode_binary_floor_divide', opcode_binary_floor_divide),
+ *         ('opcode_binary_modulo', opcode_binary_modulo),
+ *         ('opcode_binary_plus', opcode_binary_plus),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_minus', opcode_binary_minus),
+ *         ('opcode_binary_subscr', opcode_binary_subscr),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_minus); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 74, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_plus); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 74, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_23 = PyTuple_New(2); if (unlikely(!__pyx_t_23)) __PYX_ERR(1, 74, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_23);
-    __Pyx_INCREF(__pyx_n_s_op_minus);
-    __Pyx_GIVEREF(__pyx_n_s_op_minus);
-    PyTuple_SET_ITEM(__pyx_t_23, 0, __pyx_n_s_op_minus);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_plus);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_plus);
+    PyTuple_SET_ITEM(__pyx_t_23, 0, __pyx_n_s_opcode_binary_plus);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_23, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":75
- *         ('op_plus', op_plus),
- *         ('op_minus', op_minus),
- *         ('op_times', op_times),             # <<<<<<<<<<<<<<
- *         ('op_power', op_power),
- *         ('op_divide', op_divide),
+ *         ('opcode_binary_modulo', opcode_binary_modulo),
+ *         ('opcode_binary_plus', opcode_binary_plus),
+ *         ('opcode_binary_minus', opcode_binary_minus),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_subscr', opcode_binary_subscr),
+ *         ('opcode_binary_and', opcode_binary_and),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_times); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 75, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_minus); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 75, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_24 = PyTuple_New(2); if (unlikely(!__pyx_t_24)) __PYX_ERR(1, 75, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_24);
-    __Pyx_INCREF(__pyx_n_s_op_times);
-    __Pyx_GIVEREF(__pyx_n_s_op_times);
-    PyTuple_SET_ITEM(__pyx_t_24, 0, __pyx_n_s_op_times);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_minus);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_minus);
+    PyTuple_SET_ITEM(__pyx_t_24, 0, __pyx_n_s_opcode_binary_minus);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_24, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":76
- *         ('op_minus', op_minus),
- *         ('op_times', op_times),
- *         ('op_power', op_power),             # <<<<<<<<<<<<<<
- *         ('op_divide', op_divide),
- *         ('op_div', op_div),
+ *         ('opcode_binary_plus', opcode_binary_plus),
+ *         ('opcode_binary_minus', opcode_binary_minus),
+ *         ('opcode_binary_subscr', opcode_binary_subscr),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_and', opcode_binary_and),
+ *         ('opcode_binary_or', opcode_binary_or),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_power); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 76, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_subscr); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_25 = PyTuple_New(2); if (unlikely(!__pyx_t_25)) __PYX_ERR(1, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_25);
-    __Pyx_INCREF(__pyx_n_s_op_power);
-    __Pyx_GIVEREF(__pyx_n_s_op_power);
-    PyTuple_SET_ITEM(__pyx_t_25, 0, __pyx_n_s_op_power);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_subscr);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_subscr);
+    PyTuple_SET_ITEM(__pyx_t_25, 0, __pyx_n_s_opcode_binary_subscr);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_25, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":77
- *         ('op_times', op_times),
- *         ('op_power', op_power),
- *         ('op_divide', op_divide),             # <<<<<<<<<<<<<<
- *         ('op_div', op_div),
- *         ('op_mod', op_mod),
+ *         ('opcode_binary_minus', opcode_binary_minus),
+ *         ('opcode_binary_subscr', opcode_binary_subscr),
+ *         ('opcode_binary_and', opcode_binary_and),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_or', opcode_binary_or),
+ *         ('opcode_binary_compare', opcode_binary_compare),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_divide); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 77, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_and); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 77, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_26 = PyTuple_New(2); if (unlikely(!__pyx_t_26)) __PYX_ERR(1, 77, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_26);
-    __Pyx_INCREF(__pyx_n_s_op_divide);
-    __Pyx_GIVEREF(__pyx_n_s_op_divide);
-    PyTuple_SET_ITEM(__pyx_t_26, 0, __pyx_n_s_op_divide);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_and);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_and);
+    PyTuple_SET_ITEM(__pyx_t_26, 0, __pyx_n_s_opcode_binary_and);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_26, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":78
- *         ('op_power', op_power),
- *         ('op_divide', op_divide),
- *         ('op_div', op_div),             # <<<<<<<<<<<<<<
- *         ('op_mod', op_mod),
- *         ('op_odd', op_odd),
+ *         ('opcode_binary_subscr', opcode_binary_subscr),
+ *         ('opcode_binary_and', opcode_binary_and),
+ *         ('opcode_binary_or', opcode_binary_or),             # <<<<<<<<<<<<<<
+ *         ('opcode_binary_compare', opcode_binary_compare),
+ *         ('opcode_store_fast', opcode_store_fast),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_div); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 78, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_or); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 78, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_27 = PyTuple_New(2); if (unlikely(!__pyx_t_27)) __PYX_ERR(1, 78, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_27);
-    __Pyx_INCREF(__pyx_n_s_op_div);
-    __Pyx_GIVEREF(__pyx_n_s_op_div);
-    PyTuple_SET_ITEM(__pyx_t_27, 0, __pyx_n_s_op_div);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_or);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_or);
+    PyTuple_SET_ITEM(__pyx_t_27, 0, __pyx_n_s_opcode_binary_or);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_27, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":79
- *         ('op_divide', op_divide),
- *         ('op_div', op_div),
- *         ('op_mod', op_mod),             # <<<<<<<<<<<<<<
- *         ('op_odd', op_odd),
- *         ('op_and', op_and),
+ *         ('opcode_binary_and', opcode_binary_and),
+ *         ('opcode_binary_or', opcode_binary_or),
+ *         ('opcode_binary_compare', opcode_binary_compare),             # <<<<<<<<<<<<<<
+ *         ('opcode_store_fast', opcode_store_fast),
+ *         ('opcode_store_subscr', opcode_store_subscr),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_mod); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 79, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_compare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 79, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_28 = PyTuple_New(2); if (unlikely(!__pyx_t_28)) __PYX_ERR(1, 79, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_28);
-    __Pyx_INCREF(__pyx_n_s_op_mod);
-    __Pyx_GIVEREF(__pyx_n_s_op_mod);
-    PyTuple_SET_ITEM(__pyx_t_28, 0, __pyx_n_s_op_mod);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_compare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_compare);
+    PyTuple_SET_ITEM(__pyx_t_28, 0, __pyx_n_s_opcode_binary_compare);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_28, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":80
- *         ('op_div', op_div),
- *         ('op_mod', op_mod),
- *         ('op_odd', op_odd),             # <<<<<<<<<<<<<<
- *         ('op_and', op_and),
- *         ('op_or', op_or),
+ *         ('opcode_binary_or', opcode_binary_or),
+ *         ('opcode_binary_compare', opcode_binary_compare),
+ *         ('opcode_store_fast', opcode_store_fast),             # <<<<<<<<<<<<<<
+ *         ('opcode_store_subscr', opcode_store_subscr),
+ *         ('opcode_jump', opcode_jump),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_odd); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 80, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_store_fast); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 80, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_29 = PyTuple_New(2); if (unlikely(!__pyx_t_29)) __PYX_ERR(1, 80, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_29);
-    __Pyx_INCREF(__pyx_n_s_op_odd);
-    __Pyx_GIVEREF(__pyx_n_s_op_odd);
-    PyTuple_SET_ITEM(__pyx_t_29, 0, __pyx_n_s_op_odd);
+    __Pyx_INCREF(__pyx_n_s_opcode_store_fast);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_store_fast);
+    PyTuple_SET_ITEM(__pyx_t_29, 0, __pyx_n_s_opcode_store_fast);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_29, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":81
- *         ('op_mod', op_mod),
- *         ('op_odd', op_odd),
- *         ('op_and', op_and),             # <<<<<<<<<<<<<<
- *         ('op_or', op_or),
- *         ('op_not', op_not),
+ *         ('opcode_binary_compare', opcode_binary_compare),
+ *         ('opcode_store_fast', opcode_store_fast),
+ *         ('opcode_store_subscr', opcode_store_subscr),             # <<<<<<<<<<<<<<
+ *         ('opcode_jump', opcode_jump),
+ *         ('opcode_jump_if_true', opcode_jump_if_true),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_and); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 81, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_store_subscr); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 81, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_30 = PyTuple_New(2); if (unlikely(!__pyx_t_30)) __PYX_ERR(1, 81, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_30);
-    __Pyx_INCREF(__pyx_n_s_op_and);
-    __Pyx_GIVEREF(__pyx_n_s_op_and);
-    PyTuple_SET_ITEM(__pyx_t_30, 0, __pyx_n_s_op_and);
+    __Pyx_INCREF(__pyx_n_s_opcode_store_subscr);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_store_subscr);
+    PyTuple_SET_ITEM(__pyx_t_30, 0, __pyx_n_s_opcode_store_subscr);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_30, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":82
- *         ('op_odd', op_odd),
- *         ('op_and', op_and),
- *         ('op_or', op_or),             # <<<<<<<<<<<<<<
- *         ('op_not', op_not),
- *         ('op_load_const', op_load_const),
+ *         ('opcode_store_fast', opcode_store_fast),
+ *         ('opcode_store_subscr', opcode_store_subscr),
+ *         ('opcode_jump', opcode_jump),             # <<<<<<<<<<<<<<
+ *         ('opcode_jump_if_true', opcode_jump_if_true),
+ *         ('opcode_jump_if_false', opcode_jump_if_false),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_or); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 82, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_jump); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_31 = PyTuple_New(2); if (unlikely(!__pyx_t_31)) __PYX_ERR(1, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_31);
-    __Pyx_INCREF(__pyx_n_s_op_or);
-    __Pyx_GIVEREF(__pyx_n_s_op_or);
-    PyTuple_SET_ITEM(__pyx_t_31, 0, __pyx_n_s_op_or);
+    __Pyx_INCREF(__pyx_n_s_opcode_jump);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_jump);
+    PyTuple_SET_ITEM(__pyx_t_31, 0, __pyx_n_s_opcode_jump);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_31, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":83
- *         ('op_and', op_and),
- *         ('op_or', op_or),
- *         ('op_not', op_not),             # <<<<<<<<<<<<<<
- *         ('op_load_const', op_load_const),
- *         ('op_load_identifier', op_load_identifier),
+ *         ('opcode_store_subscr', opcode_store_subscr),
+ *         ('opcode_jump', opcode_jump),
+ *         ('opcode_jump_if_true', opcode_jump_if_true),             # <<<<<<<<<<<<<<
+ *         ('opcode_jump_if_false', opcode_jump_if_false),
+ *         ('opcode_call_function', opcode_call_function),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_not); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 83, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_jump_if_true); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 83, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_32 = PyTuple_New(2); if (unlikely(!__pyx_t_32)) __PYX_ERR(1, 83, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_32);
-    __Pyx_INCREF(__pyx_n_s_op_not);
-    __Pyx_GIVEREF(__pyx_n_s_op_not);
-    PyTuple_SET_ITEM(__pyx_t_32, 0, __pyx_n_s_op_not);
+    __Pyx_INCREF(__pyx_n_s_opcode_jump_if_true);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_jump_if_true);
+    PyTuple_SET_ITEM(__pyx_t_32, 0, __pyx_n_s_opcode_jump_if_true);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_32, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":84
- *         ('op_or', op_or),
- *         ('op_not', op_not),
- *         ('op_load_const', op_load_const),             # <<<<<<<<<<<<<<
- *         ('op_load_identifier', op_load_identifier),
- *     ]))
+ *         ('opcode_jump', opcode_jump),
+ *         ('opcode_jump_if_true', opcode_jump_if_true),
+ *         ('opcode_jump_if_false', opcode_jump_if_false),             # <<<<<<<<<<<<<<
+ *         ('opcode_call_function', opcode_call_function),
+ *         ('opcode_return_function', opcode_return_function),
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_load_const); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 84, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_jump_if_false); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 84, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 84, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_load_const);
-    __Pyx_GIVEREF(__pyx_n_s_op_load_const);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_n_s_op_load_const);
+    __Pyx_INCREF(__pyx_n_s_opcode_jump_if_false);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_jump_if_false);
+    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_n_s_opcode_jump_if_false);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":85
- *         ('op_not', op_not),
- *         ('op_load_const', op_load_const),
- *         ('op_load_identifier', op_load_identifier),             # <<<<<<<<<<<<<<
+ *         ('opcode_jump_if_true', opcode_jump_if_true),
+ *         ('opcode_jump_if_false', opcode_jump_if_false),
+ *         ('opcode_call_function', opcode_call_function),             # <<<<<<<<<<<<<<
+ *         ('opcode_return_function', opcode_return_function),
  *     ]))
- *     __Pyx_globals['op_nop'] = OPCODE.op_nop
  */
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_load_identifier); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 85, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_call_function); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 85, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 85, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_load_identifier);
-    __Pyx_GIVEREF(__pyx_n_s_op_load_identifier);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_n_s_op_load_identifier);
+    __Pyx_INCREF(__pyx_n_s_opcode_call_function);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_call_function);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_n_s_opcode_call_function);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_t_1);
+    __pyx_t_1 = 0;
+
+    /* "EnumType":86
+ *         ('opcode_jump_if_false', opcode_jump_if_false),
+ *         ('opcode_call_function', opcode_call_function),
+ *         ('opcode_return_function', opcode_return_function),             # <<<<<<<<<<<<<<
+ *     ]))
+ *     __Pyx_globals['opcode_nop'] = OPCODE.opcode_nop
+ */
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_return_function); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 86, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 86, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_return_function);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_return_function);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_n_s_opcode_return_function);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_t_1);
     __pyx_t_1 = 0;
 
     /* "EnumType":53
  * if PY_VERSION_HEX >= 0x03040000:
  * 
  *     OPCODE = __Pyx_EnumBase('OPCODE', __Pyx_OrderedDict([             # <<<<<<<<<<<<<<
- *         ('op_nop', op_nop),
- *         ('op_const_declare', op_const_declare),
+ *         ('opcode_nop', opcode_nop),
+ *         ('opcode_const_declare', opcode_const_declare),
  */
-    __pyx_t_1 = PyList_New(32); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 53, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(33); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 53, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_3);
     PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
@@ -5557,6 +5579,8 @@ if (!__Pyx_RefNanny) {
     PyList_SET_ITEM(__pyx_t_1, 30, __pyx_t_33);
     __Pyx_GIVEREF(__pyx_t_34);
     PyList_SET_ITEM(__pyx_t_1, 31, __pyx_t_34);
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyList_SET_ITEM(__pyx_t_1, 32, __pyx_t_35);
     __pyx_t_3 = 0;
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
@@ -5589,630 +5613,650 @@ if (!__Pyx_RefNanny) {
     __pyx_t_32 = 0;
     __pyx_t_33 = 0;
     __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_CallOneArg(__Pyx_OrderedDict, __pyx_t_1); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 53, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_CallOneArg(__Pyx_OrderedDict, __pyx_t_1); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 53, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 53, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_n_s_OPCODE);
     __Pyx_GIVEREF(__pyx_n_s_OPCODE);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_OPCODE);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_34);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__Pyx_EnumBase, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 53, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_35);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__Pyx_EnumBase, __pyx_t_1, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 53, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_OPCODE, __pyx_t_34) < 0) __PYX_ERR(1, 53, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-
-    /* "EnumType":87
- *         ('op_load_identifier', op_load_identifier),
- *     ]))
- *     __Pyx_globals['op_nop'] = OPCODE.op_nop             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_const_declare'] = OPCODE.op_const_declare
- *     __Pyx_globals['op_type_declare'] = OPCODE.op_type_declare
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 87, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_nop); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 87, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    if (unlikely(__Pyx_globals == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(1, 87, __pyx_L1_error)
-    }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_nop, __pyx_t_1) < 0)) __PYX_ERR(1, 87, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (PyDict_SetItem(__pyx_d, __pyx_n_s_OPCODE, __pyx_t_35) < 0) __PYX_ERR(1, 53, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":88
+ *         ('opcode_return_function', opcode_return_function),
  *     ]))
- *     __Pyx_globals['op_nop'] = OPCODE.op_nop
- *     __Pyx_globals['op_const_declare'] = OPCODE.op_const_declare             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_type_declare'] = OPCODE.op_type_declare
- *     __Pyx_globals['op_var_declare'] = OPCODE.op_var_declare
+ *     __Pyx_globals['opcode_nop'] = OPCODE.opcode_nop             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE.opcode_const_declare
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE.opcode_type_declare
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 88, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 88, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_nop); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 88, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_const_declare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 88, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 88, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_const_declare, __pyx_t_34) < 0)) __PYX_ERR(1, 88, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_nop, __pyx_t_1) < 0)) __PYX_ERR(1, 88, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":89
- *     __Pyx_globals['op_nop'] = OPCODE.op_nop
- *     __Pyx_globals['op_const_declare'] = OPCODE.op_const_declare
- *     __Pyx_globals['op_type_declare'] = OPCODE.op_type_declare             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_var_declare'] = OPCODE.op_var_declare
- *     __Pyx_globals['op_procedure_declare'] = OPCODE.op_procedure_declare
+ *     ]))
+ *     __Pyx_globals['opcode_nop'] = OPCODE.opcode_nop
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE.opcode_const_declare             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE.opcode_type_declare
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE.opcode_var_declare
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 89, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_type_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 89, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 89, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_const_declare); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 89, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 89, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_type_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 89, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_const_declare, __pyx_t_35) < 0)) __PYX_ERR(1, 89, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":90
- *     __Pyx_globals['op_const_declare'] = OPCODE.op_const_declare
- *     __Pyx_globals['op_type_declare'] = OPCODE.op_type_declare
- *     __Pyx_globals['op_var_declare'] = OPCODE.op_var_declare             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_procedure_declare'] = OPCODE.op_procedure_declare
- *     __Pyx_globals['op_function_declare'] = OPCODE.op_function_declare
+ *     __Pyx_globals['opcode_nop'] = OPCODE.opcode_nop
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE.opcode_const_declare
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE.opcode_type_declare             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE.opcode_var_declare
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE.opcode_procedure_declare
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 90, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 90, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_type_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 90, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_var_declare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 90, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 90, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_var_declare, __pyx_t_34) < 0)) __PYX_ERR(1, 90, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_type_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 90, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":91
- *     __Pyx_globals['op_type_declare'] = OPCODE.op_type_declare
- *     __Pyx_globals['op_var_declare'] = OPCODE.op_var_declare
- *     __Pyx_globals['op_procedure_declare'] = OPCODE.op_procedure_declare             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_function_declare'] = OPCODE.op_function_declare
- *     __Pyx_globals['op_assign'] = OPCODE.op_assign
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE.opcode_const_declare
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE.opcode_type_declare
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE.opcode_var_declare             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE.opcode_procedure_declare
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE.opcode_function_declare
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_procedure_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 91, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 91, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_var_declare); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 91, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 91, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_procedure_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 91, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_var_declare, __pyx_t_35) < 0)) __PYX_ERR(1, 91, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":92
- *     __Pyx_globals['op_var_declare'] = OPCODE.op_var_declare
- *     __Pyx_globals['op_procedure_declare'] = OPCODE.op_procedure_declare
- *     __Pyx_globals['op_function_declare'] = OPCODE.op_function_declare             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_assign'] = OPCODE.op_assign
- *     __Pyx_globals['op_if_then'] = OPCODE.op_if_then
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE.opcode_type_declare
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE.opcode_var_declare
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE.opcode_procedure_declare             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE.opcode_function_declare
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE.opcode_param_declare
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 92, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 92, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_procedure_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 92, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_function_declare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 92, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 92, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_function_declare, __pyx_t_34) < 0)) __PYX_ERR(1, 92, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_procedure_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 92, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":93
- *     __Pyx_globals['op_procedure_declare'] = OPCODE.op_procedure_declare
- *     __Pyx_globals['op_function_declare'] = OPCODE.op_function_declare
- *     __Pyx_globals['op_assign'] = OPCODE.op_assign             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_if_then'] = OPCODE.op_if_then
- *     __Pyx_globals['op_if_then_else'] = OPCODE.op_if_then_else
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE.opcode_var_declare
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE.opcode_procedure_declare
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE.opcode_function_declare             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE.opcode_param_declare
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE.opcode_build_array_type
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 93, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_assign); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 93, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_function_declare); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 93, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 93, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_assign, __pyx_t_1) < 0)) __PYX_ERR(1, 93, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_function_declare, __pyx_t_35) < 0)) __PYX_ERR(1, 93, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":94
- *     __Pyx_globals['op_function_declare'] = OPCODE.op_function_declare
- *     __Pyx_globals['op_assign'] = OPCODE.op_assign
- *     __Pyx_globals['op_if_then'] = OPCODE.op_if_then             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_if_then_else'] = OPCODE.op_if_then_else
- *     __Pyx_globals['op_while_do'] = OPCODE.op_while_do
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE.opcode_procedure_declare
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE.opcode_function_declare
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE.opcode_param_declare             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE.opcode_build_array_type
+ *     __Pyx_globals['opcode_load_const'] = OPCODE.opcode_load_const
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 94, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 94, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_param_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 94, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_if_then); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 94, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 94, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_if_then, __pyx_t_34) < 0)) __PYX_ERR(1, 94, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_param_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 94, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":95
- *     __Pyx_globals['op_assign'] = OPCODE.op_assign
- *     __Pyx_globals['op_if_then'] = OPCODE.op_if_then
- *     __Pyx_globals['op_if_then_else'] = OPCODE.op_if_then_else             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_while_do'] = OPCODE.op_while_do
- *     __Pyx_globals['op_continue'] = OPCODE.op_continue
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE.opcode_function_declare
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE.opcode_param_declare
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE.opcode_build_array_type             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_load_const'] = OPCODE.opcode_load_const
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE.opcode_load_fast
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 95, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_if_then_else); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 95, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_build_array_type); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 95, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 95, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_if_then_else, __pyx_t_1) < 0)) __PYX_ERR(1, 95, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_build_array_type, __pyx_t_35) < 0)) __PYX_ERR(1, 95, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":96
- *     __Pyx_globals['op_if_then'] = OPCODE.op_if_then
- *     __Pyx_globals['op_if_then_else'] = OPCODE.op_if_then_else
- *     __Pyx_globals['op_while_do'] = OPCODE.op_while_do             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_continue'] = OPCODE.op_continue
- *     __Pyx_globals['op_exit'] = OPCODE.op_exit
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE.opcode_param_declare
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE.opcode_build_array_type
+ *     __Pyx_globals['opcode_load_const'] = OPCODE.opcode_load_const             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE.opcode_load_fast
+ *     __Pyx_globals['opcode_block_start'] = OPCODE.opcode_block_start
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 96, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 96, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_load_const); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 96, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_while_do); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 96, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 96, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_while_do, __pyx_t_34) < 0)) __PYX_ERR(1, 96, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_load_const, __pyx_t_1) < 0)) __PYX_ERR(1, 96, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":97
- *     __Pyx_globals['op_if_then_else'] = OPCODE.op_if_then_else
- *     __Pyx_globals['op_while_do'] = OPCODE.op_while_do
- *     __Pyx_globals['op_continue'] = OPCODE.op_continue             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_exit'] = OPCODE.op_exit
- *     __Pyx_globals['op_call'] = OPCODE.op_call
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE.opcode_build_array_type
+ *     __Pyx_globals['opcode_load_const'] = OPCODE.opcode_load_const
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE.opcode_load_fast             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_block_start'] = OPCODE.opcode_block_start
+ *     __Pyx_globals['opcode_block_end'] = OPCODE.opcode_block_end
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 97, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_continue); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 97, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 97, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_load_fast); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 97, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 97, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_continue, __pyx_t_1) < 0)) __PYX_ERR(1, 97, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_load_fast, __pyx_t_35) < 0)) __PYX_ERR(1, 97, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":98
- *     __Pyx_globals['op_while_do'] = OPCODE.op_while_do
- *     __Pyx_globals['op_continue'] = OPCODE.op_continue
- *     __Pyx_globals['op_exit'] = OPCODE.op_exit             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_call'] = OPCODE.op_call
- *     __Pyx_globals['op_le'] = OPCODE.op_le
+ *     __Pyx_globals['opcode_load_const'] = OPCODE.opcode_load_const
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE.opcode_load_fast
+ *     __Pyx_globals['opcode_block_start'] = OPCODE.opcode_block_start             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_block_end'] = OPCODE.opcode_block_end
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE.opcode_unary_negative
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 98, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 98, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_block_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 98, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_exit); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 98, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 98, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_exit, __pyx_t_34) < 0)) __PYX_ERR(1, 98, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_block_start, __pyx_t_1) < 0)) __PYX_ERR(1, 98, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":99
- *     __Pyx_globals['op_continue'] = OPCODE.op_continue
- *     __Pyx_globals['op_exit'] = OPCODE.op_exit
- *     __Pyx_globals['op_call'] = OPCODE.op_call             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_le'] = OPCODE.op_le
- *     __Pyx_globals['op_leq'] = OPCODE.op_leq
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE.opcode_load_fast
+ *     __Pyx_globals['opcode_block_start'] = OPCODE.opcode_block_start
+ *     __Pyx_globals['opcode_block_end'] = OPCODE.opcode_block_end             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE.opcode_unary_negative
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE.opcode_unary_not
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 99, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_call); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 99, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 99, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_block_end); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 99, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 99, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_call, __pyx_t_1) < 0)) __PYX_ERR(1, 99, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_block_end, __pyx_t_35) < 0)) __PYX_ERR(1, 99, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":100
- *     __Pyx_globals['op_exit'] = OPCODE.op_exit
- *     __Pyx_globals['op_call'] = OPCODE.op_call
- *     __Pyx_globals['op_le'] = OPCODE.op_le             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_leq'] = OPCODE.op_leq
- *     __Pyx_globals['op_ge'] = OPCODE.op_ge
+ *     __Pyx_globals['opcode_block_start'] = OPCODE.opcode_block_start
+ *     __Pyx_globals['opcode_block_end'] = OPCODE.opcode_block_end
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE.opcode_unary_negative             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE.opcode_unary_not
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE.opcode_unary_odd
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 100, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 100, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_unary_negative); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_le); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 100, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 100, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_le, __pyx_t_34) < 0)) __PYX_ERR(1, 100, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_unary_negative, __pyx_t_1) < 0)) __PYX_ERR(1, 100, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":101
- *     __Pyx_globals['op_call'] = OPCODE.op_call
- *     __Pyx_globals['op_le'] = OPCODE.op_le
- *     __Pyx_globals['op_leq'] = OPCODE.op_leq             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_ge'] = OPCODE.op_ge
- *     __Pyx_globals['op_geq'] = OPCODE.op_geq
+ *     __Pyx_globals['opcode_block_end'] = OPCODE.opcode_block_end
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE.opcode_unary_negative
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE.opcode_unary_not             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE.opcode_unary_odd
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE.opcode_binary_power
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 101, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_leq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 101, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 101, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_unary_not); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 101, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 101, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_leq, __pyx_t_1) < 0)) __PYX_ERR(1, 101, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_unary_not, __pyx_t_35) < 0)) __PYX_ERR(1, 101, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":102
- *     __Pyx_globals['op_le'] = OPCODE.op_le
- *     __Pyx_globals['op_leq'] = OPCODE.op_leq
- *     __Pyx_globals['op_ge'] = OPCODE.op_ge             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_geq'] = OPCODE.op_geq
- *     __Pyx_globals['op_eq'] = OPCODE.op_eq
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE.opcode_unary_negative
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE.opcode_unary_not
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE.opcode_unary_odd             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE.opcode_binary_power
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE.opcode_binary_times
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 102, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 102, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_unary_odd); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_ge); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 102, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 102, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_ge, __pyx_t_34) < 0)) __PYX_ERR(1, 102, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_unary_odd, __pyx_t_1) < 0)) __PYX_ERR(1, 102, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":103
- *     __Pyx_globals['op_leq'] = OPCODE.op_leq
- *     __Pyx_globals['op_ge'] = OPCODE.op_ge
- *     __Pyx_globals['op_geq'] = OPCODE.op_geq             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_eq'] = OPCODE.op_eq
- *     __Pyx_globals['op_neq'] = OPCODE.op_neq
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE.opcode_unary_not
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE.opcode_unary_odd
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE.opcode_binary_power             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE.opcode_binary_times
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE.opcode_binary_divide
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 103, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_geq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 103, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 103, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_binary_power); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 103, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 103, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_geq, __pyx_t_1) < 0)) __PYX_ERR(1, 103, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_power, __pyx_t_35) < 0)) __PYX_ERR(1, 103, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":104
- *     __Pyx_globals['op_ge'] = OPCODE.op_ge
- *     __Pyx_globals['op_geq'] = OPCODE.op_geq
- *     __Pyx_globals['op_eq'] = OPCODE.op_eq             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_neq'] = OPCODE.op_neq
- *     __Pyx_globals['op_plus'] = OPCODE.op_plus
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE.opcode_unary_odd
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE.opcode_binary_power
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE.opcode_binary_times             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE.opcode_binary_divide
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE.opcode_binary_floor_divide
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 104, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 104, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_binary_times); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 104, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_eq); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 104, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 104, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_eq, __pyx_t_34) < 0)) __PYX_ERR(1, 104, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_times, __pyx_t_1) < 0)) __PYX_ERR(1, 104, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":105
- *     __Pyx_globals['op_geq'] = OPCODE.op_geq
- *     __Pyx_globals['op_eq'] = OPCODE.op_eq
- *     __Pyx_globals['op_neq'] = OPCODE.op_neq             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_plus'] = OPCODE.op_plus
- *     __Pyx_globals['op_minus'] = OPCODE.op_minus
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE.opcode_binary_power
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE.opcode_binary_times
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE.opcode_binary_divide             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE.opcode_binary_floor_divide
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE.opcode_binary_modulo
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 105, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_neq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 105, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 105, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_binary_divide); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 105, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 105, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_neq, __pyx_t_1) < 0)) __PYX_ERR(1, 105, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_divide, __pyx_t_35) < 0)) __PYX_ERR(1, 105, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":106
- *     __Pyx_globals['op_eq'] = OPCODE.op_eq
- *     __Pyx_globals['op_neq'] = OPCODE.op_neq
- *     __Pyx_globals['op_plus'] = OPCODE.op_plus             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_minus'] = OPCODE.op_minus
- *     __Pyx_globals['op_times'] = OPCODE.op_times
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE.opcode_binary_times
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE.opcode_binary_divide
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE.opcode_binary_floor_divide             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE.opcode_binary_modulo
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE.opcode_binary_plus
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 106, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 106, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_binary_floor_divide); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_plus); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 106, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 106, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_plus, __pyx_t_34) < 0)) __PYX_ERR(1, 106, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_floor_divide, __pyx_t_1) < 0)) __PYX_ERR(1, 106, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":107
- *     __Pyx_globals['op_neq'] = OPCODE.op_neq
- *     __Pyx_globals['op_plus'] = OPCODE.op_plus
- *     __Pyx_globals['op_minus'] = OPCODE.op_minus             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_times'] = OPCODE.op_times
- *     __Pyx_globals['op_power'] = OPCODE.op_power
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE.opcode_binary_divide
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE.opcode_binary_floor_divide
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE.opcode_binary_modulo             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE.opcode_binary_plus
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE.opcode_binary_minus
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 107, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_minus); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 107, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_binary_modulo); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 107, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 107, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_minus, __pyx_t_1) < 0)) __PYX_ERR(1, 107, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_modulo, __pyx_t_35) < 0)) __PYX_ERR(1, 107, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":108
- *     __Pyx_globals['op_plus'] = OPCODE.op_plus
- *     __Pyx_globals['op_minus'] = OPCODE.op_minus
- *     __Pyx_globals['op_times'] = OPCODE.op_times             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_power'] = OPCODE.op_power
- *     __Pyx_globals['op_divide'] = OPCODE.op_divide
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE.opcode_binary_floor_divide
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE.opcode_binary_modulo
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE.opcode_binary_plus             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE.opcode_binary_minus
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE.opcode_binary_subscr
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 108, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 108, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_binary_plus); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 108, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_times); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 108, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 108, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_times, __pyx_t_34) < 0)) __PYX_ERR(1, 108, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_plus, __pyx_t_1) < 0)) __PYX_ERR(1, 108, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":109
- *     __Pyx_globals['op_minus'] = OPCODE.op_minus
- *     __Pyx_globals['op_times'] = OPCODE.op_times
- *     __Pyx_globals['op_power'] = OPCODE.op_power             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_divide'] = OPCODE.op_divide
- *     __Pyx_globals['op_div'] = OPCODE.op_div
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE.opcode_binary_modulo
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE.opcode_binary_plus
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE.opcode_binary_minus             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE.opcode_binary_subscr
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE.opcode_binary_and
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 109, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_power); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 109, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 109, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_binary_minus); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 109, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 109, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_power, __pyx_t_1) < 0)) __PYX_ERR(1, 109, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_minus, __pyx_t_35) < 0)) __PYX_ERR(1, 109, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":110
- *     __Pyx_globals['op_times'] = OPCODE.op_times
- *     __Pyx_globals['op_power'] = OPCODE.op_power
- *     __Pyx_globals['op_divide'] = OPCODE.op_divide             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_div'] = OPCODE.op_div
- *     __Pyx_globals['op_mod'] = OPCODE.op_mod
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE.opcode_binary_plus
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE.opcode_binary_minus
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE.opcode_binary_subscr             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE.opcode_binary_and
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE.opcode_binary_or
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 110, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 110, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_binary_subscr); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_divide); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 110, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 110, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_divide, __pyx_t_34) < 0)) __PYX_ERR(1, 110, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_subscr, __pyx_t_1) < 0)) __PYX_ERR(1, 110, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":111
- *     __Pyx_globals['op_power'] = OPCODE.op_power
- *     __Pyx_globals['op_divide'] = OPCODE.op_divide
- *     __Pyx_globals['op_div'] = OPCODE.op_div             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_mod'] = OPCODE.op_mod
- *     __Pyx_globals['op_odd'] = OPCODE.op_odd
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE.opcode_binary_minus
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE.opcode_binary_subscr
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE.opcode_binary_and             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE.opcode_binary_or
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE.opcode_binary_compare
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 111, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_div); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 111, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 111, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_binary_and); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 111, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 111, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_div, __pyx_t_1) < 0)) __PYX_ERR(1, 111, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_and, __pyx_t_35) < 0)) __PYX_ERR(1, 111, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":112
- *     __Pyx_globals['op_divide'] = OPCODE.op_divide
- *     __Pyx_globals['op_div'] = OPCODE.op_div
- *     __Pyx_globals['op_mod'] = OPCODE.op_mod             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_odd'] = OPCODE.op_odd
- *     __Pyx_globals['op_and'] = OPCODE.op_and
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE.opcode_binary_subscr
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE.opcode_binary_and
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE.opcode_binary_or             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE.opcode_binary_compare
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE.opcode_store_fast
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 112, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 112, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_binary_or); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_mod); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 112, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 112, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_mod, __pyx_t_34) < 0)) __PYX_ERR(1, 112, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_or, __pyx_t_1) < 0)) __PYX_ERR(1, 112, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":113
- *     __Pyx_globals['op_div'] = OPCODE.op_div
- *     __Pyx_globals['op_mod'] = OPCODE.op_mod
- *     __Pyx_globals['op_odd'] = OPCODE.op_odd             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_and'] = OPCODE.op_and
- *     __Pyx_globals['op_or'] = OPCODE.op_or
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE.opcode_binary_and
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE.opcode_binary_or
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE.opcode_binary_compare             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE.opcode_store_fast
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE.opcode_store_subscr
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 113, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_odd); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 113, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_binary_compare); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 113, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 113, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_odd, __pyx_t_1) < 0)) __PYX_ERR(1, 113, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_compare, __pyx_t_35) < 0)) __PYX_ERR(1, 113, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":114
- *     __Pyx_globals['op_mod'] = OPCODE.op_mod
- *     __Pyx_globals['op_odd'] = OPCODE.op_odd
- *     __Pyx_globals['op_and'] = OPCODE.op_and             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_or'] = OPCODE.op_or
- *     __Pyx_globals['op_not'] = OPCODE.op_not
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE.opcode_binary_or
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE.opcode_binary_compare
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE.opcode_store_fast             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE.opcode_store_subscr
+ *     __Pyx_globals['opcode_jump'] = OPCODE.opcode_jump
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 114, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 114, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_store_fast); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 114, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_and); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 114, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 114, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_and, __pyx_t_34) < 0)) __PYX_ERR(1, 114, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_store_fast, __pyx_t_1) < 0)) __PYX_ERR(1, 114, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":115
- *     __Pyx_globals['op_odd'] = OPCODE.op_odd
- *     __Pyx_globals['op_and'] = OPCODE.op_and
- *     __Pyx_globals['op_or'] = OPCODE.op_or             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_not'] = OPCODE.op_not
- *     __Pyx_globals['op_load_const'] = OPCODE.op_load_const
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE.opcode_binary_compare
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE.opcode_store_fast
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE.opcode_store_subscr             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_jump'] = OPCODE.opcode_jump
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE.opcode_jump_if_true
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 115, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_or); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 115, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 115, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_store_subscr); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 115, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 115, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_or, __pyx_t_1) < 0)) __PYX_ERR(1, 115, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_store_subscr, __pyx_t_35) < 0)) __PYX_ERR(1, 115, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":116
- *     __Pyx_globals['op_and'] = OPCODE.op_and
- *     __Pyx_globals['op_or'] = OPCODE.op_or
- *     __Pyx_globals['op_not'] = OPCODE.op_not             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_load_const'] = OPCODE.op_load_const
- *     __Pyx_globals['op_load_identifier'] = OPCODE.op_load_identifier
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE.opcode_store_fast
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE.opcode_store_subscr
+ *     __Pyx_globals['opcode_jump'] = OPCODE.opcode_jump             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE.opcode_jump_if_true
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE.opcode_jump_if_false
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 116, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 116, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_jump); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_not); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 116, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 116, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_not, __pyx_t_34) < 0)) __PYX_ERR(1, 116, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_jump, __pyx_t_1) < 0)) __PYX_ERR(1, 116, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":117
- *     __Pyx_globals['op_or'] = OPCODE.op_or
- *     __Pyx_globals['op_not'] = OPCODE.op_not
- *     __Pyx_globals['op_load_const'] = OPCODE.op_load_const             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_load_identifier'] = OPCODE.op_load_identifier
- * else:
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE.opcode_store_subscr
+ *     __Pyx_globals['opcode_jump'] = OPCODE.opcode_jump
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE.opcode_jump_if_true             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE.opcode_jump_if_false
+ *     __Pyx_globals['opcode_call_function'] = OPCODE.opcode_call_function
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 117, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_34, __pyx_n_s_op_load_const); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 117, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_jump_if_true); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 117, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 117, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_load_const, __pyx_t_1) < 0)) __PYX_ERR(1, 117, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_jump_if_true, __pyx_t_35) < 0)) __PYX_ERR(1, 117, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":118
- *     __Pyx_globals['op_not'] = OPCODE.op_not
- *     __Pyx_globals['op_load_const'] = OPCODE.op_load_const
- *     __Pyx_globals['op_load_identifier'] = OPCODE.op_load_identifier             # <<<<<<<<<<<<<<
- * else:
- *     class OPCODE(__Pyx_EnumBase):
+ *     __Pyx_globals['opcode_jump'] = OPCODE.opcode_jump
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE.opcode_jump_if_true
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE.opcode_jump_if_false             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_call_function'] = OPCODE.opcode_call_function
+ *     __Pyx_globals['opcode_return_function'] = OPCODE.opcode_return_function
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 118, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 118, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_jump_if_false); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_34 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_op_load_identifier); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 118, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 118, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_load_identifier, __pyx_t_34) < 0)) __PYX_ERR(1, 118, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_jump_if_false, __pyx_t_1) < 0)) __PYX_ERR(1, 118, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "EnumType":119
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE.opcode_jump_if_true
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE.opcode_jump_if_false
+ *     __Pyx_globals['opcode_call_function'] = OPCODE.opcode_call_function             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_return_function'] = OPCODE.opcode_return_function
+ * else:
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 119, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_opcode_call_function); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 119, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(__Pyx_globals == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+      __PYX_ERR(1, 119, __pyx_L1_error)
+    }
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_call_function, __pyx_t_35) < 0)) __PYX_ERR(1, 119, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+
+    /* "EnumType":120
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE.opcode_jump_if_false
+ *     __Pyx_globals['opcode_call_function'] = OPCODE.opcode_call_function
+ *     __Pyx_globals['opcode_return_function'] = OPCODE.opcode_return_function             # <<<<<<<<<<<<<<
+ * else:
+ *     class OPCODE(__Pyx_EnumBase):
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 120, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_35, __pyx_n_s_opcode_return_function); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 120, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    if (unlikely(__Pyx_globals == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+      __PYX_ERR(1, 120, __pyx_L1_error)
+    }
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_return_function, __pyx_t_1) < 0)) __PYX_ERR(1, 120, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":51
  * 
@@ -6224,989 +6268,1019 @@ if (!__Pyx_RefNanny) {
     goto __pyx_L4;
   }
 
-  /* "EnumType":120
- *     __Pyx_globals['op_load_identifier'] = OPCODE.op_load_identifier
+  /* "EnumType":122
+ *     __Pyx_globals['opcode_return_function'] = OPCODE.opcode_return_function
  * else:
  *     class OPCODE(__Pyx_EnumBase):             # <<<<<<<<<<<<<<
  *         pass
- *     __Pyx_globals['op_nop'] = OPCODE(op_nop, 'op_nop')
+ *     __Pyx_globals['opcode_nop'] = OPCODE(opcode_nop, 'opcode_nop')
  */
   /*else*/ {
-    __pyx_t_34 = PyTuple_New(1); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 120, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
+    __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 122, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__Pyx_EnumBase);
     __Pyx_GIVEREF(__Pyx_EnumBase);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __Pyx_EnumBase);
-    __pyx_t_1 = __Pyx_CalculateMetaclass(NULL, __pyx_t_34); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 120, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_34, __pyx_n_s_OPCODE, __pyx_n_s_OPCODE, (PyObject *) NULL, __pyx_n_s_EnumType, (PyObject *) NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 120, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_32 = __Pyx_Py3ClassCreate(__pyx_t_1, __pyx_n_s_OPCODE, __pyx_t_34, __pyx_t_33, NULL, 0, 1); if (unlikely(!__pyx_t_32)) __PYX_ERR(1, 120, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_32);
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_OPCODE, __pyx_t_32) < 0) __PYX_ERR(1, 120, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_32); __pyx_t_32 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-
-    /* "EnumType":122
- *     class OPCODE(__Pyx_EnumBase):
- *         pass
- *     __Pyx_globals['op_nop'] = OPCODE(op_nop, 'op_nop')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_const_declare'] = OPCODE(op_const_declare, 'op_const_declare')
- *     __Pyx_globals['op_type_declare'] = OPCODE(op_type_declare, 'op_type_declare')
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 122, __pyx_L1_error)
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __Pyx_EnumBase);
+    __pyx_t_35 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 122, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_Py3MetaclassPrepare(__pyx_t_35, __pyx_t_1, __pyx_n_s_OPCODE, __pyx_n_s_OPCODE, (PyObject *) NULL, __pyx_n_s_EnumType, (PyObject *) NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 122, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_nop); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 122, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 122, __pyx_L1_error)
+    __pyx_t_33 = __Pyx_Py3ClassCreate(__pyx_t_35, __pyx_n_s_OPCODE, __pyx_t_1, __pyx_t_34, NULL, 0, 1); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 122, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_nop);
-    __Pyx_GIVEREF(__pyx_n_s_op_nop);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_nop);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 122, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (PyDict_SetItem(__pyx_d, __pyx_n_s_OPCODE, __pyx_t_33) < 0) __PYX_ERR(1, 122, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
-    if (unlikely(__Pyx_globals == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(1, 122, __pyx_L1_error)
-    }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_nop, __pyx_t_1) < 0)) __PYX_ERR(1, 122, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "EnumType":123
- *         pass
- *     __Pyx_globals['op_nop'] = OPCODE(op_nop, 'op_nop')
- *     __Pyx_globals['op_const_declare'] = OPCODE(op_const_declare, 'op_const_declare')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_type_declare'] = OPCODE(op_type_declare, 'op_type_declare')
- *     __Pyx_globals['op_var_declare'] = OPCODE(op_var_declare, 'op_var_declare')
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 123, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_const_declare); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 123, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 123, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_const_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_const_declare);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_const_declare);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 123, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    if (unlikely(__Pyx_globals == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(1, 123, __pyx_L1_error)
-    }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_const_declare, __pyx_t_33) < 0)) __PYX_ERR(1, 123, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":124
- *     __Pyx_globals['op_nop'] = OPCODE(op_nop, 'op_nop')
- *     __Pyx_globals['op_const_declare'] = OPCODE(op_const_declare, 'op_const_declare')
- *     __Pyx_globals['op_type_declare'] = OPCODE(op_type_declare, 'op_type_declare')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_var_declare'] = OPCODE(op_var_declare, 'op_var_declare')
- *     __Pyx_globals['op_procedure_declare'] = OPCODE(op_procedure_declare, 'op_procedure_declare')
+ *     class OPCODE(__Pyx_EnumBase):
+ *         pass
+ *     __Pyx_globals['opcode_nop'] = OPCODE(opcode_nop, 'opcode_nop')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE(opcode_const_declare, 'opcode_const_declare')
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE(opcode_type_declare, 'opcode_type_declare')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 124, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_type_declare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 124, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 124, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 124, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_type_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_type_declare);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_type_declare);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 124, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_nop); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 124, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 124, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_nop);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_nop);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_nop);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 124, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 124, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_type_declare, __pyx_t_34) < 0)) __PYX_ERR(1, 124, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_nop, __pyx_t_35) < 0)) __PYX_ERR(1, 124, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":125
- *     __Pyx_globals['op_const_declare'] = OPCODE(op_const_declare, 'op_const_declare')
- *     __Pyx_globals['op_type_declare'] = OPCODE(op_type_declare, 'op_type_declare')
- *     __Pyx_globals['op_var_declare'] = OPCODE(op_var_declare, 'op_var_declare')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_procedure_declare'] = OPCODE(op_procedure_declare, 'op_procedure_declare')
- *     __Pyx_globals['op_function_declare'] = OPCODE(op_function_declare, 'op_function_declare')
+ *         pass
+ *     __Pyx_globals['opcode_nop'] = OPCODE(opcode_nop, 'opcode_nop')
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE(opcode_const_declare, 'opcode_const_declare')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE(opcode_type_declare, 'opcode_type_declare')
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE(opcode_var_declare, 'opcode_var_declare')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 125, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 125, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_const_declare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 125, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_var_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 125, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 125, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_var_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_var_declare);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_var_declare);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_const_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_const_declare);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_const_declare);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 125, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 125, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_var_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 125, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_const_declare, __pyx_t_34) < 0)) __PYX_ERR(1, 125, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":126
- *     __Pyx_globals['op_type_declare'] = OPCODE(op_type_declare, 'op_type_declare')
- *     __Pyx_globals['op_var_declare'] = OPCODE(op_var_declare, 'op_var_declare')
- *     __Pyx_globals['op_procedure_declare'] = OPCODE(op_procedure_declare, 'op_procedure_declare')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_function_declare'] = OPCODE(op_function_declare, 'op_function_declare')
- *     __Pyx_globals['op_assign'] = OPCODE(op_assign, 'op_assign')
+ *     __Pyx_globals['opcode_nop'] = OPCODE(opcode_nop, 'opcode_nop')
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE(opcode_const_declare, 'opcode_const_declare')
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE(opcode_type_declare, 'opcode_type_declare')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE(opcode_var_declare, 'opcode_var_declare')
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE(opcode_procedure_declare, 'opcode_procedure_declare')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 126, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_procedure_declare); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 126, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 126, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 126, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_procedure_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_procedure_declare);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_procedure_declare);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 126, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_type_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 126, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 126, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_type_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_type_declare);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_type_declare);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 126, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 126, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_procedure_declare, __pyx_t_33) < 0)) __PYX_ERR(1, 126, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_type_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 126, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":127
- *     __Pyx_globals['op_var_declare'] = OPCODE(op_var_declare, 'op_var_declare')
- *     __Pyx_globals['op_procedure_declare'] = OPCODE(op_procedure_declare, 'op_procedure_declare')
- *     __Pyx_globals['op_function_declare'] = OPCODE(op_function_declare, 'op_function_declare')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_assign'] = OPCODE(op_assign, 'op_assign')
- *     __Pyx_globals['op_if_then'] = OPCODE(op_if_then, 'op_if_then')
+ *     __Pyx_globals['opcode_const_declare'] = OPCODE(opcode_const_declare, 'opcode_const_declare')
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE(opcode_type_declare, 'opcode_type_declare')
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE(opcode_var_declare, 'opcode_var_declare')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE(opcode_procedure_declare, 'opcode_procedure_declare')
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE(opcode_function_declare, 'opcode_function_declare')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 127, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_function_declare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 127, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 127, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 127, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_function_declare);
-    __Pyx_GIVEREF(__pyx_n_s_op_function_declare);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_function_declare);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 127, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_var_declare); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 127, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 127, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_var_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_var_declare);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_var_declare);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 127, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 127, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_function_declare, __pyx_t_34) < 0)) __PYX_ERR(1, 127, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_var_declare, __pyx_t_35) < 0)) __PYX_ERR(1, 127, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":128
- *     __Pyx_globals['op_procedure_declare'] = OPCODE(op_procedure_declare, 'op_procedure_declare')
- *     __Pyx_globals['op_function_declare'] = OPCODE(op_function_declare, 'op_function_declare')
- *     __Pyx_globals['op_assign'] = OPCODE(op_assign, 'op_assign')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_if_then'] = OPCODE(op_if_then, 'op_if_then')
- *     __Pyx_globals['op_if_then_else'] = OPCODE(op_if_then_else, 'op_if_then_else')
+ *     __Pyx_globals['opcode_type_declare'] = OPCODE(opcode_type_declare, 'opcode_type_declare')
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE(opcode_var_declare, 'opcode_var_declare')
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE(opcode_procedure_declare, 'opcode_procedure_declare')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE(opcode_function_declare, 'opcode_function_declare')
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE(opcode_param_declare, 'opcode_param_declare')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 128, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 128, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_procedure_declare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_assign); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 128, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 128, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_assign);
-    __Pyx_GIVEREF(__pyx_n_s_op_assign);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_assign);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 128, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_procedure_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_procedure_declare);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_procedure_declare);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 128, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 128, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_assign, __pyx_t_1) < 0)) __PYX_ERR(1, 128, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_procedure_declare, __pyx_t_34) < 0)) __PYX_ERR(1, 128, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":129
- *     __Pyx_globals['op_function_declare'] = OPCODE(op_function_declare, 'op_function_declare')
- *     __Pyx_globals['op_assign'] = OPCODE(op_assign, 'op_assign')
- *     __Pyx_globals['op_if_then'] = OPCODE(op_if_then, 'op_if_then')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_if_then_else'] = OPCODE(op_if_then_else, 'op_if_then_else')
- *     __Pyx_globals['op_while_do'] = OPCODE(op_while_do, 'op_while_do')
+ *     __Pyx_globals['opcode_var_declare'] = OPCODE(opcode_var_declare, 'opcode_var_declare')
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE(opcode_procedure_declare, 'opcode_procedure_declare')
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE(opcode_function_declare, 'opcode_function_declare')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE(opcode_param_declare, 'opcode_param_declare')
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE(opcode_build_array_type, 'opcode_build_array_type')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 129, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_if_then); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 129, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 129, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_if_then);
-    __Pyx_GIVEREF(__pyx_n_s_op_if_then);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_if_then);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 129, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_function_declare); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 129, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 129, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_function_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_function_declare);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_function_declare);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 129, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 129, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_if_then, __pyx_t_33) < 0)) __PYX_ERR(1, 129, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_function_declare, __pyx_t_1) < 0)) __PYX_ERR(1, 129, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":130
- *     __Pyx_globals['op_assign'] = OPCODE(op_assign, 'op_assign')
- *     __Pyx_globals['op_if_then'] = OPCODE(op_if_then, 'op_if_then')
- *     __Pyx_globals['op_if_then_else'] = OPCODE(op_if_then_else, 'op_if_then_else')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_while_do'] = OPCODE(op_while_do, 'op_while_do')
- *     __Pyx_globals['op_continue'] = OPCODE(op_continue, 'op_continue')
+ *     __Pyx_globals['opcode_procedure_declare'] = OPCODE(opcode_procedure_declare, 'opcode_procedure_declare')
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE(opcode_function_declare, 'opcode_function_declare')
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE(opcode_param_declare, 'opcode_param_declare')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE(opcode_build_array_type, 'opcode_build_array_type')
+ *     __Pyx_globals['opcode_load_const'] = OPCODE(opcode_load_const, 'opcode_load_const')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 130, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_if_then_else); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 130, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 130, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 130, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_if_then_else);
-    __Pyx_GIVEREF(__pyx_n_s_op_if_then_else);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_if_then_else);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 130, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_param_declare); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 130, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 130, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_param_declare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_param_declare);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_param_declare);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 130, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 130, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_if_then_else, __pyx_t_34) < 0)) __PYX_ERR(1, 130, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_param_declare, __pyx_t_35) < 0)) __PYX_ERR(1, 130, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":131
- *     __Pyx_globals['op_if_then'] = OPCODE(op_if_then, 'op_if_then')
- *     __Pyx_globals['op_if_then_else'] = OPCODE(op_if_then_else, 'op_if_then_else')
- *     __Pyx_globals['op_while_do'] = OPCODE(op_while_do, 'op_while_do')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_continue'] = OPCODE(op_continue, 'op_continue')
- *     __Pyx_globals['op_exit'] = OPCODE(op_exit, 'op_exit')
+ *     __Pyx_globals['opcode_function_declare'] = OPCODE(opcode_function_declare, 'opcode_function_declare')
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE(opcode_param_declare, 'opcode_param_declare')
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE(opcode_build_array_type, 'opcode_build_array_type')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_load_const'] = OPCODE(opcode_load_const, 'opcode_load_const')
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE(opcode_load_fast, 'opcode_load_fast')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 131, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 131, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_build_array_type); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 131, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_while_do); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 131, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 131, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 131, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_while_do);
-    __Pyx_GIVEREF(__pyx_n_s_op_while_do);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_while_do);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 131, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_build_array_type);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_build_array_type);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_build_array_type);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 131, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 131, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_while_do, __pyx_t_1) < 0)) __PYX_ERR(1, 131, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_build_array_type, __pyx_t_34) < 0)) __PYX_ERR(1, 131, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":132
- *     __Pyx_globals['op_if_then_else'] = OPCODE(op_if_then_else, 'op_if_then_else')
- *     __Pyx_globals['op_while_do'] = OPCODE(op_while_do, 'op_while_do')
- *     __Pyx_globals['op_continue'] = OPCODE(op_continue, 'op_continue')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_exit'] = OPCODE(op_exit, 'op_exit')
- *     __Pyx_globals['op_call'] = OPCODE(op_call, 'op_call')
+ *     __Pyx_globals['opcode_param_declare'] = OPCODE(opcode_param_declare, 'opcode_param_declare')
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE(opcode_build_array_type, 'opcode_build_array_type')
+ *     __Pyx_globals['opcode_load_const'] = OPCODE(opcode_load_const, 'opcode_load_const')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE(opcode_load_fast, 'opcode_load_fast')
+ *     __Pyx_globals['opcode_block_start'] = OPCODE(opcode_block_start, 'opcode_block_start')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 132, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_continue); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 132, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 132, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 132, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_continue);
-    __Pyx_GIVEREF(__pyx_n_s_op_continue);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_continue);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 132, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_load_const); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 132, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 132, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_load_const);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_load_const);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_load_const);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 132, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 132, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_continue, __pyx_t_33) < 0)) __PYX_ERR(1, 132, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_load_const, __pyx_t_1) < 0)) __PYX_ERR(1, 132, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":133
- *     __Pyx_globals['op_while_do'] = OPCODE(op_while_do, 'op_while_do')
- *     __Pyx_globals['op_continue'] = OPCODE(op_continue, 'op_continue')
- *     __Pyx_globals['op_exit'] = OPCODE(op_exit, 'op_exit')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_call'] = OPCODE(op_call, 'op_call')
- *     __Pyx_globals['op_le'] = OPCODE(op_le, 'op_le')
+ *     __Pyx_globals['opcode_build_array_type'] = OPCODE(opcode_build_array_type, 'opcode_build_array_type')
+ *     __Pyx_globals['opcode_load_const'] = OPCODE(opcode_load_const, 'opcode_load_const')
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE(opcode_load_fast, 'opcode_load_fast')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_block_start'] = OPCODE(opcode_block_start, 'opcode_block_start')
+ *     __Pyx_globals['opcode_block_end'] = OPCODE(opcode_block_end, 'opcode_block_end')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 133, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_exit); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 133, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 133, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 133, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_exit);
-    __Pyx_GIVEREF(__pyx_n_s_op_exit);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_exit);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 133, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_load_fast); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 133, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 133, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_load_fast);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_load_fast);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_load_fast);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 133, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 133, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_exit, __pyx_t_34) < 0)) __PYX_ERR(1, 133, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_load_fast, __pyx_t_35) < 0)) __PYX_ERR(1, 133, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":134
- *     __Pyx_globals['op_continue'] = OPCODE(op_continue, 'op_continue')
- *     __Pyx_globals['op_exit'] = OPCODE(op_exit, 'op_exit')
- *     __Pyx_globals['op_call'] = OPCODE(op_call, 'op_call')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_le'] = OPCODE(op_le, 'op_le')
- *     __Pyx_globals['op_leq'] = OPCODE(op_leq, 'op_leq')
+ *     __Pyx_globals['opcode_load_const'] = OPCODE(opcode_load_const, 'opcode_load_const')
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE(opcode_load_fast, 'opcode_load_fast')
+ *     __Pyx_globals['opcode_block_start'] = OPCODE(opcode_block_start, 'opcode_block_start')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_block_end'] = OPCODE(opcode_block_end, 'opcode_block_end')
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE(opcode_unary_negative, 'opcode_unary_negative')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 134, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 134, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_block_start); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 134, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_call); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 134, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 134, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 134, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_call);
-    __Pyx_GIVEREF(__pyx_n_s_op_call);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_call);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 134, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_block_start);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_block_start);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_block_start);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 134, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 134, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_call, __pyx_t_1) < 0)) __PYX_ERR(1, 134, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_block_start, __pyx_t_34) < 0)) __PYX_ERR(1, 134, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":135
- *     __Pyx_globals['op_exit'] = OPCODE(op_exit, 'op_exit')
- *     __Pyx_globals['op_call'] = OPCODE(op_call, 'op_call')
- *     __Pyx_globals['op_le'] = OPCODE(op_le, 'op_le')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_leq'] = OPCODE(op_leq, 'op_leq')
- *     __Pyx_globals['op_ge'] = OPCODE(op_ge, 'op_ge')
+ *     __Pyx_globals['opcode_load_fast'] = OPCODE(opcode_load_fast, 'opcode_load_fast')
+ *     __Pyx_globals['opcode_block_start'] = OPCODE(opcode_block_start, 'opcode_block_start')
+ *     __Pyx_globals['opcode_block_end'] = OPCODE(opcode_block_end, 'opcode_block_end')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE(opcode_unary_negative, 'opcode_unary_negative')
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE(opcode_unary_not, 'opcode_unary_not')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_le); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 135, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 135, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_le);
-    __Pyx_GIVEREF(__pyx_n_s_op_le);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_le);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_block_end); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 135, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 135, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_block_end);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_block_end);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_block_end);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 135, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 135, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_le, __pyx_t_33) < 0)) __PYX_ERR(1, 135, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_block_end, __pyx_t_1) < 0)) __PYX_ERR(1, 135, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":136
- *     __Pyx_globals['op_call'] = OPCODE(op_call, 'op_call')
- *     __Pyx_globals['op_le'] = OPCODE(op_le, 'op_le')
- *     __Pyx_globals['op_leq'] = OPCODE(op_leq, 'op_leq')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_ge'] = OPCODE(op_ge, 'op_ge')
- *     __Pyx_globals['op_geq'] = OPCODE(op_geq, 'op_geq')
+ *     __Pyx_globals['opcode_block_start'] = OPCODE(opcode_block_start, 'opcode_block_start')
+ *     __Pyx_globals['opcode_block_end'] = OPCODE(opcode_block_end, 'opcode_block_end')
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE(opcode_unary_negative, 'opcode_unary_negative')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE(opcode_unary_not, 'opcode_unary_not')
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE(opcode_unary_odd, 'opcode_unary_odd')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 136, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_leq); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 136, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 136, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 136, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_leq);
-    __Pyx_GIVEREF(__pyx_n_s_op_leq);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_leq);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 136, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_unary_negative); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 136, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 136, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_unary_negative);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_unary_negative);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_unary_negative);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 136, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 136, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_leq, __pyx_t_34) < 0)) __PYX_ERR(1, 136, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_unary_negative, __pyx_t_35) < 0)) __PYX_ERR(1, 136, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":137
- *     __Pyx_globals['op_le'] = OPCODE(op_le, 'op_le')
- *     __Pyx_globals['op_leq'] = OPCODE(op_leq, 'op_leq')
- *     __Pyx_globals['op_ge'] = OPCODE(op_ge, 'op_ge')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_geq'] = OPCODE(op_geq, 'op_geq')
- *     __Pyx_globals['op_eq'] = OPCODE(op_eq, 'op_eq')
+ *     __Pyx_globals['opcode_block_end'] = OPCODE(opcode_block_end, 'opcode_block_end')
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE(opcode_unary_negative, 'opcode_unary_negative')
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE(opcode_unary_not, 'opcode_unary_not')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE(opcode_unary_odd, 'opcode_unary_odd')
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE(opcode_binary_power, 'opcode_binary_power')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 137, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 137, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_unary_not); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 137, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_ge); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 137, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 137, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 137, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_ge);
-    __Pyx_GIVEREF(__pyx_n_s_op_ge);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_ge);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 137, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_unary_not);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_unary_not);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_unary_not);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 137, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 137, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_ge, __pyx_t_1) < 0)) __PYX_ERR(1, 137, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_unary_not, __pyx_t_34) < 0)) __PYX_ERR(1, 137, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":138
- *     __Pyx_globals['op_leq'] = OPCODE(op_leq, 'op_leq')
- *     __Pyx_globals['op_ge'] = OPCODE(op_ge, 'op_ge')
- *     __Pyx_globals['op_geq'] = OPCODE(op_geq, 'op_geq')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_eq'] = OPCODE(op_eq, 'op_eq')
- *     __Pyx_globals['op_neq'] = OPCODE(op_neq, 'op_neq')
+ *     __Pyx_globals['opcode_unary_negative'] = OPCODE(opcode_unary_negative, 'opcode_unary_negative')
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE(opcode_unary_not, 'opcode_unary_not')
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE(opcode_unary_odd, 'opcode_unary_odd')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE(opcode_binary_power, 'opcode_binary_power')
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE(opcode_binary_times, 'opcode_binary_times')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 138, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_geq); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 138, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 138, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 138, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_geq);
-    __Pyx_GIVEREF(__pyx_n_s_op_geq);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_geq);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 138, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_unary_odd); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 138, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 138, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_unary_odd);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_unary_odd);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_unary_odd);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 138, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 138, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_geq, __pyx_t_33) < 0)) __PYX_ERR(1, 138, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_unary_odd, __pyx_t_1) < 0)) __PYX_ERR(1, 138, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":139
- *     __Pyx_globals['op_ge'] = OPCODE(op_ge, 'op_ge')
- *     __Pyx_globals['op_geq'] = OPCODE(op_geq, 'op_geq')
- *     __Pyx_globals['op_eq'] = OPCODE(op_eq, 'op_eq')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_neq'] = OPCODE(op_neq, 'op_neq')
- *     __Pyx_globals['op_plus'] = OPCODE(op_plus, 'op_plus')
+ *     __Pyx_globals['opcode_unary_not'] = OPCODE(opcode_unary_not, 'opcode_unary_not')
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE(opcode_unary_odd, 'opcode_unary_odd')
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE(opcode_binary_power, 'opcode_binary_power')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE(opcode_binary_times, 'opcode_binary_times')
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE(opcode_binary_divide, 'opcode_binary_divide')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 139, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_eq); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 139, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 139, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_eq);
-    __Pyx_GIVEREF(__pyx_n_s_op_eq);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_eq);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 139, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_binary_power); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 139, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_power);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_power);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_binary_power);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 139, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 139, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_eq, __pyx_t_34) < 0)) __PYX_ERR(1, 139, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_power, __pyx_t_35) < 0)) __PYX_ERR(1, 139, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":140
- *     __Pyx_globals['op_geq'] = OPCODE(op_geq, 'op_geq')
- *     __Pyx_globals['op_eq'] = OPCODE(op_eq, 'op_eq')
- *     __Pyx_globals['op_neq'] = OPCODE(op_neq, 'op_neq')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_plus'] = OPCODE(op_plus, 'op_plus')
- *     __Pyx_globals['op_minus'] = OPCODE(op_minus, 'op_minus')
+ *     __Pyx_globals['opcode_unary_odd'] = OPCODE(opcode_unary_odd, 'opcode_unary_odd')
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE(opcode_binary_power, 'opcode_binary_power')
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE(opcode_binary_times, 'opcode_binary_times')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE(opcode_binary_divide, 'opcode_binary_divide')
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE(opcode_binary_floor_divide, 'opcode_binary_floor_divide')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 140, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 140, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_binary_times); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 140, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_neq); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 140, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 140, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 140, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_neq);
-    __Pyx_GIVEREF(__pyx_n_s_op_neq);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_neq);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 140, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_times);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_times);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_binary_times);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 140, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 140, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_neq, __pyx_t_1) < 0)) __PYX_ERR(1, 140, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_times, __pyx_t_34) < 0)) __PYX_ERR(1, 140, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":141
- *     __Pyx_globals['op_eq'] = OPCODE(op_eq, 'op_eq')
- *     __Pyx_globals['op_neq'] = OPCODE(op_neq, 'op_neq')
- *     __Pyx_globals['op_plus'] = OPCODE(op_plus, 'op_plus')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_minus'] = OPCODE(op_minus, 'op_minus')
- *     __Pyx_globals['op_times'] = OPCODE(op_times, 'op_times')
+ *     __Pyx_globals['opcode_binary_power'] = OPCODE(opcode_binary_power, 'opcode_binary_power')
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE(opcode_binary_times, 'opcode_binary_times')
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE(opcode_binary_divide, 'opcode_binary_divide')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE(opcode_binary_floor_divide, 'opcode_binary_floor_divide')
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE(opcode_binary_modulo, 'opcode_binary_modulo')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 141, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_plus); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 141, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 141, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 141, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_plus);
-    __Pyx_GIVEREF(__pyx_n_s_op_plus);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_plus);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 141, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_divide); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 141, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 141, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_divide);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_divide);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_binary_divide);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 141, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 141, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_plus, __pyx_t_33) < 0)) __PYX_ERR(1, 141, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_divide, __pyx_t_1) < 0)) __PYX_ERR(1, 141, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":142
- *     __Pyx_globals['op_neq'] = OPCODE(op_neq, 'op_neq')
- *     __Pyx_globals['op_plus'] = OPCODE(op_plus, 'op_plus')
- *     __Pyx_globals['op_minus'] = OPCODE(op_minus, 'op_minus')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_times'] = OPCODE(op_times, 'op_times')
- *     __Pyx_globals['op_power'] = OPCODE(op_power, 'op_power')
+ *     __Pyx_globals['opcode_binary_times'] = OPCODE(opcode_binary_times, 'opcode_binary_times')
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE(opcode_binary_divide, 'opcode_binary_divide')
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE(opcode_binary_floor_divide, 'opcode_binary_floor_divide')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE(opcode_binary_modulo, 'opcode_binary_modulo')
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE(opcode_binary_plus, 'opcode_binary_plus')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 142, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_minus); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 142, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 142, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 142, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_minus);
-    __Pyx_GIVEREF(__pyx_n_s_op_minus);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_minus);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 142, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_binary_floor_divide); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 142, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 142, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_floor_divide);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_floor_divide);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_binary_floor_divide);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 142, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 142, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_minus, __pyx_t_34) < 0)) __PYX_ERR(1, 142, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_floor_divide, __pyx_t_35) < 0)) __PYX_ERR(1, 142, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":143
- *     __Pyx_globals['op_plus'] = OPCODE(op_plus, 'op_plus')
- *     __Pyx_globals['op_minus'] = OPCODE(op_minus, 'op_minus')
- *     __Pyx_globals['op_times'] = OPCODE(op_times, 'op_times')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_power'] = OPCODE(op_power, 'op_power')
- *     __Pyx_globals['op_divide'] = OPCODE(op_divide, 'op_divide')
+ *     __Pyx_globals['opcode_binary_divide'] = OPCODE(opcode_binary_divide, 'opcode_binary_divide')
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE(opcode_binary_floor_divide, 'opcode_binary_floor_divide')
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE(opcode_binary_modulo, 'opcode_binary_modulo')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE(opcode_binary_plus, 'opcode_binary_plus')
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE(opcode_binary_minus, 'opcode_binary_minus')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 143, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 143, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_binary_modulo); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_times); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 143, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 143, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_times);
-    __Pyx_GIVEREF(__pyx_n_s_op_times);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_times);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 143, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_modulo);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_modulo);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_binary_modulo);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 143, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 143, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_times, __pyx_t_1) < 0)) __PYX_ERR(1, 143, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_modulo, __pyx_t_34) < 0)) __PYX_ERR(1, 143, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":144
- *     __Pyx_globals['op_minus'] = OPCODE(op_minus, 'op_minus')
- *     __Pyx_globals['op_times'] = OPCODE(op_times, 'op_times')
- *     __Pyx_globals['op_power'] = OPCODE(op_power, 'op_power')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_divide'] = OPCODE(op_divide, 'op_divide')
- *     __Pyx_globals['op_div'] = OPCODE(op_div, 'op_div')
+ *     __Pyx_globals['opcode_binary_floor_divide'] = OPCODE(opcode_binary_floor_divide, 'opcode_binary_floor_divide')
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE(opcode_binary_modulo, 'opcode_binary_modulo')
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE(opcode_binary_plus, 'opcode_binary_plus')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE(opcode_binary_minus, 'opcode_binary_minus')
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE(opcode_binary_subscr, 'opcode_binary_subscr')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 144, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_power); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 144, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 144, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_power);
-    __Pyx_GIVEREF(__pyx_n_s_op_power);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_power);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 144, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_plus); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 144, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 144, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_plus);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_plus);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_binary_plus);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 144, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 144, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_power, __pyx_t_33) < 0)) __PYX_ERR(1, 144, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_plus, __pyx_t_1) < 0)) __PYX_ERR(1, 144, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":145
- *     __Pyx_globals['op_times'] = OPCODE(op_times, 'op_times')
- *     __Pyx_globals['op_power'] = OPCODE(op_power, 'op_power')
- *     __Pyx_globals['op_divide'] = OPCODE(op_divide, 'op_divide')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_div'] = OPCODE(op_div, 'op_div')
- *     __Pyx_globals['op_mod'] = OPCODE(op_mod, 'op_mod')
+ *     __Pyx_globals['opcode_binary_modulo'] = OPCODE(opcode_binary_modulo, 'opcode_binary_modulo')
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE(opcode_binary_plus, 'opcode_binary_plus')
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE(opcode_binary_minus, 'opcode_binary_minus')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE(opcode_binary_subscr, 'opcode_binary_subscr')
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE(opcode_binary_and, 'opcode_binary_and')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 145, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_divide); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 145, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 145, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 145, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_divide);
-    __Pyx_GIVEREF(__pyx_n_s_op_divide);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_divide);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 145, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_binary_minus); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 145, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 145, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_minus);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_minus);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_binary_minus);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 145, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 145, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_divide, __pyx_t_34) < 0)) __PYX_ERR(1, 145, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_minus, __pyx_t_35) < 0)) __PYX_ERR(1, 145, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":146
- *     __Pyx_globals['op_power'] = OPCODE(op_power, 'op_power')
- *     __Pyx_globals['op_divide'] = OPCODE(op_divide, 'op_divide')
- *     __Pyx_globals['op_div'] = OPCODE(op_div, 'op_div')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_mod'] = OPCODE(op_mod, 'op_mod')
- *     __Pyx_globals['op_odd'] = OPCODE(op_odd, 'op_odd')
+ *     __Pyx_globals['opcode_binary_plus'] = OPCODE(opcode_binary_plus, 'opcode_binary_plus')
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE(opcode_binary_minus, 'opcode_binary_minus')
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE(opcode_binary_subscr, 'opcode_binary_subscr')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE(opcode_binary_and, 'opcode_binary_and')
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE(opcode_binary_or, 'opcode_binary_or')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 146, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 146, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_binary_subscr); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 146, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_div); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 146, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 146, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_div);
-    __Pyx_GIVEREF(__pyx_n_s_op_div);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_div);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_subscr);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_subscr);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_binary_subscr);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 146, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 146, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_div, __pyx_t_1) < 0)) __PYX_ERR(1, 146, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_subscr, __pyx_t_34) < 0)) __PYX_ERR(1, 146, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":147
- *     __Pyx_globals['op_divide'] = OPCODE(op_divide, 'op_divide')
- *     __Pyx_globals['op_div'] = OPCODE(op_div, 'op_div')
- *     __Pyx_globals['op_mod'] = OPCODE(op_mod, 'op_mod')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_odd'] = OPCODE(op_odd, 'op_odd')
- *     __Pyx_globals['op_and'] = OPCODE(op_and, 'op_and')
+ *     __Pyx_globals['opcode_binary_minus'] = OPCODE(opcode_binary_minus, 'opcode_binary_minus')
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE(opcode_binary_subscr, 'opcode_binary_subscr')
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE(opcode_binary_and, 'opcode_binary_and')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE(opcode_binary_or, 'opcode_binary_or')
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE(opcode_binary_compare, 'opcode_binary_compare')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 147, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_mod); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 147, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 147, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 147, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_mod);
-    __Pyx_GIVEREF(__pyx_n_s_op_mod);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_mod);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 147, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_binary_and); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 147, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 147, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_and);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_and);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_binary_and);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 147, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 147, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_mod, __pyx_t_33) < 0)) __PYX_ERR(1, 147, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_and, __pyx_t_1) < 0)) __PYX_ERR(1, 147, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":148
- *     __Pyx_globals['op_div'] = OPCODE(op_div, 'op_div')
- *     __Pyx_globals['op_mod'] = OPCODE(op_mod, 'op_mod')
- *     __Pyx_globals['op_odd'] = OPCODE(op_odd, 'op_odd')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_and'] = OPCODE(op_and, 'op_and')
- *     __Pyx_globals['op_or'] = OPCODE(op_or, 'op_or')
+ *     __Pyx_globals['opcode_binary_subscr'] = OPCODE(opcode_binary_subscr, 'opcode_binary_subscr')
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE(opcode_binary_and, 'opcode_binary_and')
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE(opcode_binary_or, 'opcode_binary_or')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE(opcode_binary_compare, 'opcode_binary_compare')
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE(opcode_store_fast, 'opcode_store_fast')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 148, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_odd); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 148, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 148, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_odd);
-    __Pyx_GIVEREF(__pyx_n_s_op_odd);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_odd);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 148, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_binary_or); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 148, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_or);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_or);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_binary_or);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 148, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 148, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_odd, __pyx_t_34) < 0)) __PYX_ERR(1, 148, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_or, __pyx_t_35) < 0)) __PYX_ERR(1, 148, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":149
- *     __Pyx_globals['op_mod'] = OPCODE(op_mod, 'op_mod')
- *     __Pyx_globals['op_odd'] = OPCODE(op_odd, 'op_odd')
- *     __Pyx_globals['op_and'] = OPCODE(op_and, 'op_and')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_or'] = OPCODE(op_or, 'op_or')
- *     __Pyx_globals['op_not'] = OPCODE(op_not, 'op_not')
+ *     __Pyx_globals['opcode_binary_and'] = OPCODE(opcode_binary_and, 'opcode_binary_and')
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE(opcode_binary_or, 'opcode_binary_or')
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE(opcode_binary_compare, 'opcode_binary_compare')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE(opcode_store_fast, 'opcode_store_fast')
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE(opcode_store_subscr, 'opcode_store_subscr')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 149, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 149, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_binary_compare); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_and); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 149, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 149, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_and);
-    __Pyx_GIVEREF(__pyx_n_s_op_and);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_and);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 149, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_binary_compare);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_binary_compare);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_binary_compare);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 149, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 149, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_and, __pyx_t_1) < 0)) __PYX_ERR(1, 149, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_binary_compare, __pyx_t_34) < 0)) __PYX_ERR(1, 149, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":150
- *     __Pyx_globals['op_odd'] = OPCODE(op_odd, 'op_odd')
- *     __Pyx_globals['op_and'] = OPCODE(op_and, 'op_and')
- *     __Pyx_globals['op_or'] = OPCODE(op_or, 'op_or')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_not'] = OPCODE(op_not, 'op_not')
- *     __Pyx_globals['op_load_const'] = OPCODE(op_load_const, 'op_load_const')
+ *     __Pyx_globals['opcode_binary_or'] = OPCODE(opcode_binary_or, 'opcode_binary_or')
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE(opcode_binary_compare, 'opcode_binary_compare')
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE(opcode_store_fast, 'opcode_store_fast')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE(opcode_store_subscr, 'opcode_store_subscr')
+ *     __Pyx_globals['opcode_jump'] = OPCODE(opcode_jump, 'opcode_jump')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 150, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_or); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 150, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 150, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_or);
-    __Pyx_GIVEREF(__pyx_n_s_op_or);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_or);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 150, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_store_fast); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 150, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 150, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_store_fast);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_store_fast);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_store_fast);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 150, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 150, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_or, __pyx_t_33) < 0)) __PYX_ERR(1, 150, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_store_fast, __pyx_t_1) < 0)) __PYX_ERR(1, 150, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "EnumType":151
- *     __Pyx_globals['op_and'] = OPCODE(op_and, 'op_and')
- *     __Pyx_globals['op_or'] = OPCODE(op_or, 'op_or')
- *     __Pyx_globals['op_not'] = OPCODE(op_not, 'op_not')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_load_const'] = OPCODE(op_load_const, 'op_load_const')
- *     __Pyx_globals['op_load_identifier'] = OPCODE(op_load_identifier, 'op_load_identifier')
+ *     __Pyx_globals['opcode_binary_compare'] = OPCODE(opcode_binary_compare, 'opcode_binary_compare')
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE(opcode_store_fast, 'opcode_store_fast')
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE(opcode_store_subscr, 'opcode_store_subscr')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_jump'] = OPCODE(opcode_jump, 'opcode_jump')
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE(opcode_jump_if_true, 'opcode_jump_if_true')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_33, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 151, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(op_not); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 151, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 151, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_34);
-    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
-    __Pyx_INCREF(__pyx_n_s_op_not);
-    __Pyx_GIVEREF(__pyx_n_s_op_not);
-    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_op_not);
-    __pyx_t_34 = 0;
-    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_33, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 151, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_store_subscr); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 151, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_store_subscr);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_store_subscr);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_store_subscr);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 151, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 151, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_not, __pyx_t_34) < 0)) __PYX_ERR(1, 151, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_store_subscr, __pyx_t_35) < 0)) __PYX_ERR(1, 151, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
 
     /* "EnumType":152
- *     __Pyx_globals['op_or'] = OPCODE(op_or, 'op_or')
- *     __Pyx_globals['op_not'] = OPCODE(op_not, 'op_not')
- *     __Pyx_globals['op_load_const'] = OPCODE(op_load_const, 'op_load_const')             # <<<<<<<<<<<<<<
- *     __Pyx_globals['op_load_identifier'] = OPCODE(op_load_identifier, 'op_load_identifier')
- * 
+ *     __Pyx_globals['opcode_store_fast'] = OPCODE(opcode_store_fast, 'opcode_store_fast')
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE(opcode_store_subscr, 'opcode_store_subscr')
+ *     __Pyx_globals['opcode_jump'] = OPCODE(opcode_jump, 'opcode_jump')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE(opcode_jump_if_true, 'opcode_jump_if_true')
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE(opcode_jump_if_false, 'opcode_jump_if_false')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 152, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 152, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_jump); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(op_load_const); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 152, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = PyTuple_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 152, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_33, 0, __pyx_t_1);
-    __Pyx_INCREF(__pyx_n_s_op_load_const);
-    __Pyx_GIVEREF(__pyx_n_s_op_load_const);
-    PyTuple_SET_ITEM(__pyx_t_33, 1, __pyx_n_s_op_load_const);
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_33, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 152, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_jump);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_jump);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_jump);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 152, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 152, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_load_const, __pyx_t_1) < 0)) __PYX_ERR(1, 152, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_jump, __pyx_t_34) < 0)) __PYX_ERR(1, 152, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
 
     /* "EnumType":153
- *     __Pyx_globals['op_not'] = OPCODE(op_not, 'op_not')
- *     __Pyx_globals['op_load_const'] = OPCODE(op_load_const, 'op_load_const')
- *     __Pyx_globals['op_load_identifier'] = OPCODE(op_load_identifier, 'op_load_identifier')             # <<<<<<<<<<<<<<
- * 
+ *     __Pyx_globals['opcode_store_subscr'] = OPCODE(opcode_store_subscr, 'opcode_store_subscr')
+ *     __Pyx_globals['opcode_jump'] = OPCODE(opcode_jump, 'opcode_jump')
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE(opcode_jump_if_true, 'opcode_jump_if_true')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE(opcode_jump_if_false, 'opcode_jump_if_false')
+ *     __Pyx_globals['opcode_call_function'] = OPCODE(opcode_call_function, 'opcode_call_function')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 153, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_33 = __Pyx_PyInt_From_enum__opcode(op_load_identifier); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 153, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 153, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 153, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
-    __Pyx_GIVEREF(__pyx_t_33);
-    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_33);
-    __Pyx_INCREF(__pyx_n_s_op_load_identifier);
-    __Pyx_GIVEREF(__pyx_n_s_op_load_identifier);
-    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_op_load_identifier);
-    __pyx_t_33 = 0;
-    __pyx_t_33 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_33)) __PYX_ERR(1, 153, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_33);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_jump_if_true); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 153, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 153, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_jump_if_true);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_jump_if_true);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_jump_if_true);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 153, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
     if (unlikely(__Pyx_globals == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 153, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_op_load_identifier, __pyx_t_33) < 0)) __PYX_ERR(1, 153, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_33); __pyx_t_33 = 0;
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_jump_if_true, __pyx_t_1) < 0)) __PYX_ERR(1, 153, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "EnumType":154
+ *     __Pyx_globals['opcode_jump'] = OPCODE(opcode_jump, 'opcode_jump')
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE(opcode_jump_if_true, 'opcode_jump_if_true')
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE(opcode_jump_if_false, 'opcode_jump_if_false')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_call_function'] = OPCODE(opcode_call_function, 'opcode_call_function')
+ *     __Pyx_globals['opcode_return_function'] = OPCODE(opcode_return_function, 'opcode_return_function')
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 154, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = __Pyx_PyInt_From_enum__opcode(opcode_jump_if_false); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 154, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = PyTuple_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 154, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_GIVEREF(__pyx_t_35);
+    PyTuple_SET_ITEM(__pyx_t_34, 0, __pyx_t_35);
+    __Pyx_INCREF(__pyx_n_s_opcode_jump_if_false);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_jump_if_false);
+    PyTuple_SET_ITEM(__pyx_t_34, 1, __pyx_n_s_opcode_jump_if_false);
+    __pyx_t_35 = 0;
+    __pyx_t_35 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_34, NULL); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 154, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    if (unlikely(__Pyx_globals == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+      __PYX_ERR(1, 154, __pyx_L1_error)
+    }
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_jump_if_false, __pyx_t_35) < 0)) __PYX_ERR(1, 154, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+
+    /* "EnumType":155
+ *     __Pyx_globals['opcode_jump_if_true'] = OPCODE(opcode_jump_if_true, 'opcode_jump_if_true')
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE(opcode_jump_if_false, 'opcode_jump_if_false')
+ *     __Pyx_globals['opcode_call_function'] = OPCODE(opcode_call_function, 'opcode_call_function')             # <<<<<<<<<<<<<<
+ *     __Pyx_globals['opcode_return_function'] = OPCODE(opcode_return_function, 'opcode_return_function')
+ * 
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_35, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __pyx_t_34 = __Pyx_PyInt_From_enum__opcode(opcode_call_function); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_GIVEREF(__pyx_t_34);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_34);
+    __Pyx_INCREF(__pyx_n_s_opcode_call_function);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_call_function);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_opcode_call_function);
+    __pyx_t_34 = 0;
+    __pyx_t_34 = __Pyx_PyObject_Call(__pyx_t_35, __pyx_t_1, NULL); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(__Pyx_globals == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+      __PYX_ERR(1, 155, __pyx_L1_error)
+    }
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_call_function, __pyx_t_34) < 0)) __PYX_ERR(1, 155, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+
+    /* "EnumType":156
+ *     __Pyx_globals['opcode_jump_if_false'] = OPCODE(opcode_jump_if_false, 'opcode_jump_if_false')
+ *     __Pyx_globals['opcode_call_function'] = OPCODE(opcode_call_function, 'opcode_call_function')
+ *     __Pyx_globals['opcode_return_function'] = OPCODE(opcode_return_function, 'opcode_return_function')             # <<<<<<<<<<<<<<
+ * 
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_34, __pyx_n_s_OPCODE); if (unlikely(!__pyx_t_34)) __PYX_ERR(1, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_34);
+    __pyx_t_1 = __Pyx_PyInt_From_enum__opcode(opcode_return_function); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_35 = PyTuple_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(1, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_35);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_35, 0, __pyx_t_1);
+    __Pyx_INCREF(__pyx_n_s_opcode_return_function);
+    __Pyx_GIVEREF(__pyx_n_s_opcode_return_function);
+    PyTuple_SET_ITEM(__pyx_t_35, 1, __pyx_n_s_opcode_return_function);
+    __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_34, __pyx_t_35, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
+    __Pyx_DECREF(__pyx_t_35); __pyx_t_35 = 0;
+    if (unlikely(__Pyx_globals == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+      __PYX_ERR(1, 156, __pyx_L1_error)
+    }
+    if (unlikely(PyDict_SetItem(__Pyx_globals, __pyx_n_s_opcode_return_function, __pyx_t_1) < 0)) __PYX_ERR(1, 156, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __pyx_L4:;
 
@@ -7247,6 +7321,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_32);
   __Pyx_XDECREF(__pyx_t_33);
   __Pyx_XDECREF(__pyx_t_34);
+  __Pyx_XDECREF(__pyx_t_35);
   if (__pyx_m) {
     if (__pyx_d) {
       __Pyx_AddTraceback("init plinf.core", __pyx_clineno, __pyx_lineno, __pyx_filename);

@@ -11,7 +11,7 @@
  *                                                  *
  ****************************************************/
 
-int global_index = 0;
+int global_index = -1;
 
 int current_index(void) { return global_index; }
 
@@ -164,7 +164,7 @@ void opout_type(FILE *fp, TYPE *type) {
       break;
     case tt_identifier:
       temp = (ARG *)calloc(1, sizeof(ARG));
-      temp->type = at_type;
+      temp->type = at_str;
       temp->str = type->identifier->name;
       output(fp, next_index(), opcode_load_fast, temp);
       break;
@@ -209,14 +209,10 @@ void opout_identifier_ref(FILE *fp, IDENTIFIER_REF *id_ref) {
   temp->type = at_str;
   temp->str = id_ref->id->name;
   output(fp, next_index(), opcode_load_fast, temp);
-  if (offset != NULL) {
-    while (offset->next != NULL) {
-      opout_node(fp, offset->expression);
-      output(fp, next_index(), opcode_binary_subscr, (ARG *)NULL);
-      offset = offset->next;
-    }
+  while (offset != NULL) {
     opout_node(fp, offset->expression);
     output(fp, next_index(), opcode_binary_subscr, (ARG *)NULL);
+    offset = offset->next;
   }
 }
 
@@ -255,6 +251,7 @@ void opout_procedure_declare(FILE *fp, PROCEDURE_DECLARE *procedure_declare) {
     opout_node(fp, node);
     node = node->next;
   }
+  output(fp, next_index(), opcode_return_function, (ARG *)NULL);
   output(fp, next_index(), opcode_block_end, (ARG *)NULL);
 
   int param_count = 0;
@@ -314,8 +311,22 @@ void opout_function_declare(FILE *fp, FUNCTION_DECLARE *function_declare) {
 
 void opout_assign(FILE *fp, ASSIGN *assign) {
   opout_node(fp, assign->expression);
-  opout_identifier_ref(fp, assign->id_ref);
-  output(fp, next_index(), opcode_store_fast, (ARG *)NULL);
+  ARG *temp;
+  ARRAY_OFFSET *offset = assign->id_ref->offset;
+  temp = (ARG *)calloc(1, sizeof(ARG));
+  temp->type = at_str;
+  temp->str = assign->id_ref->id->name;
+  output(fp, next_index(), opcode_load_fast, temp);
+  if (offset != NULL) {
+    while (offset->next != NULL) {
+      opout_node(fp, offset->expression);
+      output(fp, next_index(), opcode_binary_subscr, (ARG *)NULL);
+      offset = offset->next;
+    }
+    opout_node(fp, offset->expression);
+    output(fp, next_index(), opcode_store_subscr, (ARG *)NULL);
+  } else
+    output(fp, next_index(), opcode_store_fast, (ARG *)NULL);
 }
 
 void opout_condition_jump(FILE *fp, CONDITION_JUMP *condition_jump) {
@@ -551,7 +562,7 @@ void opout_node(FILE *fp, NODE *node) {
 }
 
 void restart_opcode(void) {
-  global_index = 0;
+  global_index = -1;
   tag_wait = NULL;
   tag_ready = NULL;
   output_cache = NULL;
