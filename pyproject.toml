@@ -10,9 +10,11 @@ include = ["py.typed"]
 [tool.poetry.dependencies]
 python = "^3.7"
 Cython = "^0.29.23"
+PyQt5 = "^5.15.4"
 
 [tool.poetry.dev-dependencies]
 black = "^21.6b0"
+Nuitka = "^0.6.16"
 
 [tool.poetry.scripts]
 plinf = "plinf.__main__:main"

@@ -1,7 +1,7 @@
 import sys
 import operator
 from enum import Enum, IntEnum, auto
-from typing import Any, List, Type, Union, Tuple, Generic, TypeVar, Optional
+from typing import Any, List, Type, Union, Tuple, Generic, TypeVar, Optional, Callable
 
 from .core import OPCODE
 
@@ -65,6 +65,17 @@ class SymbolTable:
                 if symbol.name == symbol_name:
                     return symbol
         return None
+
+    def to_list(self) -> List[List[str]]:
+        result: List[List[str]] = []
+        for i, scope in enumerate(self.scope):
+            for symbol in scope:
+                if symbol.type in (Symbol.SymbolType.const, Symbol.SymbolType.variable):
+                    value = symbol.value.value
+                else:
+                    value = str(symbol.value)
+                result.append([symbol.name, symbol.type.name, value, str(i)])
+        return result
 
 
 # stack accept type
@@ -265,12 +276,16 @@ class Function:
         return self._block
 
 
+F = Callable[..., None]
+
 # operation class
 class OperationList(List[Optional["Operation"]]):
     def __init__(self, operations: List["Operation"]):
         super(OperationList, self).__init__(self.filter_operations(operations))
         self.input = sys.stdin
         self.output = sys.stdout
+        self.input_callback = None
+        self.output_callback = None
         self.reset()
 
     def reset(self):
@@ -279,6 +294,14 @@ class OperationList(List[Optional["Operation"]]):
         self._function_call_stack: List[Tuple[str, int]] = []
         self._stack: List[StackType] = []
         self._symbol_table = SymbolTable()
+
+    def on_input(self, func: F) -> F:
+        self.input_callback = func
+        return func
+
+    def on_output(self, func: F) -> F:
+        self.output_callback = func
+        return func
 
     @property
     def current_operation(self) -> Optional["Operation"]:
@@ -331,7 +354,6 @@ class OperationList(List[Optional["Operation"]]):
 
     def run_operation(self):
         op = self.current_operation
-        # print(f"Running {op}")
         self._current_index += 1
         if op is None:
             return
@@ -776,6 +798,8 @@ class OperationList(List[Optional["Operation"]]):
                 self.output.write(
                     ", ".join(map(lambda x: str(x.value), reversed(args))) + "\n"
                 )
+                if self.output_callback:
+                    self.output_callback()
             elif function_name.value == "read":
                 for param in args:
                     if not isinstance(param, VAR):
@@ -783,6 +807,8 @@ class OperationList(List[Optional["Operation"]]):
                     param_type = param.type
                     if param_type.type == TYPE.TYPE_TYPE.array:
                         raise RuntimeError(f"Can't store input into array variable")
+                    if self.input_callback:
+                        self.input_callback()
                     temp = self.input.readline().strip()
                     if param_type.type == TYPE.TYPE_TYPE.int:
                         param.value = int(temp)
