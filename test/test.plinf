@@ -32,6 +32,6 @@ begin
       WRITE(call function1(a + 1, true));
       if not (a <> 0) then
         exit;
-    end
+    end;
 
 end.

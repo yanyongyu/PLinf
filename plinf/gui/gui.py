@@ -1,7 +1,10 @@
-from io import StringIO
+import os
 import sys
-from PyQt5.QtCore import Qt, QTimer
+from io import StringIO
 
+from PyQt5.QtCore import QUrl, Qt, QFileInfo, QObject, pyqtSlot
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtWebChannel import QWebChannel
 from PyQt5.QtWidgets import (
     QFileDialog,
     QGridLayout,
@@ -13,12 +16,15 @@ from PyQt5.QtWidgets import (
     QTextEdit,
     QWidget,
     QApplication,
-    QFrame,
-    QTextEdit,
+    QMainWindow,
 )
 
-from plinf.runner import convert_lines
 from plinf.core import get_tree, get_opcode
+from plinf.runner import convert_lines, Symbol, CONST, TYPE
+
+
+CURRENT_DIR = os.path.dirname(__file__)
+HTML_FILE = os.path.join(CURRENT_DIR, "index.html")
 
 
 class MainWindow(QWidget):
@@ -155,110 +161,133 @@ class MainWindow(QWidget):
             self.result.setPlainText(tree)
 
 
-class SubWindow(QWidget):
-    def __init__(self, win: "MainWindow"):
+class Myshared(QObject):
+    def __init__(self, win: MainWindow, sub: "SubWindow"):
+        super().__init__()
+        self.win = win
+        self.sub = sub
+
+    @pyqtSlot()
+    def do_execute(self):
+        self.sub.run_code()
+
+    @pyqtSlot()
+    def reset(self):
+        self.sub.reset()
+
+
+class SubWindow(QMainWindow):
+    def __init__(self, win: MainWindow):
         super(SubWindow, self).__init__()
         self.win = win
-        self.initUI()
-
-    def initUI(self):
-        self.sbTableTitle = QLabel("符号表")
-        self.sbTableTitle.setAlignment(Qt.AlignCenter)
-        self.sbTableName1 = QLabel("名")
-        self.sbTableName1.setFrameShape(QFrame.Box)
-        self.sbTableName1.setAlignment(Qt.AlignCenter)
-        self.sbTableName2 = QLabel("类")
-        self.sbTableName2.setFrameShape(QFrame.Box)
-        self.sbTableName2.setAlignment(Qt.AlignCenter)
-        self.sbTableName3 = QLabel("值")
-        self.sbTableName3.setFrameShape(QFrame.Box)
-        self.sbTableName3.setAlignment(Qt.AlignCenter)
-        self.sbTableName4 = QLabel("scope")
-        self.sbTableName4.setFrameShape(QFrame.Box)
-        self.sbTableName4.setAlignment(Qt.AlignCenter)
-        self.sbTable = []
-        for i in range(16):
-            self.sbTable.append(QLabel("1"))
-            self.sbTable[i].setFrameShape(QFrame.Box)
-            self.sbTable[i].setAlignment(Qt.AlignCenter)
-
-        self.stackTitle = QLabel("堆栈")
-        self.stackTitle.setAlignment(Qt.AlignCenter)
-        self.stackTable = []
-        for i in range(5):
-            self.stackTable.append(QLabel("2"))
-            self.stackTable[i].setFrameShape(QFrame.Box)
-            self.stackTable[i].setAlignment(Qt.AlignCenter)
-
-        self.opTitle = QLabel("当前操作")
-        self.opTitle.setAlignment(Qt.AlignCenter)
-        self.op1 = QLabel("操作符")
-        self.op1.setFrameShape(QFrame.Box)
-        self.op1.setAlignment(Qt.AlignCenter)
-        self.op2 = QLabel("参数")
-        self.op2.setFrameShape(QFrame.Box)
-        self.op2.setAlignment(Qt.AlignCenter)
-        self.opTable = []
-        for i in range(2):
-            self.opTable.append(QLabel("3"))
-            self.opTable[i].setFrameShape(QFrame.Box)
-            self.opTable[i].setAlignment(Qt.AlignCenter)
-
-        self.btn = QPushButton("下一步", self)
-
-        self.opListTitle = QLabel("operation操作列表")
-        self.opListTitle.setAlignment(Qt.AlignCenter)
-        self.opList = QTextEdit()
-        self.opList.setReadOnly(True)
-
-        self.blank = QLabel("")
-
-        grid = QGridLayout()
-        grid.setSpacing(0)
-
-        grid.addWidget(self.sbTableTitle, 1, 1, 1, 2)
-        grid.addWidget(self.sbTableName1, 2, 0)
-        grid.addWidget(self.sbTableName2, 2, 1)
-        grid.addWidget(self.sbTableName3, 2, 2)
-        grid.addWidget(self.sbTableName4, 2, 3)
-        for i in range(16):
-            posX = i // 4 + 3
-            posY = i % 4
-            grid.addWidget(self.sbTable[i], posX, posY)
-        grid.addWidget(self.stackTitle, 7, 1, 1, 2)
-        for i in range(5):
-            grid.addWidget(self.stackTable[i], 8 + i, 1, 1, 2)
-
-        grid.addWidget(self.blank, 13, 1)
-        grid.addWidget(self.blank, 1, 4)
-
-        grid.addWidget(self.opTitle, 1, 5, 1, 2)
-        grid.addWidget(self.op1, 2, 5)
-        grid.addWidget(self.op2, 2, 6)
-        for i in range(2):
-            grid.addWidget(self.opTable[i], 3, i + 5)
-        grid.addWidget(self.btn, 5, 5, 1, 2)
-
-        grid.addWidget(self.blank, 1, 7)
-
-        grid.addWidget(self.opListTitle, 1, 8, 1, 4)
-        grid.addWidget(self.opList, 2, 8, 11, 4)
-
-        # self.btn
-
-        self.setLayout(grid)
         self.setWindowTitle("编译")
-        self.setGeometry(150, 150, 1080, 720)
+        self.setGeometry(150, 150, 1440, 810)
+        self.browser = QWebEngineView()
+        self.browser.load(QUrl(f"file://{QFileInfo(HTML_FILE).absoluteFilePath()}"))
+        self.setCentralWidget(self.browser)
+
+    def user_input(self):
+        value, _ = QInputDialog.getText(self, "请输入", "请输入：", QLineEdit.Normal, "")
+        self.op_list.input.truncate(0)
+        self.op_list.input.seek(0)
+        self.op_list.input.write(value + "\n")
+        self.op_list.input.seek(0)
 
     def handle_click(self):
+        opcode = get_opcode(self.win.content)
+        if opcode is None:
+            QMessageBox.warning(self, "错误", "语法错误！")
+            return
+        else:
+            self.win.result.setPlainText("")
+            self.op_list = convert_lines(opcode.splitlines())
+            self.op_list.input = StringIO()
+            self.op_list.output = StringIO()
+            self.op_list.on_input(self.user_input)
+            self.op_list.on_output(self.refresh_page)
+            self.init_page()
+
         if not self.isVisible():
             self.show()
+
+    def init_page(self):
+        op_list = self.op_list
+        operations = []
+        for index, op in enumerate(op_list):
+            if not op:
+                operations.append([str(index), "null", "null", "null"])
+            else:
+                if not op.arg:
+                    arg_type = "null"
+                    arg_value = "null"
+                elif isinstance(op.arg, CONST):
+                    arg_type = op.arg.type_name
+                    arg_value = op.arg.to_string()
+                else:
+                    arg_type = "type"
+                    arg_value = op.arg.to_string()
+                operations.append([str(index), op.opcode.name, arg_type, arg_value])
+
+        code = self.win.content
+        tree = get_tree(code)
+        jscode = (
+            f"init_code({code!r});\n"
+            f"init_opcode({operations!r});\n"
+            f"init_tree({tree!r});"
+        )
+        self.browser.page().runJavaScript(jscode)
+        self.refresh_page()
+
+    def refresh_page(self):
+        op_list = self.op_list
+        output = op_list.output.getvalue()
+        index = op_list._current_index
+        finished = op_list.finished
+
+        symbols = []
+        for i, scope in enumerate(op_list._symbol_table.scope):
+            for symbol in scope:
+                if symbol.type in (Symbol.SymbolType.const, Symbol.SymbolType.variable):
+                    value = symbol.value.value
+                else:
+                    value = symbol.value
+                symbols.append([symbol.name, symbol.type.name, str(value), str(i)])
+
+        stack = []
+        for stack_content in op_list._stack:
+            stack.insert(
+                0, [type(stack_content).__name__.lower(), stack_content.to_string()]
+            )
+
+        jscode = (
+            f"refresh_symbol({symbols!r});\n"
+            f"refresh_stack({stack!r});\n"
+            f"refresh_opcode({index});\n"
+            f"refresh_output({output!r});"
+        )
+        if finished:
+            jscode += "\nfinished();"
+        self.browser.page().runJavaScript(jscode)
+
+    def run_code(self):
+        self.op_list.run_operation()
+        self.refresh_page()
+
+    def reset(self):
+        self.op_list.reset()
+        self.refresh_page()
 
 
 def main():
     app = QApplication([])
     win = MainWindow()
     sub = SubWindow(win)
+
+    channel = QWebChannel()
+    shared = Myshared(win, sub)
+    channel.registerObject("con", shared)
+    sub.browser.page().setWebChannel(channel)
+
     win.subbtn.clicked.connect(sub.handle_click)
     sub.setWindowModality(Qt.ApplicationModal)
     win.show()

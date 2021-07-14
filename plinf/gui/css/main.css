@@ -1,0 +1,100 @@
+html, body {
+  height: 100%;
+}
+
+.app, .full-height {
+  height: 100%;
+}
+
+.symbol-container, .stack-container {
+  position: relative;
+  height: 45%;
+}
+#symbol, #stack {
+  position: relative;
+  height: calc(100% - 1em - 40px);
+  overflow-y: auto;
+}
+#symbol table, #stack table {
+  border-top: none;
+}
+
+#symbol table thead, #stack table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+#symbol table thead tr th, #stack table thead tr th {
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+
+#output {
+  position: relative;
+  height: calc(100% - 64px);
+}
+
+#output pre {
+  height: 100%;
+  overflow-y: auto;
+}
+
+#code, #tree {
+  position: relative;
+  height: calc(100% - 80px);
+}
+
+#code pre, #tree pre {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+#opcode {
+  position: relative;
+  height: calc(100% - 80px);
+  overflow-y: auto;
+}
+#opcode table {
+  border-top: none;
+}
+
+#opcode table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+#opcode table thead tr th {
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+
+#opcode table tbody tr[opcode-current=true] {
+  background-color: yellow;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}

@@ -66,22 +66,14 @@ class SymbolTable:
                     return symbol
         return None
 
-    def to_list(self) -> List[List[str]]:
-        result: List[List[str]] = []
-        for i, scope in enumerate(self.scope):
-            for symbol in scope:
-                if symbol.type in (Symbol.SymbolType.const, Symbol.SymbolType.variable):
-                    value = symbol.value.value
-                else:
-                    value = str(symbol.value)
-                result.append([symbol.name, symbol.type.name, value, str(i)])
-        return result
-
 
 # stack accept type
 class StackType:
     def __repr__(self) -> str:
         return str(self)
+
+    def to_string(self) -> str:
+        raise NotImplementedError()
 
 
 CT = TypeVar("CT", int, float, bool, str)
@@ -116,6 +108,9 @@ class CONST(StackType, Generic[CT]):
     def convert_value(self, value: Union[str, CT]) -> CT:
         return self.type(value)
 
+    def to_string(self) -> str:
+        return str(self.value)
+
 
 class BLOCK(StackType):
     def __init__(self, start_index: int, end_index):
@@ -132,6 +127,9 @@ class BLOCK(StackType):
     @property
     def end_index(self) -> int:
         return self._end_index
+
+    def to_string(self) -> str:
+        return str(self)
 
 
 class TYPE(StackType):
@@ -162,6 +160,9 @@ class TYPE(StackType):
     def check_type(self, value: Any) -> bool:
         checkers = {"int": int, "real": float, "bool": bool, "array": list}
         return isinstance(value, checkers[self.type])
+
+    def to_string(self) -> str:
+        return self.type.value
 
 
 class TYPE_ARRAY(TYPE):
@@ -194,6 +195,9 @@ class TYPE_ARRAY(TYPE):
             map(lambda x: self.sub_type.check_type(x), value)
         )
 
+    def to_string(self) -> str:
+        return f"array[{self.array_start}~{self.array_end} {self.sub_type.to_string()}]"
+
 
 class VAR(StackType):
     def __init__(self, type: TYPE):
@@ -219,6 +223,9 @@ class VAR(StackType):
             raise ValueError(f"Value {value!r} is incompatible with type {self.type}")
         self._value = value
 
+    def to_string(self) -> str:
+        return str(self.value)
+
 
 class PARAM(StackType):
     def __init__(self, name: str, type: TYPE):
@@ -235,6 +242,9 @@ class PARAM(StackType):
     @property
     def type(self) -> TYPE:
         return self._type
+
+    def to_string(self) -> str:
+        return f"{self.name}: {self.type}"
 
 
 class Procedure:

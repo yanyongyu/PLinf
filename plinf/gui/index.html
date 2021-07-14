@@ -5,16 +5,143 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" type="text/css" href="mdui.min.css" />
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="css/mdui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
-    <div class="mdui-container">
-      <div class="mdui-col-4"></div>
-      <div class="mdui-col-4"></div>
-      <div class="mdui-col-4"></div>
+    <div class="app mdui-container-fluid">
+      <div class="mdui-row">
+        <div class="mdui-col-xs-4 full-height">
+          <div class="symbol-container">
+            <div class="mdui-typo mdui-text-center">
+              <h5>符号表</h5>
+            </div>
+            <div id="symbol" class="mdui-m-y-2">
+              <table class="mdui-table mdui-table-hoverable">
+                <thead>
+                  <tr>
+                    <th>符号</th>
+                    <th>类型</th>
+                    <th>值</th>
+                    <th>层级</th>
+                  </tr>
+                </thead>
+                <tbody id="symbol-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="stack-container">
+            <div class="mdui-typo mdui-text-center">
+              <h5>堆栈</h5>
+            </div>
+            <div id="stack" class="mdui-m-y-2">
+              <table class="mdui-table mdui-table-hoverable">
+                <thead>
+                  <tr>
+                    <th>值</th>
+                  </tr>
+                </thead>
+                <tbody id="stack-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="mdui-col-xs-4 full-height">
+          <div class="mdui-valign" style="height: 40%">
+            <div class="mdui-container-fluid" style="width: 100%">
+              <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-typo mdui-text-center">
+                  <h5>当前操作</h5>
+                </div>
+              </div>
+              <div class="mdui-row mdui-m-y-2">
+                <div class="mdui-col-xs-12">
+                  <table class="mdui-table mdui-table-fluid">
+                    <thead>
+                      <tr>
+                        <th>序号</th>
+                        <th>操作符</th>
+                        <th>参数</th>
+                      </tr>
+                    </thead>
+                    <tbody id="current-table-body"></tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="mdui-row">
+                <div class="mdui-col-xs-6">
+                  <button
+                    id="reset"
+                    class="
+                      mdui-btn
+                      mdui-btn-raised
+                      mdui-color-green-accent
+                      mdui-ripple
+                      mdui-center
+                    "
+                    onclick="reset()"
+                  >
+                    重置
+                  </button>
+                </div>
+                <div class="mdui-col-xs-6">
+                  <button
+                    id="next"
+                    class="
+                      mdui-btn
+                      mdui-btn-raised
+                      mdui-color-green-accent
+                      mdui-ripple
+                      mdui-center
+                    "
+                    onclick="do_execute()"
+                  >
+                    下一步
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="height: 55%">
+            <div class="mdui-typo mdui-text-center">
+              <h5>输出</h5>
+            </div>
+            <div class="mdui-m-y-2">
+              <div id="output" class="mdui-typo">
+                <pre></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mdui-col-xs-4 full-height">
+          <div class="mdui-tab mdui-tab-full-width mdui-tab-centered" mdui-tab>
+            <a href="#code" class="mdui-ripple">源代码</a>
+            <a href="#opcode" class="mdui-tab-active mdui-ripple">中间代码</a>
+            <a href="#tree" class="mdui-ripple">语法树</a>
+          </div>
+          <div id="code" class="mdui-m-a-2 mdui-typo">
+            <pre></pre>
+          </div>
+          <div id="opcode" class="mdui-m-a-2 mdui-typo">
+            <table class="mdui-table mdui-table-hoverable">
+              <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>操作符</th>
+                  <th>参数</th>
+                </tr>
+              </thead>
+              <tbody id="opcode-table-body"></tbody>
+            </table>
+          </div>
+          <div id="tree" class="mdui-m-a-2 mdui-typo">
+            <pre></pre>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="mdui.min.js"></script>
-    <script src="main.js"></script>
+    <script src="js/mdui.min.js"></script>
+    <script src="js/qwebchannel.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
