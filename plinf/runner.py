@@ -719,7 +719,7 @@ class OperationList(List[Optional["Operation"]]):
         elif op.opcode == OPCODE.opcode_store_subscr:
             tos, tos1, tos2 = self.pop_stack(3)
             if (
-                not isinstance(tos, CONST)
+                not isinstance(tos, (CONST, VAR))
                 or not isinstance(tos1, VAR)
                 or tos1.type.type != TYPE.TYPE_TYPE.array
                 or not isinstance(tos2, (CONST, VAR))

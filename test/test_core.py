@@ -95,24 +95,50 @@ class TestOutput(unittest.TestCase):
             code = f.read()
         opcode = get_opcode(code)
         self.assertIsNotNone(opcode)
+        assert opcode
+        op_list = convert_lines(opcode.splitlines())
+        op_list.output = StringIO()
+        op_list.run()
+        self.assertListEqual(op_list.output.getvalue().splitlines(), ["1"])
 
     def test_case8(self):
         with TEST_CASE8.open("r") as f:
             code = f.read()
         opcode = get_opcode(code)
         self.assertIsNotNone(opcode)
+        assert opcode
+        op_list = convert_lines(opcode.splitlines())
+        op_list.output = StringIO()
+        op_list.run()
+        self.assertListEqual(op_list.output.getvalue().splitlines(), ["5050.0"])
 
     def test_case9(self):
         with TEST_CASE9.open("r") as f:
             code = f.read()
         opcode = get_opcode(code)
         self.assertIsNotNone(opcode)
+        assert opcode
+        op_list = convert_lines(opcode.splitlines())
+        op_list.input = StringIO("1\n")
+        op_list.output = StringIO()
+        op_list.run()
+        self.assertListEqual(
+            op_list.output.getvalue().splitlines(),
+            ["1, 2", "1, 3", "2, 3", "1, 2", "3, 1", "3, 2", "1, 2"],
+        )
 
     def test_case10(self):
         with TEST_CASE10.open("r") as f:
             code = f.read()
         opcode = get_opcode(code)
         self.assertIsNotNone(opcode)
+        assert opcode
+        op_list = convert_lines(opcode.splitlines())
+        op_list.output = StringIO()
+        op_list.run()
+        self.assertListEqual(
+            op_list.output.getvalue().splitlines(), ["595", "8, 1", "2"]
+        )
 
 
 if __name__ == "__main__":

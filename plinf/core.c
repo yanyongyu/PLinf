@@ -1582,7 +1582,7 @@ static PyObject *__pyx_codeobj__7;
 static PyObject *__pyx_codeobj__9;
 /* Late includes */
 
-/* "plinf/core.pyx":69
+/* "plinf/core.pyx":68
  * 
  * 
  * cpdef unicode get_tree(unicode code):             # <<<<<<<<<<<<<<
@@ -1612,7 +1612,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_tree", 0);
 
-  /* "plinf/core.pyx":70
+  /* "plinf/core.pyx":69
  * 
  * cpdef unicode get_tree(unicode code):
  *     cdef int result = 1             # <<<<<<<<<<<<<<
@@ -1621,7 +1621,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_result = 1;
 
-  /* "plinf/core.pyx":71
+  /* "plinf/core.pyx":70
  * cpdef unicode get_tree(unicode code):
  *     cdef int result = 1
  *     cdef NODE *node = NULL             # <<<<<<<<<<<<<<
@@ -1630,7 +1630,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_node = NULL;
 
-  /* "plinf/core.pyx":72
+  /* "plinf/core.pyx":71
  *     cdef int result = 1
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")             # <<<<<<<<<<<<<<
@@ -1639,24 +1639,24 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   if (unlikely(__pyx_v_code == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 72, __pyx_L1_error)
+    __PYX_ERR(0, 71, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_code_bytes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "plinf/core.pyx":73
+  /* "plinf/core.pyx":72
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")
  *     cdef char *c_code = code_bytes             # <<<<<<<<<<<<<<
  *     cdef char *input_bp
  *     cdef char *output_bp
  */
-  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 72, __pyx_L1_error)
   __pyx_v_c_code = __pyx_t_2;
 
-  /* "plinf/core.pyx":78
+  /* "plinf/core.pyx":77
  *     cdef size_t input_size
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)             # <<<<<<<<<<<<<<
@@ -1665,7 +1665,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_fake_input = open_memstream((&__pyx_v_input_bp), (&__pyx_v_input_size));
 
-  /* "plinf/core.pyx":79
+  /* "plinf/core.pyx":78
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)             # <<<<<<<<<<<<<<
@@ -1674,7 +1674,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_fake_output = open_memstream((&__pyx_v_output_bp), (&__pyx_v_output_size));
 
-  /* "plinf/core.pyx":80
+  /* "plinf/core.pyx":79
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yylex_destroy()             # <<<<<<<<<<<<<<
@@ -1683,7 +1683,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   (void)(yylex_destroy());
 
-  /* "plinf/core.pyx":81
+  /* "plinf/core.pyx":80
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yylex_destroy()
  *     yyset_in(fake_input)             # <<<<<<<<<<<<<<
@@ -1692,7 +1692,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   yyset_in(__pyx_v_fake_input);
 
-  /* "plinf/core.pyx":82
+  /* "plinf/core.pyx":81
  *     yylex_destroy()
  *     yyset_in(fake_input)
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)             # <<<<<<<<<<<<<<
@@ -1701,7 +1701,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   (void)(fwrite(__pyx_v_c_code, (sizeof(char)), strlen(__pyx_v_c_code), __pyx_v_fake_input));
 
-  /* "plinf/core.pyx":84
+  /* "plinf/core.pyx":83
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)
  * 
  *     result = yyparse()             # <<<<<<<<<<<<<<
@@ -1710,7 +1710,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   __pyx_v_result = yyparse();
 
-  /* "plinf/core.pyx":85
+  /* "plinf/core.pyx":84
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -1720,7 +1720,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   __pyx_t_3 = ((__pyx_v_result == 0) != 0);
   if (__pyx_t_3) {
 
-    /* "plinf/core.pyx":86
+    /* "plinf/core.pyx":85
  *     result = yyparse()
  *     if result == 0:
  *         node = global_result             # <<<<<<<<<<<<<<
@@ -1729,7 +1729,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     __pyx_v_node = global_result;
 
-    /* "plinf/core.pyx":87
+    /* "plinf/core.pyx":86
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -1739,7 +1739,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
     __pyx_t_3 = ((__pyx_v_node == NULL) != 0);
     if (__pyx_t_3) {
 
-      /* "plinf/core.pyx":88
+      /* "plinf/core.pyx":87
  *         node = global_result
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")             # <<<<<<<<<<<<<<
@@ -1748,7 +1748,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       (void)(fprintf(stderr, ((char const *)"Error parsing: no result\n")));
 
-      /* "plinf/core.pyx":89
+      /* "plinf/core.pyx":88
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -1757,7 +1757,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       (void)(fclose(__pyx_v_fake_input));
 
-      /* "plinf/core.pyx":90
+      /* "plinf/core.pyx":89
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)
  *             fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -1766,7 +1766,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       (void)(fclose(__pyx_v_fake_output));
 
-      /* "plinf/core.pyx":91
+      /* "plinf/core.pyx":90
  *             fclose(fake_input)
  *             fclose(fake_output)
  *             free(input_bp)             # <<<<<<<<<<<<<<
@@ -1775,7 +1775,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       free(__pyx_v_input_bp);
 
-      /* "plinf/core.pyx":92
+      /* "plinf/core.pyx":91
  *             fclose(fake_output)
  *             free(input_bp)
  *             free(output_bp)             # <<<<<<<<<<<<<<
@@ -1784,7 +1784,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       free(__pyx_v_output_bp);
 
-      /* "plinf/core.pyx":93
+      /* "plinf/core.pyx":92
  *             free(input_bp)
  *             free(output_bp)
  *             return None             # <<<<<<<<<<<<<<
@@ -1795,7 +1795,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
       __pyx_r = ((PyObject*)Py_None); __Pyx_INCREF(Py_None);
       goto __pyx_L0;
 
-      /* "plinf/core.pyx":87
+      /* "plinf/core.pyx":86
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -1804,7 +1804,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     }
 
-    /* "plinf/core.pyx":94
+    /* "plinf/core.pyx":93
  *             free(output_bp)
  *             return None
  *         print_node(fake_output, node, 0)             # <<<<<<<<<<<<<<
@@ -1813,7 +1813,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     print_node(__pyx_v_fake_output, __pyx_v_node, 0);
 
-    /* "plinf/core.pyx":95
+    /* "plinf/core.pyx":94
  *             return None
  *         print_node(fake_output, node, 0)
  *         node = free_node(node)             # <<<<<<<<<<<<<<
@@ -1822,7 +1822,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     __pyx_v_node = free_node(__pyx_v_node);
 
-    /* "plinf/core.pyx":96
+    /* "plinf/core.pyx":95
  *         print_node(fake_output, node, 0)
  *         node = free_node(node)
  *         while node is not NULL:             # <<<<<<<<<<<<<<
@@ -1833,7 +1833,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
       __pyx_t_3 = ((__pyx_v_node != NULL) != 0);
       if (!__pyx_t_3) break;
 
-      /* "plinf/core.pyx":97
+      /* "plinf/core.pyx":96
  *         node = free_node(node)
  *         while node is not NULL:
  *             print_node(fake_output, node, 0)             # <<<<<<<<<<<<<<
@@ -1842,7 +1842,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
       print_node(__pyx_v_fake_output, __pyx_v_node, 0);
 
-      /* "plinf/core.pyx":98
+      /* "plinf/core.pyx":97
  *         while node is not NULL:
  *             print_node(fake_output, node, 0)
  *             node = free_node(node)             # <<<<<<<<<<<<<<
@@ -1852,7 +1852,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
       __pyx_v_node = free_node(__pyx_v_node);
     }
 
-    /* "plinf/core.pyx":85
+    /* "plinf/core.pyx":84
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -1862,7 +1862,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
     goto __pyx_L3;
   }
 
-  /* "plinf/core.pyx":100
+  /* "plinf/core.pyx":99
  *             node = free_node(node)
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)             # <<<<<<<<<<<<<<
@@ -1872,7 +1872,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   /*else*/ {
     (void)(fprintf(stderr, ((char const *)"Error parsing: code %d\n"), __pyx_v_result));
 
-    /* "plinf/core.pyx":101
+    /* "plinf/core.pyx":100
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -1881,7 +1881,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     (void)(fclose(__pyx_v_fake_input));
 
-    /* "plinf/core.pyx":102
+    /* "plinf/core.pyx":101
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)
  *         fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -1890,7 +1890,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     (void)(fclose(__pyx_v_fake_output));
 
-    /* "plinf/core.pyx":103
+    /* "plinf/core.pyx":102
  *         fclose(fake_input)
  *         fclose(fake_output)
  *         free(input_bp)             # <<<<<<<<<<<<<<
@@ -1899,7 +1899,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     free(__pyx_v_input_bp);
 
-    /* "plinf/core.pyx":104
+    /* "plinf/core.pyx":103
  *         fclose(fake_output)
  *         free(input_bp)
  *         free(output_bp)             # <<<<<<<<<<<<<<
@@ -1908,7 +1908,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
     free(__pyx_v_output_bp);
 
-    /* "plinf/core.pyx":105
+    /* "plinf/core.pyx":104
  *         free(input_bp)
  *         free(output_bp)
  *         return None             # <<<<<<<<<<<<<<
@@ -1921,7 +1921,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
   }
   __pyx_L3:;
 
-  /* "plinf/core.pyx":107
+  /* "plinf/core.pyx":106
  *         return None
  * 
  *     fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -1930,7 +1930,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   (void)(fclose(__pyx_v_fake_input));
 
-  /* "plinf/core.pyx":108
+  /* "plinf/core.pyx":107
  * 
  *     fclose(fake_input)
  *     fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -1939,7 +1939,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   (void)(fclose(__pyx_v_fake_output));
 
-  /* "plinf/core.pyx":109
+  /* "plinf/core.pyx":108
  *     fclose(fake_input)
  *     fclose(fake_output)
  *     free(input_bp)             # <<<<<<<<<<<<<<
@@ -1948,7 +1948,7 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  */
   free(__pyx_v_input_bp);
 
-  /* "plinf/core.pyx":110
+  /* "plinf/core.pyx":109
  *     fclose(fake_output)
  *     free(input_bp)
  *     return output_bp.decode("utf-8")             # <<<<<<<<<<<<<<
@@ -1956,13 +1956,13 @@ static PyObject *__pyx_f_5plinf_4core_get_tree(PyObject *__pyx_v_code, CYTHON_UN
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "plinf/core.pyx":69
+  /* "plinf/core.pyx":68
  * 
  * 
  * cpdef unicode get_tree(unicode code):             # <<<<<<<<<<<<<<
@@ -1991,7 +1991,7 @@ static PyObject *__pyx_pw_5plinf_4core_1get_tree(PyObject *__pyx_self, PyObject 
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_tree (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 69, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 68, __pyx_L1_error)
   __pyx_r = __pyx_pf_5plinf_4core_get_tree(__pyx_self, ((PyObject*)__pyx_v_code));
 
   /* function exit code */
@@ -2012,7 +2012,7 @@ static PyObject *__pyx_pf_5plinf_4core_get_tree(CYTHON_UNUSED PyObject *__pyx_se
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_tree", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5plinf_4core_get_tree(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_5plinf_4core_get_tree(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2029,7 +2029,7 @@ static PyObject *__pyx_pf_5plinf_4core_get_tree(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "plinf/core.pyx":113
+/* "plinf/core.pyx":112
  * 
  * 
  * cpdef unicode get_opcode(unicode code):             # <<<<<<<<<<<<<<
@@ -2059,7 +2059,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_opcode", 0);
 
-  /* "plinf/core.pyx":114
+  /* "plinf/core.pyx":113
  * 
  * cpdef unicode get_opcode(unicode code):
  *     cdef int result = 1             # <<<<<<<<<<<<<<
@@ -2068,7 +2068,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_result = 1;
 
-  /* "plinf/core.pyx":115
+  /* "plinf/core.pyx":114
  * cpdef unicode get_opcode(unicode code):
  *     cdef int result = 1
  *     cdef NODE *node = NULL             # <<<<<<<<<<<<<<
@@ -2077,7 +2077,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_node = NULL;
 
-  /* "plinf/core.pyx":116
+  /* "plinf/core.pyx":115
  *     cdef int result = 1
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")             # <<<<<<<<<<<<<<
@@ -2086,24 +2086,24 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   if (unlikely(__pyx_v_code == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 116, __pyx_L1_error)
+    __PYX_ERR(0, 115, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_code_bytes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "plinf/core.pyx":117
+  /* "plinf/core.pyx":116
  *     cdef NODE *node = NULL
  *     code_bytes = code.encode("utf-8")
  *     cdef char *c_code = code_bytes             # <<<<<<<<<<<<<<
  *     cdef char *input_bp
  *     cdef char *output_bp
  */
-  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_AsWritableString(__pyx_v_code_bytes); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 116, __pyx_L1_error)
   __pyx_v_c_code = __pyx_t_2;
 
-  /* "plinf/core.pyx":122
+  /* "plinf/core.pyx":121
  *     cdef size_t input_size
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)             # <<<<<<<<<<<<<<
@@ -2112,7 +2112,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_fake_input = open_memstream((&__pyx_v_input_bp), (&__pyx_v_input_size));
 
-  /* "plinf/core.pyx":123
+  /* "plinf/core.pyx":122
  *     cdef size_t output_size
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)             # <<<<<<<<<<<<<<
@@ -2121,7 +2121,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_fake_output = open_memstream((&__pyx_v_output_bp), (&__pyx_v_output_size));
 
-  /* "plinf/core.pyx":124
+  /* "plinf/core.pyx":123
  *     cdef FILE *fake_input = open_memstream(&input_bp, &input_size)
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yylex_destroy()             # <<<<<<<<<<<<<<
@@ -2130,7 +2130,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   (void)(yylex_destroy());
 
-  /* "plinf/core.pyx":125
+  /* "plinf/core.pyx":124
  *     cdef FILE *fake_output = open_memstream(&output_bp, &output_size)
  *     yylex_destroy()
  *     yyset_in(fake_input)             # <<<<<<<<<<<<<<
@@ -2139,7 +2139,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   yyset_in(__pyx_v_fake_input);
 
-  /* "plinf/core.pyx":126
+  /* "plinf/core.pyx":125
  *     yylex_destroy()
  *     yyset_in(fake_input)
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)             # <<<<<<<<<<<<<<
@@ -2148,7 +2148,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   (void)(fwrite(__pyx_v_c_code, (sizeof(char)), strlen(__pyx_v_c_code), __pyx_v_fake_input));
 
-  /* "plinf/core.pyx":128
+  /* "plinf/core.pyx":127
  *     fwrite(c_code, sizeof(char), strlen(c_code), fake_input)
  * 
  *     result = yyparse()             # <<<<<<<<<<<<<<
@@ -2157,7 +2157,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   __pyx_v_result = yyparse();
 
-  /* "plinf/core.pyx":129
+  /* "plinf/core.pyx":128
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -2167,7 +2167,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   __pyx_t_3 = ((__pyx_v_result == 0) != 0);
   if (__pyx_t_3) {
 
-    /* "plinf/core.pyx":130
+    /* "plinf/core.pyx":129
  *     result = yyparse()
  *     if result == 0:
  *         node = global_result             # <<<<<<<<<<<<<<
@@ -2176,7 +2176,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     __pyx_v_node = global_result;
 
-    /* "plinf/core.pyx":131
+    /* "plinf/core.pyx":130
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -2186,7 +2186,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
     __pyx_t_3 = ((__pyx_v_node == NULL) != 0);
     if (__pyx_t_3) {
 
-      /* "plinf/core.pyx":132
+      /* "plinf/core.pyx":131
  *         node = global_result
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")             # <<<<<<<<<<<<<<
@@ -2195,7 +2195,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       (void)(fprintf(stderr, ((char const *)"Error parsing: no result\n")));
 
-      /* "plinf/core.pyx":133
+      /* "plinf/core.pyx":132
  *         if node is NULL:
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -2204,7 +2204,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       (void)(fclose(__pyx_v_fake_input));
 
-      /* "plinf/core.pyx":134
+      /* "plinf/core.pyx":133
  *             fprintf(stderr, "Error parsing: no result\n")
  *             fclose(fake_input)
  *             fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -2213,7 +2213,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       (void)(fclose(__pyx_v_fake_output));
 
-      /* "plinf/core.pyx":135
+      /* "plinf/core.pyx":134
  *             fclose(fake_input)
  *             fclose(fake_output)
  *             free(input_bp)             # <<<<<<<<<<<<<<
@@ -2222,7 +2222,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       free(__pyx_v_input_bp);
 
-      /* "plinf/core.pyx":136
+      /* "plinf/core.pyx":135
  *             fclose(fake_output)
  *             free(input_bp)
  *             free(output_bp)             # <<<<<<<<<<<<<<
@@ -2231,7 +2231,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       free(__pyx_v_output_bp);
 
-      /* "plinf/core.pyx":137
+      /* "plinf/core.pyx":136
  *             free(input_bp)
  *             free(output_bp)
  *             return None             # <<<<<<<<<<<<<<
@@ -2242,7 +2242,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
       __pyx_r = ((PyObject*)Py_None); __Pyx_INCREF(Py_None);
       goto __pyx_L0;
 
-      /* "plinf/core.pyx":131
+      /* "plinf/core.pyx":130
  *     if result == 0:
  *         node = global_result
  *         if node is NULL:             # <<<<<<<<<<<<<<
@@ -2251,7 +2251,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     }
 
-    /* "plinf/core.pyx":138
+    /* "plinf/core.pyx":137
  *             free(output_bp)
  *             return None
  *         restart_opcode()             # <<<<<<<<<<<<<<
@@ -2260,7 +2260,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     restart_opcode();
 
-    /* "plinf/core.pyx":139
+    /* "plinf/core.pyx":138
  *             return None
  *         restart_opcode()
  *         opout_node(fake_output, node)             # <<<<<<<<<<<<<<
@@ -2269,7 +2269,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     opout_node(__pyx_v_fake_output, __pyx_v_node);
 
-    /* "plinf/core.pyx":140
+    /* "plinf/core.pyx":139
  *         restart_opcode()
  *         opout_node(fake_output, node)
  *         node = free_node(node)             # <<<<<<<<<<<<<<
@@ -2278,7 +2278,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     __pyx_v_node = free_node(__pyx_v_node);
 
-    /* "plinf/core.pyx":141
+    /* "plinf/core.pyx":140
  *         opout_node(fake_output, node)
  *         node = free_node(node)
  *         while node is not NULL:             # <<<<<<<<<<<<<<
@@ -2289,7 +2289,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
       __pyx_t_3 = ((__pyx_v_node != NULL) != 0);
       if (!__pyx_t_3) break;
 
-      /* "plinf/core.pyx":142
+      /* "plinf/core.pyx":141
  *         node = free_node(node)
  *         while node is not NULL:
  *             opout_node(fake_output, node)             # <<<<<<<<<<<<<<
@@ -2298,7 +2298,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
       opout_node(__pyx_v_fake_output, __pyx_v_node);
 
-      /* "plinf/core.pyx":143
+      /* "plinf/core.pyx":142
  *         while node is not NULL:
  *             opout_node(fake_output, node)
  *             node = free_node(node)             # <<<<<<<<<<<<<<
@@ -2308,7 +2308,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
       __pyx_v_node = free_node(__pyx_v_node);
     }
 
-    /* "plinf/core.pyx":129
+    /* "plinf/core.pyx":128
  * 
  *     result = yyparse()
  *     if result == 0:             # <<<<<<<<<<<<<<
@@ -2318,7 +2318,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
     goto __pyx_L3;
   }
 
-  /* "plinf/core.pyx":145
+  /* "plinf/core.pyx":144
  *             node = free_node(node)
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)             # <<<<<<<<<<<<<<
@@ -2328,7 +2328,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   /*else*/ {
     (void)(fprintf(stderr, ((char const *)"Error parsing: code %d\n"), __pyx_v_result));
 
-    /* "plinf/core.pyx":146
+    /* "plinf/core.pyx":145
  *     else:
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -2337,7 +2337,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     (void)(fclose(__pyx_v_fake_input));
 
-    /* "plinf/core.pyx":147
+    /* "plinf/core.pyx":146
  *         fprintf(stderr, "Error parsing: code %d\n", result)
  *         fclose(fake_input)
  *         fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -2346,7 +2346,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     (void)(fclose(__pyx_v_fake_output));
 
-    /* "plinf/core.pyx":148
+    /* "plinf/core.pyx":147
  *         fclose(fake_input)
  *         fclose(fake_output)
  *         free(input_bp)             # <<<<<<<<<<<<<<
@@ -2355,7 +2355,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     free(__pyx_v_input_bp);
 
-    /* "plinf/core.pyx":149
+    /* "plinf/core.pyx":148
  *         fclose(fake_output)
  *         free(input_bp)
  *         free(output_bp)             # <<<<<<<<<<<<<<
@@ -2364,7 +2364,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
     free(__pyx_v_output_bp);
 
-    /* "plinf/core.pyx":150
+    /* "plinf/core.pyx":149
  *         free(input_bp)
  *         free(output_bp)
  *         return None             # <<<<<<<<<<<<<<
@@ -2377,7 +2377,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
   }
   __pyx_L3:;
 
-  /* "plinf/core.pyx":152
+  /* "plinf/core.pyx":151
  *         return None
  * 
  *     fclose(fake_input)             # <<<<<<<<<<<<<<
@@ -2386,7 +2386,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   (void)(fclose(__pyx_v_fake_input));
 
-  /* "plinf/core.pyx":153
+  /* "plinf/core.pyx":152
  * 
  *     fclose(fake_input)
  *     fclose(fake_output)             # <<<<<<<<<<<<<<
@@ -2395,7 +2395,7 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   (void)(fclose(__pyx_v_fake_output));
 
-  /* "plinf/core.pyx":154
+  /* "plinf/core.pyx":153
  *     fclose(fake_input)
  *     fclose(fake_output)
  *     free(input_bp)             # <<<<<<<<<<<<<<
@@ -2403,19 +2403,19 @@ static PyObject *__pyx_f_5plinf_4core_get_opcode(PyObject *__pyx_v_code, CYTHON_
  */
   free(__pyx_v_input_bp);
 
-  /* "plinf/core.pyx":155
+  /* "plinf/core.pyx":154
  *     fclose(fake_output)
  *     free(input_bp)
  *     return output_bp.decode("utf-8")             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_output_bp, 0, strlen(__pyx_v_output_bp), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "plinf/core.pyx":113
+  /* "plinf/core.pyx":112
  * 
  * 
  * cpdef unicode get_opcode(unicode code):             # <<<<<<<<<<<<<<
@@ -2444,7 +2444,7 @@ static PyObject *__pyx_pw_5plinf_4core_3get_opcode(PyObject *__pyx_self, PyObjec
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_opcode (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 113, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_code), (&PyUnicode_Type), 1, "code", 1))) __PYX_ERR(0, 112, __pyx_L1_error)
   __pyx_r = __pyx_pf_5plinf_4core_2get_opcode(__pyx_self, ((PyObject*)__pyx_v_code));
 
   /* function exit code */
@@ -2465,7 +2465,7 @@ static PyObject *__pyx_pf_5plinf_4core_2get_opcode(CYTHON_UNUSED PyObject *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_opcode", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5plinf_4core_get_opcode(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_5plinf_4core_get_opcode(__pyx_v_code, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
