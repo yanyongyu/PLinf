@@ -477,6 +477,8 @@ class OperationList(List[Optional["Operation"]]):
             elif not isinstance(sub_type, TYPE):
                 raise RuntimeError(f"{op} with unexpected array subtype {sub_type}")
 
+            if end.value < start.value:
+                raise RuntimeError(f"Invalid array start end")
             array_type = TYPE_ARRAY(start.value, end.value, sub_type)
             self.push_stack(array_type)
         elif op.opcode == OPCODE.opcode_load_const:
