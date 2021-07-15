@@ -262,11 +262,12 @@ class SubWindow(QMainWindow):
         jscode = (
             f"refresh_symbol({symbols!r});\n"
             f"refresh_stack({stack!r});\n"
-            f"refresh_opcode({index});\n"
-            f"refresh_output({output!r});"
+            f"refresh_output({output!r});\n"
         )
         if finished:
-            jscode += "\nfinished();"
+            jscode += f"finished({index});"
+        else:
+            jscode += f"refresh_opcode({index});"
         self.browser.page().runJavaScript(jscode)
 
     def run_code(self):

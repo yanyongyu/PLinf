@@ -54,47 +54,25 @@ html, body {
   position: relative;
   height: calc(100% - 80px);
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 #opcode table {
   border-top: none;
 }
 
-#opcode table thead {
+#opcode table thead tr th {
   position: sticky;
   top: 0;
   z-index: 1;
   background-color: #ffffff;
+  border-top: 1px solid rgba(0,0,0,.12);
 }
 
-#opcode table thead tr th {
-  border-top: 1px solid rgba(0,0,0,.12);
+#opcode table tbody tr {
+  transition: all .4s ease-in-out;
+  background-color: white;
 }
 
 #opcode table tbody tr[opcode-current=true] {
   background-color: yellow;
-}
-
-.d-flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.flex-auto {
-  flex: 1 1 auto;
-}
-
-.flex-grow-0 {
-  flex-grow: 0 !important;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0 !important;
 }

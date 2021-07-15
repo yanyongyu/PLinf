@@ -70,8 +70,8 @@ function refresh_opcode(index) {
   $("#opcode-table-body > tr").removeAttr("opcode-current");
   refresh_current(opcode_list[index]);
   $(`#opcode-${index}`).attr("opcode-current", true);
-  // TODO: auto scroll
-  // $(`#opcode-${index}`).offset({ top: 300 });
+  let pos = document.getElementById(`opcode-${index}`).offsetTop - 250;
+  document.getElementById("opcode").scrollTop = pos;
 }
 
 /** @param {string} tree */
@@ -179,7 +179,10 @@ function reset() {
   $("#next").removeAttr("disabled");
 }
 
-function finished() {
+/** @param {number} index */
+function finished(index) {
+  $("#opcode-table-body > tr").removeAttr("opcode-current");
+  refresh_current([index, "finish", "null", "null"]);
   alert("运行完毕");
   $("#next").attr("disabled", true);
 }
